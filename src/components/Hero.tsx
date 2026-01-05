@@ -25,11 +25,16 @@ export default function Hero() {
             <section id="home" className="relative z-10 overflow-hidden">
                 {/* Background (swap to <video muted playsInline loop ... /> later) */}
                 <div aria-hidden className="absolute inset-0 z-0">
-                    <img
-                        src={mainImageUrl}
-                        alt=""
+                    <video
                         className="h-full w-full object-cover object-center scale-105 opacity-35"
-                        draggable={false}
+                        src="/demo_video_test.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="auto"
+                        controls={false}
+                        disablePictureInPicture
                     />
                     <div className="absolute inset-0 bg-black/65" />
                     <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-25 mix-blend-soft-light" />
