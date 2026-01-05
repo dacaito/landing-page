@@ -1,20 +1,25 @@
-import { UploadIcon, VideoIcon, ZapIcon } from 'lucide-react';
+import { ZapIcon } from 'lucide-react';
 
 export const featuresData = [
     {
-        icon: <UploadIcon className="w-6 h-6" />,
-        title: 'Discovery & Planning',
-        desc: 'We understand your goals, audience and challenges to craft a clear, actionable strategy.'
+        icon: <ZapIcon className="w-6 h-6" />,
+        title: 'Stockouts and emergency purchases',
+        desc: 'Unexpected shortages force rush buys, expediting, and production delays.'
     },
     {
         icon: <ZapIcon className="w-6 h-6" />,
-        title: 'Design & Development',
-        desc: 'High-quality design and scalable development focused on performance and usability.'
+        title: 'Excess inventory and write-offs',
+        desc: 'Over-ordering ties up cash and leads to scrap, obsolescence, and write-downs.'
     },
     {
-        icon: <VideoIcon className="w-6 h-6" />,
-        title: 'Launch & Growth',
-        desc: 'We launch, optimize and continuously improve to drive measurable business growth.'
+        icon: <ZapIcon className="w-6 h-6" />,
+        title: 'Hours lost on manual recounts',
+        desc: 'Teams burn time chasing variances with cycle counts and ad-hoc audits.'
+    },
+    {
+        icon: <ZapIcon className="w-6 h-6" />,
+        title: 'Decisions made with unreliable data',
+        desc: 'Planning suffers when the system of record doesn’t match reality.'
     }
 ];
 

@@ -1,8 +1,12 @@
-import { ArrowRightIcon, PlayIcon, ZapIcon, CheckIcon } from 'lucide-react';
+import { ArrowRightIcon, PlayIcon, PauseIcon, ZapIcon, CheckIcon } from 'lucide-react';
 import { PrimaryButton, GhostButton } from './Buttons';
 import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Hero() {
+
+    const bgVideoRef = useRef<HTMLVideoElement | null>(null);
+    const [isBgVideoPaused, setIsBgVideoPaused] = useState(false);
 
     const trustedUserImages = [
         'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=50',
@@ -20,12 +24,29 @@ export default function Hero() {
         'Creative brands'
     ];
 
+    useEffect(() => {
+        const videoEl = bgVideoRef.current;
+        if (!videoEl) return;
+
+        const sync = () => setIsBgVideoPaused(videoEl.paused);
+        sync();
+
+        videoEl.addEventListener('play', sync);
+        videoEl.addEventListener('pause', sync);
+
+        return () => {
+            videoEl.removeEventListener('play', sync);
+            videoEl.removeEventListener('pause', sync);
+        };
+    }, []);
+
     return (
         <>
             <section id="home" className="relative z-10 overflow-hidden">
                 {/* Background (swap to <video muted playsInline loop ... /> later) */}
                 <div aria-hidden className="absolute inset-0 z-0">
                     <video
+                        ref={bgVideoRef}
                         className="h-full w-full object-cover object-center scale-105 opacity-35"
                         src="/demo_video_test.mp4"
                         autoPlay
@@ -40,9 +61,38 @@ export default function Hero() {
                     <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-25 mix-blend-soft-light" />
                 </div>
 
+                <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-20">
+                    <button
+                        type="button"
+                        className="inline-flex size-10 items-center justify-center rounded-full border border-white/12 bg-black/35 backdrop-blur-sm hover:bg-black/50 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+                        aria-label={isBgVideoPaused ? 'Play background video' : 'Pause background video'}
+                        aria-pressed={!isBgVideoPaused}
+                        onClick={async () => {
+                            const videoEl = bgVideoRef.current;
+                            if (!videoEl) return;
+
+                            try {
+                                if (videoEl.paused) {
+                                    await videoEl.play();
+                                } else {
+                                    videoEl.pause();
+                                }
+                            } catch {
+                                // Ignore autoplay/play promise failures (e.g. if browser blocks it unexpectedly).
+                            }
+                        }}
+                    >
+                        {isBgVideoPaused ? (
+                            <PlayIcon className="size-4.5" />
+                        ) : (
+                            <PauseIcon className="size-4.5" />
+                        )}
+                    </button>
+                </div>
+
                 <div className="relative z-10 max-w-6xl mx-auto px-4 min-h-screen max-md:w-screen max-md:overflow-hidden pt-32 md:pt-26 flex items-center justify-center">
                     <div className="w-full">
-                        <div className="text-left max-w-2xl">
+                        <div className="text-left max-w-3xl">
                             <motion.a href="https://prebuiltui.com/tailwind-templates?ref=pixel-forge" className="inline-flex items-center gap-3 pl-3 pr-4 py-1.5 rounded-full bg-white/10 mb-6 justify-start"
                                 initial={{ y: 60, opacity: 0 }}
                                 whileInView={{ y: 0, opacity: 1 }}
@@ -72,20 +122,21 @@ export default function Hero() {
                                 viewport={{ once: true }}
                                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.1 }}
                             >
-                                We design & build <br />
+                                Align ERP{' '}
                                 <span className="bg-clip-text text-transparent bg-linear-to-r from-indigo-300 to-indigo-400">
-                                    high-impact digital experiences
+                                    with Reality
                                 </span>
                             </motion.h1>
 
-                            <motion.p className="text-gray-300 max-w-lg mb-8"
+                            <motion.p className="text-gray-300 max-w-xl mb-8"
                                 initial={{ y: 60, opacity: 0 }}
                                 whileInView={{ y: 0, opacity: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.2 }}
                             >
-                                A creative digital agency helping startups and businesses grow through
-                                thoughtful design, scalable development and performance-driven strategy.
+                                Real-time visibility and reconciliation between ERP data and physical inventory.
+                                <br />
+                                No manual counts. No tags. No operational disruption.
                             </motion.p>
 
                             <motion.div className="flex flex-col sm:flex-row items-center gap-4 mb-8"
@@ -96,7 +147,7 @@ export default function Hero() {
                             >
                                 <a href="/" className="w-full sm:w-auto">
                                     <PrimaryButton className="max-sm:w-full py-3 px-7">
-                                        Get a demo
+                                        Get a Demo
                                         <ArrowRightIcon className="size-4" />
                                     </PrimaryButton>
                                 </a>
