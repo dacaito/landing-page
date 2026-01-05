@@ -71,20 +71,16 @@ export const plansData = [
 
 export const faqData = [
     {
-        question: 'What services does your agency provide?',
-        answer: 'We offer end-to-end digital services including brand strategy, UI/UX design, web and app development and growth-focused marketing solutions.'
+        question: '1. Capture physical movements',
+        answer: 'Cameras continuously monitor inventory flows, ensuring no movement is missed.'
     },
     {
-        question: 'Do you work with startups or only large companies?',
-        answer: 'We work with startups, growing businesses and established brands. Our process is flexible and tailored to match your goals and scale.'
+        question: '2. Validate inventory events',
+        answer: 'Vision-based intelligence identifies materials, movements and quantities.'
     },
     {
-        question: 'How long does a typical project take?',
-        answer: 'Project timelines vary by scope, but most projects take between 2–6 weeks. We provide a clear timeline after the discovery phase.'
-    },
-    {
-        question: 'Do you offer ongoing support after launch?',
-        answer: 'Yes. We offer maintenance, optimization and growth support packages to ensure your product continues to perform and evolve.'
+        question: '3. Synchronize ERP in real time',
+        answer: 'Discrepancies are detected and corrected automatically, without operator input.'
     }
 ];
 

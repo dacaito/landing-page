@@ -15,16 +15,41 @@ export default function CTA() {
                             viewport={{ once: true }}
                             transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
                         >
-                            Ready to grow your brand?
+                            Reality pays back fast
                         </motion.h2>
-                        <motion.p className="max-sm:text-sm text-slate-400 mb-10 max-w-xl mx-auto"
+                        <motion.div className="max-sm:text-sm text-slate-400 mb-10 max-w-xl mx-auto"
                             initial={{ y: 60, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.2 }}
                         >
-                            Partner with our agency to design, build and scale digital products that deliver real business results.
-                        </motion.p>
+                            <p className="text-sm">
+                                Vixgen is proven in production manufacturing environments, delivering fast, measurable impact.
+                            </p>
+
+                            <p className="mt-6 mb-3 font-bold text-white text-base text-left">
+                                Results:
+                            </p>
+
+                            <ul className="space-y-2 text-left list-disc pl-5 text-white text-base">
+                                <li>
+                                    &gt;99% inventory accuracy
+                                </li>
+                                <li>
+                                    Six-figure write-off reduction per site
+                                </li>
+                                <li>
+                                    ERP reconciliation time under 1 hour, replacing days of manual checks
+                                </li>
+                                <li>
+                                    ROI in under 90 days
+                                </li>
+                            </ul>
+
+                            <p className="mt-6 text-sm">
+                                Actual value increases further through avoided stockouts, urgent purchases, production delays and manual recounts.
+                            </p>
+                        </motion.div>
                         <motion.div
                             initial={{ y: 60, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
@@ -32,7 +57,7 @@ export default function CTA() {
                             transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.3 }}
                         >
                             <GhostButton className="px-8 py-3 gap-2">
-                                Get a demo <ArrowRightIcon size={20} />
+                                Get a Demo <ArrowRightIcon size={20} />
                             </GhostButton>
                         </motion.div>
                     </div>

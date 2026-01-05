@@ -1,4 +1,4 @@
-import { Check } from 'lucide-react';
+import { ArrowRightIcon, Check } from 'lucide-react';
 import { PrimaryButton, GhostButton } from './Buttons';
 import Title from './Title';
 import { plansData } from '../assets/dummy-data';
@@ -23,7 +23,8 @@ export default function Pricing() {
                 <Title
                     title="THE OUTCOME"
                     heading="What changes when ERP reflects reality"
-                    description="When physical inventory is continuously verified, operations become predictable. This is not periodic inventory checking. It is continuous operational visibility."
+                    description={"When physical inventory is continuously verified, operations become predictable.\nThis is not periodic inventory checking. It is continuous operational visibility."}
+                    descriptionClassName="max-w-xl"
                 />
 
                 <div className="grid grid-cols-1 gap-6 max-w-5xl mx-auto">
@@ -67,6 +68,7 @@ export default function Pricing() {
                         <div>
                             <PrimaryButton className="w-full sm:w-auto">
                                 Get a Demo
+                                <ArrowRightIcon className="size-4" />
                             </PrimaryButton>
                         </div>
                     </motion.div>

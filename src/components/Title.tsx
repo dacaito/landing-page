@@ -4,9 +4,10 @@ interface TitleProps {
     title?: string;
     heading?: string;
     description?: string;
+    descriptionClassName?: string;
 }
 
-export default function Title({ title, heading, description }: TitleProps) {
+export default function Title({ title, heading, description, descriptionClassName }: TitleProps) {
 
     return (
         <div className="text-center mb-16">
@@ -32,7 +33,7 @@ export default function Title({ title, heading, description }: TitleProps) {
                 </motion.h2>
             )}
             {description && (
-                <motion.p className='max-w-md mx-auto text-sm text-gray-400 my-3'
+                <motion.p className={`max-w-md mx-auto text-sm text-gray-400 my-3 whitespace-pre-line ${descriptionClassName ?? ''}`}
                     initial={{ y: 60, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}

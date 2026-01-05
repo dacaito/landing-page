@@ -11,9 +11,9 @@ export default function Faq() {
             <div className="max-w-3xl mx-auto px-4">
 
                 <Title
-                    title="FAQ"
-                    heading="Frequently asked questions"
-                    description="Everything you need to know about working with our agency. If you have more questions, feel free to reach out."
+                    title="HOW IT WORKS"
+                    heading="Continuous reconciliation between physical reality and ERP"
+                    description={"Vixgen connects physical movements to digital records automatically.\nNo scanners. No tags. No manual processes."}
                 />
 
                 <div className="space-y-3">
