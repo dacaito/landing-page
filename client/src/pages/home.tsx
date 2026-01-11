@@ -304,19 +304,19 @@ export default function Home() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-16">
             <Card className="p-6 sm:p-8 md:p-10 text-center border-border/50">
-              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2 sm:mb-3" data-testid="text-metric-accuracy">{t.results.metrics.accuracy.value}</p>
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2 sm:mb-3 whitespace-nowrap" data-testid="text-metric-accuracy">{t.results.metrics.accuracy.value}</p>
               <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground">{t.results.metrics.accuracy.label}</p>
             </Card>
             <Card className="p-6 sm:p-8 md:p-10 text-center border-border/50">
-              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2 sm:mb-3" data-testid="text-metric-writeoff">{t.results.metrics.writeoff.value}</p>
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2 sm:mb-3 whitespace-nowrap" data-testid="text-metric-writeoff">{t.results.metrics.writeoff.value}</p>
               <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground">{t.results.metrics.writeoff.label}</p>
             </Card>
             <Card className="p-6 sm:p-8 md:p-10 text-center border-border/50">
-              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2 sm:mb-3" data-testid="text-metric-time">{t.results.metrics.time.value}</p>
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2 sm:mb-3 whitespace-nowrap" data-testid="text-metric-time">{t.results.metrics.time.value}</p>
               <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground">{t.results.metrics.time.label}</p>
             </Card>
             <Card className="p-6 sm:p-8 md:p-10 text-center border-border/50">
-              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2 sm:mb-3" data-testid="text-metric-roi">{t.results.metrics.roi.value}</p>
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2 sm:mb-3 whitespace-nowrap" data-testid="text-metric-roi">{t.results.metrics.roi.value}</p>
               <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground">{t.results.metrics.roi.label}</p>
             </Card>
           </div>

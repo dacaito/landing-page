@@ -161,9 +161,9 @@ export const translations = {
       description: "Im Einsatz in echten Produktionsumgebungen. Messbarer ROI ab dem ersten Tag.",
       metrics: {
         accuracy: { value: ">99%", label: "Bestandsgenauigkeit" },
-        writeoff: { value: "6-stellig", label: "Weniger Abschreibungen" },
-        time: { value: "<1 Stunde", label: "ERP-Abgleich" },
-        roi: { value: "<90 Tage", label: "Zeit bis ROI" }
+        writeoff: { value: "6‑stellig", label: "Weniger Abschreibungen" },
+        time: { value: "<1\u00A0Stunde", label: "ERP-Abgleich" },
+        roi: { value: "<90\u00A0Tage", label: "Zeit bis ROI" }
       },
       dashboardCaption: "Live-Dashboard aus aktivem Einsatz"
     },
