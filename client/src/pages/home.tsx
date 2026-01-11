@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowDown, Camera, RefreshCw, Database, Factory, Warehouse, Users, Building2, ChevronRight, Check, Loader2, Menu, X, Globe, Volume2, VolumeX } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { ArrowDown, Camera, RefreshCw, Database, Factory, Warehouse, Users, Building2, ChevronRight, Check, Loader2, Menu, X, Globe } from "lucide-react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { translations, Language } from "@/lib/translations";
 import dashboardImage from "@assets/dash-board-kpi.png";
@@ -32,8 +32,6 @@ export default function Home() {
     company: "",
     message: ""
   });
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isMuted, setIsMuted] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -93,14 +91,6 @@ export default function Home() {
     setTimeout(() => {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     }, 100);
-  };
-
-  const toggleMute = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
   };
 
   const toggleLanguage = () => {
@@ -245,27 +235,14 @@ export default function Home() {
             <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 rounded-2xl sm:rounded-3xl blur-xl sm:blur-2xl opacity-50 group-hover:opacity-70 transition-opacity" />
             <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-border/50 bg-card shadow-2xl">
               <video 
-                ref={videoRef}
                 src={demoVideo}
                 className="w-full aspect-video object-cover"
                 playsInline
                 autoPlay
                 loop
-                muted={isMuted}
+                muted
                 data-testid="video-demo"
               />
-              <button
-                onClick={toggleMute}
-                className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center hover:bg-black/70 transition-colors"
-                aria-label={isMuted ? "Unmute video" : "Mute video"}
-                data-testid="button-toggle-mute"
-              >
-                {isMuted ? (
-                  <VolumeX className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                ) : (
-                  <Volume2 className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                )}
-              </button>
             </div>
           </div>
 
