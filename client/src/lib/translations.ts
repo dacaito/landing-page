@@ -130,7 +130,7 @@ export const translations = {
           bio: "Extensive executive experience in industrial manufacturing and operations leadership across global enterprises."
         }
       },
-      location: "Zurich, Switzerland",
+      location: "Baumackerstrasse 42, 8050, Zurich, Switzerland",
       focus: "Manufacturing and Warehouse Focus"
     },
     footer: {
@@ -270,7 +270,7 @@ export const translations = {
           bio: "Umfassende Führungserfahrung in der industriellen Fertigung und im operativen Management globaler Unternehmen."
         }
       },
-      location: "Zürich, Schweiz",
+      location: "Baumackerstrasse 42, 8050, Zürich, Schweiz",
       focus: "Fokus: Fertigung und Lager"
     },
     footer: {
