@@ -278,16 +278,18 @@ export default function Home() {
             {t.cta.requestDemo}
             <ChevronRight className="w-5 h-5 ml-1" />
           </Button>
-        </div>
 
-        <button 
-          onClick={() => scrollToSection("results")} 
-          className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-foreground transition-colors animate-bounce"
-          aria-label="Scroll down"
-          data-testid="button-scroll-down"
-        >
-          <ArrowDown className="w-6 h-6" />
-        </button>
+          <div className="mt-6 flex justify-center">
+            <button
+              onClick={() => scrollToSection("results")}
+              className="text-muted-foreground hover:text-foreground transition-colors animate-bounce"
+              aria-label="Scroll down"
+              data-testid="button-scroll-down"
+            >
+              <ArrowDown className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
       </section>
 
       <section id="results" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-card border-y border-border/50">
