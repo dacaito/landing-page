@@ -6,7 +6,7 @@ import { ArrowDown, Camera, RefreshCw, Database, Factory, Warehouse, Users, Buil
 import { useState, useRef, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { translations, Language } from "@/lib/translations";
-import dashboardImage from "@assets/image_1767949813510.png";
+import dashboardImage from "@assets/dash-board-kpi.png";
 import stockImage from "@assets/image_1_1767949813510.png";
 import demoVideo from "@assets/Landing-Page-Reel-876x512.mp4";
 import vixgenLogo from "@assets/Vexgen-owl.png";
