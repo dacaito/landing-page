@@ -44,7 +44,7 @@ export default function Home() {
     return () => { document.body.style.overflow = ''; };
   }, [mobileMenuOpen]);
 
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mkgvlpww";
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mojjqzqj";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
