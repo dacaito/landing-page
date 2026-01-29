@@ -89,7 +89,17 @@ export default function Home() {
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false);
     setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      // Offset for fixed navbar so section headings don't land under it.
+      const nav = document.querySelector("nav");
+      const navHeight = nav?.getBoundingClientRect().height ?? 0;
+      const extraGap = 12; // small breathing room below the nav
+      const top =
+        window.scrollY + el.getBoundingClientRect().top - navHeight - extraGap;
+
+      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
     }, 100);
   };
 
@@ -104,10 +114,19 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
-          <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => {
+              setMobileMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="flex items-center gap-2 cursor-pointer rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background"
+            aria-label="Go to top"
+            data-testid="button-logo-home"
+          >
             <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-8 h-8 sm:w-9 sm:h-9 object-contain" />
             <span className="font-bold text-lg sm:text-xl tracking-tight text-primary" data-testid="text-logo">Vexgen AI</span>
-          </div>
+          </button>
           <div className="hidden lg:flex items-center gap-8">
             <button 
               onClick={() => scrollToSection("results")} 
@@ -269,7 +288,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="results" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-card border-y border-border/50">
+      <section id="results" className="scroll-mt-24 sm:scroll-mt-28 py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-card border-y border-border/50">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center" data-testid="text-results-label">{t.results.label}</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center mb-4 sm:mb-6" data-testid="text-results-headline">
@@ -340,7 +359,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="solution" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-card border-y border-border/50">
+      <section id="solution" className="scroll-mt-24 sm:scroll-mt-28 py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-card border-y border-border/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             <div>
@@ -386,7 +405,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how-it-works" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6">
+      <section id="how-it-works" className="scroll-mt-24 sm:scroll-mt-28 py-16 sm:py-24 md:py-32 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center" data-testid="text-how-label">{t.howItWorks.label}</p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-center mb-4 sm:mb-6 leading-tight" data-testid="text-how-headline">
@@ -447,7 +466,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 pb-24 sm:pb-32">
+      <section id="contact" className="scroll-mt-24 sm:scroll-mt-28 py-16 sm:py-24 md:py-32 px-4 sm:px-6 pb-24 sm:pb-32">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
             <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4" data-testid="text-cta-label">{t.contact.label}</p>
@@ -488,9 +507,9 @@ export default function Home() {
                 />
               </div>
               <div>
-                <label htmlFor="company" className="block text-sm font-medium mb-1.5 sm:mb-2">{t.contact.form.company} *</label>
+                <label htmlFor="company-name" className="block text-sm font-medium mb-1.5 sm:mb-2">{t.contact.form.company} *</label>
                 <Input
-                  id="company"
+                  id="company-name"
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                   placeholder={t.contact.form.companyPlaceholder}
@@ -531,7 +550,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="company" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-card border-t border-border/50">
+      <section id="company" className="scroll-mt-24 sm:scroll-mt-28 py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-card border-t border-border/50">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4" data-testid="text-company-label">{t.company.label}</p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 sm:mb-8" data-testid="text-company-headline">
@@ -576,7 +595,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
           <div className="flex items-center gap-2">
             <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
-            <span className="font-bold text-lg sm:text-xl tracking-tight">Vexgen AI</span>
+            <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
           </div>
           <p className="text-xs sm:text-sm text-muted-foreground">
             contact@vexgen.ai
@@ -586,6 +605,9 @@ export default function Home() {
           </p>
         </div>
       </footer>
+
+      {/* Spacer so the last section ("Company") can scroll to the top below the fixed nav on all viewport sizes. */}
+      <div aria-hidden className="h-[20vh] min-h-24 sm:h-[12vh] sm:min-h-16" />
 
       <div className="fixed bottom-0 left-0 right-0 p-3 bg-background/95 backdrop-blur-lg border-t border-border/50 sm:hidden z-40">
         <Button 
