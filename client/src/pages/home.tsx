@@ -106,7 +106,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
           <div className="flex items-center gap-2">
             <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-8 h-8 sm:w-9 sm:h-9 object-contain" />
-            <span className="font-bold text-lg sm:text-xl tracking-tight" data-testid="text-logo">Vexgen AI</span>
+            <span className="font-bold text-lg sm:text-xl tracking-tight text-primary" data-testid="text-logo">Vexgen AI</span>
           </div>
           <div className="hidden lg:flex items-center gap-8">
             <button 
@@ -221,7 +221,7 @@ export default function Home() {
 
       <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 pt-20 sm:pt-24 pb-12 sm:pb-16">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.1] mb-6 sm:mb-8 whitespace-pre-line" data-testid="text-hero-headline">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.1] mb-6 sm:mb-8 whitespace-pre-line text-primary" data-testid="text-hero-headline">
             {t.hero.headline}
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-3 sm:mb-4 leading-relaxed px-2">
