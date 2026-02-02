@@ -387,25 +387,9 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
         </>
       )}
 
-      {/* LAYOUT B: Horizontal Timeline - Used by Food & Beverage */}
+      {/* LAYOUT B: Horizontal Timeline - Used by All Industries */}
       {layoutVariant === 'B' && (
         <>
-          <section className="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-b from-primary/5 to-transparent">
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-12">
-                <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">Impact at a Glance</p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-16">
-                {content.provenResults.metrics.map((metric, i) => (
-                  <div key={i} className="text-center">
-                    <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary">{metric.value}</p>
-                    <p className="text-sm sm:text-base uppercase tracking-wider text-muted-foreground mt-2">{metric.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           <section className="py-16 sm:py-24 px-4 sm:px-6">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -434,23 +418,29 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
 
           <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div className="order-2 lg:order-1 space-y-3">
-                  {content.outcome.benefits.map((item, i) => (
-                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-primary/5 border-l-4 border-primary">
-                      <span className="text-base sm:text-lg">{item}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="order-1 lg:order-2">
-                  <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">The Transformation</p>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
-                    {content.outcome.headline}
-                  </h2>
-                  <p className="text-base sm:text-lg text-muted-foreground">
-                    {content.outcome.description}
-                  </p>
-                </div>
+              <div className="text-center mb-12">
+                <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">The Transformation</p>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
+                  {content.outcome.headline}
+                </h2>
+                <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
+                  {content.outcome.description}
+                </p>
+              </div>
+              <div className="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-16 mb-12">
+                {content.provenResults.metrics.map((metric, i) => (
+                  <div key={i} className="text-center">
+                    <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary">{metric.value}</p>
+                    <p className="text-sm sm:text-base uppercase tracking-wider text-muted-foreground mt-2">{metric.label}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+                {content.outcome.benefits.map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-primary/5 border-l-4 border-primary">
+                    <span className="text-base sm:text-lg">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
