@@ -14,7 +14,7 @@ const chemicalContent: IndustryContent = {
       { value: ">99%", label: "Inventory Accuracy" },
       { value: "15+ Days", label: "DIO Reduction" },
       { value: "6-Figure", label: "Write-off Reduction" },
-      { value: "40%", label: "Less Expediting" }
+      { value: "12%", label: "Working Capital Freed" }
     ]
   },
   problem: {
