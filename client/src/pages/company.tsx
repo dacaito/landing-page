@@ -6,7 +6,7 @@ import { Link } from "wouter";
 import { translations, Language } from "@/lib/translations";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
-const companyVisionImage = "/images/company-vision.png?v=2";
+const companyVisionImage = "/images/company-warehouse.png";
 
 export default function Company() {
   const [lang, setLang] = useState<Language>(() => {
