@@ -35,7 +35,7 @@ const foodBeverageContent: IndustryContent = {
       "Trusted accuracy by SKU, quantity, and expiration",
       "Lower waste through better FIFO/FEFO execution",
       "Higher service levels, fewer missing pallets",
-      "Less capital tied up in protective buffers"
+      "Teams freed from constant manual pallet checks"
     ]
   },
   howItWorks: {
