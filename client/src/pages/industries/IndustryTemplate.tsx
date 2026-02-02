@@ -430,7 +430,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                   {content.problem.issues.map((item, i) => {
                     const issueIcons = [AlertTriangle, Package, Layers, Clock];
                     const IssueIcon = issueIcons[i];
-                    const showIssueIcons = content.slug === 'food-beverage';
+                    const showIssueIcons = true;
                     return (
                       <div key={i} className={`flex items-start gap-4 p-4 rounded-xl bg-destructive/5 ${showIssueIcons ? 'border border-destructive/20' : 'border-l-4 border-destructive'}`}>
                         {showIssueIcons && (
@@ -447,14 +447,8 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             </div>
           </section>
 
-          <section className={`py-16 sm:py-24 px-4 sm:px-6 border-y border-border/50 relative overflow-hidden ${content.slug === 'cosmetics' ? 'bg-gradient-to-br from-primary/5 via-card to-primary/10' : 'bg-card'}`}>
-            {content.slug === 'cosmetics' && (
-              <>
-                <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-              </>
-            )}
-            <div className="max-w-6xl mx-auto relative z-10">
+          <section className="py-16 sm:py-24 px-4 sm:px-6 border-y border-border/50 bg-card">
+            <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">The Transformation</p>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
@@ -468,7 +462,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 {content.provenResults.metrics.map((metric, i) => {
                   const metricIcons = [Target, Clock, DollarSign, TrendingUp];
                   const MetricIcon = metricIcons[i];
-                  const showMetricIcons = content.slug === 'chemical';
+                  const showMetricIcons = false;
                   return (
                     <div key={i} className={`text-center ${showMetricIcons ? 'p-6 rounded-2xl bg-background border border-border/50 shadow-sm' : ''}`}>
                       {showMetricIcons && (
@@ -486,7 +480,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 {content.outcome.benefits.map((item, i) => {
                   const benefitIcons = [CheckCircle2, Zap, Shield, ArrowUpRight];
                   const BenefitIcon = benefitIcons[i];
-                  const showBenefitIcons = content.slug === 'plastics';
+                  const showBenefitIcons = true;
                   return (
                     <div key={i} className={`flex items-start gap-4 p-4 rounded-xl bg-primary/5 ${showBenefitIcons ? 'border border-primary/20' : 'border-l-4 border-primary'}`}>
                       {showBenefitIcons && (
@@ -518,17 +512,11 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
                   {content.howItWorks.steps.map((item, i) => {
                     const Icon = howItWorksIcons[i];
-                    const isPharma = content.slug === 'pharma';
                     return (
                       <div key={i} className="text-center relative">
-                        <div className={`mx-auto mb-6 rounded-full border-4 border-primary flex items-center justify-center bg-background ${isPharma ? 'w-28 h-28 shadow-lg shadow-primary/20' : 'w-24 h-24'}`}>
-                          <Icon className={`text-primary ${isPharma ? 'w-12 h-12' : 'w-10 h-10'}`} />
+                        <div className="w-24 h-24 mx-auto mb-6 rounded-full border-4 border-primary flex items-center justify-center bg-background">
+                          <Icon className="w-10 h-10 text-primary" />
                         </div>
-                        {isPharma && (
-                          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
-                            Step {i + 1}
-                          </div>
-                        )}
                         <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                         <p className="text-muted-foreground">{item.description}</p>
                       </div>
