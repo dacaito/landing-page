@@ -184,7 +184,7 @@ export default function Privacy() {
               <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
-              <span>Zurich, Switzerland</span>
+              <span>Baumackerstrasse 42, 8050 Zurich, Switzerland</span>
               <span>contact@vexgen.ai</span>
             </div>
             <div className="flex items-center gap-4 sm:gap-6 text-sm">

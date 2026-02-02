@@ -384,15 +384,26 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
         </div>
       </section>
 
-      <footer className="py-8 px-4 sm:px-6 border-t border-border/50">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-6 h-6 object-contain" />
-            <span className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} {t.footer.copyright}</span>
+      <footer className="py-8 sm:py-12 px-4 sm:px-6 border-t border-border/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-2">
+              <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
+              <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
+              <span>Baumackerstrasse 42, 8050 Zurich, Switzerland</span>
+              <span>contact@vexgen.ai</span>
+            </div>
+            <div className="flex items-center gap-4 sm:gap-6 text-sm">
+              <Link href="/company" className="text-muted-foreground hover:text-foreground transition-colors">Company</Link>
+              <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
+              <Link href="/imprint" className="text-muted-foreground hover:text-foreground transition-colors">Imprint</Link>
+            </div>
           </div>
-          <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            Back to Home
-          </Link>
+          <div className="mt-6 text-center text-xs text-muted-foreground">
+            &copy; {new Date().getFullYear()} {t.footer.copyright}
+          </div>
         </div>
       </footer>
     </div>
