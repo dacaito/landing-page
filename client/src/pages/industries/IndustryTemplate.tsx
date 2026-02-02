@@ -68,6 +68,16 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
   }, []);
 
   useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -373,26 +383,22 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
       </section>
 
       <section id="contact" className="scroll-mt-24 sm:scroll-mt-28 py-16 sm:py-24 md:py-32 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Get Started</p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 sm:mb-6">
-            {content.getStarted.headline}
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 px-2">
-            {content.getStarted.description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#contact">
-              <Button size="lg" className="rounded-full px-8 py-6 text-lg">
-                {t.cta.requestDemo}
-                <ChevronRight className="w-5 h-5 ml-1" />
-              </Button>
-            </Link>
-            <Link href="/">
-              <Button size="lg" variant="outline" className="rounded-full px-8 py-6 text-lg">
-                Learn More
-              </Button>
-            </Link>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Get Started</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 sm:mb-6">
+              {content.getStarted.headline}
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
+              {content.getStarted.description}
+            </p>
+          </div>
+          <div className="max-w-3xl mx-auto">
+            <div 
+              className="calendly-inline-widget rounded-xl overflow-hidden" 
+              data-url="https://calendly.com/sebastian-freijo-vexgen/30min?hide_gdpr_banner=1&primary_color=0063BF"
+              style={{ minWidth: '320px', height: '950px' }}
+            />
           </div>
         </div>
       </section>
