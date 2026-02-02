@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { translations, Language } from "@/lib/translations";
 import vixgenLogo from "@assets/Vexgen-owl.png";
-import companyVisionImage from "/images/company-vision.png";
+
+const companyVisionImage = "/images/company-vision.png?v=2";
 
 export default function Company() {
   const [lang, setLang] = useState<Language>(() => {
