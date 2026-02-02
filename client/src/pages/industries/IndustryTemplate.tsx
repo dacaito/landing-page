@@ -159,6 +159,9 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
               {industriesOpen && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 z-50 pt-1">
                   <div className="bg-background border border-border rounded-lg shadow-lg py-2">
+                    <Link href="/industries/chemical" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                      {t.industries.chemical}
+                    </Link>
                     <Link href="/industries/plastics" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.plastics}
                     </Link>
@@ -170,9 +173,6 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                     </Link>
                     <Link href="/industries/pharma" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.pharma}
-                    </Link>
-                    <Link href="/industries/chemical" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
-                      {t.industries.chemical}
                     </Link>
                   </div>
                 </div>
@@ -232,6 +232,9 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             <div className="flex flex-col items-center gap-2">
               <span className="text-2xl font-medium text-foreground">{t.nav.industries}</span>
               <div className="flex flex-wrap justify-center gap-2">
+                <Link href="/industries/chemical" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                  {t.industries.chemical}
+                </Link>
                 <Link href="/industries/plastics" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
                   {t.industries.plastics}
                 </Link>
@@ -243,9 +246,6 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 </Link>
                 <Link href="/industries/pharma" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
                   {t.industries.pharma}
-                </Link>
-                <Link href="/industries/chemical" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
-                  {t.industries.chemical}
                 </Link>
               </div>
             </div>

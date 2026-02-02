@@ -83,6 +83,9 @@ export default function Imprint() {
               {industriesOpen && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 z-50 pt-1">
                   <div className="bg-background border border-border rounded-lg shadow-lg py-2">
+                    <Link href="/industries/chemical" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                      {t.industries.chemical}
+                    </Link>
                     <Link href="/industries/plastics" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.plastics}
                     </Link>
@@ -94,9 +97,6 @@ export default function Imprint() {
                     </Link>
                     <Link href="/industries/pharma" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.pharma}
-                    </Link>
-                    <Link href="/industries/chemical" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
-                      {t.industries.chemical}
                     </Link>
                   </div>
                 </div>
@@ -147,11 +147,11 @@ export default function Imprint() {
             <button onClick={() => navigateToHomeSection("how-it-works")} className="text-lg font-medium">{t.nav.howItWorks}</button>
             <div className="flex flex-col items-center gap-2">
               <span className="text-lg font-medium text-muted-foreground">{t.nav.industries}</span>
+              <Link href="/industries/chemical" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.chemical}</Link>
               <Link href="/industries/plastics" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.plastics}</Link>
               <Link href="/industries/food-beverage" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.foodBeverage}</Link>
               <Link href="/industries/cosmetics" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.cosmetics}</Link>
               <Link href="/industries/pharma" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.pharma}</Link>
-              <Link href="/industries/chemical" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.chemical}</Link>
             </div>
             <Link href="/company" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>{t.nav.company}</Link>
           </div>
