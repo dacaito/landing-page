@@ -39,7 +39,7 @@ const cosmeticsContent: IndustryContent = {
   },
   howItWorks: {
     headline: "A launch and availability protection layer for cosmetics operations",
-    description: "Vexgen adds a continuous visual verification layer on top of your existing ERP. By continuously aligning physical inventory reality with system data, Vexgen helps cosmetics teams:",
+    description: "Vexgen AI adds a continuous visual verification layer on top of your existing ERP. By continuously aligning physical inventory reality with system data, Vexgen AI helps cosmetics teams:",
     steps: [
       {
         step: "01",

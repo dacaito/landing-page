@@ -62,7 +62,7 @@ export const translations = {
     howItWorks: {
       label: "How It Works",
       headline: "Continuous reconciliation. Zero manual effort.",
-      description: "Vexgen securely and automatically connects physical movements to digital records. All your data is processed locally and never leaves your premises. Operator identity is automatically blurred.",
+      description: "Vexgen AI securely and automatically connects physical movements to digital records. All your data is processed locally and never leaves your premises. Operator identity is automatically blurred.",
       steps: [
         {
           step: "01",
@@ -91,11 +91,11 @@ export const translations = {
         { label: "Operations and supply chain teams" },
         { label: "Industrial enterprises on SAP or ERP" }
       ],
-      closing: "If inventory accuracy impacts your bottom line, Vexgen was built for you."
+      closing: "If inventory accuracy impacts your bottom line, Vexgen AI was built for you."
     },
     contact: {
       label: "Get Started",
-      headline: "See Vexgen in action",
+      headline: "See Vexgen AI in action",
       description: "The fastest path to understanding impact? See it applied to your operation.",
       form: {
         name: "Name",
@@ -117,9 +117,9 @@ export const translations = {
       }
     },
     company: {
-      label: "About Vexgen",
+      label: "About Vexgen AI",
       headline: "Built for real industrial operations",
-      description: "Vexgen was founded to solve a persistent, costly problem: the gap between ERP records and physical reality. We restore trust in operational data by making inventory movements continuously observable and verifiable.",
+      description: "Vexgen AI was founded to solve a persistent, costly problem: the gap between ERP records and physical reality. We restore trust in operational data by making inventory movements continuously observable and verifiable.",
       team: {
         ceo: {
           name: "Sebastian Freijo",
@@ -146,7 +146,7 @@ export const translations = {
     cta: {
       requestDemo: "Request a Demo"
     },
-    stockComparison: "Per-lot weight comparison: Vexgen vs. SAP"
+    stockComparison: "Per-lot weight comparison: Vexgen AI vs. SAP"
   },
   de: {
     nav: {
@@ -209,7 +209,7 @@ export const translations = {
     howItWorks: {
       label: "So funktioniert es",
       headline: "Kontinuierlicher Abgleich. Null manueller Aufwand.",
-      description: "Vexgen verbindet physische Bewegungen sicher und automatisch mit digitalen Aufzeichnungen. Alle Ihre Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände. Die Identität der Mitarbeiter wird automatisch unkenntlich gemacht.",
+      description: "Vexgen AI verbindet physische Bewegungen sicher und automatisch mit digitalen Aufzeichnungen. Alle Ihre Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände. Die Identität der Mitarbeiter wird automatisch unkenntlich gemacht.",
       steps: [
         {
           step: "01",
@@ -238,11 +238,11 @@ export const translations = {
         { label: "Operations- und Supply-Chain-Teams" },
         { label: "Industrieunternehmen mit SAP oder ERP" }
       ],
-      closing: "Wenn Bestandsgenauigkeit Ihr Ergebnis beeinflusst, wurde Vexgen für Sie entwickelt."
+      closing: "Wenn Bestandsgenauigkeit Ihr Ergebnis beeinflusst, wurde Vexgen AI für Sie entwickelt."
     },
     contact: {
       label: "Jetzt starten",
-      headline: "Vexgen in Aktion erleben",
+      headline: "Vexgen AI in Aktion erleben",
       description: "Der schnellste Weg, die Wirkung zu verstehen? Sehen Sie es in Ihrem Betrieb angewendet.",
       form: {
         name: "Name",
@@ -264,9 +264,9 @@ export const translations = {
       }
     },
     company: {
-      label: "Über Vexgen",
+      label: "Über Vexgen AI",
       headline: "Entwickelt für echte industrielle Abläufe",
-      description: "Vexgen wurde gegründet, um ein hartnäckiges, kostspieliges Problem zu lösen: die Lücke zwischen ERP-Daten und physischer Realität. Wir stellen das Vertrauen in Betriebsdaten wieder her, indem wir Bestandsbewegungen kontinuierlich beobachtbar und verifizierbar machen.",
+      description: "Vexgen AI wurde gegründet, um ein hartnäckiges, kostspieliges Problem zu lösen: die Lücke zwischen ERP-Daten und physischer Realität. Wir stellen das Vertrauen in Betriebsdaten wieder her, indem wir Bestandsbewegungen kontinuierlich beobachtbar und verifizierbar machen.",
       team: {
         ceo: {
           name: "Sebastian Freijo",
@@ -293,7 +293,7 @@ export const translations = {
     cta: {
       requestDemo: "Demo anfordern"
     },
-    stockComparison: "Gewichtsvergleich pro Los: Vexgen vs. SAP"
+    stockComparison: "Gewichtsvergleich pro Los: Vexgen AI vs. SAP"
   }
 } as const;
 

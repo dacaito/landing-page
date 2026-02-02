@@ -39,7 +39,7 @@ const plasticsContent: IndustryContent = {
   },
   howItWorks: {
     headline: "A flow protection layer for plastics plants",
-    description: "Vexgen adds a continuous visual verification layer on top of your existing ERP. By continuously aligning physical inventory reality with system data, Vexgen helps teams:",
+    description: "Vexgen AI adds a continuous visual verification layer on top of your existing ERP. By continuously aligning physical inventory reality with system data, Vexgen AI helps teams:",
     steps: [
       {
         step: "01",

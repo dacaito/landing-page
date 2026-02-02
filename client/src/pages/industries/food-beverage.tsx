@@ -39,7 +39,7 @@ const foodBeverageContent: IndustryContent = {
   },
   howItWorks: {
     headline: "A freshness and flow protection layer for food & beverage plants",
-    description: "Vexgen adds a continuous visual verification layer on top of your existing ERP. By continuously aligning physical pallet reality with system data, Vexgen helps food and beverage teams:",
+    description: "Vexgen AI adds a continuous visual verification layer on top of your existing ERP. By continuously aligning physical pallet reality with system data, Vexgen AI helps food and beverage teams:",
     steps: [
       {
         step: "01",
