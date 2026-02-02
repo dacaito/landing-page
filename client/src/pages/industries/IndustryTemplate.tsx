@@ -496,7 +496,17 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
           <section className="py-16 sm:py-24 px-4 sm:px-6">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div>
+                <div className="order-2 lg:order-1">
+                  <img 
+                    src="/images/process-technology.png"
+                    alt={`${content.howItWorks.headline} - Vexgen AI`}
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                    className="w-full rounded-2xl shadow-xl"
+                  />
+                </div>
+                <div className="order-1 lg:order-2">
                   <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">The Process</p>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
                     {content.howItWorks.headline}
@@ -523,16 +533,6 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                   <p className="text-base text-muted-foreground mt-8 italic border-l-4 border-primary/30 pl-4">
                     {content.howItWorks.closing}
                   </p>
-                </div>
-                <div>
-                  <img 
-                    src={content.intro.heroImage} 
-                    alt={`${content.howItWorks.headline} - Vexgen AI`}
-                    width="600"
-                    height="400"
-                    loading="lazy"
-                    className="w-full rounded-2xl shadow-xl"
-                  />
                 </div>
               </div>
             </div>
