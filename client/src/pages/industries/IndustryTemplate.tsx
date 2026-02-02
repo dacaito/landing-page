@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ChevronRight, Check, Camera, RefreshCw, Database, Globe, Menu, X, ChevronDown } from "lucide-react";
+import { ChevronRight, Check, Camera, RefreshCw, Database, Globe, Menu, X, ChevronDown, Target, TrendingUp, DollarSign, Clock, AlertTriangle, Package, Thermometer, Sparkles, Shield, Zap, BarChart3, CheckCircle2, ArrowUpRight, Layers } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Helmet } from "react-helmet-async";
@@ -427,18 +427,34 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                   </p>
                 </div>
                 <div className="space-y-3">
-                  {content.problem.issues.map((item, i) => (
-                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-destructive/5 border-l-4 border-destructive">
-                      <span className="text-base sm:text-lg">{item}</span>
-                    </div>
-                  ))}
+                  {content.problem.issues.map((item, i) => {
+                    const issueIcons = [AlertTriangle, Package, Layers, Clock];
+                    const IssueIcon = issueIcons[i];
+                    const showIssueIcons = content.slug === 'food-beverage';
+                    return (
+                      <div key={i} className={`flex items-start gap-4 p-4 rounded-xl bg-destructive/5 ${showIssueIcons ? 'border border-destructive/20' : 'border-l-4 border-destructive'}`}>
+                        {showIssueIcons && (
+                          <div className="w-8 h-8 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <IssueIcon className="w-4 h-4 text-destructive" />
+                          </div>
+                        )}
+                        <span className="text-base sm:text-lg">{item}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
           </section>
 
-          <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
-            <div className="max-w-6xl mx-auto">
+          <section className={`py-16 sm:py-24 px-4 sm:px-6 border-y border-border/50 relative overflow-hidden ${content.slug === 'cosmetics' ? 'bg-gradient-to-br from-primary/5 via-card to-primary/10' : 'bg-card'}`}>
+            {content.slug === 'cosmetics' && (
+              <>
+                <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+              </>
+            )}
+            <div className="max-w-6xl mx-auto relative z-10">
               <div className="text-center mb-12">
                 <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">The Transformation</p>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
@@ -449,19 +465,39 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 </p>
               </div>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12">
-                {content.provenResults.metrics.map((metric, i) => (
-                  <div key={i} className="text-center">
-                    <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">{metric.value}</p>
-                    <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground mt-2">{metric.label}</p>
-                  </div>
-                ))}
+                {content.provenResults.metrics.map((metric, i) => {
+                  const metricIcons = [Target, Clock, DollarSign, TrendingUp];
+                  const MetricIcon = metricIcons[i];
+                  const showMetricIcons = content.slug === 'chemical';
+                  return (
+                    <div key={i} className={`text-center ${showMetricIcons ? 'p-6 rounded-2xl bg-background border border-border/50 shadow-sm' : ''}`}>
+                      {showMetricIcons && (
+                        <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                          <MetricIcon className="w-6 h-6 text-primary" />
+                        </div>
+                      )}
+                      <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">{metric.value}</p>
+                      <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground mt-2">{metric.label}</p>
+                    </div>
+                  );
+                })}
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {content.outcome.benefits.map((item, i) => (
-                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-primary/5 border-l-4 border-primary">
-                    <span className="text-base sm:text-lg">{item}</span>
-                  </div>
-                ))}
+                {content.outcome.benefits.map((item, i) => {
+                  const benefitIcons = [CheckCircle2, Zap, Shield, ArrowUpRight];
+                  const BenefitIcon = benefitIcons[i];
+                  const showBenefitIcons = content.slug === 'plastics';
+                  return (
+                    <div key={i} className={`flex items-start gap-4 p-4 rounded-xl bg-primary/5 ${showBenefitIcons ? 'border border-primary/20' : 'border-l-4 border-primary'}`}>
+                      {showBenefitIcons && (
+                        <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <BenefitIcon className="w-4 h-4 text-primary" />
+                        </div>
+                      )}
+                      <span className="text-base sm:text-lg">{item}</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </section>
@@ -482,11 +518,17 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
                   {content.howItWorks.steps.map((item, i) => {
                     const Icon = howItWorksIcons[i];
+                    const isPharma = content.slug === 'pharma';
                     return (
                       <div key={i} className="text-center relative">
-                        <div className="w-24 h-24 mx-auto mb-6 rounded-full border-4 border-primary flex items-center justify-center bg-background">
-                          <Icon className="w-10 h-10 text-primary" />
+                        <div className={`mx-auto mb-6 rounded-full border-4 border-primary flex items-center justify-center bg-background ${isPharma ? 'w-28 h-28 shadow-lg shadow-primary/20' : 'w-24 h-24'}`}>
+                          <Icon className={`text-primary ${isPharma ? 'w-12 h-12' : 'w-10 h-10'}`} />
                         </div>
+                        {isPharma && (
+                          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
+                            Step {i + 1}
+                          </div>
+                        )}
                         <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                         <p className="text-muted-foreground">{item.description}</p>
                       </div>
