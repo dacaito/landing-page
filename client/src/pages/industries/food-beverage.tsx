@@ -14,7 +14,7 @@ const foodBeverageContent: IndustryContent = {
       { value: ">99%", label: "Inventory Accuracy" },
       { value: "40%", label: "Less Waste" },
       { value: "5pp", label: "OTIF Improvement" },
-      { value: "18+ Days", label: "Freshness Coverage" }
+      { value: "90%", label: "Less Manual Checks" }
     ]
   },
   problem: {
