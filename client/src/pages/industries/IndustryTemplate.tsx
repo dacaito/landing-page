@@ -728,15 +728,19 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 sm:mb-8">
             {content.whoItsFor.headline}
           </h2>
-          <div className="space-y-3 sm:space-y-4 text-left max-w-2xl mx-auto">
-            {content.whoItsFor.criteria.map((item, i) => (
-              <div key={i} className="flex items-start gap-3 sm:gap-4">
-                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+            {content.whoItsFor.criteria.map((item, i) => {
+              const criteriaIcons = [Target, BarChart3, Layers, Shield];
+              const CriteriaIcon = criteriaIcons[i];
+              return (
+                <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-primary/5 border border-primary/20">
+                  <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <CriteriaIcon className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-base sm:text-lg">{item}</span>
                 </div>
-                <span className="text-base sm:text-lg">{item}</span>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
