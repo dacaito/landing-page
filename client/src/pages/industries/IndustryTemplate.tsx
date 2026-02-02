@@ -427,11 +427,11 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                   {content.outcome.description}
                 </p>
               </div>
-              <div className="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-16 mb-12">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12">
                 {content.provenResults.metrics.map((metric, i) => (
                   <div key={i} className="text-center">
-                    <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary">{metric.value}</p>
-                    <p className="text-sm sm:text-base uppercase tracking-wider text-muted-foreground mt-2">{metric.label}</p>
+                    <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">{metric.value}</p>
+                    <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground mt-2">{metric.label}</p>
                   </div>
                 ))}
               </div>
