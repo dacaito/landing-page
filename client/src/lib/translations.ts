@@ -62,7 +62,7 @@ export const translations = {
     howItWorks: {
       label: "How It Works",
       headline: "Continuous reconciliation. Zero manual effort.",
-      description: "Vexgen automatically connects physical movements to digital records.",
+      description: "Vexgen securely and automatically connects physical movements to digital records. All your data is processed locally and never leaves your premises. Operator identity is automatically blurred.",
       steps: [
         {
           step: "01",
@@ -209,7 +209,7 @@ export const translations = {
     howItWorks: {
       label: "So funktioniert es",
       headline: "Kontinuierlicher Abgleich. Null manueller Aufwand.",
-      description: "Vexgen verbindet physische Bewegungen automatisch mit digitalen Aufzeichnungen.",
+      description: "Vexgen verbindet physische Bewegungen sicher und automatisch mit digitalen Aufzeichnungen. Alle Ihre Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände. Die Identität der Mitarbeiter wird automatisch unkenntlich gemacht.",
       steps: [
         {
           step: "01",
