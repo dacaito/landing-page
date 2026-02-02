@@ -223,19 +223,21 @@ export default function Company() {
 
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
         <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10 sm:mb-12">
+            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Careers</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
+              Join Our Team
+            </h2>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="order-2 lg:order-1">
+            <div>
               <img 
                 src="/images/careers-team.png" 
                 alt="Join our team" 
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
             </div>
-            <div className="order-1 lg:order-2">
-              <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Careers</p>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                Join Our Team
-              </h2>
+            <div>
               <p className="text-base sm:text-lg text-muted-foreground mb-6">
                 We currently have no open positions, but we're always interested in hearing from talented individuals who share our passion for transforming manufacturing through technology.
               </p>
