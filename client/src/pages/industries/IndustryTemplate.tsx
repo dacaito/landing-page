@@ -109,6 +109,9 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               {t.nav.solution}
             </Link>
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              {t.nav.howItWorks}
+            </Link>
             <div 
               className="relative group"
               onMouseEnter={() => setIndustriesOpen(true)}
@@ -139,10 +142,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 </div>
               )}
             </div>
-            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              {t.nav.howItWorks}
-            </Link>
-            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/company" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               {t.nav.company}
             </Link>
           </div>
@@ -185,7 +185,13 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
               <span className="uppercase font-medium">{lang === 'en' ? 'English' : 'Deutsch'}</span>
             </button>
             <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-foreground hover:text-primary transition-colors">
-              Home
+              {t.nav.results}
+            </Link>
+            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-foreground hover:text-primary transition-colors">
+              {t.nav.solution}
+            </Link>
+            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-foreground hover:text-primary transition-colors">
+              {t.nav.howItWorks}
             </Link>
             <div className="flex flex-col items-center gap-2">
               <span className="text-2xl font-medium text-foreground">{t.nav.industries}</span>
@@ -204,6 +210,9 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 </Link>
               </div>
             </div>
+            <Link href="/company" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-foreground hover:text-primary transition-colors">
+              {t.nav.company}
+            </Link>
             <Button 
               onClick={() => scrollToSection("contact")} 
               className="rounded-full px-8 py-6 text-lg mt-4"

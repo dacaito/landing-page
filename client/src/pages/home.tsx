@@ -144,6 +144,13 @@ export default function Home() {
             >
               {t.nav.solution}
             </button>
+            <button 
+              onClick={() => scrollToSection("how-it-works")} 
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              data-testid="link-how-it-works"
+            >
+              {t.nav.howItWorks}
+            </button>
             <div 
               className="relative group"
               onMouseEnter={() => setIndustriesOpen(true)}
@@ -175,13 +182,6 @@ export default function Home() {
                 </div>
               )}
             </div>
-            <button 
-              onClick={() => scrollToSection("how-it-works")} 
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="link-how-it-works"
-            >
-              {t.nav.howItWorks}
-            </button>
             <Link 
               href="/company"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -246,6 +246,13 @@ export default function Home() {
             >
               {t.nav.solution}
             </button>
+            <button 
+              onClick={() => scrollToSection("how-it-works")} 
+              className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
+              data-testid="link-how-it-works-mobile"
+            >
+              {t.nav.howItWorks}
+            </button>
             <div className="flex flex-col items-center gap-2">
               <span className="text-2xl font-medium text-foreground">{t.nav.industries}</span>
               <div className="flex flex-wrap justify-center gap-2">
@@ -263,13 +270,6 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <button 
-              onClick={() => scrollToSection("how-it-works")} 
-              className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
-              data-testid="link-how-it-works-mobile"
-            >
-              {t.nav.howItWorks}
-            </button>
             <Link 
               href="/company"
               onClick={() => setMobileMenuOpen(false)}

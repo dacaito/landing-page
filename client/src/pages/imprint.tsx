@@ -49,6 +49,9 @@ export default function Imprint() {
             <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               {t.nav.solution}
             </Link>
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              {t.nav.howItWorks}
+            </Link>
             <div 
               className="relative group"
               onMouseEnter={() => setIndustriesOpen(true)}
@@ -77,9 +80,6 @@ export default function Imprint() {
                 </div>
               )}
             </div>
-            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              {t.nav.howItWorks}
-            </Link>
             <Link href="/company" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               {t.nav.company}
             </Link>
@@ -123,6 +123,13 @@ export default function Imprint() {
             <Link href="/" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>{t.nav.results}</Link>
             <Link href="/" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>{t.nav.solution}</Link>
             <Link href="/" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>{t.nav.howItWorks}</Link>
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-lg font-medium text-muted-foreground">{t.nav.industries}</span>
+              <Link href="/industries/plastics" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.plastics}</Link>
+              <Link href="/industries/food-beverage" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.foodBeverage}</Link>
+              <Link href="/industries/cosmetics" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.cosmetics}</Link>
+              <Link href="/industries/pharma" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.pharma}</Link>
+            </div>
             <Link href="/company" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>{t.nav.company}</Link>
           </div>
         </div>
