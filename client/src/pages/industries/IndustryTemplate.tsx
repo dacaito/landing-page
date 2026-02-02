@@ -214,32 +214,40 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
         </div>
       )}
 
-      <section className="min-h-[70vh] flex flex-col items-center justify-center px-4 sm:px-6 pt-24 sm:pt-32 pb-12 sm:pb-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">{content.intro.headline}</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 sm:mb-8 text-primary">
-            {content.intro.subheadline}
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 leading-relaxed px-2">
-            {content.intro.description}
-          </p>
-          <Button 
-            size="lg" 
-            onClick={() => scrollToSection("contact")} 
-            className="rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg mt-6"
-          >
-            {t.cta.requestDemo}
-            <ChevronRight className="w-5 h-5 ml-1" />
-          </Button>
-          {content.intro.heroImage && (
-            <div className="mt-12 sm:mt-16">
-              <img 
-                src={content.intro.heroImage} 
-                alt="Industry illustration" 
-                className="w-full max-w-2xl mx-auto rounded-2xl shadow-2xl"
-              />
+      <section className="px-4 sm:px-6 pt-24 sm:pt-32 pb-12 sm:pb-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">{content.intro.headline}</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-primary">
+              {content.intro.subheadline}
+            </h1>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8 sm:mb-12">
+            <div className="text-center lg:text-left">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
+                {content.intro.description}
+              </p>
             </div>
-          )}
+            {content.intro.heroImage && (
+              <div>
+                <img 
+                  src={content.intro.heroImage} 
+                  alt="Industry illustration" 
+                  className="w-full rounded-2xl shadow-2xl"
+                />
+              </div>
+            )}
+          </div>
+          <div className="text-center">
+            <Button 
+              size="lg" 
+              onClick={() => scrollToSection("contact")} 
+              className="rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg"
+            >
+              {t.cta.requestDemo}
+              <ChevronRight className="w-5 h-5 ml-1" />
+            </Button>
+          </div>
         </div>
       </section>
 
