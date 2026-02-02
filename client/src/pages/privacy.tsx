@@ -2,6 +2,7 @@ import { Globe, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
+import { Helmet } from "react-helmet-async";
 import { translations, Language } from "@/lib/translations";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
@@ -55,6 +56,12 @@ export default function Privacy() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet htmlAttributes={{ lang }}>
+        <title>Privacy Policy - Vexgen AI</title>
+        <meta name="description" content="Vexgen AI Privacy Policy. Learn how we collect, use, and protect your data." />
+        <link rel="canonical" href="https://vexgen.ai/privacy" />
+        <meta property="og:url" content="https://vexgen.ai/privacy" />
+      </Helmet>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
           <Link href="/" className="flex items-center gap-2 cursor-pointer">

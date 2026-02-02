@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { ArrowDown, Camera, RefreshCw, Database, Factory, Warehouse, Users, Building2, ChevronRight, Check, Menu, X, Globe, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { translations, Language } from "@/lib/translations";
 import dashboardImage from "@assets/dash-board-kpi.png";
 import stockImage from "@assets/image_1_1767949813510.png";
@@ -75,6 +76,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet htmlAttributes={{ lang }}>
+        <title>Vexgen AI - Align ERP with Reality</title>
+        <meta name="description" content="Real-time visibility and reconciliation between ERP data and physical inventory. No manual counts. No tags. No operational disruption." />
+        <link rel="canonical" href="https://vexgen.ai/" />
+        <meta property="og:url" content="https://vexgen.ai/" />
+      </Helmet>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
           <button
@@ -366,6 +373,9 @@ export default function Home() {
               <img 
                 src={dashboardImage} 
                 alt="Vexgen AI KPI Dashboard showing warehouse and stock metrics"
+                width="960"
+                height="540"
+                loading="lazy"
                 className="w-full"
                 data-testid="img-dashboard"
               />
@@ -411,6 +421,9 @@ export default function Home() {
                 <img 
                   src={stockImage} 
                   alt="Vexgen AI showing stock comparison between measured weight and SAP records"
+                  width="600"
+                  height="400"
+                  loading="lazy"
                   className="w-full"
                   data-testid="img-stock-comparison"
                 />

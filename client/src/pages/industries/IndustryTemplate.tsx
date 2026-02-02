@@ -3,12 +3,14 @@ import { Card } from "@/components/ui/card";
 import { ChevronRight, Check, Camera, RefreshCw, Database, Globe, Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
+import { Helmet } from "react-helmet-async";
 import { translations, Language } from "@/lib/translations";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
 export type LayoutVariant = 'A' | 'B' | 'C' | 'D';
 
 export interface IndustryContent {
+  slug: string;
   intro: {
     headline: string;
     subheadline: string;
@@ -124,8 +126,18 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
     }, 100);
   };
 
+  const canonicalUrl = `https://vexgen.ai/industries/${content.slug}`;
+
   return (
     <div className="min-h-screen bg-background">
+      <Helmet htmlAttributes={{ lang }}>
+        <title>{content.intro.headline} - Vexgen AI</title>
+        <meta name="description" content={content.intro.description} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={`${content.intro.headline} - Vexgen AI`} />
+        <meta property="og:description" content={content.intro.description} />
+      </Helmet>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
           <Link

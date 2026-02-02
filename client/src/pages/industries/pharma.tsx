@@ -1,6 +1,7 @@
 import IndustryTemplate, { IndustryContent, LayoutVariant } from "./IndustryTemplate";
 
 const pharmaContent: IndustryContent = {
+  slug: 'pharma',
   layoutVariant: 'B' as LayoutVariant,
   intro: {
     headline: "Pharmaceutical",

@@ -55,12 +55,15 @@ A Vite + React landing page for Vexgen AI, a company offering real-time visibili
 ## SEO Configuration
 - **Sitemap**: `/public/sitemap.xml` - All 9 routes with priority and update frequency
 - **Robots.txt**: `/public/robots.txt` - Configured for all major search bots
-- **Canonical URLs**: Configured in index.html
-- **Open Graph**: Full OG meta tags with image dimensions
-- **Structured Data**: JSON-LD schema for Organization and WebSite
+- **Canonical URLs**: Per-page canonical URLs via react-helmet-async
+- **Open Graph**: Full OG meta tags with image dimensions, per-page titles and descriptions
+- **Structured Data**: JSON-LD schema for Organization and WebSite in index.html
 - **Fonts**: Optimized to single font (Inter) for performance
+- **Per-page Meta Tags**: Each page has unique title/description via react-helmet-async
+- **Image Optimization**: Lazy loading on below-fold images with explicit width/height dimensions
 
 ## Recent Changes
+- Extended SEO optimization: added react-helmet-async for per-page meta tags (unique title, description, canonical, og:url for each route), lazy loading on below-fold images, improved alt text
 - SEO audit and optimization: updated sitemap with all 9 routes, added canonical URLs, og:url meta tags, JSON-LD structured data (Organization and WebSite schema), reduced fonts to just Inter, added image dimensions
 - Added Industries dropdown navigation between Solution and How It Works
 - Created 4 industry-specific pages with shared template (Plastics, Food & Beverage, Cosmetics, Pharma)

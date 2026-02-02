@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Building2, Factory, Globe, Menu, X, ChevronDown, Linkedin, ExternalLink, Target, Eye } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
+import { Helmet } from "react-helmet-async";
 import { translations, Language } from "@/lib/translations";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
@@ -58,6 +59,12 @@ export default function Company() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet htmlAttributes={{ lang }}>
+        <title>About Us - Vexgen AI</title>
+        <meta name="description" content="Learn about Vexgen AI - bridging the gap between ERP records and physical reality with AI-powered inventory visibility." />
+        <link rel="canonical" href="https://vexgen.ai/company" />
+        <meta property="og:url" content="https://vexgen.ai/company" />
+      </Helmet>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
@@ -184,7 +191,10 @@ export default function Company() {
             <div>
               <img 
                 src={companyVisionImage} 
-                alt="AI-powered warehouse operations" 
+                alt="AI-powered warehouse operations with Vexgen AI" 
+                width="600"
+                height="400"
+                loading="lazy"
                 className="w-full rounded-2xl shadow-2xl"
               />
             </div>
