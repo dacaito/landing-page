@@ -246,7 +246,7 @@ export default function Home() {
         </div>
       )}
 
-      <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 pt-20 sm:pt-24 pb-12 sm:pb-16">
+      <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 pt-20 sm:pt-24 pb-12 sm:pb-16">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.1] mb-6 sm:mb-8 whitespace-pre-line text-primary" data-testid="text-hero-headline">
             {t.hero.headline}
@@ -499,10 +499,13 @@ export default function Home() {
       <footer className="py-8 sm:py-12 px-4 sm:px-6 border-t border-border/50 pb-20 sm:pb-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2">
+            <button 
+              onClick={() => scrollToSection("hero")}
+              className="flex items-center gap-2 cursor-pointer"
+            >
               <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
               <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
-            </div>
+            </button>
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
               <span>Baumackerstrasse 42, 8050 Zurich, Switzerland</span>
               <span>contact@vexgen.ai</span>

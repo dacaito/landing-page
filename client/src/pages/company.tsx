@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Building2, Factory, Globe, Menu, X, ChevronDown, Linkedin, ExternalLink, Target, Eye, Lightbulb } from "lucide-react";
+import { Building2, Factory, Globe, Menu, X, ChevronDown, Linkedin, ExternalLink, Target, Eye } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { translations, Language } from "@/lib/translations";
@@ -189,15 +189,6 @@ export default function Company() {
                   <div className="text-left">
                     <h3 className="font-semibold mb-1">Vision</h3>
                     <p className="text-sm text-muted-foreground">A world where every physical asset is digitally visible, driving zero-waste operations.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Lightbulb className="w-5 h-5 text-primary" />
-                  </div>
-                  <div className="text-left">
-                    <h3 className="font-semibold mb-1">Values</h3>
-                    <p className="text-sm text-muted-foreground">Precision, reliability, and relentless focus on real-world impact.</p>
                   </div>
                 </div>
               </div>
