@@ -95,6 +95,9 @@ export default function Privacy() {
                     <Link href="/industries/pharma" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.pharma}
                     </Link>
+                    <Link href="/industries/chemical" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                      {t.industries.chemical}
+                    </Link>
                   </div>
                 </div>
               )}
@@ -148,6 +151,7 @@ export default function Privacy() {
               <Link href="/industries/food-beverage" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.foodBeverage}</Link>
               <Link href="/industries/cosmetics" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.cosmetics}</Link>
               <Link href="/industries/pharma" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.pharma}</Link>
+              <Link href="/industries/chemical" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.chemical}</Link>
             </div>
             <Link href="/company" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>{t.nav.company}</Link>
           </div>

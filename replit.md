@@ -38,6 +38,7 @@ A Vite + React landing page for Vexgen AI, a company offering real-time visibili
 - `/industries/food-beverage` - Food & Beverage industry page
 - `/industries/cosmetics` - Cosmetics industry page
 - `/industries/pharma` - Pharmaceutical industry page
+- `/industries/chemical` - Chemical industry page
 - `/company` - Company/About page
 - `/privacy` - Privacy Policy page
 - `/imprint` - Imprint/Legal page

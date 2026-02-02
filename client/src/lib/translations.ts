@@ -15,7 +15,8 @@ export const translations = {
       plastics: "Plastics",
       foodBeverage: "Food & Beverage",
       cosmetics: "Cosmetics",
-      pharma: "Pharma"
+      pharma: "Pharma",
+      chemical: "Chemical"
     },
     hero: {
       headline: "Your ERP.\nThe Truth.",
@@ -162,7 +163,8 @@ export const translations = {
       plastics: "Kunststoffe",
       foodBeverage: "Lebensmittel & Getränke",
       cosmetics: "Kosmetik",
-      pharma: "Pharma"
+      pharma: "Pharma",
+      chemical: "Chemie"
     },
     hero: {
       headline: "Ihr ERP.\nDie Wahrheit.",

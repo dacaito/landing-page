@@ -139,6 +139,9 @@ export default function Home() {
                     <Link href="/industries/pharma" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.pharma}
                     </Link>
+                    <Link href="/industries/chemical" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                      {t.industries.chemical}
+                    </Link>
                   </div>
                 </div>
               )}
@@ -228,6 +231,9 @@ export default function Home() {
                 </Link>
                 <Link href="/industries/pharma" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
                   {t.industries.pharma}
+                </Link>
+                <Link href="/industries/chemical" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                  {t.industries.chemical}
                 </Link>
               </div>
             </div>

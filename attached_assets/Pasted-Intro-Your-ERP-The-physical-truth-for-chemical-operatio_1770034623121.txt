@@ -1,0 +1,63 @@
+Intro
+Your ERP. The physical truth for chemical operations.
+Real-time inventory management for chemical plants to reduce write-offs, avoid stockouts, and protect production flow across raw materials, WIP, and finished goods.
+
+Built for environments with high working capital exposure, strict traceability, and shelf-life constraints.
+
+Proven results
+
+- Inventory Accuracy >99%
+- Write-offs Reduction 6-figure
+- Days Inventory Outstanding Reduction Double-digit
+- Inventory cycle counting Reduction >90%
+
+The problem
+
+Inventory sits at the center of the business, as materials dominate cost, risk, and production continuity.
+
+When physical inventory reality diverges from what systems report, the impact is felt across the organization:
+
+- Working capital tied up in inflated buffers
+- Write-offs from expired or mislocated materials
+- Stockouts affecting customer commitments
+- Teams spending time on manual checks and firefighting
+
+Despite mature ERP and planning systems, these issues persist because system data is often disconnected from physical reality on the shop floor.
+
+The outcome
+
+- Inventory accuracy you can trust by material, lot, weight and physical location
+- Lower working capital tied up in inflated buffers
+- Fewer production downtimes due to missing or mislocated materials
+- Urgent purchasing eliminated at the source
+- More productive use of workforce time, with none manual checks
+
+How it works
+(Keep 01 to 03)
+
+A risk and flow protection layer for chemical plants
+Vexgen adds a continuous visual verification layer on top of your existing ERP
+
+By continuously aligning physical inventory reality with system data, Vexgen helps chemical teams:
+
+- Detect discrepancies early
+- Protect production flow from surprises
+- Reduce risk around shelf life and traceability
+- Safely lower buffers without increasing exposure
+
+No system replacement. No process redesign. Minimal operational friction.
+
+Who it is for
+
+Designed for chemical organizations where:
+
+- Inventory accuracy directly affects working capital and operational risk
+- Shelf life, batch tracking, and physical traceability are business-critical
+- Production plans are sensitive to material availability and WIP visibility
+- Teams rely on manual checks or conservative buffers to manage uncertainty
+
+Get started
+Explore whether this is relevant for your chemical operations
+A short conversation is often enough to assess whether physical inventory visibility is a limiting factor in your current setup.
+
+CTA buttons
