@@ -221,6 +221,27 @@ export default function Company() {
         </div>
       </section>
 
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Careers</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+            Join Our Team
+          </h2>
+          <p className="text-base sm:text-lg text-muted-foreground mb-6">
+            We currently have no open positions, but we're always interested in hearing from talented individuals who share our passion for transforming manufacturing through technology.
+          </p>
+          <p className="text-base sm:text-lg text-muted-foreground mb-8">
+            If you're a highly motivated engineer, operator, or industry expert looking to make an impact, we'd love to hear from you.
+          </p>
+          <a 
+            href="mailto:jobs@vexgen.ai" 
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+          >
+            Send your application to jobs@vexgen.ai
+          </a>
+        </div>
+      </section>
+
       <section className="py-16 sm:py-24 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
