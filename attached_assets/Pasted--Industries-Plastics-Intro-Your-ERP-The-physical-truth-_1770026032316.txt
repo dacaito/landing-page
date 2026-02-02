@@ -1,0 +1,284 @@
+## Industries
+
+### Plastics
+
+Intro
+
+Your ERP. The physical truth for plastics manufacturing.
+
+Real-time inventory visibility for plastics manufacturers to keep injection molding, extrusion, and assembly lines running without interruptions, across raw materials, WIP, and finished goods.
+
+Built for high-mix, high-volume environments where piece availability, SKU accuracy, and line uptime directly drive throughput and margins.
+
+Proven results
+
+- Inventory accuracy >99%
+- Six-figure reduction in write-offs and obsolete stock
+- Double-digit reduction in Days Inventory Outstanding (DIO)
+- >90% reduction in manual inventory checks and recounts
+
+The problem
+
+Inventory sits at the center of plastics operations, where throughput depends on having the right parts, in the right quantity, at the right machine, at the right time.
+
+When physical inventory reality diverges from what systems report, the impact is immediate:
+
+- Injection or extrusion lines waiting for material that “exist” in the system
+- Excess buffers built to protect against uncertainty
+- Finished goods piling up while the wrong SKUs are missing
+- Teams constantly checking boxes, pallets, and WIP to keep production moving
+
+Despite mature ERP and planning systems, these issues persist because system inventory is often disconnected from what is physically available at machines, staging areas, and warehouses.
+
+The outcome
+
+- Inventory accuracy you can trust by SKU, piece count, and physical location
+- Higher line uptime by eliminating material-related stoppages
+- Lower working capital tied up in oversized buffers and slow-moving SKUs
+- Urgent rescheduling and recovery actions eliminated at the source
+- More productive use of workforce time, with fewer manual checks and expediting
+
+How it works
+(Keep 01 to 03)
+
+A flow protection layer for plastics plants
+
+Vexgen adds a continuous visual verification layer on top of your existing ERP
+
+By continuously aligning physical inventory reality with system data, Vexgen helps teams:
+
+- Detect SKU and quantity mismatches before they stop a line
+- Ensure parts are physically available at machines and staging areas
+- Reduce reliance on buffers used to absorb data uncertainty
+- Stabilize production sequencing and changeovers
+
+No system replacement. No process redesign. Minimal operational friction.
+
+Who it is for
+
+Designed for plastics manufacturers that:
+
+- Run injection molding, extrusion, or assembly lines with tight sequencing
+- Manage high number of SKUs across boxes, pallets, and WIP areas
+- Experience line stoppages despite “available” system inventory
+- Use buffers, safety stock, or manual checks to protect throughput
+
+Get started
+
+Explore whether this is relevant for your plastics operations
+
+A short conversation is often enough to assess whether physical inventory visibility is limiting line uptime, throughput, or capital efficiency in your current setup.
+
+CTA buttons
+
+### Food and beverage
+
+Intro
+
+Your ERP. The physical truth for food and beverage operations.
+
+Real-time inventory visibility for food and beverage producers to reduce waste, avoid stockouts, and protect service levels across pallets of raw materials, WIP, and finished goods.
+
+Built for high-volume environments where freshness, availability, and inventory accuracy directly impact margins and customer trust.
+
+Proven results
+
+- Inventory accuracy >99%
+- Six-figure reduction in waste and expired inventory
+- >5pp improvement in On-Time In-Full
+- Double digit working capital reduction
+
+The problem
+
+Inventory sits at the center of food and beverage operations, where freshness, availability, and service levels define performance.
+
+When physical pallet reality diverges from what systems report, the impact is immediate:
+
+- Waste and write-offs from expired or forgotten pallets
+- Stockouts leading to incomplete orders and OTIF misses
+- Excess buffers built to protect service levels
+- Teams constantly checking pallets, dates, and locations to keep orders moving
+
+Despite ERP, these issues persist because system inventory is often disconnected from what is physically on pallets, in staging areas, and at outbound docks.
+
+The outcome
+
+- Inventory accuracy you can trust by SKU, quantity, and expiration date
+- Lower waste through better FIFO/FEFO execution
+- Higher service levels by avoiding missing or mislocated pallets
+- Lower working capital tied up in protective buffers
+- More productive use of workforce time, with none manual checks and firefighting
+
+How it works
+(Keep 01 to 03)
+
+**A freshness and flow protection layer for food & beverage plants**
+
+Vexgen adds a continuous visual verification layer on top of your existing ERP.
+
+By continuously aligning physical pallet reality with system data, Vexgen helps food and beverage teams:
+
+- Detect pallet-level discrepancies early
+- Protect FIFO/FEFO execution without manual intervention
+- Ensure the right pallets are available for picking and shipping
+- Reduce waste without increasing service risk
+
+No system replacement. No process redesign. Minimal operational friction.
+
+Who it is for
+
+Designed for food and beverage organizations that:
+
+- Manage large volumes of palletized finished goods and ingredients
+- Depend on FIFO/FEFO to control waste and freshness
+- Experience service issues despite “available” system inventory
+- Rely on manual pallet checks and buffers to protect OTIF
+
+Get started
+
+Explore whether this is relevant for your food & beverage operations
+
+A short conversation is often enough to assess whether physical inventory visibility is limiting freshness, service levels, or capital efficiency in your current setup.
+
+CTA buttons
+
+### Cosmetics
+
+Intro
+
+Your ERP. The physical truth for cosmetics operations.
+
+Real-time inventory visibility for cosmetics manufacturers to protect product launches, reduce write-offs, and ensure the right SKUs are available across production, warehousing, and distribution.
+
+Built for high-mix environments where SKU accuracy, variant complexity, and time-to-market directly impact revenue and brand reputation.
+
+Proven results
+
+- >5 pp improvement in launch and promotion readiness
+- Inventory accuracy >99%
+- Six-figure reduction in obsolete and expired inventory
+- Double-digit working capital reduction
+
+The problem
+
+Inventory sits at the center of cosmetics operations, where availability, accuracy, and timing define success.
+
+When physical inventory reality diverges from what systems report, the impact is immediate:
+
+- Product launches delayed due to missing or misallocated SKUs
+- Excess stock in the wrong variants while high-demand SKUs are unavailable
+- Write-offs from obsolete packaging, expired products, or canceled campaigns
+- Teams relying on manual checks to confirm launch and order readiness
+
+Despite ERP, these issues persist because system inventory often lacks reliable, real-time alignment with physical stock by SKU, variant, and location.
+
+The outcome
+
+- Inventory accuracy you can trust by SKU, variant, batch, and physical location
+- On-time product launches and promotions with fewer last-minute surprises
+- Reduced write-offs from obsolete, expired, or misallocated inventory
+- Lower working capital tied up in protective buffers
+- More productive use of workforce time, with none manual checks and launch reconciliations
+
+How it works
+(Keep 01 to 03)
+
+A launch and availability protection layer for cosmetics operations
+
+Vexgen adds a continuous visual verification layer on top of your existing ERP.
+
+By continuously aligning physical inventory reality with system data, Vexgen helps cosmetics teams:
+
+- Detect SKU and variant mismatches early
+- Ensure physical availability ahead of launches and promotions
+- Reduce reliance on buffers used to protect service and brand commitments
+- Improve confidence in inventory data across planning, supply chain, and commercial teams
+
+No system replacement. No process redesign. Minimal operational friction.
+
+Who it is for
+
+Designed for cosmetics organizations that:
+
+- Manage large SKU portfolios driven by packaging and market variants
+- Run frequent launches, promotions, and campaign-driven demand
+- Experience availability issues despite “in-stock” system data
+- Use manual checks and buffers to protect launches and service levels
+
+Get started
+Explore whether this is relevant for your cosmetics operations
+
+A short conversation is often enough to assess whether physical inventory visibility is limiting launch readiness, service levels, or capital efficiency in your current setup.
+
+CTA buttons
+
+### Pharma
+
+Intro
+
+Your ERP. The physical truth for pharmaceutical operations.
+
+Real-time inventory visibility for pharmaceutical manufacturers to improve batch confidence and reduce compliance risk across raw materials, WIP, and finished goods.
+
+Built for regulated environments where inventory accuracy, physical traceability, and release confidence are non-negotiable.
+
+Proven results
+
+- Inventory accuracy >99%
+- Reduction in release delays and shipment holds by >30%
+- Six-figure reduction in inventory write-offs and obsolescence
+- Stockouts reduction >50%
+
+The problem
+
+Inventory sits at the center of pharmaceutical operations, where accuracy, status, and traceability directly affect compliance and patient supply.
+
+When physical inventory reality diverges from what systems report, the impact is significant:
+
+- Batches delayed or blocked due to missing or mislocated inventory
+- Manual investigations to reconcile system data and physical reality
+- Conservative buffers introduced to protect availability and compliance
+- Increased audit risk driven by reliance on assumptions rather than verification
+
+Despite mature ERP, these issues persist because system data is often not continuously aligned with physical inventory reality on the shop floor and in warehouses.
+
+The outcome
+
+- Inventory accuracy you can trust by batch, status, and physical location
+- Faster and more reliable batch release decisions
+- Lower compliance and audit risk through continuous verification
+- Reduced reliance on conservative buffers to protect availability
+- More productive use of QA and operations time, with none manual reconciliations
+
+How it works
+(Keep 01 to 03)
+
+A compliance and release confidence layer for pharmaceutical operations
+
+Vexgen adds a continuous visual verification layer on top of your existing ERP.
+
+By continuously aligning physical inventory reality with system data, Vexgen helps pharma teams:
+
+- Detect batch and location discrepancies early
+- Support QA release decisions with physical evidence
+- Reduce manual checks required for audits and investigations
+- Maintain high control without adding operational burden
+
+No system replacement. No process redesign. Minimal operational friction.
+
+Who it is for
+
+Designed for pharmaceutical organizations that:
+
+- Operate in GMP-regulated environments
+- Manage batch-controlled inventory across multiple physical locations
+- Experience release delays despite “available” system inventory
+- Rely on manual verification to maintain compliance and audit readiness
+
+Get started
+
+Explore whether this is relevant for your pharmaceutical operations
+
+A short conversation is often enough to assess whether continuous physical inventory verification could improve release confidence, compliance posture, or operational efficiency.
+
+CTA buttons
