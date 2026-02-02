@@ -497,36 +497,47 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
           </section>
 
           <section className="py-16 sm:py-24 px-4 sm:px-6">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-12">
-                <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">The Process</p>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                  {content.howItWorks.headline}
-                </h2>
-                <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-                  {content.howItWorks.description}
-                </p>
-              </div>
-              <div className="relative">
-                <div className="hidden md:block absolute top-12 left-0 right-0 h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20 z-0" />
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-                  {content.howItWorks.steps.map((item, i) => {
-                    const Icon = howItWorksIcons[i];
-                    return (
-                      <div key={i} className="text-center relative">
-                        <div className="w-24 h-24 mx-auto mb-6 rounded-full border-4 border-primary flex items-center justify-center bg-background">
-                          <Icon className="w-10 h-10 text-primary" />
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div>
+                  <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">The Process</p>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+                    {content.howItWorks.headline}
+                  </h2>
+                  <p className="text-base sm:text-lg text-muted-foreground mb-8">
+                    {content.howItWorks.description}
+                  </p>
+                  <div className="space-y-6">
+                    {content.howItWorks.steps.map((item, i) => {
+                      const Icon = howItWorksIcons[i];
+                      return (
+                        <div key={i} className="flex items-start gap-4">
+                          <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
+                            <Icon className="w-6 h-6 text-primary" />
+                          </div>
+                          <div>
+                            <h3 className="text-lg font-bold mb-1">{item.title}</h3>
+                            <p className="text-muted-foreground">{item.description}</p>
+                          </div>
                         </div>
-                        <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                        <p className="text-muted-foreground">{item.description}</p>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
+                  <p className="text-base text-muted-foreground mt-8 italic border-l-4 border-primary/30 pl-4">
+                    {content.howItWorks.closing}
+                  </p>
+                </div>
+                <div>
+                  <img 
+                    src={content.intro.heroImage} 
+                    alt={`${content.howItWorks.headline} - Vexgen AI`}
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                    className="w-full rounded-2xl shadow-xl"
+                  />
                 </div>
               </div>
-              <p className="text-base text-muted-foreground text-center mt-12 italic">
-                {content.howItWorks.closing}
-              </p>
             </div>
           </section>
         </>
