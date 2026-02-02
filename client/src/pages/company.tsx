@@ -1,10 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Building2, Factory, Globe, Menu, X, ChevronDown } from "lucide-react";
+import { Building2, Factory, Globe, Menu, X, ChevronDown, Linkedin, ExternalLink, Target, Eye, Lightbulb } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { translations, Language } from "@/lib/translations";
 import vixgenLogo from "@assets/Vexgen-owl.png";
+import companyVisionImage from "/images/company-vision.png";
 
 export default function Company() {
   const [lang, setLang] = useState<Language>(() => {
@@ -150,21 +151,123 @@ export default function Company() {
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-12 sm:mb-16 max-w-3xl mx-auto leading-relaxed px-2">
             {t.company.description}
           </p>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div>
+              <img 
+                src={companyVisionImage} 
+                alt="AI-powered warehouse operations" 
+                className="w-full rounded-2xl shadow-2xl"
+              />
+            </div>
+            <div className="text-center lg:text-left">
+              <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Our Vision</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">
+                Bridging the gap between digital records and physical reality
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
+                We believe that operational excellence starts with trust in your data. When ERP systems accurately reflect what's physically on the floor, everything changes: planning becomes predictable, waste disappears, and teams can focus on value creation instead of firefighting.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Target className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="font-semibold mb-1">Mission</h3>
+                    <p className="text-sm text-muted-foreground">Make inventory movements continuously observable and verifiable in real-time.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Eye className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="font-semibold mb-1">Vision</h3>
+                    <p className="text-sm text-muted-foreground">A world where every physical asset is digitally visible, driving zero-waste operations.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Lightbulb className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="font-semibold mb-1">Values</h3>
+                    <p className="text-sm text-muted-foreground">Precision, reliability, and relentless focus on real-world impact.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-24 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Leadership</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              Meet the Team
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+              A team of operators, engineers, and industry veterans united by a shared belief: manufacturing deserves better data.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16">
             <Card className="p-5 sm:p-6 md:p-8 text-left border-border/50">
-              <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2">{t.company.team.ceo.name}</h3>
-              <p className="text-primary text-xs sm:text-sm mb-2 sm:mb-3">{t.company.team.ceo.role}</p>
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold mb-1">{t.company.team.ceo.name}</h3>
+                  <p className="text-primary text-xs sm:text-sm">{t.company.team.ceo.role}</p>
+                </div>
+                <a 
+                  href="https://www.linkedin.com/in/sfreijo/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+              </div>
               <p className="text-sm sm:text-base text-muted-foreground">{t.company.team.ceo.bio}</p>
             </Card>
             <Card className="p-5 sm:p-6 md:p-8 text-left border-border/50">
-              <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2">{t.company.team.cto.name}</h3>
-              <p className="text-primary text-xs sm:text-sm mb-2 sm:mb-3">{t.company.team.cto.role}</p>
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold mb-1">{t.company.team.cto.name}</h3>
+                  <p className="text-primary text-xs sm:text-sm">{t.company.team.cto.role}</p>
+                </div>
+                <a 
+                  href="https://www.linkedin.com/in/caodandres/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+              </div>
               <p className="text-sm sm:text-base text-muted-foreground">{t.company.team.cto.bio}</p>
             </Card>
             <Card className="p-5 sm:p-6 md:p-8 text-left border-border/50">
-              <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2">{t.company.team.advisor.name}</h3>
-              <p className="text-primary text-xs sm:text-sm mb-2 sm:mb-3">{t.company.team.advisor.role}</p>
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold mb-1">{t.company.team.advisor.name}</h3>
+                  <p className="text-primary text-xs sm:text-sm">{t.company.team.advisor.role}</p>
+                </div>
+                <a 
+                  href="https://stefankalmund.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
               <p className="text-sm sm:text-base text-muted-foreground">{t.company.team.advisor.bio}</p>
             </Card>
           </div>
