@@ -39,7 +39,7 @@ const foodBeverageContent: IndustryContent = {
   },
   howItWorks: {
     headline: "A freshness protection layer for F&B operations",
-    description: "Vexgen AI continuously aligns physical pallet reality with your ERP:",
+    description: "Vexgen AI continuously aligns physical pallet reality with your ERP. All data is processed locally and never leaves your premises.",
     steps: [
       {
         step: "01",

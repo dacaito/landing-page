@@ -39,7 +39,7 @@ const plasticsContent: IndustryContent = {
   },
   howItWorks: {
     headline: "A verification layer for plastics plants",
-    description: "Vexgen AI continuously aligns physical inventory with your ERP:",
+    description: "Vexgen AI continuously aligns physical inventory with your ERP. All data is processed locally and never leaves your premises.",
     steps: [
       {
         step: "01",

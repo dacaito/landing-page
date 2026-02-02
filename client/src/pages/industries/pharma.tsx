@@ -39,7 +39,7 @@ const pharmaContent: IndustryContent = {
   },
   howItWorks: {
     headline: "A compliance layer for pharmaceutical operations",
-    description: "Vexgen AI continuously aligns physical inventory with your ERP:",
+    description: "Vexgen AI continuously aligns physical inventory with your ERP. All data is processed locally and never leaves your premises.",
     steps: [
       {
         step: "01",
