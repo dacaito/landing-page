@@ -43,13 +43,13 @@ export default function Privacy() {
             <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
           </Link>
           <div className="hidden lg:flex items-center gap-8">
-            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/#results" className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline">
               {t.nav.results}
             </Link>
-            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/#solution" className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline">
               {t.nav.solution}
             </Link>
-            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/#how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline">
               {t.nav.howItWorks}
             </Link>
             <div 
