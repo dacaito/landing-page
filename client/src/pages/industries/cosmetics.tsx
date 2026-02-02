@@ -4,7 +4,7 @@ const cosmeticsContent: IndustryContent = {
   intro: {
     headline: "Cosmetics",
     subheadline: "Your ERP. The physical truth for cosmetics operations.",
-    description: "Real-time inventory visibility for cosmetics manufacturers to protect product launches, reduce write-offs, and ensure the right SKUs are available across production, warehousing, and distribution. Built for high-mix environments where SKU accuracy, variant complexity, and time-to-market directly impact revenue and brand reputation.",
+    description: "Real-time inventory visibility for cosmetics manufacturers to protect product launches, reduce write-offs, and ensure the right SKUs are available across production, warehousing, and distribution.\n\nBuilt for high-mix environments where SKU accuracy, variant complexity, and time-to-market directly impact revenue and brand reputation.",
     heroImage: "/images/hero-cosmetics.png"
   },
   provenResults: {

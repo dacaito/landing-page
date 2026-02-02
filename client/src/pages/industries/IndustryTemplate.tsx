@@ -262,7 +262,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8 sm:mb-12">
             <div className="text-center lg:text-left">
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed whitespace-pre-line">
                 {content.intro.description}
               </p>
             </div>

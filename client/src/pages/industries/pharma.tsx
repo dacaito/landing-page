@@ -4,7 +4,7 @@ const pharmaContent: IndustryContent = {
   intro: {
     headline: "Pharmaceutical",
     subheadline: "Your ERP. The physical truth for pharmaceutical operations.",
-    description: "Real-time inventory visibility for pharmaceutical manufacturers to improve batch confidence and reduce compliance risk across raw materials, WIP, and finished goods. Built for regulated environments where inventory accuracy, physical traceability, and release confidence are non-negotiable.",
+    description: "Real-time inventory visibility for pharmaceutical manufacturers to improve batch confidence and reduce compliance risk across raw materials, WIP, and finished goods.\n\nBuilt for regulated environments where inventory accuracy, physical traceability, and release confidence are non-negotiable.",
     heroImage: "/images/hero-pharma.png"
   },
   provenResults: {
