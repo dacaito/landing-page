@@ -1,7 +1,7 @@
 import IndustryTemplate, { IndustryContent, LayoutVariant } from "./IndustryTemplate";
 
 const pharmaContent: IndustryContent = {
-  layoutVariant: 'D' as LayoutVariant,
+  layoutVariant: 'B' as LayoutVariant,
   intro: {
     headline: "Pharmaceutical",
     subheadline: "Your ERP. The physical truth for pharmaceutical operations.",

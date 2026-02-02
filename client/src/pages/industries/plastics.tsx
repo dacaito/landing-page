@@ -1,7 +1,7 @@
 import IndustryTemplate, { IndustryContent, LayoutVariant } from "./IndustryTemplate";
 
 const plasticsContent: IndustryContent = {
-  layoutVariant: 'A' as LayoutVariant,
+  layoutVariant: 'B' as LayoutVariant,
   intro: {
     headline: "Plastics Manufacturing",
     subheadline: "Your ERP. The physical truth for plastics manufacturing.",
