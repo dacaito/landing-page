@@ -157,7 +157,8 @@ export default function Home() {
                 <ChevronDown className={`w-3 h-3 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} />
               </button>
               {industriesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg py-2 z-50">
+                <div className="absolute top-full left-0 pt-2 w-48 z-50">
+                  <div className="bg-background border border-border rounded-lg shadow-lg py-2">
                   <Link href="/industries/plastics" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                     {t.industries.plastics}
                   </Link>
@@ -170,6 +171,7 @@ export default function Home() {
                   <Link href="/industries/pharma" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                     {t.industries.pharma}
                   </Link>
+                  </div>
                 </div>
               )}
             </div>
