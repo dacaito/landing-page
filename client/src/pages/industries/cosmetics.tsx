@@ -11,10 +11,10 @@ const cosmeticsContent: IndustryContent = {
   },
   provenResults: {
     metrics: [
-      { value: ">5pp", label: "Launch Readiness" },
       { value: ">99%", label: "Inventory Accuracy" },
-      { value: "6-Figure", label: "Obsolete Stock Reduction" },
-      { value: "Double-digit", label: "Working Capital Reduction" }
+      { value: "5pp", label: "Launch On-Time Rate" },
+      { value: "6-Figure", label: "Obsolete Reduction" },
+      { value: "10+ Days", label: "DIO Reduction" }
     ]
   },
   problem: {

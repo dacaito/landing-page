@@ -12,9 +12,9 @@ const foodBeverageContent: IndustryContent = {
   provenResults: {
     metrics: [
       { value: ">99%", label: "Inventory Accuracy" },
-      { value: "6-Figure", label: "Waste Reduction" },
-      { value: ">5pp", label: "OTIF Improvement" },
-      { value: "Double-digit", label: "Working Capital Reduction" }
+      { value: "40%", label: "Less Waste" },
+      { value: "5pp", label: "OTIF Improvement" },
+      { value: "18+ Days", label: "Freshness Coverage" }
     ]
   },
   problem: {

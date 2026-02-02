@@ -12,9 +12,9 @@ const pharmaContent: IndustryContent = {
   provenResults: {
     metrics: [
       { value: ">99%", label: "Inventory Accuracy" },
-      { value: ">30%", label: "Release Delay Reduction" },
-      { value: "6-Figure", label: "Write-off Reduction" },
-      { value: ">50%", label: "Stockout Reduction" }
+      { value: "30%", label: "Faster Batch Release" },
+      { value: "50%", label: "Fewer Stockouts" },
+      { value: "2x", label: "Audit Confidence" }
     ]
   },
   problem: {

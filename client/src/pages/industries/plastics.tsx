@@ -12,9 +12,9 @@ const plasticsContent: IndustryContent = {
   provenResults: {
     metrics: [
       { value: ">99%", label: "Inventory Accuracy" },
-      { value: "6-Figure", label: "Write-off Reduction" },
-      { value: "Double-digit", label: "DIO Reduction" },
-      { value: ">90%", label: "Less Manual Checks" }
+      { value: "12+ Days", label: "DIO Reduction" },
+      { value: "25%", label: "Higher Line Uptime" },
+      { value: "90%", label: "Less Manual Checks" }
     ]
   },
   problem: {

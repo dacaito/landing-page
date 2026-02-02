@@ -12,9 +12,9 @@ const chemicalContent: IndustryContent = {
   provenResults: {
     metrics: [
       { value: ">99%", label: "Inventory Accuracy" },
+      { value: "15+ Days", label: "DIO Reduction" },
       { value: "6-Figure", label: "Write-off Reduction" },
-      { value: "Double-digit", label: "DIO Reduction" },
-      { value: ">90%", label: "Less Cycle Counting" }
+      { value: "40%", label: "Less Expediting" }
     ]
   },
   problem: {
