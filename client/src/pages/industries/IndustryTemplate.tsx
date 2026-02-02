@@ -11,6 +11,7 @@ export interface IndustryContent {
     headline: string;
     subheadline: string;
     description: string;
+    heroImage?: string;
   };
   provenResults: {
     metrics: Array<{ value: string; label: string }>;
@@ -228,20 +229,15 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             {t.cta.requestDemo}
             <ChevronRight className="w-5 h-5 ml-1" />
           </Button>
-        </div>
-      </section>
-
-      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center">Proven Results</p>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-            {content.provenResults.metrics.map((metric, i) => (
-              <Card key={i} className="p-6 sm:p-8 text-center border-border/50">
-                <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2">{metric.value}</p>
-                <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground">{metric.label}</p>
-              </Card>
-            ))}
-          </div>
+          {content.intro.heroImage && (
+            <div className="mt-12 sm:mt-16">
+              <img 
+                src={content.intro.heroImage} 
+                alt="Industry illustration" 
+                className="w-full max-w-2xl mx-auto rounded-2xl shadow-2xl"
+              />
+            </div>
+          )}
         </div>
       </section>
 
@@ -265,6 +261,20 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground italic px-2">
             {content.problem.closing}
           </p>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center">Proven Results</p>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+            {content.provenResults.metrics.map((metric, i) => (
+              <Card key={i} className="p-6 sm:p-8 text-center border-border/50">
+                <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2">{metric.value}</p>
+                <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground">{metric.label}</p>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 

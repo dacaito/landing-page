@@ -4,7 +4,8 @@ const foodBeverageContent: IndustryContent = {
   intro: {
     headline: "Food & Beverage",
     subheadline: "Your ERP. The physical truth for food and beverage operations.",
-    description: "Real-time inventory visibility for food and beverage producers to reduce waste, avoid stockouts, and protect service levels across pallets of raw materials, WIP, and finished goods. Built for high-volume environments where freshness, availability, and inventory accuracy directly impact margins and customer trust."
+    description: "Real-time inventory visibility for food and beverage producers to reduce waste, avoid stockouts, and protect service levels across pallets of raw materials, WIP, and finished goods. Built for high-volume environments where freshness, availability, and inventory accuracy directly impact margins and customer trust.",
+    heroImage: "/images/hero-food-beverage.png"
   },
   provenResults: {
     metrics: [

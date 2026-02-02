@@ -4,7 +4,8 @@ const plasticsContent: IndustryContent = {
   intro: {
     headline: "Plastics Manufacturing",
     subheadline: "Your ERP. The physical truth for plastics manufacturing.",
-    description: "Real-time inventory visibility for plastics manufacturers to keep injection molding, extrusion, and assembly lines running without interruptions, across raw materials, WIP, and finished goods. Built for high-mix, high-volume environments where piece availability, SKU accuracy, and line uptime directly drive throughput and margins."
+    description: "Real-time inventory visibility for plastics manufacturers to keep injection molding, extrusion, and assembly lines running without interruptions, across raw materials, WIP, and finished goods. Built for high-mix, high-volume environments where piece availability, SKU accuracy, and line uptime directly drive throughput and margins.",
+    heroImage: "/images/hero-plastics.png"
   },
   provenResults: {
     metrics: [
