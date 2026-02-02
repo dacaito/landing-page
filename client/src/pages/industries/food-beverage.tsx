@@ -58,7 +58,8 @@ const foodBeverageContent: IndustryContent = {
         description: "Discrepancies corrected automatically. No manual input."
       }
     ],
-    closing: "No system replacement. No process redesign. Minimal friction."
+    closing: "No system replacement. No process redesign. Minimal friction.",
+    processImage: "/images/process-food-beverage.png"
   },
   whoItsFor: {
     headline: "Built for food & beverage organizations that:",

@@ -36,6 +36,7 @@ export interface IndustryContent {
     description: string;
     steps: Array<{ step: string; title: string; description: string }>;
     closing: string;
+    processImage?: string;
   };
   whoItsFor: {
     headline: string;
@@ -498,7 +499,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div className="order-2 lg:order-1">
                   <img 
-                    src="/images/process-technology.png"
+                    src={content.howItWorks.processImage || "/images/process-technology.png"}
                     alt={`${content.howItWorks.headline} - Vexgen AI`}
                     width="600"
                     height="400"

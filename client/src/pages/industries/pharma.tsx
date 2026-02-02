@@ -58,7 +58,8 @@ const pharmaContent: IndustryContent = {
         description: "Discrepancies corrected automatically. No manual input."
       }
     ],
-    closing: "No system replacement. No process redesign. Minimal friction."
+    closing: "No system replacement. No process redesign. Minimal friction.",
+    processImage: "/images/process-pharma.png"
   },
   whoItsFor: {
     headline: "Built for pharmaceutical organizations that:",

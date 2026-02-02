@@ -58,7 +58,8 @@ const chemicalContent: IndustryContent = {
         description: "Discrepancies corrected automatically. No manual input."
       }
     ],
-    closing: "No system replacement. No process redesign. Minimal friction."
+    closing: "No system replacement. No process redesign. Minimal friction.",
+    processImage: "/images/process-chemical.png"
   },
   whoItsFor: {
     headline: "Built for chemical organizations where:",
