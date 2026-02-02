@@ -419,11 +419,8 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
                     {content.problem.headline}
                   </h2>
-                  <p className="text-base sm:text-lg text-muted-foreground mb-6">
+                  <p className="text-base sm:text-lg text-muted-foreground">
                     {content.problem.description}
-                  </p>
-                  <p className="text-base text-muted-foreground italic border-l-4 border-destructive/30 pl-4">
-                    {content.problem.closing}
                   </p>
                 </div>
                 <div className="space-y-3">
