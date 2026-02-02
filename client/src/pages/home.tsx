@@ -490,7 +490,7 @@ export default function Home() {
             <div 
               className="calendly-inline-widget rounded-xl overflow-hidden" 
               data-url="https://calendly.com/sebastian-freijo-vexgen/30min?hide_gdpr_banner=1&primary_color=0063BF"
-              style={{ minWidth: '320px', height: '700px' }}
+              style={{ minWidth: '320px', height: '950px' }}
             />
           </div>
         </div>
