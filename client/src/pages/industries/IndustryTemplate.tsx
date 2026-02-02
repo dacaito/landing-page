@@ -290,14 +290,14 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
               </p>
             </div>
             {content.intro.heroImage && (
-              <div>
+              <div className="flex justify-center">
                 <img 
                   src={content.intro.heroImage} 
                   alt={`${content.intro.headline} - Vexgen AI`}
                   width="600"
                   height="400"
                   loading="eager" 
-                  className="w-full rounded-2xl shadow-2xl"
+                  className="w-full max-h-80 object-cover rounded-2xl shadow-2xl"
                 />
               </div>
             )}
