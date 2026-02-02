@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronRight, Check, Camera, RefreshCw, Database, Globe, Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { translations, Language } from "@/lib/translations";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
@@ -58,6 +58,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
   const t = translations[lang];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
+  const [, setLocation] = useLocation();
 
   useEffect(() => {
     localStorage.setItem('vexgen-lang', lang);
@@ -105,6 +106,20 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
 
   const howItWorksIcons = [Camera, RefreshCw, Database];
 
+  const navigateToHomeSection = (sectionId: string) => {
+    setMobileMenuOpen(false);
+    setLocation('/');
+    setTimeout(() => {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        const navHeight = 72;
+        const extraGap = 12;
+        const top = window.scrollY + el.getBoundingClientRect().top - navHeight - extraGap;
+        window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
@@ -117,15 +132,15 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
           </Link>
           <div className="hidden lg:flex items-center gap-8">
-            <Link href="/#results" className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline">
+            <button onClick={() => navigateToHomeSection("results")} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               {t.nav.results}
-            </Link>
-            <Link href="/#solution" className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline">
+            </button>
+            <button onClick={() => navigateToHomeSection("solution")} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               {t.nav.solution}
-            </Link>
-            <Link href="/#how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline">
+            </button>
+            <button onClick={() => navigateToHomeSection("how-it-works")} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               {t.nav.howItWorks}
-            </Link>
+            </button>
             <div 
               className="relative group"
               onMouseEnter={() => setIndustriesOpen(true)}
@@ -198,15 +213,15 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
               <Globe className="w-5 h-5" />
               <span className="uppercase font-medium">{lang === 'en' ? 'English' : 'Deutsch'}</span>
             </button>
-            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-foreground hover:text-primary transition-colors">
+            <button onClick={() => navigateToHomeSection("results")} className="text-2xl font-medium text-foreground hover:text-primary transition-colors">
               {t.nav.results}
-            </Link>
-            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-foreground hover:text-primary transition-colors">
+            </button>
+            <button onClick={() => navigateToHomeSection("solution")} className="text-2xl font-medium text-foreground hover:text-primary transition-colors">
               {t.nav.solution}
-            </Link>
-            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-foreground hover:text-primary transition-colors">
+            </button>
+            <button onClick={() => navigateToHomeSection("how-it-works")} className="text-2xl font-medium text-foreground hover:text-primary transition-colors">
               {t.nav.howItWorks}
-            </Link>
+            </button>
             <div className="flex flex-col items-center gap-2">
               <span className="text-2xl font-medium text-foreground">{t.nav.industries}</span>
               <div className="flex flex-wrap justify-center gap-2">

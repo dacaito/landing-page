@@ -1,7 +1,7 @@
 import { Globe, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { translations, Language } from "@/lib/translations";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
@@ -16,6 +16,21 @@ export default function Privacy() {
   const t = translations[lang];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
+  const [, setLocation] = useLocation();
+
+  const navigateToHomeSection = (sectionId: string) => {
+    setMobileMenuOpen(false);
+    setLocation('/');
+    setTimeout(() => {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        const navHeight = 72;
+        const extraGap = 12;
+        const top = window.scrollY + el.getBoundingClientRect().top - navHeight - extraGap;
+        window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+      }
+    }, 100);
+  };
 
   useEffect(() => {
     localStorage.setItem('vexgen-lang', lang);
@@ -47,15 +62,15 @@ export default function Privacy() {
             <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
           </Link>
           <div className="hidden lg:flex items-center gap-8">
-            <Link href="/#results" className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline">
+            <button onClick={() => navigateToHomeSection("results")} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               {t.nav.results}
-            </Link>
-            <Link href="/#solution" className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline">
+            </button>
+            <button onClick={() => navigateToHomeSection("solution")} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               {t.nav.solution}
-            </Link>
-            <Link href="/#how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline">
+            </button>
+            <button onClick={() => navigateToHomeSection("how-it-works")} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               {t.nav.howItWorks}
-            </Link>
+            </button>
             <div 
               className="relative group"
               onMouseEnter={() => setIndustriesOpen(true)}
@@ -124,9 +139,9 @@ export default function Privacy() {
             </button>
           </div>
           <div className="flex-1 flex flex-col items-center justify-center gap-6 p-4">
-            <Link href="/" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>{t.nav.results}</Link>
-            <Link href="/" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>{t.nav.solution}</Link>
-            <Link href="/" className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>{t.nav.howItWorks}</Link>
+            <button onClick={() => navigateToHomeSection("results")} className="text-lg font-medium">{t.nav.results}</button>
+            <button onClick={() => navigateToHomeSection("solution")} className="text-lg font-medium">{t.nav.solution}</button>
+            <button onClick={() => navigateToHomeSection("how-it-works")} className="text-lg font-medium">{t.nav.howItWorks}</button>
             <div className="flex flex-col items-center gap-2">
               <span className="text-lg font-medium text-muted-foreground">{t.nav.industries}</span>
               <Link href="/industries/plastics" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.plastics}</Link>
