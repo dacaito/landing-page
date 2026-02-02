@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowDown, Camera, RefreshCw, Database, Factory, Warehouse, Users, Building2, ChevronRight, Check, Loader2, Menu, X, Globe } from "lucide-react";
+import { ArrowDown, Camera, RefreshCw, Database, Factory, Warehouse, Users, Building2, ChevronRight, Check, Loader2, Menu, X, Globe, ChevronDown } from "lucide-react";
+import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { translations, Language } from "@/lib/translations";
@@ -34,6 +35,7 @@ export default function Home() {
   });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
 
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -142,6 +144,35 @@ export default function Home() {
             >
               {t.nav.solution}
             </button>
+            <div 
+              className="relative"
+              onMouseEnter={() => setIndustriesOpen(true)}
+              onMouseLeave={() => setIndustriesOpen(false)}
+            >
+              <button 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+                data-testid="link-industries"
+              >
+                {t.nav.industries}
+                <ChevronDown className={`w-3 h-3 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {industriesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg py-2 z-50">
+                  <Link href="/industries/plastics" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    {t.industries.plastics}
+                  </Link>
+                  <Link href="/industries/food-beverage" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    {t.industries.foodBeverage}
+                  </Link>
+                  <Link href="/industries/cosmetics" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    {t.industries.cosmetics}
+                  </Link>
+                  <Link href="/industries/pharma" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    {t.industries.pharma}
+                  </Link>
+                </div>
+              )}
+            </div>
             <button 
               onClick={() => scrollToSection("how-it-works")} 
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -213,6 +244,23 @@ export default function Home() {
             >
               {t.nav.solution}
             </button>
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-2xl font-medium text-foreground">{t.nav.industries}</span>
+              <div className="flex flex-wrap justify-center gap-2">
+                <Link href="/industries/plastics" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                  {t.industries.plastics}
+                </Link>
+                <Link href="/industries/food-beverage" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                  {t.industries.foodBeverage}
+                </Link>
+                <Link href="/industries/cosmetics" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                  {t.industries.cosmetics}
+                </Link>
+                <Link href="/industries/pharma" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                  {t.industries.pharma}
+                </Link>
+              </div>
+            </div>
             <button 
               onClick={() => scrollToSection("how-it-works")} 
               className="text-2xl font-medium text-foreground hover:text-primary transition-colors"

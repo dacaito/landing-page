@@ -5,10 +5,17 @@ export const translations = {
     nav: {
       results: "Results",
       solution: "Solution",
+      industries: "Industries",
       howItWorks: "How It Works",
       company: "Company",
       requestDemo: "Request Demo",
       demo: "Demo"
+    },
+    industries: {
+      plastics: "Plastics",
+      foodBeverage: "Food & Beverage",
+      cosmetics: "Cosmetics",
+      pharma: "Pharma"
     },
     hero: {
       headline: "Your ERP.\nThe Truth.",
@@ -145,10 +152,17 @@ export const translations = {
     nav: {
       results: "Ergebnisse",
       solution: "Lösung",
+      industries: "Branchen",
       howItWorks: "So funktioniert es",
       company: "Unternehmen",
       requestDemo: "Demo anfordern",
       demo: "Demo"
+    },
+    industries: {
+      plastics: "Kunststoffe",
+      foodBeverage: "Lebensmittel & Getränke",
+      cosmetics: "Kosmetik",
+      pharma: "Pharma"
     },
     hero: {
       headline: "Ihr ERP.\nDie Wahrheit.",

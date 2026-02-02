@@ -5,11 +5,19 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
+import PlasticsIndustry from "@/pages/industries/plastics";
+import FoodBeverageIndustry from "@/pages/industries/food-beverage";
+import CosmeticsIndustry from "@/pages/industries/cosmetics";
+import PharmaIndustry from "@/pages/industries/pharma";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/industries/plastics" component={PlasticsIndustry} />
+      <Route path="/industries/food-beverage" component={FoodBeverageIndustry} />
+      <Route path="/industries/cosmetics" component={CosmeticsIndustry} />
+      <Route path="/industries/pharma" component={PharmaIndustry} />
       <Route component={NotFound} />
     </Switch>
   );
