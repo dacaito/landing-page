@@ -1,11 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { ArrowDown, Camera, RefreshCw, Database, Factory, Warehouse, Users, Building2, ChevronRight, Check, Loader2, Menu, X, Globe, ChevronDown } from "lucide-react";
+import { ArrowDown, Camera, RefreshCw, Database, Factory, Warehouse, Users, Building2, ChevronRight, Check, Menu, X, Globe, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
-import { useToast } from "@/hooks/use-toast";
 import { translations, Language } from "@/lib/translations";
 import dashboardImage from "@assets/dash-board-kpi.png";
 import stockImage from "@assets/image_1_1767949813510.png";
@@ -13,7 +10,6 @@ import demoVideo from "@assets/Landing-Page-Reel-876x512.mp4";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
 export default function Home() {
-  const { toast } = useToast();
   const [lang, setLang] = useState<Language>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('vexgen-lang');
@@ -27,15 +23,18 @@ export default function Home() {
     localStorage.setItem('vexgen-lang', lang);
   }, [lang]);
   
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: ""
-  });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -45,48 +44,6 @@ export default function Home() {
     }
     return () => { document.body.style.overflow = ''; };
   }, [mobileMenuOpen]);
-
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mojjqzqj";
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.company) return;
-
-    setIsSubmitting(true);
-    try {
-      const fd = new FormData();
-      // Honeypot: bots often fill this; humans won't see it.
-      fd.append("_gotcha", "");
-      fd.append("name", formData.name);
-      fd.append("email", formData.email);
-      fd.append("company", formData.company);
-      fd.append("message", formData.message);
-
-      const res = await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: fd,
-      });
-
-      if (!res.ok) {
-        throw new Error("Form submission failed");
-      }
-
-      toast({
-        title: t.contact.toast.successTitle,
-        description: t.contact.toast.successDescription,
-      });
-      setFormData({ name: "", email: "", company: "", message: "" });
-    } catch {
-      toast({
-        title: t.contact.toast.errorTitle,
-        description: t.contact.toast.errorDescription,
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false);
@@ -529,75 +486,13 @@ export default function Home() {
             </p>
           </div>
 
-          <Card className="p-6 sm:p-8 md:p-12 border-border/50 max-w-xl mx-auto">
-            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-              <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-1.5 sm:mb-2">{t.contact.form.name} *</label>
-                <Input
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder={t.contact.form.namePlaceholder}
-                  required
-                  className="h-11 sm:h-12"
-                  data-testid="input-name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-1.5 sm:mb-2">{t.contact.form.email} *</label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder={t.contact.form.emailPlaceholder}
-                  required
-                  className="h-11 sm:h-12"
-                  data-testid="input-email"
-                />
-              </div>
-              <div>
-                <label htmlFor="company-name" className="block text-sm font-medium mb-1.5 sm:mb-2">{t.contact.form.company} *</label>
-                <Input
-                  id="company-name"
-                  value={formData.company}
-                  onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                  placeholder={t.contact.form.companyPlaceholder}
-                  required
-                  className="h-11 sm:h-12"
-                  data-testid="input-company"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-1.5 sm:mb-2">{t.contact.form.message}</label>
-                <Textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder={t.contact.form.messagePlaceholder}
-                  rows={4}
-                  data-testid="textarea-message"
-                />
-              </div>
-              <Button 
-                type="submit" 
-                size="lg" 
-                className="w-full rounded-full py-5 sm:py-6 text-base sm:text-lg"
-                disabled={isSubmitting}
-                data-testid="button-submit-demo"
-              >
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                    {t.contact.form.submitting}
-                  </>
-                ) : (
-                  t.contact.form.submit
-                )}
-              </Button>
-            </form>
-          </Card>
+          <div className="max-w-3xl mx-auto">
+            <div 
+              className="calendly-inline-widget rounded-xl overflow-hidden" 
+              data-url="https://calendly.com/sebastian-freijo-vexgen/30min?hide_gdpr_banner=1&primary_color=0063BF"
+              style={{ minWidth: '320px', height: '700px' }}
+            />
+          </div>
         </div>
       </section>
 
