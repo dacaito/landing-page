@@ -5,7 +5,7 @@ const pharmaContent: IndustryContent = {
   intro: {
     headline: "Pharmaceutical",
     subheadline: "Your ERP. The physical truth for pharmaceutical operations.",
-    description: "Real-time inventory visibility for pharmaceutical manufacturers to improve batch confidence and reduce compliance risk across raw materials, WIP, and finished goods.\n\nBuilt for regulated environments where inventory accuracy, physical traceability, and release confidence are non-negotiable.",
+    description: "Real-time inventory visibility across raw materials, WIP, and finished goods to improve batch confidence and reduce compliance risk.\n\nBuilt for regulated environments where accuracy and traceability are non-negotiable.",
     heroImage: "/images/hero-pharma.png"
   },
   provenResults: {
@@ -17,61 +17,60 @@ const pharmaContent: IndustryContent = {
     ]
   },
   problem: {
-    headline: "When physical inventory diverges from what systems report",
-    description: "Inventory sits at the center of pharmaceutical operations, where accuracy, status, and traceability directly affect compliance and patient supply.",
+    headline: "When system inventory doesn't match physical reality",
+    description: "Accuracy, status, and traceability directly affect compliance and patient supply.",
     issues: [
-      "Batches delayed or blocked due to missing or mislocated inventory",
-      "Manual investigations to reconcile system data and physical reality",
-      "Conservative buffers introduced to protect availability and compliance",
-      "Increased audit risk driven by reliance on assumptions rather than verification"
+      "Batches delayed by missing or mislocated inventory",
+      "Manual investigations to reconcile system vs. reality",
+      "Conservative buffers to protect availability",
+      "Audit risk from assumptions instead of verification"
     ],
-    closing: "Despite mature ERP, these issues persist because system data is often not continuously aligned with physical inventory reality on the shop floor and in warehouses."
+    closing: "These issues persist because ERP isn't continuously aligned with physical reality."
   },
   outcome: {
-    headline: "What changes when ERP reflects physical reality",
-    description: "Continuous physical verification transforms operations from reactive to predictable.",
+    headline: "What changes with physical verification",
+    description: "Continuous alignment between system and reality transforms operations.",
     benefits: [
-      "Inventory accuracy you can trust by batch, status, and physical location",
-      "Faster and more reliable batch release decisions",
-      "Lower compliance and audit risk through continuous verification",
-      "Reduced reliance on conservative buffers to protect availability",
-      "More productive use of QA and operations time, with fewer manual reconciliations"
+      "Trusted accuracy by batch, status, and location",
+      "Faster, more reliable batch releases",
+      "Lower compliance and audit risk",
+      "Less reliance on conservative buffers"
     ]
   },
   howItWorks: {
-    headline: "A compliance and release confidence layer for pharmaceutical operations",
-    description: "Vexgen AI adds a continuous visual verification layer on top of your existing ERP. By continuously aligning physical inventory reality with system data, Vexgen AI helps pharma teams:",
+    headline: "A compliance layer for pharmaceutical operations",
+    description: "Vexgen AI continuously aligns physical inventory with your ERP:",
     steps: [
       {
         step: "01",
         title: "Capture every movement",
-        description: "Cameras continuously monitor inventory flows. Nothing goes untracked."
+        description: "Cameras monitor inventory flows continuously."
       },
       {
         step: "02",
         title: "Validate automatically",
-        description: "Vision technology identifies materials, movements and quantities in real time."
+        description: "Vision AI identifies materials and quantities in real time."
       },
       {
         step: "03",
         title: "Sync your ERP instantly",
-        description: "Discrepancies detected and corrected automatically. No operator input needed."
+        description: "Discrepancies corrected automatically. No manual input."
       }
     ],
-    closing: "No system replacement. No process redesign. Minimal operational friction."
+    closing: "No system replacement. No process redesign. Minimal friction."
   },
   whoItsFor: {
-    headline: "Designed for pharmaceutical organizations that:",
+    headline: "Built for pharmaceutical organizations that:",
     criteria: [
       "Operate in GMP-regulated environments",
-      "Manage batch-controlled inventory across multiple physical locations",
-      "Experience release delays despite \"available\" system inventory",
-      "Rely on manual verification to maintain compliance and audit readiness"
+      "Manage batch-controlled inventory across locations",
+      "Experience release delays despite 'available' inventory",
+      "Rely on manual verification for compliance"
     ]
   },
   getStarted: {
-    headline: "Explore whether this is relevant for your pharmaceutical operations",
-    description: "A short conversation is often enough to assess whether continuous physical inventory verification could improve release confidence, compliance posture, or operational efficiency."
+    headline: "Is this relevant for your operations?",
+    description: "A short conversation can assess whether physical inventory verification could improve release confidence or compliance posture."
   }
 };
 

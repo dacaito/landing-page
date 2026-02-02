@@ -5,7 +5,7 @@ const foodBeverageContent: IndustryContent = {
   intro: {
     headline: "Food & Beverage",
     subheadline: "Your ERP. The physical truth for food and beverage operations.",
-    description: "Real-time inventory visibility for food and beverage producers to reduce waste, avoid stockouts, and protect service levels across pallets of raw materials, WIP, and finished goods.\n\nBuilt for high-volume environments where freshness, availability, and inventory accuracy directly impact margins and customer trust.",
+    description: "Real-time inventory visibility across pallets of raw materials, WIP, and finished goods to reduce waste and protect service levels.\n\nBuilt for high-volume environments where freshness and availability define performance.",
     heroImage: "/images/hero-food-beverage.png"
   },
   provenResults: {
@@ -17,61 +17,60 @@ const foodBeverageContent: IndustryContent = {
     ]
   },
   problem: {
-    headline: "When physical pallet reality diverges from what systems report",
-    description: "Inventory sits at the center of food and beverage operations, where freshness, availability, and service levels define performance.",
+    headline: "When pallet reality diverges from system data",
+    description: "Freshness, availability, and service levels depend on knowing exactly what's where.",
     issues: [
-      "Waste and write-offs from expired or forgotten pallets",
-      "Stockouts leading to incomplete orders and OTIF misses",
-      "Excess buffers built to protect service levels",
-      "Teams constantly checking pallets, dates, and locations to keep orders moving"
+      "Waste from expired or forgotten pallets",
+      "Stockouts causing incomplete orders and OTIF misses",
+      "Excess buffers to protect service levels",
+      "Constant pallet and date checks to keep orders moving"
     ],
-    closing: "Despite ERP, these issues persist because system inventory is often disconnected from what is physically on pallets, in staging areas, and at outbound docks."
+    closing: "These issues persist because ERP data is disconnected from physical pallet reality."
   },
   outcome: {
-    headline: "What changes when ERP reflects physical reality",
-    description: "Continuous physical verification transforms operations from reactive to predictable.",
+    headline: "What changes with physical verification",
+    description: "Continuous alignment between system and reality transforms operations.",
     benefits: [
-      "Inventory accuracy you can trust by SKU, quantity, and expiration date",
+      "Trusted accuracy by SKU, quantity, and expiration",
       "Lower waste through better FIFO/FEFO execution",
-      "Higher service levels by avoiding missing or mislocated pallets",
-      "Lower working capital tied up in protective buffers",
-      "More productive use of workforce time, with fewer manual checks and firefighting"
+      "Higher service levels, fewer missing pallets",
+      "Less capital tied up in protective buffers"
     ]
   },
   howItWorks: {
-    headline: "A freshness and flow protection layer for food & beverage plants",
-    description: "Vexgen AI adds a continuous visual verification layer on top of your existing ERP. By continuously aligning physical pallet reality with system data, Vexgen AI helps food and beverage teams:",
+    headline: "A freshness protection layer for F&B operations",
+    description: "Vexgen AI continuously aligns physical pallet reality with your ERP:",
     steps: [
       {
         step: "01",
         title: "Capture every movement",
-        description: "Cameras continuously monitor inventory flows. Nothing goes untracked."
+        description: "Cameras monitor inventory flows continuously."
       },
       {
         step: "02",
         title: "Validate automatically",
-        description: "Vision technology identifies materials, movements and quantities in real time."
+        description: "Vision AI identifies materials and quantities in real time."
       },
       {
         step: "03",
         title: "Sync your ERP instantly",
-        description: "Discrepancies detected and corrected automatically. No operator input needed."
+        description: "Discrepancies corrected automatically. No manual input."
       }
     ],
-    closing: "No system replacement. No process redesign. Minimal operational friction."
+    closing: "No system replacement. No process redesign. Minimal friction."
   },
   whoItsFor: {
-    headline: "Designed for food and beverage organizations that:",
+    headline: "Built for food & beverage organizations that:",
     criteria: [
-      "Manage large volumes of palletized finished goods and ingredients",
+      "Manage large volumes of palletized goods and ingredients",
       "Depend on FIFO/FEFO to control waste and freshness",
-      "Experience service issues despite \"available\" system inventory",
-      "Rely on manual pallet checks and buffers to protect OTIF"
+      "Experience service issues despite 'available' inventory",
+      "Rely on manual checks and buffers to protect OTIF"
     ]
   },
   getStarted: {
-    headline: "Explore whether this is relevant for your food & beverage operations",
-    description: "A short conversation is often enough to assess whether physical inventory visibility is limiting freshness, service levels, or capital efficiency in your current setup."
+    headline: "Is this relevant for your operations?",
+    description: "A short conversation can assess whether physical inventory visibility could improve freshness, service levels, or capital efficiency."
   }
 };
 

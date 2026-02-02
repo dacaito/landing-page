@@ -5,7 +5,7 @@ const cosmeticsContent: IndustryContent = {
   intro: {
     headline: "Cosmetics",
     subheadline: "Your ERP. The physical truth for cosmetics operations.",
-    description: "Real-time inventory visibility for cosmetics manufacturers to protect product launches, reduce write-offs, and ensure the right SKUs are available across production, warehousing, and distribution.\n\nBuilt for high-mix environments where SKU accuracy, variant complexity, and time-to-market directly impact revenue and brand reputation.",
+    description: "Real-time inventory visibility across production, warehousing, and distribution to protect launches and reduce write-offs.\n\nBuilt for high-mix environments where SKU accuracy and timing drive revenue.",
     heroImage: "/images/hero-cosmetics.png"
   },
   provenResults: {
@@ -17,61 +17,60 @@ const cosmeticsContent: IndustryContent = {
     ]
   },
   problem: {
-    headline: "When physical inventory diverges from what systems report",
-    description: "Inventory sits at the center of cosmetics operations, where availability, accuracy, and timing define success.",
+    headline: "When system inventory doesn't match physical reality",
+    description: "Availability, accuracy, and timing define success in cosmetics.",
     issues: [
-      "Product launches delayed due to missing or misallocated SKUs",
-      "Excess stock in the wrong variants while high-demand SKUs are unavailable",
-      "Write-offs from obsolete packaging, expired products, or canceled campaigns",
-      "Teams relying on manual checks to confirm launch and order readiness"
+      "Launches delayed by missing or misallocated SKUs",
+      "Wrong variants in stock while high-demand SKUs are out",
+      "Write-offs from obsolete packaging or canceled campaigns",
+      "Manual checks needed to confirm launch readiness"
     ],
-    closing: "Despite ERP, these issues persist because system inventory often lacks reliable, real-time alignment with physical stock by SKU, variant, and location."
+    closing: "These issues persist because ERP lacks real-time alignment with physical stock."
   },
   outcome: {
-    headline: "What changes when ERP reflects physical reality",
-    description: "Continuous physical verification transforms operations from reactive to predictable.",
+    headline: "What changes with physical verification",
+    description: "Continuous alignment between system and reality transforms operations.",
     benefits: [
-      "Inventory accuracy you can trust by SKU, variant, batch, and physical location",
-      "On-time product launches and promotions with fewer last-minute surprises",
-      "Reduced write-offs from obsolete, expired, or misallocated inventory",
-      "Lower working capital tied up in protective buffers",
-      "More productive use of workforce time, with fewer manual checks and launch reconciliations"
+      "Trusted accuracy by SKU, variant, and location",
+      "On-time launches with fewer surprises",
+      "Reduced write-offs from misallocated inventory",
+      "Less capital tied up in protective buffers"
     ]
   },
   howItWorks: {
-    headline: "A launch and availability protection layer for cosmetics operations",
-    description: "Vexgen AI adds a continuous visual verification layer on top of your existing ERP. By continuously aligning physical inventory reality with system data, Vexgen AI helps cosmetics teams:",
+    headline: "A launch protection layer for cosmetics operations",
+    description: "Vexgen AI continuously aligns physical inventory with your ERP:",
     steps: [
       {
         step: "01",
         title: "Capture every movement",
-        description: "Cameras continuously monitor inventory flows. Nothing goes untracked."
+        description: "Cameras monitor inventory flows continuously."
       },
       {
         step: "02",
         title: "Validate automatically",
-        description: "Vision technology identifies materials, movements and quantities in real time."
+        description: "Vision AI identifies materials and quantities in real time."
       },
       {
         step: "03",
         title: "Sync your ERP instantly",
-        description: "Discrepancies detected and corrected automatically. No operator input needed."
+        description: "Discrepancies corrected automatically. No manual input."
       }
     ],
-    closing: "No system replacement. No process redesign. Minimal operational friction."
+    closing: "No system replacement. No process redesign. Minimal friction."
   },
   whoItsFor: {
-    headline: "Designed for cosmetics organizations that:",
+    headline: "Built for cosmetics organizations that:",
     criteria: [
-      "Manage large SKU portfolios driven by packaging and market variants",
-      "Run frequent launches, promotions, and campaign-driven demand",
-      "Experience availability issues despite \"in-stock\" system data",
-      "Use manual checks and buffers to protect launches and service levels"
+      "Manage large SKU portfolios with packaging variants",
+      "Run frequent launches and campaign-driven demand",
+      "Experience availability issues despite 'in-stock' data",
+      "Use manual checks to protect launches and service"
     ]
   },
   getStarted: {
-    headline: "Explore whether this is relevant for your cosmetics operations",
-    description: "A short conversation is often enough to assess whether physical inventory visibility is limiting launch readiness, service levels, or capital efficiency in your current setup."
+    headline: "Is this relevant for your operations?",
+    description: "A short conversation can assess whether physical inventory visibility could improve launch readiness or capital efficiency."
   }
 };
 
