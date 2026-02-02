@@ -136,38 +136,33 @@ export default function Imprint() {
 
           <div className="space-y-8 text-muted-foreground">
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Company Information</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Disclaimer</h2>
               <p className="leading-relaxed">
-                Vexgen AI<br />
-                Zurich, Switzerland
+                We strive to provide correct and complete information on this website. All texts and links have been carefully checked and are constantly updated. Vexgen AI assumes no responsibility for the completeness, accuracy, actuality, reliability, or correctness of the information provided. Liability claims for damage arising from use of the information provided, including information which is incomplete or incorrect, are therefore excluded. All offers are non-binding. Individual pages, sections thereof or the entire website, including all offers and information, may be expanded, changed or deleted by Vexgen AI without notice.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Contact</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Liability for links</h2>
+              <p className="leading-relaxed mb-4">
+                All links to external providers were checked for accuracy at the time of their inclusion. However, we are not liable for the content and availability of websites that can be reached by hyperlink. Vexgen AI assumes no responsibility for the correctness, completeness and legality of the contents and links to other websites, nor for any offers, products or services contained therein, as these are no longer under the control of Vexgen AI. This is the case even if these websites contain the Vexgen AI logo or any other protected name. Access and use of linked websites is at the user's own risk.
+              </p>
               <p className="leading-relaxed">
-                Email: <a href="mailto:contact@vexgen.ai" className="text-primary hover:underline">contact@vexgen.ai</a>
+                The provider of the linked website is solely responsible for any illegal, incorrect or incomplete contents of linked websites, and especially for damage caused by the contents. It is irrelevant whether the damage is of a direct, indirect or financial nature, or any other type of damage that could result from loss of data, loss of use or other circumstances.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Liability for Content</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Copyrights</h2>
               <p className="leading-relaxed">
-                The contents of our pages were created with the greatest care. However, we cannot assume any liability for the accuracy, completeness and timeliness of the content. As a service provider, we are responsible for our own content on these pages in accordance with general laws. However, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.
+                Copyrights and all other rights to content, images, photos, or other files on the website belong exclusively to Vexgen AI or the specifically named rights holders. Should you become aware of any copyright infringement on our pages, please notify us at <a href="mailto:contact@vexgen.ai" className="text-primary hover:underline">contact@vexgen.ai</a> and we will immediately review the circumstances, contact the author and, if necessary, delete the infringing content. Reproduction of any elements requires the advance, written consent of the copyright holder.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Liability for Links</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Applicable law</h2>
               <p className="leading-relaxed">
-                Our offer contains links to external websites of third parties, on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the contents of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal contents were not recognizable at the time of linking.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Copyright</h2>
-              <p className="leading-relaxed">
-                The content and works on these pages created by the site operators are subject to copyright law. Duplication, processing, distribution and any kind of use outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use.
+                Any disputes or claims arising from the use of our pages are subject to Swiss law. The exclusive place of jurisdiction is Zurich, Switzerland.
               </p>
             </div>
           </div>
