@@ -338,6 +338,31 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4" data-testid="text-problem-label">{t.problem.label}</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-6 sm:mb-8 leading-tight" data-testid="text-problem-headline">
+            {t.problem.headline}
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 leading-relaxed px-2">
+            {t.problem.description}
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-left mb-8 sm:mb-12">
+            {t.problem.issues.map((item, i) => (
+              <div key={i} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg sm:rounded-xl bg-destructive/5 border border-destructive/20">
+                <div className="w-2 h-2 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                <span className="text-base sm:text-lg">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground italic px-2">
+            {t.problem.closing}
+          </p>
+        </div>
+      </section>
+
       <section id="results" className="scroll-mt-24 sm:scroll-mt-28 py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-card border-y border-border/50">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center" data-testid="text-results-label">{t.results.label}</p>
@@ -381,31 +406,6 @@ export default function Home() {
               {t.results.dashboardCaption}
             </p>
           </div>
-        </div>
-      </section>
-
-      <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4" data-testid="text-problem-label">{t.problem.label}</p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-6 sm:mb-8 leading-tight" data-testid="text-problem-headline">
-            {t.problem.headline}
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 leading-relaxed px-2">
-            {t.problem.description}
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-left mb-8 sm:mb-12">
-            {t.problem.issues.map((item, i) => (
-              <div key={i} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg sm:rounded-xl bg-destructive/5 border border-destructive/20">
-                <div className="w-2 h-2 rounded-full bg-destructive mt-2 flex-shrink-0" />
-                <span className="text-base sm:text-lg">{item}</span>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground italic px-2">
-            {t.problem.closing}
-          </p>
         </div>
       </section>
 
