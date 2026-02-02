@@ -12,7 +12,18 @@ A Vite + React landing page for Vexgen AI, a company offering real-time visibili
 ## Project Structure
 ```
 ├── client/           # Frontend source
-│   ├── src/          # React components and pages
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── home.tsx          # Main landing page
+│   │   │   ├── industries/       # Industry-specific pages
+│   │   │   │   ├── IndustryTemplate.tsx  # Shared template
+│   │   │   │   ├── plastics.tsx
+│   │   │   │   ├── food-beverage.tsx
+│   │   │   │   ├── cosmetics.tsx
+│   │   │   │   └── pharma.tsx
+│   │   │   └── not-found.tsx
+│   │   ├── components/ui/  # Radix UI components
+│   │   └── lib/            # Utilities and translations
 │   ├── public/       # Static assets
 │   └── index.html    # HTML entry point
 ├── attached_assets/  # Project assets
@@ -20,6 +31,13 @@ A Vite + React landing page for Vexgen AI, a company offering real-time visibili
 ├── tailwind.config.ts # Tailwind configuration
 └── package.json      # Dependencies and scripts
 ```
+
+## Routes
+- `/` - Home page
+- `/industries/plastics` - Plastics industry page
+- `/industries/food-beverage` - Food & Beverage industry page
+- `/industries/cosmetics` - Cosmetics industry page
+- `/industries/pharma` - Pharmaceutical industry page
 
 ## Scripts
 - `npm run dev:web` - Start development server on port 5000
@@ -29,3 +47,8 @@ A Vite + React landing page for Vexgen AI, a company offering real-time visibili
 ## Deployment
 - **Type**: Static site
 - **Build Output**: dist/public
+
+## Recent Changes
+- Added Industries dropdown navigation between Solution and How It Works
+- Created 4 industry-specific pages with shared template (Plastics, Food & Beverage, Cosmetics, Pharma)
+- Added EN/DE translations for industry names
