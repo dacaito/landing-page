@@ -247,7 +247,10 @@ export default function Company() {
             <div className="lg:col-span-2">
               <img 
                 src="/images/careers-team.png" 
-                alt="Join our team" 
+                alt="Join the Vexgen AI team" 
+                width="400"
+                height="256"
+                loading="lazy"
                 className="w-full h-auto rounded-2xl shadow-lg max-h-64 object-cover"
               />
             </div>

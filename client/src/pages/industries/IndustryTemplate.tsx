@@ -280,7 +280,10 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
               <div>
                 <img 
                   src={content.intro.heroImage} 
-                  alt="Industry illustration" 
+                  alt={`${content.intro.headline} - Vexgen AI`}
+                  width="600"
+                  height="400"
+                  loading="eager" 
                   className="w-full rounded-2xl shadow-2xl"
                 />
               </div>
