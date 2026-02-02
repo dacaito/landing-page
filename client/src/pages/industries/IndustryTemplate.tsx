@@ -496,6 +496,12 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
 
           <section className="py-16 sm:py-24 px-4 sm:px-6">
             <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">The Process</p>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
+                  {content.howItWorks.headline}
+                </h2>
+              </div>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div className="order-2 lg:order-1">
                   <img 
@@ -508,10 +514,6 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                   />
                 </div>
                 <div className="order-1 lg:order-2">
-                  <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">The Process</p>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                    {content.howItWorks.headline}
-                  </h2>
                   <p className="text-base sm:text-lg text-muted-foreground mb-8">
                     {content.howItWorks.description}
                   </p>
