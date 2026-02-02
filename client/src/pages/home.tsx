@@ -182,13 +182,13 @@ export default function Home() {
             >
               {t.nav.howItWorks}
             </button>
-            <button 
-              onClick={() => scrollToSection("company")} 
+            <Link 
+              href="/company"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-company"
             >
               {t.nav.company}
-            </button>
+            </Link>
           </div>
           <div className="flex items-center gap-2">
             <button
@@ -270,13 +270,14 @@ export default function Home() {
             >
               {t.nav.howItWorks}
             </button>
-            <button 
-              onClick={() => scrollToSection("company")} 
+            <Link 
+              href="/company"
+              onClick={() => setMobileMenuOpen(false)}
               className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
               data-testid="link-company-mobile"
             >
               {t.nav.company}
-            </button>
+            </Link>
             <Button 
               onClick={() => scrollToSection("contact")} 
               className="rounded-full px-8 py-6 text-lg mt-4"
@@ -600,64 +601,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="company" className="scroll-mt-24 sm:scroll-mt-28 py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-card border-t border-border/50">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4" data-testid="text-company-label">{t.company.label}</p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 sm:mb-8" data-testid="text-company-headline">
-            {t.company.headline}
-          </h2>
-          <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-2">
-            {t.company.description}
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
-            <Card className="p-5 sm:p-6 md:p-8 text-left border-border/50">
-              <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2">{t.company.team.ceo.name}</h3>
-              <p className="text-primary text-xs sm:text-sm mb-2 sm:mb-3">{t.company.team.ceo.role}</p>
-              <p className="text-sm sm:text-base text-muted-foreground">{t.company.team.ceo.bio}</p>
-            </Card>
-            <Card className="p-5 sm:p-6 md:p-8 text-left border-border/50">
-              <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2">{t.company.team.cto.name}</h3>
-              <p className="text-primary text-xs sm:text-sm mb-2 sm:mb-3">{t.company.team.cto.role}</p>
-              <p className="text-sm sm:text-base text-muted-foreground">{t.company.team.cto.bio}</p>
-            </Card>
-            <Card className="p-5 sm:p-6 md:p-8 text-left border-border/50">
-              <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2">{t.company.team.advisor.name}</h3>
-              <p className="text-primary text-xs sm:text-sm mb-2 sm:mb-3">{t.company.team.advisor.role}</p>
-              <p className="text-sm sm:text-base text-muted-foreground">{t.company.team.advisor.bio}</p>
-            </Card>
-          </div>
-
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 text-muted-foreground">
-            <div className="flex items-center justify-center gap-2">
-              <Building2 className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span className="text-sm sm:text-base">{t.company.location}</span>
-            </div>
-            <div className="flex items-center justify-center gap-2">
-              <Factory className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span className="text-sm sm:text-base">{t.company.focus}</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <footer className="py-8 sm:py-12 px-4 sm:px-6 border-t border-border/50 pb-20 sm:pb-12">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
-          <div className="flex items-center gap-2">
-            <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
-            <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-2">
+              <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
+              <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
+              <span>Zurich, Switzerland</span>
+              <span>contact@vexgen.ai</span>
+            </div>
+            <div className="flex items-center gap-4 sm:gap-6 text-sm">
+              <Link href="/company" className="text-muted-foreground hover:text-foreground transition-colors">Company</Link>
+              <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
+              <Link href="/imprint" className="text-muted-foreground hover:text-foreground transition-colors">Imprint</Link>
+            </div>
           </div>
-          <p className="text-xs sm:text-sm text-muted-foreground">
-            contact@vexgen.ai
-          </p>
-          <p className="text-xs sm:text-sm text-muted-foreground">
+          <div className="mt-6 text-center text-xs text-muted-foreground">
             © {new Date().getFullYear()} {t.footer.copyright}
-          </p>
+          </div>
         </div>
       </footer>
-
-      {/* Spacer so the last section ("Company") can scroll to the top below the fixed nav on all viewport sizes. */}
-      <div aria-hidden className="h-[20vh] min-h-24 sm:h-[12vh] sm:min-h-16" />
 
       <div className="fixed bottom-0 left-0 right-0 p-3 bg-background/95 backdrop-blur-lg border-t border-border/50 sm:hidden z-40">
         <Button 

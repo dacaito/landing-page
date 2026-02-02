@@ -9,6 +9,9 @@ import PlasticsIndustry from "@/pages/industries/plastics";
 import FoodBeverageIndustry from "@/pages/industries/food-beverage";
 import CosmeticsIndustry from "@/pages/industries/cosmetics";
 import PharmaIndustry from "@/pages/industries/pharma";
+import Company from "@/pages/company";
+import Privacy from "@/pages/privacy";
+import Imprint from "@/pages/imprint";
 
 function Router() {
   return (
@@ -18,6 +21,9 @@ function Router() {
       <Route path="/industries/food-beverage" component={FoodBeverageIndustry} />
       <Route path="/industries/cosmetics" component={CosmeticsIndustry} />
       <Route path="/industries/pharma" component={PharmaIndustry} />
+      <Route path="/company" component={Company} />
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/imprint" component={Imprint} />
       <Route component={NotFound} />
     </Switch>
   );

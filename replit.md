@@ -38,6 +38,9 @@ A Vite + React landing page for Vexgen AI, a company offering real-time visibili
 - `/industries/food-beverage` - Food & Beverage industry page
 - `/industries/cosmetics` - Cosmetics industry page
 - `/industries/pharma` - Pharmaceutical industry page
+- `/company` - Company/About page
+- `/privacy` - Privacy Policy page
+- `/imprint` - Imprint/Legal page
 
 ## Scripts
 - `npm run dev:web` - Start development server on port 5000
@@ -52,3 +55,7 @@ A Vite + React landing page for Vexgen AI, a company offering real-time visibili
 - Added Industries dropdown navigation between Solution and How It Works
 - Created 4 industry-specific pages with shared template (Plastics, Food & Beverage, Cosmetics, Pharma)
 - Added EN/DE translations for industry names
+- Moved Company section to separate /company page
+- Created Privacy Policy page (/privacy)
+- Created Imprint page (/imprint)
+- Updated footer with address, Company, Privacy Policy, and Imprint links
