@@ -457,13 +457,13 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 </p>
               </div>
               <div className="relative">
-                <div className="hidden md:block absolute top-12 left-0 right-0 h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20" />
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="hidden md:block absolute top-12 left-0 right-0 h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20 z-0" />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
                   {content.howItWorks.steps.map((item, i) => {
                     const Icon = howItWorksIcons[i];
                     return (
                       <div key={i} className="text-center relative">
-                        <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-primary/10 border-4 border-primary flex items-center justify-center relative z-10 bg-background">
+                        <div className="w-24 h-24 mx-auto mb-6 rounded-full border-4 border-primary flex items-center justify-center bg-background">
                           <Icon className="w-10 h-10 text-primary" />
                         </div>
                         <h3 className="text-xl font-bold mb-2">{item.title}</h3>
