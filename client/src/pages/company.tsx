@@ -229,15 +229,8 @@ export default function Company() {
               Join Our Team
             </h2>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
-              <img 
-                src="/images/careers-team.png" 
-                alt="Join our team" 
-                className="w-full h-auto rounded-2xl shadow-lg"
-              />
-            </div>
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-3">
               <p className="text-base sm:text-lg text-muted-foreground mb-6">
                 We currently have no open positions, but we're always interested in hearing from talented individuals who share our passion for transforming manufacturing through technology.
               </p>
@@ -250,6 +243,13 @@ export default function Company() {
               >
                 Send your application to jobs@vexgen.ai
               </a>
+            </div>
+            <div className="lg:col-span-2">
+              <img 
+                src="/images/careers-team.png" 
+                alt="Join our team" 
+                className="w-full h-auto rounded-2xl shadow-lg max-h-64 object-cover"
+              />
             </div>
           </div>
         </div>
