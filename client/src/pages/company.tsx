@@ -283,10 +283,10 @@ export default function Company() {
       <footer className="py-8 sm:py-12 px-4 sm:px-6 border-t border-border/50">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2 cursor-pointer">
               <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
               <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
-            </div>
+            </Link>
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
               <span>Baumackerstrasse 42, 8050 Zurich, Switzerland</span>
               <span>contact@vexgen.ai</span>
