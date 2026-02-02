@@ -1,6 +1,7 @@
-import IndustryTemplate, { IndustryContent } from "./IndustryTemplate";
+import IndustryTemplate, { IndustryContent, LayoutVariant } from "./IndustryTemplate";
 
 const foodBeverageContent: IndustryContent = {
+  layoutVariant: 'B' as LayoutVariant,
   intro: {
     headline: "Food & Beverage",
     subheadline: "Your ERP. The physical truth for food and beverage operations.",
