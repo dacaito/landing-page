@@ -11,6 +11,7 @@ import FoodBeverageIndustry from "@/pages/industries/food-beverage";
 import CosmeticsIndustry from "@/pages/industries/cosmetics";
 import PharmaIndustry from "@/pages/industries/pharma";
 import ChemicalIndustry from "@/pages/industries/chemical";
+import LogisticsIndustry from "@/pages/industries/logistics";
 import Company from "@/pages/company";
 import Privacy from "@/pages/privacy";
 import Imprint from "@/pages/imprint";
@@ -41,6 +42,7 @@ function Router() {
       <Route path="/en/industries/cosmetics" component={CosmeticsIndustry} />
       <Route path="/en/industries/pharma" component={PharmaIndustry} />
       <Route path="/en/industries/chemical" component={ChemicalIndustry} />
+      <Route path="/en/industries/logistics" component={LogisticsIndustry} />
       <Route path="/en/company" component={Company} />
       <Route path="/en/privacy" component={Privacy} />
       <Route path="/en/imprint" component={Imprint} />
@@ -51,6 +53,7 @@ function Router() {
       <Route path="/de/industries/cosmetics" component={CosmeticsIndustry} />
       <Route path="/de/industries/pharma" component={PharmaIndustry} />
       <Route path="/de/industries/chemical" component={ChemicalIndustry} />
+      <Route path="/de/industries/logistics" component={LogisticsIndustry} />
       <Route path="/de/company" component={Company} />
       <Route path="/de/privacy" component={Privacy} />
       <Route path="/de/imprint" component={Imprint} />
@@ -60,6 +63,7 @@ function Router() {
       <Route path="/industries/cosmetics">{() => <LegacyRedirect path="/industries/cosmetics" />}</Route>
       <Route path="/industries/pharma">{() => <LegacyRedirect path="/industries/pharma" />}</Route>
       <Route path="/industries/chemical">{() => <LegacyRedirect path="/industries/chemical" />}</Route>
+      <Route path="/industries/logistics">{() => <LegacyRedirect path="/industries/logistics" />}</Route>
       <Route path="/company">{() => <LegacyRedirect path="/company" />}</Route>
       <Route path="/privacy">{() => <LegacyRedirect path="/privacy" />}</Route>
       <Route path="/imprint">{() => <LegacyRedirect path="/imprint" />}</Route>

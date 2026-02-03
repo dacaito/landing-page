@@ -42,6 +42,7 @@ All routes use language prefixes for SEO-friendly internationalization:
 - `/en/industries/food-beverage` - Food & Beverage industry page
 - `/en/industries/cosmetics` - Cosmetics industry page
 - `/en/industries/pharma` - Pharmaceutical industry page
+- `/en/industries/logistics` - Logistics & Fulfillment industry page
 - `/en/company` - Company/About page
 - `/en/privacy` - Privacy Policy page
 - `/en/imprint` - Imprint/Legal page
@@ -53,6 +54,7 @@ All routes use language prefixes for SEO-friendly internationalization:
 - `/de/industries/food-beverage` - Lebensmittel & Getränke page
 - `/de/industries/cosmetics` - Kosmetik page
 - `/de/industries/pharma` - Pharma page
+- `/de/industries/logistics` - Logistik & Fulfillment page
 - `/de/company` - Unternehmen page
 - `/de/privacy` - Datenschutz page
 - `/de/imprint` - Impressum page
@@ -90,6 +92,10 @@ All routes use language prefixes for SEO-friendly internationalization:
 - **Browser Language Detection**: Root path (`/`) redirects to `/en/` or `/de/` based on browser language preference
 
 ## Recent Changes
+- **2026-02-03**: Added Logistics & Fulfillment industry page (6th industry) with bilingual content focused on reducing manual labor, improving reliability, and reducing errors
+  - Created `/en/industries/logistics` and `/de/industries/logistics` routes
+  - Added navigation links in both desktop and mobile menus
+  - Updated sitemap.xml with new routes and hreflang tags
 - **2026-02-03**: Implemented SEO-friendly multilingual routing with `/en/` and `/de/` URL prefixes
   - Created LanguageContext for URL-based language detection
   - Updated all pages (home, industries, company, privacy, imprint) to use LanguageContext

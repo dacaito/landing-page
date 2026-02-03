@@ -190,6 +190,9 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                     <Link href={getLocalizedPath('/industries/pharma')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.pharma}
                     </Link>
+                    <Link href={getLocalizedPath('/industries/logistics')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                      {t.industries.logistics}
+                    </Link>
                   </div>
                 </div>
               )}
@@ -262,6 +265,9 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 </Link>
                 <Link href={getLocalizedPath('/industries/pharma')} onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
                   {t.industries.pharma}
+                </Link>
+                <Link href={getLocalizedPath('/industries/logistics')} onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                  {t.industries.logistics}
                 </Link>
               </div>
             </div>

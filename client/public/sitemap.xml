@@ -110,6 +110,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://vexgen.ai/en/industries/logistics</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/industries/logistics"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/industries/logistics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/industries/logistics"/>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vexgen.ai/de/industries/logistics</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/industries/logistics"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/industries/logistics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/industries/logistics"/>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://vexgen.ai/en/company</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/company"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/company"/>

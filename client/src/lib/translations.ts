@@ -16,7 +16,8 @@ export const translations = {
       foodBeverage: "Food & Beverage",
       cosmetics: "Cosmetics",
       pharma: "Pharma",
-      chemical: "Chemical"
+      chemical: "Chemical",
+      logistics: "Logistics & Fulfillment"
     },
     hero: {
       headline: "Your ERP.\nThe Truth.",
@@ -347,6 +348,7 @@ export const translations = {
       plastics: "Kunststoffe",
       foodBeverage: "Lebensmittel & Getränke",
       cosmetics: "Kosmetik",
+      logistics: "Logistik & Fulfillment",
       pharma: "Pharma",
       chemical: "Chemie"
     },
