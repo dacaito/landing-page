@@ -79,10 +79,10 @@ const chemicalContent: IndustryContent = {
       ]
     },
     problem: {
-      headline: "Wenn Systembestand nicht mit der physischen Realität übereinstimmt",
+      headline: "Wenn der Systembestand nicht der physischen Realität entspricht",
       description: "Materialien dominieren Kosten, Risiko und Produktionskontinuität. Abweichungen haben sofortige Auswirkungen.",
       issues: [
-        "Working Capital gebunden in überhöhten Sicherheitsbeständen",
+        "Working Capital ist in überhöhten Sicherheitsbeständen gebunden",
         "Abschreibungen durch abgelaufene oder falsch platzierte Materialien",
         "Fehlbestände beeinträchtigen Kundenzusagen",
         "Teams verbringen Zeit mit manuellen Prüfungen und Krisenmanagement"
@@ -100,7 +100,7 @@ const chemicalContent: IndustryContent = {
       ]
     },
     howItWorks: {
-      headline: "Eine Risikoschutzebene für Chemieanlagen",
+      headline: "Eine zusätzliche Sicherheitsebene für Chemieanlagen",
       description: "Vexgen AI gleicht den physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
       steps: [
         { step: "01", title: "Jede Bewegung erfassen", description: "Kameras überwachen Bestandsbewegungen kontinuierlich." },

@@ -68,7 +68,7 @@ const foodBeverageContent: IndustryContent = {
     intro: {
       headline: "Lebensmittel & Getränke",
       subheadline: "Ihr ERP. Die physische Wahrheit für Lebensmittel- und Getränkebetriebe.",
-      description: "Echtzeit-Bestandstransparenz über Paletten mit Rohstoffen, WIP und Fertigwaren zur Reduktion von Ausschuss und zum Schutz der Servicelevels.\n\nEntwickelt für Hochvolumen-Umgebungen, in denen Frische und Verfügbarkeit die Leistung definieren."
+      description: "Echtzeit-Bestandstransparenz über Paletten mit Rohstoffen, WIP und Fertigwaren zur Reduktion von Ausschuss und zum Schutz der Servicelevel.\n\nEntwickelt für Hochvolumen-Umgebungen, in denen Frische und Verfügbarkeit die Leistung definieren."
     },
     provenResults: {
       metrics: [
@@ -79,12 +79,12 @@ const foodBeverageContent: IndustryContent = {
       ]
     },
     problem: {
-      headline: "Wenn Palettenrealität von Systemdaten abweicht",
-      description: "Frische, Verfügbarkeit und Servicelevels hängen davon ab, genau zu wissen, was wo ist.",
+      headline: "Wenn die Palettenrealität von den Systemdaten abweicht",
+      description: "Frische, Verfügbarkeit und Servicelevel hängen davon ab, genau zu wissen, was wo ist.",
       issues: [
         "Ausschuss durch abgelaufene oder vergessene Paletten",
         "Fehlbestände verursachen unvollständige Aufträge und OTIF-Verfehlung",
-        "Überhöhte Puffer zum Schutz der Servicelevels",
+        "Überhöhte Puffer zum Schutz der Servicelevel",
         "Ständige Paletten- und Datumsprüfungen, um Aufträge abzuwickeln"
       ],
       closing: "Diese Probleme bestehen fort, weil ERP-Daten von der physischen Palettenrealität entkoppelt sind."
@@ -95,12 +95,12 @@ const foodBeverageContent: IndustryContent = {
       benefits: [
         "Verlässliche Bestandsgenauigkeit auf Artikel-, Mengen- und Verfallsdatumsebene",
         "Weniger Ausschuss durch bessere FIFO/FEFO-Ausführung",
-        "Höhere Servicelevels, weniger fehlende Paletten",
+        "Höhere Servicelevel, weniger fehlende Paletten",
         "Teams befreit von ständigen manuellen Palettenprüfungen"
       ]
     },
     howItWorks: {
-      headline: "Eine Frischeschutzebene für F&B-Betriebe",
+      headline: "Eine zusätzliche Transparenzebene für F&B-Betriebe",
       description: "Vexgen AI gleicht die physische Palettenrealität kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
       steps: [
         { step: "01", title: "Jede Bewegung erfassen", description: "Kameras überwachen Bestandsbewegungen kontinuierlich." },
@@ -120,7 +120,7 @@ const foodBeverageContent: IndustryContent = {
     },
     getStarted: {
       headline: "Ist das relevant für Ihren Betrieb?",
-      description: "Ein kurzes Gespräch kann klären, ob physische Bestandstransparenz Frische, Servicelevels oder Kapitaleffizienz verbessern könnte."
+      description: "Ein kurzes Gespräch kann klären, ob physische Bestandstransparenz Frische, Servicelevel oder Kapitaleffizienz verbessern könnte."
     }
   }
 };

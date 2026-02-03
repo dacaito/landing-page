@@ -79,7 +79,7 @@ const pharmaContent: IndustryContent = {
       ]
     },
     problem: {
-      headline: "Wenn Systembestand nicht mit der physischen Realität übereinstimmt",
+      headline: "Wenn der Systembestand nicht der physischen Realität entspricht",
       description: "Genauigkeit, Status und Rückverfolgbarkeit beeinflussen direkt Compliance und Patientenversorgung.",
       issues: [
         "Chargen verzögert durch fehlenden oder falsch platzierten Bestand",

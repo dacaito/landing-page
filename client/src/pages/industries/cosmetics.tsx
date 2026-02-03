@@ -79,7 +79,7 @@ const cosmeticsContent: IndustryContent = {
       ]
     },
     problem: {
-      headline: "Wenn Systembestand nicht mit der physischen Realität übereinstimmt",
+      headline: "Wenn der Systembestand nicht der physischen Realität entspricht",
       description: "Verfügbarkeit, Genauigkeit und Timing definieren Erfolg in der Kosmetik.",
       issues: [
         "Launches verzögert durch fehlende oder falsch zugeordnete Artikel",
@@ -100,7 +100,7 @@ const cosmeticsContent: IndustryContent = {
       ]
     },
     howItWorks: {
-      headline: "Eine Launch-Schutzebene für Kosmetikbetriebe",
+      headline: "Eine zusätzliche Sicherheitsebene für Produktlaunches",
       description: "Vexgen AI gleicht den physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
       steps: [
         { step: "01", title: "Jede Bewegung erfassen", description: "Kameras überwachen Bestandsbewegungen kontinuierlich." },

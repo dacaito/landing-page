@@ -79,11 +79,11 @@ const plasticsContent: IndustryContent = {
       ]
     },
     problem: {
-      headline: "Wenn Systembestand nicht mit der physischen Realität übereinstimmt",
+      headline: "Wenn der Systembestand nicht der physischen Realität entspricht",
       description: "Durchsatz hängt davon ab, die richtigen Teile zur richtigen Zeit an der richtigen Maschine zu haben.",
       issues: [
         "Linien warten auf Material, das im System 'vorhanden' ist",
-        "Überhöhte Puffer zum Schutz gegen Unsicherheit",
+        "Überhöhte Puffer zur Absicherung gegen Unsicherheiten",
         "Falsche Artikel häufen sich an, während kritische fehlen",
         "Ständige manuelle Prüfungen, um die Produktion am Laufen zu halten"
       ],

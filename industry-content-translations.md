@@ -81,12 +81,12 @@ Entwickelt für Umgebungen mit hoher Working-Capital-Bindung, strenger Rückverf
 - 6-stellig Einsparungen bei Abschreibungen
 - 12% Freigesetztes Working Capital
 
-**Problem Headline:** Wenn Systembestand nicht mit der physischen Realität übereinstimmt
+**Problem Headline:** Wenn der Systembestand nicht der physischen Realität entspricht
 
 **Problem Description:** Materialien dominieren Kosten, Risiko und Produktionskontinuität. Abweichungen haben sofortige Auswirkungen.
 
 **Issues:**
-- Working Capital gebunden in überhöhten Sicherheitsbeständen
+- Working Capital ist in überhöhten Sicherheitsbeständen gebunden
 - Abschreibungen durch abgelaufene oder falsch platzierte Materialien
 - Fehlbestände beeinträchtigen Kundenzusagen
 - Teams verbringen Zeit mit manuellen Prüfungen und Krisenmanagement
@@ -103,7 +103,7 @@ Entwickelt für Umgebungen mit hoher Working-Capital-Bindung, strenger Rückverf
 - Weniger Stillstände durch fehlende Materialien
 - Keine Notbestellungen oder Krisenmanagement mehr
 
-**How It Works Headline:** Eine Risikoschutzebene für Chemieanlagen
+**How It Works Headline:** Eine zusätzliche Sicherheitsebene für Chemieanlagen
 
 **How It Works Description:** Vexgen AI gleicht den physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
 
@@ -209,13 +209,13 @@ Entwickelt für High-Mix-, High-Volume-Umgebungen, in denen Verfügbarkeit und G
 - 25% Höhere Linienverfügbarkeit
 - 90% Weniger manuelle Prüfungen
 
-**Problem Headline:** Wenn Systembestand nicht mit der physischen Realität übereinstimmt
+**Problem Headline:** Wenn der Systembestand nicht der physischen Realität entspricht
 
 **Problem Description:** Durchsatz hängt davon ab, die richtigen Teile zur richtigen Zeit an der richtigen Maschine zu haben.
 
 **Issues:**
 - Linien warten auf Material, das im System 'vorhanden' ist
-- Überhöhte Puffer zum Schutz gegen Unsicherheit
+- Überhöhte Puffer zur Absicherung gegen Unsicherheiten
 - Falsche Artikel häufen sich an, während kritische fehlen
 - Ständige manuelle Prüfungen, um die Produktion am Laufen zu halten
 
@@ -327,7 +327,7 @@ Built for high-volume environments where freshness and availability define perfo
 
 **Subheadline:** Ihr ERP. Die physische Wahrheit für Lebensmittel- und Getränkebetriebe.
 
-**Description:** Echtzeit-Bestandstransparenz über Paletten mit Rohstoffen, WIP und Fertigwaren zur Reduktion von Ausschuss und zum Schutz der Servicelevels.
+**Description:** Echtzeit-Bestandstransparenz über Paletten mit Rohstoffen, WIP und Fertigwaren zur Reduktion von Ausschuss und zum Schutz der Servicelevel.
 
 Entwickelt für Hochvolumen-Umgebungen, in denen Frische und Verfügbarkeit die Leistung definieren.
 
@@ -337,14 +337,14 @@ Entwickelt für Hochvolumen-Umgebungen, in denen Frische und Verfügbarkeit die 
 - 5pp OTIF-Verbesserung
 - 90% Weniger manuelle Prüfungen
 
-**Problem Headline:** Wenn Palettenrealität von Systemdaten abweicht
+**Problem Headline:** Wenn die Palettenrealität von den Systemdaten abweicht
 
-**Problem Description:** Frische, Verfügbarkeit und Servicelevels hängen davon ab, genau zu wissen, was wo ist.
+**Problem Description:** Frische, Verfügbarkeit und Servicelevel hängen davon ab, genau zu wissen, was wo ist.
 
 **Issues:**
 - Ausschuss durch abgelaufene oder vergessene Paletten
 - Fehlbestände verursachen unvollständige Aufträge und OTIF-Verfehlung
-- Überhöhte Puffer zum Schutz der Servicelevels
+- Überhöhte Puffer zum Schutz der Servicelevel
 - Ständige Paletten- und Datumsprüfungen, um Aufträge abzuwickeln
 
 **Closing:** Diese Probleme bestehen fort, weil ERP-Daten von der physischen Palettenrealität entkoppelt sind.
@@ -356,10 +356,10 @@ Entwickelt für Hochvolumen-Umgebungen, in denen Frische und Verfügbarkeit die 
 **Benefits:**
 - Verlässliche Bestandsgenauigkeit auf Artikel-, Mengen- und Verfallsdatumsebene
 - Weniger Ausschuss durch bessere FIFO/FEFO-Ausführung
-- Höhere Servicelevels, weniger fehlende Paletten
+- Höhere Servicelevel, weniger fehlende Paletten
 - Teams befreit von ständigen manuellen Palettenprüfungen
 
-**How It Works Headline:** Eine Frischeschutzebene für F&B-Betriebe
+**How It Works Headline:** Eine zusätzliche Transparenzebene für F&B-Betriebe
 
 **How It Works Description:** Vexgen AI gleicht die physische Palettenrealität kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
 
@@ -380,7 +380,7 @@ Entwickelt für Hochvolumen-Umgebungen, in denen Frische und Verfügbarkeit die 
 
 **Get Started Headline:** Ist das relevant für Ihren Betrieb?
 
-**Get Started Description:** Ein kurzes Gespräch kann klären, ob physische Bestandstransparenz Frische, Servicelevels oder Kapitaleffizienz verbessern könnte.
+**Get Started Description:** Ein kurzes Gespräch kann klären, ob physische Bestandstransparenz Frische, Servicelevel oder Kapitaleffizienz verbessern könnte.
 
 ---
 
@@ -465,7 +465,7 @@ Entwickelt für High-Mix-Umgebungen, in denen Artikelgenauigkeit und Timing den 
 - 6-stellig Einsparungen bei obsoleten Beständen
 - 10+ Tage DIO-Reduktion
 
-**Problem Headline:** Wenn Systembestand nicht mit der physischen Realität übereinstimmt
+**Problem Headline:** Wenn der Systembestand nicht der physischen Realität entspricht
 
 **Problem Description:** Verfügbarkeit, Genauigkeit und Timing definieren Erfolg in der Kosmetik.
 
@@ -487,7 +487,7 @@ Entwickelt für High-Mix-Umgebungen, in denen Artikelgenauigkeit und Timing den 
 - Weniger Abschreibungen durch falsch zugeordneten Bestand
 - Weniger Kapital in Sicherheitspuffern gebunden
 
-**How It Works Headline:** Eine Launch-Schutzebene für Kosmetikbetriebe
+**How It Works Headline:** Eine zusätzliche Sicherheitsebene für Produktlaunches
 
 **How It Works Description:** Vexgen AI gleicht den physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
 
@@ -593,7 +593,7 @@ Entwickelt für regulierte Umgebungen, in denen Genauigkeit und Rückverfolgbark
 - 50% Weniger Fehlbestände
 - Doppelte Audit-Sicherheit
 
-**Problem Headline:** Wenn Systembestand nicht mit der physischen Realität übereinstimmt
+**Problem Headline:** Wenn der Systembestand nicht der physischen Realität entspricht
 
 **Problem Description:** Genauigkeit, Status und Rückverfolgbarkeit beeinflussen direkt Compliance und Patientenversorgung.
 
