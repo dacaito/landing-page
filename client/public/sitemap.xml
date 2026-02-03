@@ -1,56 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://vexgen.ai/</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://vexgen.ai/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/"/>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vexgen.ai/industries/chemical</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://vexgen.ai/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/"/>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vexgen.ai/en/industries/chemical</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/industries/chemical"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/industries/chemical"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/industries/chemical"/>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vexgen.ai/industries/plastics</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://vexgen.ai/de/industries/chemical</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/industries/chemical"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/industries/chemical"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/industries/chemical"/>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vexgen.ai/industries/food-beverage</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://vexgen.ai/en/industries/plastics</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/industries/plastics"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/industries/plastics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/industries/plastics"/>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vexgen.ai/industries/cosmetics</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://vexgen.ai/de/industries/plastics</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/industries/plastics"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/industries/plastics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/industries/plastics"/>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vexgen.ai/industries/pharma</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://vexgen.ai/en/industries/food-beverage</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/industries/food-beverage"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/industries/food-beverage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/industries/food-beverage"/>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vexgen.ai/company</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://vexgen.ai/de/industries/food-beverage</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/industries/food-beverage"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/industries/food-beverage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/industries/food-beverage"/>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vexgen.ai/en/industries/cosmetics</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/industries/cosmetics"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/industries/cosmetics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/industries/cosmetics"/>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vexgen.ai/de/industries/cosmetics</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/industries/cosmetics"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/industries/cosmetics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/industries/cosmetics"/>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vexgen.ai/en/industries/pharma</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/industries/pharma"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/industries/pharma"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/industries/pharma"/>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vexgen.ai/de/industries/pharma</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/industries/pharma"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/industries/pharma"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/industries/pharma"/>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vexgen.ai/en/company</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/company"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/company"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/company"/>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vexgen.ai/privacy</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://vexgen.ai/de/company</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/company"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/company"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/company"/>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vexgen.ai/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/privacy"/>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://vexgen.ai/imprint</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://vexgen.ai/de/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/privacy"/>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://vexgen.ai/en/imprint</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/imprint"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/imprint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/imprint"/>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://vexgen.ai/de/imprint</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/imprint"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/imprint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/imprint"/>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

@@ -1,28 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowDown, Camera, RefreshCw, Database, Factory, Warehouse, Users, Building2, ChevronRight, Check, Menu, X, Globe, ChevronDown } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { translations, Language } from "@/lib/translations";
+import { translations } from "@/lib/translations";
+import { useLanguage } from "@/lib/LanguageContext";
 import dashboardImage from "@assets/dash-board-kpi.png";
 import stockImage from "@assets/image_1_1767949813510.png";
 import demoVideo from "@assets/Landing-Page-Reel-876x512.mp4";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
 export default function Home() {
-  const [lang, setLang] = useState<Language>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('vexgen-lang');
-      if (saved === 'de' || saved === 'en') return saved;
-    }
-    return 'en';
-  });
+  const { language: lang, getLocalizedPath, switchLanguagePath } = useLanguage();
+  const [, setLocation] = useLocation();
   const t = translations[lang];
-
-  useEffect(() => {
-    localStorage.setItem('vexgen-lang', lang);
-  }, [lang]);
   
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
@@ -56,10 +48,9 @@ export default function Home() {
       const el = document.getElementById(id);
       if (!el) return;
 
-      // Offset for fixed navbar so section headings don't land under it.
       const nav = document.querySelector("nav");
       const navHeight = nav?.getBoundingClientRect().height ?? 0;
-      const extraGap = 12; // small breathing room below the nav
+      const extraGap = 12;
       const top =
         window.scrollY + el.getBoundingClientRect().top - navHeight - extraGap;
 
@@ -68,35 +59,42 @@ export default function Home() {
   };
 
   const toggleLanguage = () => {
-    setLang(lang === 'en' ? 'de' : 'en');
+    setLocation(switchLanguagePath());
   };
 
   const howItWorksIcons = [Camera, RefreshCw, Database];
   const whoItsForIcons = [Factory, Warehouse, Users, Building2];
 
+  const canonicalUrl = `https://vexgen.ai/${lang}`;
+  const alternateEn = "https://vexgen.ai/en";
+  const alternateDe = "https://vexgen.ai/de";
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet htmlAttributes={{ lang }}>
-        <title>Vexgen AI - Align ERP with Reality</title>
-        <meta name="description" content="Real-time visibility and reconciliation between ERP data and physical inventory. No manual counts. No tags. No operational disruption." />
-        <link rel="canonical" href="https://vexgen.ai/" />
-        <meta property="og:url" content="https://vexgen.ai/" />
+        <title>Vexgen AI - {lang === 'en' ? 'Align ERP with Reality' : 'ERP mit Realität abgleichen'}</title>
+        <meta name="description" content={lang === 'en' 
+          ? "Real-time visibility and reconciliation between ERP data and physical inventory. No manual counts. No tags. No operational disruption."
+          : "Echtzeit-Transparenz und Abgleich zwischen ERP-Daten und physischem Bestand. Keine manuellen Zählungen. Keine Tags. Keine Betriebsunterbrechung."
+        } />
+        <link rel="canonical" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="en" href={alternateEn} />
+        <link rel="alternate" hrefLang="de" href={alternateDe} />
+        <link rel="alternate" hrefLang="x-default" href={alternateEn} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'de_DE'} />
       </Helmet>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
-          <button
-            type="button"
-            onClick={() => {
-              setMobileMenuOpen(false);
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
+          <Link
+            href={getLocalizedPath('/')}
             className="flex items-center gap-2 cursor-pointer rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background"
-            aria-label="Go to top"
+            aria-label="Go to home"
             data-testid="button-logo-home"
           >
             <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-8 h-8 sm:w-9 sm:h-9 object-contain" />
             <span className="font-bold text-lg sm:text-xl tracking-tight text-primary" data-testid="text-logo">Vexgen AI</span>
-          </button>
+          </Link>
           <div className="hidden lg:flex items-center gap-8">
             <button 
               onClick={() => scrollToSection("results")} 
@@ -134,19 +132,19 @@ export default function Home() {
               {industriesOpen && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 z-50 pt-1">
                   <div className="bg-background border border-border rounded-lg shadow-lg py-2">
-                    <Link href="/industries/chemical" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link href={getLocalizedPath('/industries/chemical')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.chemical}
                     </Link>
-                    <Link href="/industries/plastics" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link href={getLocalizedPath('/industries/plastics')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.plastics}
                     </Link>
-                    <Link href="/industries/food-beverage" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link href={getLocalizedPath('/industries/food-beverage')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.foodBeverage}
                     </Link>
-                    <Link href="/industries/cosmetics" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link href={getLocalizedPath('/industries/cosmetics')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.cosmetics}
                     </Link>
-                    <Link href="/industries/pharma" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link href={getLocalizedPath('/industries/pharma')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.pharma}
                     </Link>
                   </div>
@@ -154,7 +152,7 @@ export default function Home() {
               )}
             </div>
             <Link 
-              href="/company"
+              href={getLocalizedPath('/company')}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-company"
             >
@@ -227,25 +225,25 @@ export default function Home() {
             <div className="flex flex-col items-center gap-2">
               <span className="text-2xl font-medium text-foreground">{t.nav.industries}</span>
               <div className="flex flex-wrap justify-center gap-2">
-                <Link href="/industries/chemical" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                <Link href={getLocalizedPath('/industries/chemical')} onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
                   {t.industries.chemical}
                 </Link>
-                <Link href="/industries/plastics" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                <Link href={getLocalizedPath('/industries/plastics')} onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
                   {t.industries.plastics}
                 </Link>
-                <Link href="/industries/food-beverage" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                <Link href={getLocalizedPath('/industries/food-beverage')} onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
                   {t.industries.foodBeverage}
                 </Link>
-                <Link href="/industries/cosmetics" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                <Link href={getLocalizedPath('/industries/cosmetics')} onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
                   {t.industries.cosmetics}
                 </Link>
-                <Link href="/industries/pharma" onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                <Link href={getLocalizedPath('/industries/pharma')} onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
                   {t.industries.pharma}
                 </Link>
               </div>
             </div>
             <Link 
-              href="/company"
+              href={getLocalizedPath('/company')}
               onClick={() => setMobileMenuOpen(false)}
               className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
               data-testid="link-company-mobile"
@@ -522,21 +520,21 @@ export default function Home() {
       <footer className="py-8 sm:py-12 px-4 sm:px-6 border-t border-border/50 pb-20 sm:pb-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <button 
-              onClick={() => scrollToSection("hero")}
+            <Link 
+              href={getLocalizedPath('/')}
               className="flex items-center gap-2 cursor-pointer"
             >
               <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
               <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
-            </button>
+            </Link>
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
               <span>Baumackerstrasse 42, 8050 Zurich, Switzerland</span>
               <span>contact@vexgen.ai</span>
             </div>
             <div className="flex items-center gap-4 sm:gap-6 text-sm">
-              <Link href="/company" className="text-muted-foreground hover:text-foreground transition-colors">Company</Link>
-              <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
-              <Link href="/imprint" className="text-muted-foreground hover:text-foreground transition-colors">Imprint</Link>
+              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">{lang === 'en' ? 'Company' : 'Unternehmen'}</Link>
+              <Link href={getLocalizedPath('/privacy')} className="text-muted-foreground hover:text-foreground transition-colors">{lang === 'en' ? 'Privacy Policy' : 'Datenschutz'}</Link>
+              <Link href={getLocalizedPath('/imprint')} className="text-muted-foreground hover:text-foreground transition-colors">{lang === 'en' ? 'Imprint' : 'Impressum'}</Link>
             </div>
           </div>
           <div className="mt-6 text-center text-xs text-muted-foreground">

@@ -4,27 +4,22 @@ import { Building2, Factory, Globe, Menu, X, ChevronDown, Linkedin, ExternalLink
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Helmet } from "react-helmet-async";
-import { translations, Language } from "@/lib/translations";
+import { translations } from "@/lib/translations";
+import { useLanguage } from "@/lib/LanguageContext";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
 const companyVisionImage = "/images/company-warehouse.png";
 
 export default function Company() {
-  const [lang, setLang] = useState<Language>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('vexgen-lang');
-      if (saved === 'de' || saved === 'en') return saved;
-    }
-    return 'en';
-  });
+  const { language: lang, getLocalizedPath, switchLanguagePath } = useLanguage();
+  const [, setLocation] = useLocation();
   const t = translations[lang];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
-  const [, setLocation] = useLocation();
 
   const navigateToHomeSection = (sectionId: string) => {
     setMobileMenuOpen(false);
-    setLocation('/');
+    setLocation(getLocalizedPath('/'));
     setTimeout(() => {
       const el = document.getElementById(sectionId);
       if (el) {
@@ -35,10 +30,6 @@ export default function Company() {
       }
     }, 100);
   };
-
-  useEffect(() => {
-    localStorage.setItem('vexgen-lang', lang);
-  }, [lang]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -54,20 +45,28 @@ export default function Company() {
   }, [mobileMenuOpen]);
 
   const toggleLanguage = () => {
-    setLang(lang === 'en' ? 'de' : 'en');
+    setLocation(switchLanguagePath());
   };
+
+  const canonicalUrl = `https://vexgen.ai/${lang}/company`;
+  const alternateEn = `https://vexgen.ai/en/company`;
+  const alternateDe = `https://vexgen.ai/de/company`;
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet htmlAttributes={{ lang }}>
         <title>About Us - Vexgen AI</title>
         <meta name="description" content="Learn about Vexgen AI - bridging the gap between ERP records and physical reality with AI-powered inventory visibility." />
-        <link rel="canonical" href="https://vexgen.ai/company" />
-        <meta property="og:url" content="https://vexgen.ai/company" />
+        <link rel="canonical" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="en" href={alternateEn} />
+        <link rel="alternate" hrefLang="de" href={alternateDe} />
+        <link rel="alternate" hrefLang="x-default" href={alternateEn} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'de_DE'} />
       </Helmet>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
-          <Link href="/" className="flex items-center gap-2 cursor-pointer">
+          <Link href={getLocalizedPath('/')} className="flex items-center gap-2 cursor-pointer">
             <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-8 h-8 sm:w-9 sm:h-9 object-contain" />
             <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
           </Link>
@@ -93,26 +92,26 @@ export default function Company() {
               {industriesOpen && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 z-50 pt-1">
                   <div className="bg-background border border-border rounded-lg shadow-lg py-2">
-                    <Link href="/industries/chemical" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link href={getLocalizedPath('/industries/chemical')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.chemical}
                     </Link>
-                    <Link href="/industries/plastics" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link href={getLocalizedPath('/industries/plastics')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.plastics}
                     </Link>
-                    <Link href="/industries/food-beverage" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link href={getLocalizedPath('/industries/food-beverage')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.foodBeverage}
                     </Link>
-                    <Link href="/industries/cosmetics" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link href={getLocalizedPath('/industries/cosmetics')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.cosmetics}
                     </Link>
-                    <Link href="/industries/pharma" className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link href={getLocalizedPath('/industries/pharma')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
                       {t.industries.pharma}
                     </Link>
                   </div>
                 </div>
               )}
             </div>
-            <Link href="/company" className="text-sm text-foreground font-medium transition-colors">
+            <Link href={getLocalizedPath('/company')} className="text-sm text-foreground font-medium transition-colors">
               {t.nav.company}
             </Link>
           </div>
@@ -124,7 +123,7 @@ export default function Company() {
               <Globe className="w-4 h-4" />
               <span className="uppercase font-medium">{lang}</span>
             </button>
-            <Link href="/">
+            <Link href={getLocalizedPath('/')}>
               <Button size="sm" className="hidden sm:flex rounded-full px-4 sm:px-6">
                 {t.cta.requestDemo}
               </Button>
@@ -143,7 +142,7 @@ export default function Company() {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 bg-background flex flex-col">
           <div className="flex items-center justify-between p-4 border-b border-border/50">
-            <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
+            <Link href={getLocalizedPath('/')} className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
               <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-8 h-8 object-contain" />
               <span className="font-bold text-lg tracking-tight text-primary">Vexgen AI</span>
             </Link>
@@ -157,14 +156,14 @@ export default function Company() {
             <button onClick={() => navigateToHomeSection("how-it-works")} className="text-lg font-medium">{t.nav.howItWorks}</button>
             <div className="flex flex-col items-center gap-2">
               <span className="text-lg font-medium text-muted-foreground">{t.nav.industries}</span>
-              <Link href="/industries/chemical" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.chemical}</Link>
-              <Link href="/industries/plastics" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.plastics}</Link>
-              <Link href="/industries/food-beverage" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.foodBeverage}</Link>
-              <Link href="/industries/cosmetics" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.cosmetics}</Link>
-              <Link href="/industries/pharma" className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.pharma}</Link>
+              <Link href={getLocalizedPath('/industries/chemical')} className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.chemical}</Link>
+              <Link href={getLocalizedPath('/industries/plastics')} className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.plastics}</Link>
+              <Link href={getLocalizedPath('/industries/food-beverage')} className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.foodBeverage}</Link>
+              <Link href={getLocalizedPath('/industries/cosmetics')} className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.cosmetics}</Link>
+              <Link href={getLocalizedPath('/industries/pharma')} className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.pharma}</Link>
             </div>
-            <Link href="/company" className="text-lg font-medium text-primary" onClick={() => setMobileMenuOpen(false)}>{t.nav.company}</Link>
-            <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+            <Link href={getLocalizedPath('/company')} className="text-lg font-medium text-primary" onClick={() => setMobileMenuOpen(false)}>{t.nav.company}</Link>
+            <Link href={getLocalizedPath('/')} onClick={() => setMobileMenuOpen(false)}>
               <Button className="rounded-full px-8 py-3 text-base mt-4">
                 {t.cta.requestDemo}
               </Button>
@@ -350,7 +349,7 @@ export default function Company() {
       <footer className="py-8 sm:py-12 px-4 sm:px-6 border-t border-border/50">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <Link href="/" className="flex items-center gap-2 cursor-pointer">
+            <Link href={getLocalizedPath('/')} className="flex items-center gap-2 cursor-pointer">
               <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
               <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
             </Link>
@@ -359,9 +358,9 @@ export default function Company() {
               <span>contact@vexgen.ai</span>
             </div>
             <div className="flex items-center gap-4 sm:gap-6 text-sm">
-              <Link href="/company" className="text-muted-foreground hover:text-foreground transition-colors">Company</Link>
-              <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
-              <Link href="/imprint" className="text-muted-foreground hover:text-foreground transition-colors">Imprint</Link>
+              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">Company</Link>
+              <Link href={getLocalizedPath('/privacy')} className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
+              <Link href={getLocalizedPath('/imprint')} className="text-muted-foreground hover:text-foreground transition-colors">Imprint</Link>
             </div>
           </div>
           <div className="mt-6 text-center text-xs text-muted-foreground">
