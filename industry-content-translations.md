@@ -78,7 +78,7 @@ Entwickelt für Umgebungen mit hoher Working-Capital-Bindung, strenger Rückverf
 **Metrics:**
 - >99% Bestandsgenauigkeit
 - 15+ Tage DIO-Reduktion
-- 6-stellig Weniger Abschreibungen
+- 6-stellig Einsparungen bei Abschreibungen
 - 12% Freigesetztes Working Capital
 
 **Problem Headline:** Wenn Systembestand nicht mit der physischen Realität übereinstimmt
@@ -95,17 +95,17 @@ Entwickelt für Umgebungen mit hoher Working-Capital-Bindung, strenger Rückverf
 
 **Outcome Headline:** Was sich mit physischer Verifizierung ändert
 
-**Outcome Description:** Kontinuierlicher Abgleich zwischen System und Realität transformiert den Betrieb.
+**Outcome Description:** Kontinuierlicher Abgleich zwischen System und Realität sorgt für stabile und planbare Prozesse.
 
 **Benefits:**
-- Verlässliche Genauigkeit nach Material, Charge und Lagerort
+- Verlässliche Bestandsgenauigkeit auf Material-, Chargen- und Lagerortebene
 - Weniger Working Capital in überhöhten Puffern
 - Weniger Stillstände durch fehlende Materialien
 - Keine Notbestellungen oder Krisenmanagement mehr
 
 **How It Works Headline:** Eine Risikoschutzebene für Chemieanlagen
 
-**How It Works Description:** Vexgen AI gleicht physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
+**How It Works Description:** Vexgen AI gleicht den physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
 
 **Steps:**
 1. Jede Bewegung erfassen - Kameras überwachen Bestandsbewegungen kontinuierlich.
@@ -223,17 +223,17 @@ Entwickelt für High-Mix-, High-Volume-Umgebungen, in denen Verfügbarkeit und G
 
 **Outcome Headline:** Was sich mit physischer Verifizierung ändert
 
-**Outcome Description:** Kontinuierlicher Abgleich zwischen System und Realität transformiert den Betrieb.
+**Outcome Description:** Kontinuierlicher Abgleich zwischen System und Realität sorgt für stabile und planbare Prozesse.
 
 **Benefits:**
-- Verlässliche Genauigkeit nach Artikel, Stück und Lagerort
+- Verlässliche Bestandsgenauigkeit auf Artikel-, Stück- und Lagerortebene
 - Höhere Verfügbarkeit, weniger Materialstopps
 - Weniger Working Capital in Puffern
 - Keine Notfallaktionen oder manuellen Abgleiche mehr
 
 **How It Works Headline:** Eine Verifizierungsebene für Kunststoffwerke
 
-**How It Works Description:** Vexgen AI gleicht physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
+**How It Works Description:** Vexgen AI gleicht den physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
 
 **Steps:**
 1. Jede Bewegung erfassen - Kameras überwachen Bestandsbewegungen kontinuierlich.
@@ -351,17 +351,17 @@ Entwickelt für Hochvolumen-Umgebungen, in denen Frische und Verfügbarkeit die 
 
 **Outcome Headline:** Was sich mit physischer Verifizierung ändert
 
-**Outcome Description:** Kontinuierlicher Abgleich zwischen System und Realität transformiert den Betrieb.
+**Outcome Description:** Kontinuierlicher Abgleich zwischen System und Realität sorgt für stabile und planbare Prozesse.
 
 **Benefits:**
-- Verlässliche Genauigkeit nach Artikel, Menge und Verfallsdatum
+- Verlässliche Bestandsgenauigkeit auf Artikel-, Mengen- und Verfallsdatumsebene
 - Weniger Ausschuss durch bessere FIFO/FEFO-Ausführung
 - Höhere Servicelevels, weniger fehlende Paletten
 - Teams befreit von ständigen manuellen Palettenprüfungen
 
 **How It Works Headline:** Eine Frischeschutzebene für F&B-Betriebe
 
-**How It Works Description:** Vexgen AI gleicht physische Palettenrealität kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
+**How It Works Description:** Vexgen AI gleicht die physische Palettenrealität kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
 
 **Steps:**
 1. Jede Bewegung erfassen - Kameras überwachen Bestandsbewegungen kontinuierlich.
@@ -462,7 +462,7 @@ Entwickelt für High-Mix-Umgebungen, in denen Artikelgenauigkeit und Timing den 
 **Metrics:**
 - >99% Bestandsgenauigkeit
 - 5pp Pünktliche Launch-Rate
-- 6-stellig Reduktion Obsoleter Bestände
+- 6-stellig Einsparungen bei obsoleten Beständen
 - 10+ Tage DIO-Reduktion
 
 **Problem Headline:** Wenn Systembestand nicht mit der physischen Realität übereinstimmt
@@ -479,17 +479,17 @@ Entwickelt für High-Mix-Umgebungen, in denen Artikelgenauigkeit und Timing den 
 
 **Outcome Headline:** Was sich mit physischer Verifizierung ändert
 
-**Outcome Description:** Kontinuierlicher Abgleich zwischen System und Realität transformiert den Betrieb.
+**Outcome Description:** Kontinuierlicher Abgleich zwischen System und Realität sorgt für stabile und planbare Prozesse.
 
 **Benefits:**
-- Verlässliche Genauigkeit nach Artikel, Variante und Lagerort
+- Verlässliche Bestandsgenauigkeit auf Artikel-, Varianten- und Lagerortebene
 - Pünktliche Launches mit weniger Überraschungen
 - Weniger Abschreibungen durch falsch zugeordneten Bestand
 - Weniger Kapital in Sicherheitspuffern gebunden
 
 **How It Works Headline:** Eine Launch-Schutzebene für Kosmetikbetriebe
 
-**How It Works Description:** Vexgen AI gleicht physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
+**How It Works Description:** Vexgen AI gleicht den physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
 
 **Steps:**
 1. Jede Bewegung erfassen - Kameras überwachen Bestandsbewegungen kontinuierlich.
@@ -589,9 +589,9 @@ Entwickelt für regulierte Umgebungen, in denen Genauigkeit und Rückverfolgbark
 
 **Metrics:**
 - >99% Bestandsgenauigkeit
-- 30% Schnellere Chargenfreigabe
+- 30 % schnellere Chargenfreigabe
 - 50% Weniger Fehlbestände
-- 2x Audit-Sicherheit
+- Doppelte Audit-Sicherheit
 
 **Problem Headline:** Wenn Systembestand nicht mit der physischen Realität übereinstimmt
 
@@ -607,17 +607,17 @@ Entwickelt für regulierte Umgebungen, in denen Genauigkeit und Rückverfolgbark
 
 **Outcome Headline:** Was sich mit physischer Verifizierung ändert
 
-**Outcome Description:** Kontinuierlicher Abgleich zwischen System und Realität transformiert den Betrieb.
+**Outcome Description:** Kontinuierlicher Abgleich zwischen System und Realität sorgt für stabile und planbare Prozesse.
 
 **Benefits:**
-- Verlässliche Genauigkeit nach Charge, Status und Lagerort
+- Verlässliche Bestandsgenauigkeit auf Chargen-, Status- und Lagerortebene
 - Schnellere, zuverlässigere Chargenfreigaben
 - Geringeres Compliance- und Audit-Risiko
 - Weniger Abhängigkeit von konservativen Puffern
 
 **How It Works Headline:** Eine Compliance-Ebene für Pharmabetriebe
 
-**How It Works Description:** Vexgen AI gleicht physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
+**How It Works Description:** Vexgen AI gleicht den physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
 
 **Steps:**
 1. Jede Bewegung erfassen - Kameras überwachen Bestandsbewegungen kontinuierlich.

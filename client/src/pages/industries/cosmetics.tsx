@@ -74,7 +74,7 @@ const cosmeticsContent: IndustryContent = {
       metrics: [
         { value: ">99%", label: "Bestandsgenauigkeit" },
         { value: "5pp", label: "Pünktliche Launch-Rate" },
-        { value: "6-stellig", label: "Reduktion Obsoleter Bestände" },
+        { value: "6-stellig", label: "Einsparungen bei obsoleten Beständen" },
         { value: "10+ Tage", label: "DIO-Reduktion" }
       ]
     },
@@ -91,9 +91,9 @@ const cosmeticsContent: IndustryContent = {
     },
     outcome: {
       headline: "Was sich mit physischer Verifizierung ändert",
-      description: "Kontinuierlicher Abgleich zwischen System und Realität transformiert den Betrieb.",
+      description: "Kontinuierlicher Abgleich zwischen System und Realität sorgt für stabile und planbare Prozesse.",
       benefits: [
-        "Verlässliche Genauigkeit nach Artikel, Variante und Lagerort",
+        "Verlässliche Bestandsgenauigkeit auf Artikel-, Varianten- und Lagerortebene",
         "Pünktliche Launches mit weniger Überraschungen",
         "Weniger Abschreibungen durch falsch zugeordneten Bestand",
         "Weniger Kapital in Sicherheitspuffern gebunden"
@@ -101,7 +101,7 @@ const cosmeticsContent: IndustryContent = {
     },
     howItWorks: {
       headline: "Eine Launch-Schutzebene für Kosmetikbetriebe",
-      description: "Vexgen AI gleicht physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
+      description: "Vexgen AI gleicht den physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
       steps: [
         { step: "01", title: "Jede Bewegung erfassen", description: "Kameras überwachen Bestandsbewegungen kontinuierlich." },
         { step: "02", title: "Automatisch validieren", description: "Vision-KI identifiziert Materialien und Mengen in Echtzeit." },

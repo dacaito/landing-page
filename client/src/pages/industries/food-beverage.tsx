@@ -91,9 +91,9 @@ const foodBeverageContent: IndustryContent = {
     },
     outcome: {
       headline: "Was sich mit physischer Verifizierung ändert",
-      description: "Kontinuierlicher Abgleich zwischen System und Realität transformiert den Betrieb.",
+      description: "Kontinuierlicher Abgleich zwischen System und Realität sorgt für stabile und planbare Prozesse.",
       benefits: [
-        "Verlässliche Genauigkeit nach Artikel, Menge und Verfallsdatum",
+        "Verlässliche Bestandsgenauigkeit auf Artikel-, Mengen- und Verfallsdatumsebene",
         "Weniger Ausschuss durch bessere FIFO/FEFO-Ausführung",
         "Höhere Servicelevels, weniger fehlende Paletten",
         "Teams befreit von ständigen manuellen Palettenprüfungen"
@@ -101,7 +101,7 @@ const foodBeverageContent: IndustryContent = {
     },
     howItWorks: {
       headline: "Eine Frischeschutzebene für F&B-Betriebe",
-      description: "Vexgen AI gleicht physische Palettenrealität kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
+      description: "Vexgen AI gleicht die physische Palettenrealität kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
       steps: [
         { step: "01", title: "Jede Bewegung erfassen", description: "Kameras überwachen Bestandsbewegungen kontinuierlich." },
         { step: "02", title: "Automatisch validieren", description: "Vision-KI identifiziert Materialien und Mengen in Echtzeit." },

@@ -74,7 +74,7 @@ const chemicalContent: IndustryContent = {
       metrics: [
         { value: ">99%", label: "Bestandsgenauigkeit" },
         { value: "15+ Tage", label: "DIO-Reduktion" },
-        { value: "6-stellig", label: "Weniger Abschreibungen" },
+        { value: "6-stellig", label: "Einsparungen bei Abschreibungen" },
         { value: "12%", label: "Freigesetztes Working Capital" }
       ]
     },
@@ -91,9 +91,9 @@ const chemicalContent: IndustryContent = {
     },
     outcome: {
       headline: "Was sich mit physischer Verifizierung ändert",
-      description: "Kontinuierlicher Abgleich zwischen System und Realität transformiert den Betrieb.",
+      description: "Kontinuierlicher Abgleich zwischen System und Realität sorgt für stabile und planbare Prozesse.",
       benefits: [
-        "Verlässliche Genauigkeit nach Material, Charge und Lagerort",
+        "Verlässliche Bestandsgenauigkeit auf Material-, Chargen- und Lagerortebene",
         "Weniger Working Capital in überhöhten Puffern",
         "Weniger Stillstände durch fehlende Materialien",
         "Keine Notbestellungen oder Krisenmanagement mehr"
@@ -101,7 +101,7 @@ const chemicalContent: IndustryContent = {
     },
     howItWorks: {
       headline: "Eine Risikoschutzebene für Chemieanlagen",
-      description: "Vexgen AI gleicht physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
+      description: "Vexgen AI gleicht den physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
       steps: [
         { step: "01", title: "Jede Bewegung erfassen", description: "Kameras überwachen Bestandsbewegungen kontinuierlich." },
         { step: "02", title: "Automatisch validieren", description: "Vision-KI identifiziert Materialien und Mengen in Echtzeit." },

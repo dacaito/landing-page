@@ -91,9 +91,9 @@ const plasticsContent: IndustryContent = {
     },
     outcome: {
       headline: "Was sich mit physischer Verifizierung ändert",
-      description: "Kontinuierlicher Abgleich zwischen System und Realität transformiert den Betrieb.",
+      description: "Kontinuierlicher Abgleich zwischen System und Realität sorgt für stabile und planbare Prozesse.",
       benefits: [
-        "Verlässliche Genauigkeit nach Artikel, Stück und Lagerort",
+        "Verlässliche Bestandsgenauigkeit auf Artikel-, Stück- und Lagerortebene",
         "Höhere Verfügbarkeit, weniger Materialstopps",
         "Weniger Working Capital in Puffern",
         "Keine Notfallaktionen oder manuellen Abgleiche mehr"
@@ -101,7 +101,7 @@ const plasticsContent: IndustryContent = {
     },
     howItWorks: {
       headline: "Eine Verifizierungsebene für Kunststoffwerke",
-      description: "Vexgen AI gleicht physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
+      description: "Vexgen AI gleicht den physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
       steps: [
         { step: "01", title: "Jede Bewegung erfassen", description: "Kameras überwachen Bestandsbewegungen kontinuierlich." },
         { step: "02", title: "Automatisch validieren", description: "Vision-KI identifiziert Materialien und Mengen in Echtzeit." },

@@ -73,9 +73,9 @@ const pharmaContent: IndustryContent = {
     provenResults: {
       metrics: [
         { value: ">99%", label: "Bestandsgenauigkeit" },
-        { value: "30%", label: "Schnellere Chargenfreigabe" },
+        { value: "30 %", label: "schnellere Chargenfreigabe" },
         { value: "50%", label: "Weniger Fehlbestände" },
-        { value: "2x", label: "Audit-Sicherheit" }
+        { value: "Doppelte", label: "Audit-Sicherheit" }
       ]
     },
     problem: {
@@ -91,9 +91,9 @@ const pharmaContent: IndustryContent = {
     },
     outcome: {
       headline: "Was sich mit physischer Verifizierung ändert",
-      description: "Kontinuierlicher Abgleich zwischen System und Realität transformiert den Betrieb.",
+      description: "Kontinuierlicher Abgleich zwischen System und Realität sorgt für stabile und planbare Prozesse.",
       benefits: [
-        "Verlässliche Genauigkeit nach Charge, Status und Lagerort",
+        "Verlässliche Bestandsgenauigkeit auf Chargen-, Status- und Lagerortebene",
         "Schnellere, zuverlässigere Chargenfreigaben",
         "Geringeres Compliance- und Audit-Risiko",
         "Weniger Abhängigkeit von konservativen Puffern"
@@ -101,7 +101,7 @@ const pharmaContent: IndustryContent = {
     },
     howItWorks: {
       headline: "Eine Compliance-Ebene für Pharmabetriebe",
-      description: "Vexgen AI gleicht physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
+      description: "Vexgen AI gleicht den physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
       steps: [
         { step: "01", title: "Jede Bewegung erfassen", description: "Kameras überwachen Bestandsbewegungen kontinuierlich." },
         { step: "02", title: "Automatisch validieren", description: "Vision-KI identifiziert Materialien und Mengen in Echtzeit." },
