@@ -9,13 +9,11 @@ import vixgenLogo from "@assets/Vexgen-owl.png";
 
 export type LayoutVariant = 'A' | 'B' | 'C' | 'D';
 
-export interface IndustryContent {
-  slug: string;
+export interface IndustryContentLang {
   intro: {
     headline: string;
     subheadline: string;
     description: string;
-    heroImage?: string;
   };
   provenResults: {
     metrics: Array<{ value: string; label: string }>;
@@ -36,7 +34,6 @@ export interface IndustryContent {
     description: string;
     steps: Array<{ step: string; title: string; description: string }>;
     closing: string;
-    processImage?: string;
   };
   whoItsFor: {
     headline: string;
@@ -46,7 +43,15 @@ export interface IndustryContent {
     headline: string;
     description: string;
   };
+}
+
+export interface IndustryContent {
+  slug: string;
+  heroImage?: string;
+  processImage?: string;
   layoutVariant?: LayoutVariant;
+  en: IndustryContentLang;
+  de: IndustryContentLang;
 }
 
 interface IndustryTemplateProps {
@@ -62,6 +67,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
     return 'en';
   });
   const t = translations[lang];
+  const c = content[lang];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
   const [, setLocation] = useLocation();
@@ -132,12 +138,12 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
   return (
     <div className="min-h-screen bg-background">
       <Helmet htmlAttributes={{ lang }}>
-        <title>{content.intro.headline} - Vexgen AI</title>
-        <meta name="description" content={content.intro.description} />
+        <title>{c.intro.headline} - Vexgen AI</title>
+        <meta name="description" content={c.intro.description} />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:title" content={`${content.intro.headline} - Vexgen AI`} />
-        <meta property="og:description" content={content.intro.description} />
+        <meta property="og:title" content={`${c.intro.headline} - Vexgen AI`} />
+        <meta property="og:description" content={c.intro.description} />
       </Helmet>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
@@ -278,22 +284,22 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
       <section className="px-4 sm:px-6 pt-24 sm:pt-32 pb-12 sm:pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
-            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">{content.intro.headline}</p>
+            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">{c.intro.headline}</p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-primary">
-              {content.intro.subheadline}
+              {c.intro.subheadline}
             </h1>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8 sm:mb-12">
             <div className="text-center lg:text-left">
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed whitespace-pre-line">
-                {content.intro.description}
+                {c.intro.description}
               </p>
             </div>
-            {content.intro.heroImage && (
+            {content.heroImage && (
               <div className="flex justify-center">
                 <img 
-                  src={content.intro.heroImage} 
-                  alt={`${content.intro.headline} - Vexgen AI`}
+                  src={content.heroImage} 
+                  alt={`${c.intro.headline} - Vexgen AI`}
                   width="600"
                   height="400"
                   loading="eager" 
@@ -322,13 +328,13 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">The Challenge</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 sm:mb-8 leading-tight">
-                {content.problem.headline}
+                {c.problem.headline}
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 leading-relaxed px-2">
-                {content.problem.description}
+                {c.problem.description}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-left mb-8 sm:mb-12">
-                {content.problem.issues.map((item, i) => (
+                {c.problem.issues.map((item, i) => (
                   <div key={i} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg sm:rounded-xl bg-destructive/5 border border-destructive/20">
                     <div className="w-2 h-2 rounded-full bg-destructive mt-2 flex-shrink-0" />
                     <span className="text-base sm:text-lg">{item}</span>
@@ -336,7 +342,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 ))}
               </div>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground italic px-2">
-                {content.problem.closing}
+                {c.problem.closing}
               </p>
             </div>
           </section>
@@ -345,7 +351,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             <div className="max-w-7xl mx-auto">
               <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center">Proven Results</p>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-                {content.provenResults.metrics.map((metric, i) => (
+                {c.provenResults.metrics.map((metric, i) => (
                   <Card key={i} className="p-6 sm:p-8 text-center border-border/50">
                     <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2">{metric.value}</p>
                     <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground">{metric.label}</p>
@@ -359,13 +365,13 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             <div className="max-w-4xl mx-auto">
               <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center">The Solution</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 sm:mb-8 text-center">
-                {content.outcome.headline}
+                {c.outcome.headline}
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 text-center">
-                {content.outcome.description}
+                {c.outcome.description}
               </p>
               <div className="space-y-3 sm:space-y-4">
-                {content.outcome.benefits.map((item, i) => (
+                {c.outcome.benefits.map((item, i) => (
                   <div key={i} className="flex items-start gap-3 sm:gap-4">
                     <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
@@ -381,13 +387,13 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             <div className="max-w-7xl mx-auto">
               <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center">How It Works</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-center mb-4 sm:mb-6">
-                {content.howItWorks.headline}
+                {c.howItWorks.headline}
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-center max-w-3xl mx-auto mb-10 sm:mb-16 px-2">
-                {content.howItWorks.description}
+                {c.howItWorks.description}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                {content.howItWorks.steps.map((item, i) => {
+                {c.howItWorks.steps.map((item, i) => {
                   const Icon = howItWorksIcons[i];
                   return (
                     <Card key={i} className="p-6 sm:p-8 md:p-10 border-border/50 relative overflow-visible">
@@ -402,7 +408,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 })}
               </div>
               <p className="text-base sm:text-lg text-muted-foreground text-center mt-8 sm:mt-12 italic max-w-3xl mx-auto">
-                {content.howItWorks.closing}
+                {c.howItWorks.closing}
               </p>
             </div>
           </section>
@@ -418,14 +424,14 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 <div>
                   <p className="text-xs sm:text-sm uppercase tracking-widest text-destructive mb-3">The Reality Today</p>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
-                    {content.problem.headline}
+                    {c.problem.headline}
                   </h2>
                   <p className="text-base sm:text-lg text-muted-foreground">
-                    {content.problem.description}
+                    {c.problem.description}
                   </p>
                 </div>
                 <div className="space-y-3">
-                  {content.problem.issues.map((item, i) => {
+                  {c.problem.issues.map((item, i) => {
                     const issueIcons = [AlertTriangle, Package, Layers, Clock];
                     const IssueIcon = issueIcons[i];
                     const showIssueIcons = true;
@@ -450,14 +456,14 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
               <div className="text-center mb-12">
                 <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">The Transformation</p>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
-                  {content.outcome.headline}
+                  {c.outcome.headline}
                 </h2>
                 <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-                  {content.outcome.description}
+                  {c.outcome.description}
                 </p>
               </div>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12">
-                {content.provenResults.metrics.map((metric, i) => {
+                {c.provenResults.metrics.map((metric, i) => {
                   const metricIcons = [Target, Clock, DollarSign, TrendingUp];
                   const MetricIcon = metricIcons[i];
                   const showMetricIcons = false;
@@ -475,7 +481,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 })}
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {content.outcome.benefits.map((item, i) => {
+                {c.outcome.benefits.map((item, i) => {
                   const benefitIcons = [CheckCircle2, Zap, Shield, ArrowUpRight];
                   const BenefitIcon = benefitIcons[i];
                   const showBenefitIcons = true;
@@ -499,14 +505,14 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
               <div className="text-center mb-12">
                 <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">The Process</p>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-                  {content.howItWorks.headline}
+                  {c.howItWorks.headline}
                 </h2>
               </div>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div className="order-2 lg:order-1">
                   <img 
-                    src={content.howItWorks.processImage || "/images/process-technology.png"}
-                    alt={`${content.howItWorks.headline} - Vexgen AI`}
+                    src={content.processImage || "/images/process-technology.png"}
+                    alt={`${c.howItWorks.headline} - Vexgen AI`}
                     width="600"
                     height="400"
                     loading="lazy"
@@ -515,10 +521,10 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 </div>
                 <div className="order-1 lg:order-2">
                   <p className="text-base sm:text-lg text-muted-foreground mb-8">
-                    {content.howItWorks.description}
+                    {c.howItWorks.description}
                   </p>
                   <div className="space-y-6">
-                    {content.howItWorks.steps.map((item, i) => {
+                    {c.howItWorks.steps.map((item, i) => {
                       const Icon = howItWorksIcons[i];
                       return (
                         <div key={i} className="flex items-start gap-4">
@@ -534,7 +540,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                     })}
                   </div>
                   <p className="text-base text-muted-foreground mt-8 italic border-l-4 border-primary/30 pl-4">
-                    {content.howItWorks.closing}
+                    {c.howItWorks.closing}
                   </p>
                 </div>
               </div>
@@ -549,13 +555,13 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
           <section className="py-20 sm:py-32 px-4 sm:px-6">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-tight">
-                {content.problem.headline}
+                {c.problem.headline}
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground mb-12 leading-relaxed">
-                {content.problem.description}
+                {c.problem.description}
               </p>
               <div className="grid grid-cols-1 gap-4 text-left max-w-2xl mx-auto">
-                {content.problem.issues.map((item, i) => (
+                {c.problem.issues.map((item, i) => (
                   <div key={i} className="flex items-center gap-4 py-4 border-b border-border/50 last:border-0">
                     <span className="text-2xl font-light text-destructive/50">{String(i + 1).padStart(2, '0')}</span>
                     <span className="text-lg">{item}</span>
@@ -569,7 +575,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             <div className="max-w-6xl mx-auto">
               <p className="text-sm uppercase tracking-widest opacity-70 mb-8 text-center">Measured Impact</p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-                {content.provenResults.metrics.map((metric, i) => (
+                {c.provenResults.metrics.map((metric, i) => (
                   <div key={i} className="text-center">
                     <p className="text-4xl sm:text-5xl md:text-6xl font-light mb-2">{metric.value}</p>
                     <p className="text-sm uppercase tracking-wider opacity-70">{metric.label}</p>
@@ -583,13 +589,13 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-sm uppercase tracking-widest text-primary mb-4">What Changes</p>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-8">
-                {content.outcome.headline}
+                {c.outcome.headline}
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground mb-12">
-                {content.outcome.description}
+                {c.outcome.description}
               </p>
               <div className="inline-flex flex-col gap-4 text-left">
-                {content.outcome.benefits.map((item, i) => (
+                {c.outcome.benefits.map((item, i) => (
                   <div key={i} className="flex items-center gap-4">
                     <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
                       <Check className="w-4 h-4 text-primary-foreground" />
@@ -606,11 +612,11 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
               <div className="text-center mb-16">
                 <p className="text-sm uppercase tracking-widest text-primary mb-4">Three Steps</p>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-                  {content.howItWorks.headline}
+                  {c.howItWorks.headline}
                 </h2>
               </div>
               <div className="space-y-16">
-                {content.howItWorks.steps.map((item, i) => {
+                {c.howItWorks.steps.map((item, i) => {
                   const Icon = howItWorksIcons[i];
                   return (
                     <div key={i} className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
@@ -636,7 +642,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
           <section className="py-16 sm:py-24 px-4 sm:px-6">
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-                {content.provenResults.metrics.map((metric, i) => (
+                {c.provenResults.metrics.map((metric, i) => (
                   <div key={i} className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20">
                     <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-1">{metric.value}</p>
                     <p className="text-sm uppercase tracking-wider text-muted-foreground">{metric.label}</p>
@@ -652,17 +658,17 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 <div className="lg:col-span-2">
                   <p className="text-xs sm:text-sm uppercase tracking-widest text-destructive mb-3">Current State</p>
                   <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-4 leading-tight">
-                    {content.problem.headline}
+                    {c.problem.headline}
                   </h2>
                   <p className="text-base text-muted-foreground mb-6">
-                    {content.problem.description}
+                    {c.problem.description}
                   </p>
                   <p className="text-sm text-muted-foreground italic">
-                    {content.problem.closing}
+                    {c.problem.closing}
                   </p>
                 </div>
                 <div className="lg:col-span-3 space-y-2">
-                  {content.problem.issues.map((item, i) => (
+                  {c.problem.issues.map((item, i) => (
                     <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-background border border-border/50">
                       <span className="text-xs font-bold text-destructive bg-destructive/10 px-2 py-1 rounded">{String(i + 1).padStart(2, '0')}</span>
                       <span className="text-base">{item}</span>
@@ -677,7 +683,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
                 <div className="lg:col-span-3 space-y-2 order-2 lg:order-1">
-                  {content.outcome.benefits.map((item, i) => (
+                  {c.outcome.benefits.map((item, i) => (
                     <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-primary/5 border border-primary/20">
                       <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">{String(i + 1).padStart(2, '0')}</span>
                       <span className="text-base">{item}</span>
@@ -687,10 +693,10 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 <div className="lg:col-span-2 order-1 lg:order-2">
                   <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">Target State</p>
                   <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-4 leading-tight">
-                    {content.outcome.headline}
+                    {c.outcome.headline}
                   </h2>
                   <p className="text-base text-muted-foreground">
-                    {content.outcome.description}
+                    {c.outcome.description}
                   </p>
                 </div>
               </div>
@@ -702,14 +708,14 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
               <div className="text-center mb-12">
                 <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">Implementation</p>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                  {content.howItWorks.headline}
+                  {c.howItWorks.headline}
                 </h2>
                 <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-                  {content.howItWorks.description}
+                  {c.howItWorks.description}
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {content.howItWorks.steps.map((item, i) => {
+                {c.howItWorks.steps.map((item, i) => {
                   const Icon = howItWorksIcons[i];
                   return (
                     <div key={i} className="p-6 rounded-2xl bg-background border border-border/50 relative">
@@ -726,7 +732,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                 })}
               </div>
               <p className="text-base text-muted-foreground text-center mt-10 italic">
-                {content.howItWorks.closing}
+                {c.howItWorks.closing}
               </p>
             </div>
           </section>
@@ -737,10 +743,10 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Who It Is For</p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 sm:mb-8">
-            {content.whoItsFor.headline}
+            {c.whoItsFor.headline}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
-            {content.whoItsFor.criteria.map((item, i) => {
+            {c.whoItsFor.criteria.map((item, i) => {
               const criteriaIcons = [Target, BarChart3, Layers, Shield];
               const CriteriaIcon = criteriaIcons[i];
               return (
@@ -761,10 +767,10 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
           <div className="text-center mb-8 sm:mb-12">
             <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Get Started</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 sm:mb-6">
-              {content.getStarted.headline}
+              {c.getStarted.headline}
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
-              {content.getStarted.description}
+              {c.getStarted.description}
             </p>
           </div>
           <div className="max-w-3xl mx-auto">

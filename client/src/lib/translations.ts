@@ -147,7 +147,191 @@ export const translations = {
     cta: {
       requestDemo: "Request a Demo"
     },
-    stockComparison: "Per-lot weight comparison: Vexgen AI vs. SAP"
+    stockComparison: "Per-lot weight comparison: Vexgen AI vs. SAP",
+    industryPages: {
+      sections: {
+        realityToday: "The Reality Today",
+        transformation: "The Transformation",
+        theProcess: "The Process",
+        whoItsFor: "Who It's For",
+        getStarted: "Get Started"
+      },
+      common: {
+        inventoryAccuracy: "Inventory Accuracy",
+        dioReduction: "DIO Reduction",
+        writeOffReduction: "Write-off Reduction",
+        workingCapitalFreed: "Working Capital Freed",
+        lessManualChecks: "Less Manual Checks",
+        whatChanges: "What changes with physical verification",
+        continuousAlignment: "Continuous alignment between system and reality transforms operations.",
+        captureTitle: "Capture every movement",
+        captureDesc: "Cameras monitor inventory flows continuously.",
+        validateTitle: "Validate automatically",
+        validateDesc: "Vision AI identifies materials and quantities in real time.",
+        syncTitle: "Sync your ERP instantly",
+        syncDesc: "Discrepancies corrected automatically. No manual input.",
+        closing: "No system replacement. No process redesign. Minimal friction.",
+        isRelevant: "Is this relevant for your operations?"
+      },
+      chemical: {
+        headline: "Chemical",
+        subheadline: "Your ERP. The physical truth for chemical operations.",
+        description: "Real-time inventory visibility across raw materials, WIP, and finished goods to reduce write-offs, avoid stockouts, and protect production flow.\n\nBuilt for environments with high working capital exposure, strict traceability, and shelf-life constraints.",
+        problemHeadline: "When system inventory doesn't match physical reality",
+        problemDescription: "Materials dominate cost, risk, and production continuity. Divergence has immediate impact.",
+        issues: [
+          "Working capital tied up in inflated buffers",
+          "Write-offs from expired or mislocated materials",
+          "Stockouts affecting customer commitments",
+          "Teams spending time on manual checks and firefighting"
+        ],
+        problemClosing: "These issues persist because ERP data is disconnected from physical reality on the floor.",
+        benefits: [
+          "Trusted accuracy by material, lot, and location",
+          "Lower working capital in inflated buffers",
+          "Fewer downtimes from missing materials",
+          "No more urgent purchasing or fire-drills"
+        ],
+        processHeadline: "A risk protection layer for chemical plants",
+        processDescription: "Vexgen AI continuously aligns physical inventory with your ERP. All data is processed locally and never leaves your premises.",
+        whoHeadline: "Built for chemical organizations where:",
+        criteria: [
+          "Inventory accuracy affects working capital and risk",
+          "Shelf life, batch tracking, and traceability are critical",
+          "Production plans depend on material availability",
+          "Teams rely on manual checks or buffers to manage uncertainty"
+        ],
+        getStartedDescription: "A short conversation can assess whether physical inventory visibility could improve capital efficiency or reduce operational risk."
+      },
+      plastics: {
+        headline: "Plastics Manufacturing",
+        subheadline: "Your ERP. The physical truth for plastics manufacturing.",
+        description: "Real-time inventory visibility across raw materials, WIP, and finished goods to keep injection molding, extrusion, and assembly lines running.\n\nBuilt for high-mix, high-volume environments where uptime and accuracy drive margins.",
+        higherLineUptime: "Higher Line Uptime",
+        problemHeadline: "When system inventory doesn't match physical reality",
+        problemDescription: "Throughput depends on having the right parts, at the right machine, at the right time.",
+        issues: [
+          "Lines waiting for material that 'exists' in the system",
+          "Excess buffers built to protect against uncertainty",
+          "Wrong SKUs piling up while critical ones are missing",
+          "Constant manual checks to keep production moving"
+        ],
+        problemClosing: "These issues persist because ERP data is disconnected from what's actually on the floor.",
+        benefits: [
+          "Trusted accuracy by SKU, piece, and location",
+          "Higher uptime, fewer material stoppages",
+          "Lower working capital in buffers",
+          "No more fire-drills or manual reconciliation"
+        ],
+        processHeadline: "A verification layer for plastics plants",
+        processDescription: "Vexgen AI continuously aligns physical inventory with your ERP. All data is processed locally and never leaves your premises.",
+        whoHeadline: "Built for plastics manufacturers that:",
+        criteria: [
+          "Run injection molding, extrusion, or assembly with tight sequencing",
+          "Manage high SKU counts across boxes, pallets, and WIP",
+          "Experience stoppages despite 'available' inventory",
+          "Rely on buffers and manual checks to protect throughput"
+        ],
+        getStartedDescription: "A short conversation can assess whether physical inventory visibility could improve uptime, accuracy, or capital efficiency."
+      },
+      foodBeverage: {
+        headline: "Food & Beverage",
+        subheadline: "Your ERP. The physical truth for food and beverage operations.",
+        description: "Real-time inventory visibility across pallets of raw materials, WIP, and finished goods to reduce waste and protect service levels.\n\nBuilt for high-volume environments where freshness and availability define performance.",
+        lessWaste: "Less Waste",
+        otifImprovement: "OTIF Improvement",
+        problemHeadline: "When pallet reality diverges from system data",
+        problemDescription: "Freshness, availability, and service levels depend on knowing exactly what's where.",
+        issues: [
+          "Waste from expired or forgotten pallets",
+          "Stockouts causing incomplete orders and OTIF misses",
+          "Excess buffers to protect service levels",
+          "Constant pallet and date checks to keep orders moving"
+        ],
+        problemClosing: "These issues persist because ERP data is disconnected from physical pallet reality.",
+        benefits: [
+          "Trusted accuracy by SKU, quantity, and expiration",
+          "Lower waste through better FIFO/FEFO execution",
+          "Higher service levels, fewer missing pallets",
+          "Teams freed from constant manual pallet checks"
+        ],
+        processHeadline: "A freshness protection layer for F&B operations",
+        processDescription: "Vexgen AI continuously aligns physical pallet reality with your ERP. All data is processed locally and never leaves your premises.",
+        whoHeadline: "Built for food & beverage organizations that:",
+        criteria: [
+          "Manage large volumes of palletized goods and ingredients",
+          "Depend on FIFO/FEFO to control waste and freshness",
+          "Experience service issues despite 'available' inventory",
+          "Rely on manual checks and buffers to protect OTIF"
+        ],
+        getStartedDescription: "A short conversation can assess whether physical inventory visibility could improve freshness, service levels, or capital efficiency."
+      },
+      cosmetics: {
+        headline: "Cosmetics",
+        subheadline: "Your ERP. The physical truth for cosmetics operations.",
+        description: "Real-time inventory visibility across production, warehousing, and distribution to protect launches and reduce write-offs.\n\nBuilt for high-mix environments where SKU accuracy and timing drive revenue.",
+        launchOnTimeRate: "Launch On-Time Rate",
+        obsoleteReduction: "Obsolete Reduction",
+        problemHeadline: "When system inventory doesn't match physical reality",
+        problemDescription: "Availability, accuracy, and timing define success in cosmetics.",
+        issues: [
+          "Launches delayed by missing or misallocated SKUs",
+          "Wrong variants in stock while high-demand SKUs are out",
+          "Write-offs from obsolete packaging or canceled campaigns",
+          "Manual checks needed to confirm launch readiness"
+        ],
+        problemClosing: "These issues persist because ERP lacks real-time alignment with physical stock.",
+        benefits: [
+          "Trusted accuracy by SKU, variant, and location",
+          "On-time launches with fewer surprises",
+          "Reduced write-offs from misallocated inventory",
+          "Less capital tied up in protective buffers"
+        ],
+        processHeadline: "A launch protection layer for cosmetics operations",
+        processDescription: "Vexgen AI continuously aligns physical inventory with your ERP. All data is processed locally and never leaves your premises.",
+        whoHeadline: "Built for cosmetics organizations that:",
+        criteria: [
+          "Manage large SKU portfolios with packaging variants",
+          "Run frequent launches and campaign-driven demand",
+          "Experience availability issues despite 'in-stock' data",
+          "Use manual checks to protect launches and service"
+        ],
+        getStartedDescription: "A short conversation can assess whether physical inventory visibility could improve launch readiness or capital efficiency."
+      },
+      pharma: {
+        headline: "Pharmaceutical",
+        subheadline: "Your ERP. The physical truth for pharmaceutical operations.",
+        description: "Real-time inventory visibility across raw materials, WIP, and finished goods to improve batch confidence and reduce compliance risk.\n\nBuilt for regulated environments where accuracy and traceability are non-negotiable.",
+        fasterBatchRelease: "Faster Batch Release",
+        fewerStockouts: "Fewer Stockouts",
+        auditConfidence: "Audit Confidence",
+        problemHeadline: "When system inventory doesn't match physical reality",
+        problemDescription: "Accuracy, status, and traceability directly affect compliance and patient supply.",
+        issues: [
+          "Batches delayed by missing or mislocated inventory",
+          "Manual investigations to reconcile system vs. reality",
+          "Conservative buffers to protect availability",
+          "Audit risk from assumptions instead of verification"
+        ],
+        problemClosing: "These issues persist because ERP isn't continuously aligned with physical reality.",
+        benefits: [
+          "Trusted accuracy by batch, status, and location",
+          "Faster, more reliable batch releases",
+          "Lower compliance and audit risk",
+          "Less reliance on conservative buffers"
+        ],
+        processHeadline: "A compliance layer for pharmaceutical operations",
+        processDescription: "Vexgen AI continuously aligns physical inventory with your ERP. All data is processed locally and never leaves your premises.",
+        whoHeadline: "Built for pharmaceutical organizations that:",
+        criteria: [
+          "Operate in GMP-regulated environments",
+          "Manage batch-controlled inventory across locations",
+          "Experience release delays despite 'available' inventory",
+          "Rely on manual verification for compliance"
+        ],
+        getStartedDescription: "A short conversation can assess whether physical inventory verification could improve release confidence or compliance posture."
+      }
+    }
   },
   de: {
     nav: {
@@ -295,7 +479,191 @@ export const translations = {
     cta: {
       requestDemo: "Demo anfordern"
     },
-    stockComparison: "Gewichtsvergleich pro Los: Vexgen AI vs. SAP"
+    stockComparison: "Gewichtsvergleich pro Los: Vexgen AI vs. SAP",
+    industryPages: {
+      sections: {
+        realityToday: "Die Realität heute",
+        transformation: "Die Transformation",
+        theProcess: "Der Prozess",
+        whoItsFor: "Für wen",
+        getStarted: "Jetzt starten"
+      },
+      common: {
+        inventoryAccuracy: "Bestandsgenauigkeit",
+        dioReduction: "DIO-Reduktion",
+        writeOffReduction: "Weniger Abschreibungen",
+        workingCapitalFreed: "Freigesetztes Working Capital",
+        lessManualChecks: "Weniger manuelle Prüfungen",
+        whatChanges: "Was sich mit physischer Verifizierung ändert",
+        continuousAlignment: "Kontinuierlicher Abgleich zwischen System und Realität transformiert den Betrieb.",
+        captureTitle: "Jede Bewegung erfassen",
+        captureDesc: "Kameras überwachen Bestandsbewegungen kontinuierlich.",
+        validateTitle: "Automatisch validieren",
+        validateDesc: "Vision-KI identifiziert Materialien und Mengen in Echtzeit.",
+        syncTitle: "ERP sofort synchronisieren",
+        syncDesc: "Abweichungen werden automatisch korrigiert. Keine manuelle Eingabe.",
+        closing: "Kein Systemwechsel. Keine Prozessumstellung. Minimale Reibung.",
+        isRelevant: "Ist das relevant für Ihren Betrieb?"
+      },
+      chemical: {
+        headline: "Chemie",
+        subheadline: "Ihr ERP. Die physische Wahrheit für Chemiebetriebe.",
+        description: "Echtzeit-Bestandstransparenz über Rohstoffe, WIP und Fertigwaren zur Reduktion von Abschreibungen, Vermeidung von Fehlbeständen und zum Schutz des Produktionsflusses.\n\nEntwickelt für Umgebungen mit hoher Working-Capital-Bindung, strenger Rückverfolgbarkeit und Mindesthaltbarkeitsanforderungen.",
+        problemHeadline: "Wenn Systembestand nicht mit der physischen Realität übereinstimmt",
+        problemDescription: "Materialien dominieren Kosten, Risiko und Produktionskontinuität. Abweichungen haben sofortige Auswirkungen.",
+        issues: [
+          "Working Capital gebunden in überhöhten Sicherheitsbeständen",
+          "Abschreibungen durch abgelaufene oder falsch platzierte Materialien",
+          "Fehlbestände beeinträchtigen Kundenzusagen",
+          "Teams verbringen Zeit mit manuellen Prüfungen und Krisenmanagement"
+        ],
+        problemClosing: "Diese Probleme bestehen fort, weil ERP-Daten von der physischen Realität in der Produktion entkoppelt sind.",
+        benefits: [
+          "Verlässliche Genauigkeit nach Material, Charge und Lagerort",
+          "Weniger Working Capital in überhöhten Puffern",
+          "Weniger Stillstände durch fehlende Materialien",
+          "Keine Notbestellungen oder Krisenmanagement mehr"
+        ],
+        processHeadline: "Eine Risikoschutzebene für Chemieanlagen",
+        processDescription: "Vexgen AI gleicht physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
+        whoHeadline: "Entwickelt für Chemieunternehmen, bei denen:",
+        criteria: [
+          "Bestandsgenauigkeit Working Capital und Risiko beeinflusst",
+          "Mindesthaltbarkeit, Chargenverfolgung und Rückverfolgbarkeit kritisch sind",
+          "Produktionspläne von Materialverfügbarkeit abhängen",
+          "Teams auf manuelle Prüfungen oder Puffer zur Unsicherheitsbewältigung angewiesen sind"
+        ],
+        getStartedDescription: "Ein kurzes Gespräch kann klären, ob physische Bestandstransparenz die Kapitaleffizienz verbessern oder operatives Risiko reduzieren könnte."
+      },
+      plastics: {
+        headline: "Kunststofffertigung",
+        subheadline: "Ihr ERP. Die physische Wahrheit für die Kunststofffertigung.",
+        description: "Echtzeit-Bestandstransparenz über Rohstoffe, WIP und Fertigwaren, um Spritzguss-, Extrusions- und Montagelinien am Laufen zu halten.\n\nEntwickelt für High-Mix-, High-Volume-Umgebungen, in denen Verfügbarkeit und Genauigkeit die Margen bestimmen.",
+        higherLineUptime: "Höhere Linienverfügbarkeit",
+        problemHeadline: "Wenn Systembestand nicht mit der physischen Realität übereinstimmt",
+        problemDescription: "Durchsatz hängt davon ab, die richtigen Teile zur richtigen Zeit an der richtigen Maschine zu haben.",
+        issues: [
+          "Linien warten auf Material, das im System 'vorhanden' ist",
+          "Überhöhte Puffer zum Schutz gegen Unsicherheit",
+          "Falsche Artikel häufen sich an, während kritische fehlen",
+          "Ständige manuelle Prüfungen, um die Produktion am Laufen zu halten"
+        ],
+        problemClosing: "Diese Probleme bestehen fort, weil ERP-Daten von dem entkoppelt sind, was tatsächlich in der Produktion ist.",
+        benefits: [
+          "Verlässliche Genauigkeit nach Artikel, Stück und Lagerort",
+          "Höhere Verfügbarkeit, weniger Materialstopps",
+          "Weniger Working Capital in Puffern",
+          "Keine Notfallaktionen oder manuellen Abgleiche mehr"
+        ],
+        processHeadline: "Eine Verifizierungsebene für Kunststoffwerke",
+        processDescription: "Vexgen AI gleicht physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
+        whoHeadline: "Entwickelt für Kunststoffhersteller, die:",
+        criteria: [
+          "Spritzguss, Extrusion oder Montage mit enger Taktung betreiben",
+          "Hohe Artikelzahlen über Kartons, Paletten und WIP verwalten",
+          "Stillstände trotz 'verfügbarem' Bestand erleben",
+          "Auf Puffer und manuelle Prüfungen zum Schutz des Durchsatzes angewiesen sind"
+        ],
+        getStartedDescription: "Ein kurzes Gespräch kann klären, ob physische Bestandstransparenz Verfügbarkeit, Genauigkeit oder Kapitaleffizienz verbessern könnte."
+      },
+      foodBeverage: {
+        headline: "Lebensmittel & Getränke",
+        subheadline: "Ihr ERP. Die physische Wahrheit für Lebensmittel- und Getränkebetriebe.",
+        description: "Echtzeit-Bestandstransparenz über Paletten mit Rohstoffen, WIP und Fertigwaren zur Reduktion von Ausschuss und zum Schutz der Servicelevels.\n\nEntwickelt für Hochvolumen-Umgebungen, in denen Frische und Verfügbarkeit die Leistung definieren.",
+        lessWaste: "Weniger Ausschuss",
+        otifImprovement: "OTIF-Verbesserung",
+        problemHeadline: "Wenn Palettenrealität von Systemdaten abweicht",
+        problemDescription: "Frische, Verfügbarkeit und Servicelevels hängen davon ab, genau zu wissen, was wo ist.",
+        issues: [
+          "Ausschuss durch abgelaufene oder vergessene Paletten",
+          "Fehlbestände verursachen unvollständige Aufträge und OTIF-Verfehlung",
+          "Überhöhte Puffer zum Schutz der Servicelevels",
+          "Ständige Paletten- und Datumsprüfungen, um Aufträge abzuwickeln"
+        ],
+        problemClosing: "Diese Probleme bestehen fort, weil ERP-Daten von der physischen Palettenrealität entkoppelt sind.",
+        benefits: [
+          "Verlässliche Genauigkeit nach Artikel, Menge und Verfallsdatum",
+          "Weniger Ausschuss durch bessere FIFO/FEFO-Ausführung",
+          "Höhere Servicelevels, weniger fehlende Paletten",
+          "Teams befreit von ständigen manuellen Palettenprüfungen"
+        ],
+        processHeadline: "Eine Frischeschutzebene für F&B-Betriebe",
+        processDescription: "Vexgen AI gleicht physische Palettenrealität kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
+        whoHeadline: "Entwickelt für Lebensmittel- und Getränkeunternehmen, die:",
+        criteria: [
+          "Grosse Mengen palettierter Waren und Zutaten verwalten",
+          "Auf FIFO/FEFO zur Kontrolle von Ausschuss und Frische angewiesen sind",
+          "Serviceprobleme trotz 'verfügbarem' Bestand erleben",
+          "Auf manuelle Prüfungen und Puffer zum Schutz von OTIF angewiesen sind"
+        ],
+        getStartedDescription: "Ein kurzes Gespräch kann klären, ob physische Bestandstransparenz Frische, Servicelevels oder Kapitaleffizienz verbessern könnte."
+      },
+      cosmetics: {
+        headline: "Kosmetik",
+        subheadline: "Ihr ERP. Die physische Wahrheit für Kosmetikbetriebe.",
+        description: "Echtzeit-Bestandstransparenz über Produktion, Lagerung und Distribution zum Schutz von Produktlaunches und zur Reduktion von Abschreibungen.\n\nEntwickelt für High-Mix-Umgebungen, in denen Artikelgenauigkeit und Timing den Umsatz bestimmen.",
+        launchOnTimeRate: "Pünktliche Launch-Rate",
+        obsoleteReduction: "Reduktion Obsoleter Bestände",
+        problemHeadline: "Wenn Systembestand nicht mit der physischen Realität übereinstimmt",
+        problemDescription: "Verfügbarkeit, Genauigkeit und Timing definieren Erfolg in der Kosmetik.",
+        issues: [
+          "Launches verzögert durch fehlende oder falsch zugeordnete Artikel",
+          "Falsche Varianten auf Lager, während nachgefragte Artikel fehlen",
+          "Abschreibungen durch veraltete Verpackungen oder abgesagte Kampagnen",
+          "Manuelle Prüfungen zur Bestätigung der Launch-Bereitschaft erforderlich"
+        ],
+        problemClosing: "Diese Probleme bestehen fort, weil dem ERP der Echtzeit-Abgleich mit physischem Bestand fehlt.",
+        benefits: [
+          "Verlässliche Genauigkeit nach Artikel, Variante und Lagerort",
+          "Pünktliche Launches mit weniger Überraschungen",
+          "Weniger Abschreibungen durch falsch zugeordneten Bestand",
+          "Weniger Kapital in Sicherheitspuffern gebunden"
+        ],
+        processHeadline: "Eine Launch-Schutzebene für Kosmetikbetriebe",
+        processDescription: "Vexgen AI gleicht physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
+        whoHeadline: "Entwickelt für Kosmetikunternehmen, die:",
+        criteria: [
+          "Grosse Artikelportfolios mit Verpackungsvarianten verwalten",
+          "Häufige Launches und kampagnengetriebene Nachfrage betreiben",
+          "Verfügbarkeitsprobleme trotz 'auf Lager'-Daten erleben",
+          "Manuelle Prüfungen zum Schutz von Launches und Service nutzen"
+        ],
+        getStartedDescription: "Ein kurzes Gespräch kann klären, ob physische Bestandstransparenz Launch-Bereitschaft oder Kapitaleffizienz verbessern könnte."
+      },
+      pharma: {
+        headline: "Pharma",
+        subheadline: "Ihr ERP. Die physische Wahrheit für Pharmabetriebe.",
+        description: "Echtzeit-Bestandstransparenz über Rohstoffe, WIP und Fertigwaren zur Verbesserung der Chargenfreigabe-Sicherheit und Reduktion von Compliance-Risiken.\n\nEntwickelt für regulierte Umgebungen, in denen Genauigkeit und Rückverfolgbarkeit nicht verhandelbar sind.",
+        fasterBatchRelease: "Schnellere Chargenfreigabe",
+        fewerStockouts: "Weniger Fehlbestände",
+        auditConfidence: "Audit-Sicherheit",
+        problemHeadline: "Wenn Systembestand nicht mit der physischen Realität übereinstimmt",
+        problemDescription: "Genauigkeit, Status und Rückverfolgbarkeit beeinflussen direkt Compliance und Patientenversorgung.",
+        issues: [
+          "Chargen verzögert durch fehlenden oder falsch platzierten Bestand",
+          "Manuelle Untersuchungen zur Abstimmung von System und Realität",
+          "Konservative Puffer zum Schutz der Verfügbarkeit",
+          "Audit-Risiko durch Annahmen statt Verifizierung"
+        ],
+        problemClosing: "Diese Probleme bestehen fort, weil das ERP nicht kontinuierlich mit der physischen Realität abgeglichen wird.",
+        benefits: [
+          "Verlässliche Genauigkeit nach Charge, Status und Lagerort",
+          "Schnellere, zuverlässigere Chargenfreigaben",
+          "Geringeres Compliance- und Audit-Risiko",
+          "Weniger Abhängigkeit von konservativen Puffern"
+        ],
+        processHeadline: "Eine Compliance-Ebene für Pharmabetriebe",
+        processDescription: "Vexgen AI gleicht physischen Bestand kontinuierlich mit Ihrem ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.",
+        whoHeadline: "Entwickelt für Pharmaunternehmen, die:",
+        criteria: [
+          "In GMP-regulierten Umgebungen arbeiten",
+          "Chargengesteuerten Bestand über Standorte verwalten",
+          "Freigabeverzögerungen trotz 'verfügbarem' Bestand erleben",
+          "Auf manuelle Verifizierung für Compliance angewiesen sind"
+        ],
+        getStartedDescription: "Ein kurzes Gespräch kann klären, ob physische Bestandsverifizierung die Freigabesicherheit oder Compliance-Position verbessern könnte."
+      }
+    }
   }
 } as const;
 
