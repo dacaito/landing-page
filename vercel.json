@@ -1,5 +1,16 @@
 {
   "buildCommand": "npm run build:web",
   "outputDirectory": "dist/public",
+  "redirects": [
+    { "source": "/privacy", "destination": "/en/privacy", "permanent": true },
+    { "source": "/imprint", "destination": "/en/imprint", "permanent": true },
+    { "source": "/company", "destination": "/en/company", "permanent": true },
+
+    { "source": "/industries/:slug", "destination": "/en/industries/:slug", "permanent": true },
+
+    { "source": "/Privacy", "destination": "/en/privacy", "permanent": true },
+    { "source": "/Imprint", "destination": "/en/imprint", "permanent": true },
+    { "source": "/Company", "destination": "/en/company", "permanent": true }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
