@@ -18,7 +18,7 @@ type SeoHeadProps = {
   ogImage?: string;
 };
 
-const DEFAULT_OG_IMAGE = "https://vexgen.ai/og.png";
+const DEFAULT_OG_IMAGE = "https://vexgen.ai/og-default.png";
 const SITE_NAME = "Vexgen AI";
 
 function ogLocaleForLang(lang: SeoHeadProps["lang"]) {
@@ -56,6 +56,9 @@ export function SeoHead({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={ogType} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/png" />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content={ogLocaleForLang(lang)} />
 
