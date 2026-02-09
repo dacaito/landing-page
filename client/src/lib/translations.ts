@@ -164,10 +164,14 @@ export const translations = {
       }
     },
     meta: {
-      homeTitle: "Vexgen AI - Align ERP with Reality",
+      homeTitle: "Inventory Visibility Software for Manufacturers | Vexgen AI",
       homeDescription: "Real-time visibility and reconciliation between ERP data and physical inventory. No manual counts. No tags. No operational disruption.",
-      companyTitle: "About Us - Vexgen AI",
+      companyTitle: "About Vexgen AI | Industrial Inventory Visibility Company",
       companyDescription: "Learn about Vexgen AI - bridging the gap between ERP records and physical reality with AI-powered inventory visibility.",
+      privacyTitle: "Data Privacy - Vexgen AI",
+      privacyDescription: "How Vexgen AI handles privacy, data processing, retention, and security to protect operational information.",
+      imprintTitle: "Imprint - Vexgen AI",
+      imprintDescription: "Legal disclosure and company information for Vexgen AI (Zurich, Switzerland).",
     },
     footer: {
       copyright: "Vexgen AI. All rights reserved.",
@@ -567,6 +571,10 @@ export const translations = {
       homeDescription: "Echtzeit-Transparenz und Abgleich zwischen ERP-Daten und physischem Bestand. Keine manuellen Zählungen. Keine Tags. Keine Betriebsunterbrechung.",
       companyTitle: "Über uns - Vexgen AI",
       companyDescription: "Erfahren Sie mehr über Vexgen AI - die Brücke zwischen ERP-Daten und physischer Realität mit KI-gestützter Bestandstransparenz.",
+      privacyTitle: "Datenschutz - Vexgen AI",
+      privacyDescription: "Wie Vexgen AI Datenschutz, Datenverarbeitung, Aufbewahrung und Sicherheit zum Schutz betrieblicher Informationen umsetzt.",
+      imprintTitle: "Impressum - Vexgen AI",
+      imprintDescription: "Rechtliche Angaben und Unternehmensinformationen zu Vexgen AI (Zürich, Schweiz).",
     },
     footer: {
       copyright: "Vexgen AI. Alle Rechte vorbehalten.",
@@ -966,6 +974,10 @@ export const translations = {
       homeDescription: "Visibilidad en tiempo real y conciliación entre datos ERP e inventario físico. Sin recuentos manuales. Sin etiquetas. Sin interrupciones operativas.",
       companyTitle: "Sobre nosotros - Vexgen AI",
       companyDescription: "Conozca Vexgen AI - cerrando la brecha entre los registros ERP y la realidad física con visibilidad de inventario impulsada por IA.",
+      privacyTitle: "Protección de datos - Vexgen AI",
+      privacyDescription: "Cómo Vexgen AI gestiona la privacidad, el tratamiento de datos, la retención y la seguridad para proteger la información operativa.",
+      imprintTitle: "Aviso legal - Vexgen AI",
+      imprintDescription: "Información legal y datos de la empresa Vexgen AI (Zúrich, Suiza).",
     },
     footer: {
       copyright: "Vexgen AI. Todos los derechos reservados.",

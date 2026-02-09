@@ -2,7 +2,7 @@ import { Globe, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Helmet } from "react-helmet-async";
+import { SeoHead } from "@/components/SeoHead";
 import { translations } from "@/lib/translations";
 import { useLanguage } from "@/lib/LanguageContext";
 import { LanguageDropdown } from "@/components/LanguageDropdown";
@@ -49,17 +49,14 @@ export default function Imprint() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet htmlAttributes={{ lang }}>
-        <title>{t.imprint.title} - Vexgen AI</title>
-        <meta name="description" content={`Vexgen AI - ${t.imprint.title}`} />
-        <link rel="canonical" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="en" href={alternateEn} />
-        <link rel="alternate" hrefLang="de" href={alternateDe} />
-        <link rel="alternate" hrefLang="es" href={alternateEs} />
-        <link rel="alternate" hrefLang="x-default" href={alternateEn} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:locale" content={lang === 'de' ? 'de_DE' : lang === 'es' ? 'es_ES' : 'en_US'} />
-      </Helmet>
+      <SeoHead
+        lang={lang}
+        title={t.meta.imprintTitle}
+        description={t.meta.imprintDescription}
+        canonicalUrl={canonicalUrl}
+        alternates={{ en: alternateEn, de: alternateDe, es: alternateEs, xDefault: alternateEn }}
+        ogType="website"
+      />
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
           <Link href={getLocalizedPath('/')} className="flex items-center gap-2 cursor-pointer">

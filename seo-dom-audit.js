@@ -1,20 +1,67 @@
 import { chromium } from "playwright";
 
 const BASE_URL = (process.env.BASE_URL || "https://vexgen.ai").replace(/\/$/, "");
+const BASE_HOSTNAME = new URL(BASE_URL).hostname;
+const ENFORCE_VERCEL_REDIRECTS = BASE_HOSTNAME === "vexgen.ai";
+
+const TIMEOUTS = {
+  navMs: Number(process.env.NAV_TIMEOUT_MS || 15000),
+  perUrlMs: Number(process.env.PER_URL_TIMEOUT_MS || 25000),
+  requestMs: Number(process.env.REQUEST_TIMEOUT_MS || 12000),
+};
+
+function withTimeout(promise, ms, label) {
+  let t;
+  const timeout = new Promise((_, reject) => {
+    t = setTimeout(() => reject(new Error(`Timeout after ${ms}ms (${label})`)), ms);
+  });
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(t));
+}
+
+const INDUSTRY_SLUGS = [
+  "chemical",
+  "plastics",
+  "food-beverage",
+  "cosmetics",
+  "pharma",
+  "logistics",
+];
 
 const REAL_PAGE_PATHS = [
   "/en",
   "/de",
   "/es",
-  "/en/industries/pharma",
-  "/de/industries/pharma",
-  "/es/industries/pharma",
+  "/en/company",
+  "/de/company",
+  "/es/company",
+  "/en/privacy",
+  "/de/privacy",
+  "/es/privacy",
+  "/en/imprint",
+  "/de/imprint",
+  "/es/imprint",
+  ...INDUSTRY_SLUGS.flatMap((slug) => [
+    `/en/industries/${slug}`,
+    `/de/industries/${slug}`,
+    `/es/industries/${slug}`,
+  ]),
 ];
 
-const NOT_FOUND_PATHS = [
-  "/en/does-not-exist",
-  "/de/does-not-exist",
-  "/es/does-not-exist",
+const NOT_FOUND_PATHS = ["/en/does-not-exist", "/de/does-not-exist", "/es/does-not-exist"];
+
+const TRAILING_SLASH_REDIRECT_PATHS = [
+  "/en/company/",
+  "/de/company/",
+  "/es/company/",
+  "/en/privacy/",
+  "/de/privacy/",
+  "/es/privacy/",
+  "/en/imprint/",
+  "/de/imprint/",
+  "/es/imprint/",
+  "/en/industries/pharma/",
+  "/de/industries/pharma/",
+  "/es/industries/pharma/",
 ];
 
 function printSection(title) {
@@ -103,7 +150,10 @@ const NOT_FOUND_EXPECTED_H1 = {
 };
 
 const browser = await chromium.launch();
-const page = await browser.newPage();
+const context = await browser.newContext();
+const page = await context.newPage();
+page.setDefaultTimeout(TIMEOUTS.navMs);
+page.setDefaultNavigationTimeout(TIMEOUTS.navMs);
 
 async function extractSeoFromDom() {
   return await page.evaluate(() => {
@@ -134,11 +184,33 @@ async function extractSeoFromDom() {
       .map((s) => s.trim())
       .filter(Boolean);
 
+    const og = (name) => document.querySelector(`meta[property="${name}"]`)?.getAttribute("content") ?? null;
+    const tw = (name) => document.querySelector(`meta[name="${name}"]`)?.getAttribute("content") ?? null;
+
+    const openGraph = {
+      title: og("og:title"),
+      description: og("og:description"),
+      url: og("og:url"),
+      type: og("og:type"),
+      image: og("og:image"),
+      siteName: og("og:site_name"),
+      locale: og("og:locale"),
+    };
+
+    const twitter = {
+      card: tw("twitter:card"),
+      title: tw("twitter:title"),
+      description: tw("twitter:description"),
+      image: tw("twitter:image"),
+    };
+
     return {
       title: document.title || "",
       h1,
       robotsMeta,
       jsonLdScripts,
+      openGraph,
+      twitter,
       canonicalCount: canonicalNodes.length,
       canonicalHrefs,
       metaDescriptionCount: descNodes.length,
@@ -153,14 +225,66 @@ const failures = [];
 const REAL_PAGE_URLS = REAL_PAGE_PATHS.map((p) => `${BASE_URL}${p}`);
 const NOT_FOUND_URLS = NOT_FOUND_PATHS.map((p) => `${BASE_URL}${p}`);
 
+// Redirect normalization checks (Vercel-only; local dev server won't do these redirects)
+printSection("Redirect normalization checks");
+if (!ENFORCE_VERCEL_REDIRECTS) {
+  printResultLine(true, `Skipping redirect checks (BASE_URL hostname is ${BASE_HOSTNAME})`);
+} else {
+  for (const p of TRAILING_SLASH_REDIRECT_PATHS) {
+    const url = `${BASE_URL}${p}`;
+    let res;
+    try {
+      res = await withTimeout(context.request.get(url, { maxRedirects: 0, timeout: TIMEOUTS.requestMs }), TIMEOUTS.requestMs + 2000, `request ${url}`);
+      const status = res.status();
+      const location = res.headers()["location"] || "";
+      const expectedLocation = p.replace(/\/+$/, "");
+      const checks = [
+        assertTruthy([301, 308].includes(status), `${p} first hop is 301/308`),
+        assertEqual(location, expectedLocation, `${p} Location header is "${expectedLocation}"`),
+      ];
+      for (const c of checks) {
+        printResultLine(c.ok, c.label + (c.details ? ` (${c.details})` : ""));
+        if (!c.ok) failures.push({ url, label: c.label, details: c.details });
+      }
+    } catch (e) {
+      const msg = `redirect check failed: ${String(e)}`;
+      printResultLine(false, `${p} (${msg})`);
+      failures.push({ url, label: "redirect check failed", details: msg });
+    }
+  }
+}
+
+const seenTitleDescByLang = {
+  en: new Map(),
+  de: new Map(),
+  es: new Map(),
+};
+
 for (const url of [...REAL_PAGE_URLS, ...NOT_FOUND_URLS]) {
   const isNotFound = NOT_FOUND_URLS.includes(url);
   const kind = isNotFound ? "NotFound" : "Real page";
   printSection(`URL: ${url} (${kind})`);
 
-  const res = await page.goto(url, { waitUntil: "networkidle" });
-  const status = res?.status() ?? null;
-  const finalUrl = page.url();
+  let res;
+  let status = null;
+  let finalUrl = url;
+  try {
+    // Avoid `networkidle` for SPAs with long-polling/media in dev.
+    res = await withTimeout(
+      page.goto(url, { waitUntil: "domcontentloaded", timeout: TIMEOUTS.navMs }),
+      TIMEOUTS.perUrlMs,
+      `goto ${url}`,
+    );
+    status = res?.status() ?? null;
+    finalUrl = page.url();
+  } catch (e) {
+    printResultLine(false, `Navigation failed (${String(e)})`);
+    failures.push({ url, label: "Navigation failed", details: String(e) });
+    continue;
+  }
+
+  // Give Helmet a short moment to flush head tags after route render.
+  await page.waitForTimeout(150);
 
   const extracted = await extractSeoFromDom();
   const alternates = dedupeAlternates(extracted.alternates).sort((a, b) =>
@@ -188,6 +312,8 @@ for (const url of [...REAL_PAGE_URLS, ...NOT_FOUND_URLS]) {
     const checks = [
       assertEqual(extracted.robotsMeta, "noindex, follow", 'robots meta content is "noindex, follow"'),
       assertEqual(extracted.h1, NOT_FOUND_EXPECTED_H1[lang], "H1 matches expected language copy"),
+      assertEqual(extracted.title, NOT_FOUND_EXPECTED_H1[lang], "<title> matches NotFound headline (not home title)"),
+      assertTruthy(extracted.title !== "", "NotFound <title> is present"),
     ];
 
     let urlOk = true;
@@ -208,16 +334,45 @@ for (const url of [...REAL_PAGE_URLS, ...NOT_FOUND_URLS]) {
     const org = findOrganizationJsonLd(jsonLdDocs);
     const sameAs = Array.isArray(org?.sameAs) ? org.sameAs : [];
 
+    const canonicalHref = extracted.canonicalHrefs[0] || "";
+    const metaDesc = extracted.metaDescriptionContents[0] || "";
+
+    // Uniqueness: no duplicate title+description combos within same language for real pages.
+    const lang = getLangFromUrl(url);
+    const key = `${extracted.title}|||${metaDesc}`;
+    const prev = seenTitleDescByLang[lang].get(key);
+    if (prev) {
+      failures.push({ url, label: "Duplicate title+description within language", details: `same as ${prev}` });
+    } else {
+      seenTitleDescByLang[lang].set(key, url);
+    }
+
     const checks = [
       assertEqual(extracted.canonicalCount, 1, "exactly 1 canonical tag"),
       assertTruthy(extracted.canonicalHrefs[0], "canonical href present"),
       assertEqual(extracted.metaDescriptionCount, 1, "exactly 1 meta description tag"),
       assertTruthy(extracted.metaDescriptionContents[0], "meta description content present"),
       assertIncludesAll(hreflangValues, ["en", "de", "es", "x-default"], "hreflang includes en,de,es,x-default"),
-      assertTruthy(extracted.jsonLdScripts.length >= 1, "has >= 1 JSON-LD script"),
+      assertEqual(extracted.jsonLdScripts.length, 1, "exactly 1 JSON-LD script"),
       assertTruthy(!jsonLdParseErrors.length, `JSON-LD scripts parse without errors`),
       assertTruthy(Boolean(org), "Organization schema present"),
       assertIncludesAll(sameAs, EXPECTED_ORG_SAME_AS, "Organization sameAs includes required profiles"),
+      assertTruthy(Boolean(extracted.openGraph?.title), "og:title present"),
+      assertTruthy(Boolean(extracted.openGraph?.description), "og:description present"),
+      assertTruthy(Boolean(extracted.openGraph?.url), "og:url present"),
+      assertTruthy(Boolean(extracted.openGraph?.type), "og:type present"),
+      assertTruthy(Boolean(extracted.openGraph?.image), "og:image present"),
+      assertTruthy(Boolean(extracted.openGraph?.siteName), "og:site_name present"),
+      assertTruthy(Boolean(extracted.openGraph?.locale), "og:locale present"),
+      assertTruthy(Boolean(extracted.twitter?.card), "twitter:card present"),
+      assertTruthy(Boolean(extracted.twitter?.title), "twitter:title present"),
+      assertTruthy(Boolean(extracted.twitter?.description), "twitter:description present"),
+      assertTruthy(Boolean(extracted.twitter?.image), "twitter:image present"),
+      assertEqual(extracted.openGraph?.url, canonicalHref, "og:url matches canonical"),
+      assertEqual(extracted.openGraph?.title, extracted.title, "og:title matches <title>"),
+      assertEqual(extracted.openGraph?.description, metaDesc, "og:description matches meta description"),
+      assertEqual(extracted.twitter?.title, extracted.title, "twitter:title matches <title>"),
+      assertEqual(extracted.twitter?.description, metaDesc, "twitter:description matches meta description"),
     ];
 
     let urlOk = true;

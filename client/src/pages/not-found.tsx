@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AlertCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { SeoHead } from "@/components/SeoHead";
 import { Link, useLocation } from "wouter";
 
 type NotFoundCopy = {
@@ -43,12 +43,25 @@ export default function NotFound() {
   const lang = getLangFromPathname(location);
   const copy = COPY[lang];
   const homeHref = `/${lang}`;
+  const suffix = location.replace(/^\/(en|de|es)/, "") || "";
+  const normalizedSuffix = suffix !== "/" ? suffix.replace(/\/+$/, "") : "";
+  const canonicalUrl = `https://vexgen.ai/${lang}${normalizedSuffix}`;
+  const alternateEn = `https://vexgen.ai/en${normalizedSuffix}`;
+  const alternateDe = `https://vexgen.ai/de${normalizedSuffix}`;
+  const alternateEs = `https://vexgen.ai/es${normalizedSuffix}`;
+  const description = `${copy.body} ${copy.subtext}`.trim();
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
-      <Helmet>
-        <meta name="robots" content="noindex, follow" />
-      </Helmet>
+      <SeoHead
+        lang={lang}
+        title={copy.title}
+        description={description}
+        canonicalUrl={canonicalUrl}
+        alternates={{ en: alternateEn, de: alternateDe, es: alternateEs, xDefault: alternateEn }}
+        robots="noindex, follow"
+        ogType="website"
+      />
       <Card className="w-full max-w-md mx-4">
         <CardContent className="pt-6 pb-6">
           <div className="flex items-start gap-3">

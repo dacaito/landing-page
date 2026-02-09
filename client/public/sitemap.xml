@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://vexgen.ai/en/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://vexgen.ai/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/"/>
+    <loc>https://vexgen.ai/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vexgen.ai/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en"/>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vexgen.ai/de/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://vexgen.ai/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/"/>
+    <loc>https://vexgen.ai/de</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vexgen.ai/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en"/>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vexgen.ai/es/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://vexgen.ai/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en/"/>
+    <loc>https://vexgen.ai/es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vexgen.ai/en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vexgen.ai/de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vexgen.ai/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vexgen.ai/en"/>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>

@@ -3,16 +3,31 @@
   "outputDirectory": "dist/public",
   "redirects": [
     { "source": "/", "destination": "/en", "permanent": true },
+
+    { "source": "/en/", "destination": "/en", "permanent": true },
+    { "source": "/de/", "destination": "/de", "permanent": true },
+    { "source": "/es/", "destination": "/es", "permanent": true },
+
+    { "source": "/en/:path*/", "destination": "/en/:path*", "permanent": true },
+    { "source": "/de/:path*/", "destination": "/de/:path*", "permanent": true },
+    { "source": "/es/:path*/", "destination": "/es/:path*", "permanent": true },
+
     { "source": "/privacy", "destination": "/en/privacy", "permanent": true },
+    { "source": "/privacy/", "destination": "/en/privacy", "permanent": true },
     { "source": "/imprint", "destination": "/en/imprint", "permanent": true },
+    { "source": "/imprint/", "destination": "/en/imprint", "permanent": true },
     { "source": "/company", "destination": "/en/company", "permanent": true },
+    { "source": "/company/", "destination": "/en/company", "permanent": true },
 
     { "source": "/industries/:path*", "destination": "/en/industries/:path*", "permanent": true },
     { "source": "/industries/:path*/", "destination": "/en/industries/:path*", "permanent": true },
 
     { "source": "/Privacy", "destination": "/en/privacy", "permanent": true },
+    { "source": "/Privacy/", "destination": "/en/privacy", "permanent": true },
     { "source": "/Imprint", "destination": "/en/imprint", "permanent": true },
-    { "source": "/Company", "destination": "/en/company", "permanent": true }
+    { "source": "/Imprint/", "destination": "/en/imprint", "permanent": true },
+    { "source": "/Company", "destination": "/en/company", "permanent": true },
+    { "source": "/Company/", "destination": "/en/company", "permanent": true }
   ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
