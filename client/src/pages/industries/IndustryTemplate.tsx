@@ -317,7 +317,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
         <>
           <section className="py-16 sm:py-24 px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">The Challenge</p>
+              <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">{t.industryPages.sections.theChallenge}</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 sm:mb-8 leading-tight">
                 {c.problem.headline}
               </h2>
@@ -340,7 +340,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
 
           <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
             <div className="max-w-7xl mx-auto">
-              <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center">Proven Results</p>
+              <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center">{t.industryPages.sections.provenResults}</p>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
                 {c.provenResults.metrics.map((metric, i) => (
                   <Card key={i} className="p-6 sm:p-8 text-center border-border/50">
@@ -354,7 +354,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
 
           <section className="py-16 sm:py-24 px-4 sm:px-6">
             <div className="max-w-4xl mx-auto">
-              <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center">The Solution</p>
+              <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center">{t.industryPages.sections.theSolution}</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 sm:mb-8 text-center">
                 {c.outcome.headline}
               </h2>
@@ -376,7 +376,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
 
           <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
             <div className="max-w-7xl mx-auto">
-              <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center">How It Works</p>
+              <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center">{t.industryPages.sections.howItWorks}</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-center mb-4 sm:mb-6">
                 {c.howItWorks.headline}
               </h2>
@@ -413,7 +413,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div>
-                  <p className="text-xs sm:text-sm uppercase tracking-widest text-destructive mb-3">The Reality Today</p>
+                  <p className="text-xs sm:text-sm uppercase tracking-widest text-destructive mb-3">{t.industryPages.sections.realityToday}</p>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
                     {c.problem.headline}
                   </h2>
@@ -445,7 +445,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
           <section className="py-16 sm:py-24 px-4 sm:px-6 border-y border-border/50 bg-card">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">The Transformation</p>
+                <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">{t.industryPages.sections.transformation}</p>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
                   {c.outcome.headline}
                 </h2>
@@ -494,7 +494,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
           <section className="py-16 sm:py-24 px-4 sm:px-6">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">The Process</p>
+                <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">{t.industryPages.sections.theProcess}</p>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
                   {c.howItWorks.headline}
                 </h2>
@@ -564,7 +564,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
 
           <section className="py-20 sm:py-32 px-4 sm:px-6 bg-primary text-primary-foreground">
             <div className="max-w-6xl mx-auto">
-              <p className="text-sm uppercase tracking-widest opacity-70 mb-8 text-center">Measured Impact</p>
+              <p className="text-sm uppercase tracking-widest opacity-70 mb-8 text-center">{t.industryPages.sections.measuredImpact}</p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
                 {c.provenResults.metrics.map((metric, i) => (
                   <div key={i} className="text-center">
@@ -578,7 +578,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
 
           <section className="py-20 sm:py-32 px-4 sm:px-6">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-sm uppercase tracking-widest text-primary mb-4">What Changes</p>
+              <p className="text-sm uppercase tracking-widest text-primary mb-4">{t.industryPages.sections.transformation}</p>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-8">
                 {c.outcome.headline}
               </h2>
@@ -601,7 +601,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
           <section className="py-20 sm:py-32 px-4 sm:px-6 bg-card border-y border-border/50">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
-                <p className="text-sm uppercase tracking-widest text-primary mb-4">Three Steps</p>
+                <p className="text-sm uppercase tracking-widest text-primary mb-4">{t.industryPages.sections.threeSteps}</p>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
                   {c.howItWorks.headline}
                 </h2>
@@ -647,7 +647,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
                 <div className="lg:col-span-2">
-                  <p className="text-xs sm:text-sm uppercase tracking-widest text-destructive mb-3">Current State</p>
+                  <p className="text-xs sm:text-sm uppercase tracking-widest text-destructive mb-3">{t.industryPages.sections.currentState}</p>
                   <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-4 leading-tight">
                     {c.problem.headline}
                   </h2>
@@ -682,7 +682,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
                   ))}
                 </div>
                 <div className="lg:col-span-2 order-1 lg:order-2">
-                  <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">Target State</p>
+                  <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">{t.industryPages.sections.targetState}</p>
                   <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-4 leading-tight">
                     {c.outcome.headline}
                   </h2>
@@ -697,7 +697,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
           <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">
-                <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">Implementation</p>
+                <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3">{t.industryPages.sections.implementation}</p>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
                   {c.howItWorks.headline}
                 </h2>
@@ -732,7 +732,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
 
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Who It Is For</p>
+          <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">{t.industryPages.sections.whoItsFor}</p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 sm:mb-8">
             {c.whoItsFor.headline}
           </h2>
@@ -756,7 +756,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
       <section id="contact" className="scroll-mt-24 sm:scroll-mt-28 py-16 sm:py-24 md:py-32 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
-            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Get Started</p>
+            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">{t.industryPages.sections.getStarted}</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 sm:mb-6">
               {c.getStarted.headline}
             </h2>

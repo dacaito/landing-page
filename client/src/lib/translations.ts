@@ -212,7 +212,16 @@ export const translations = {
         transformation: "The Transformation",
         theProcess: "The Process",
         whoItsFor: "Who It's For",
-        getStarted: "Get Started"
+        getStarted: "Get Started",
+        theChallenge: "The Challenge",
+        provenResults: "Proven Results",
+        theSolution: "The Solution",
+        howItWorks: "How It Works",
+        measuredImpact: "Measured Impact",
+        threeSteps: "Three Steps",
+        currentState: "Current State",
+        targetState: "Target State",
+        implementation: "Implementation"
       },
       common: {
         inventoryAccuracy: "Inventory Accuracy",
@@ -602,7 +611,16 @@ export const translations = {
         transformation: "Die Transformation",
         theProcess: "Der Prozess",
         whoItsFor: "Für wen",
-        getStarted: "Jetzt starten"
+        getStarted: "Jetzt starten",
+        theChallenge: "Die Herausforderung",
+        provenResults: "Nachgewiesene Ergebnisse",
+        theSolution: "Die Lösung",
+        howItWorks: "So funktioniert es",
+        measuredImpact: "Messbare Wirkung",
+        threeSteps: "Drei Schritte",
+        currentState: "Aktueller Zustand",
+        targetState: "Zielzustand",
+        implementation: "Implementierung"
       },
       common: {
         inventoryAccuracy: "Bestandsgenauigkeit",
@@ -992,7 +1010,16 @@ export const translations = {
         transformation: "La transformación",
         theProcess: "El proceso",
         whoItsFor: "Para quién es",
-        getStarted: "Empezar"
+        getStarted: "Empezar",
+        theChallenge: "El desafío",
+        provenResults: "Resultados probados",
+        theSolution: "La solución",
+        howItWorks: "Cómo funciona",
+        measuredImpact: "Impacto medido",
+        threeSteps: "Tres pasos",
+        currentState: "Estado actual",
+        targetState: "Estado objetivo",
+        implementation: "Implementación"
       },
       common: {
         inventoryAccuracy: "Precisión de inventario",
