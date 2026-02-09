@@ -2,6 +2,7 @@
   "buildCommand": "npm run build:web",
   "outputDirectory": "dist/public",
   "redirects": [
+    { "source": "/", "destination": "/en", "permanent": true },
     { "source": "/privacy", "destination": "/en/privacy", "permanent": true },
     { "source": "/imprint", "destination": "/en/imprint", "permanent": true },
     { "source": "/company", "destination": "/en/company", "permanent": true },
