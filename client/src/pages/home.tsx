@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowDown, Camera, RefreshCw, Database, Factory, Warehouse, Users, Building2, ChevronRight, Check, Menu, X, Globe, ChevronDown } from "lucide-react";
+import { ArrowDown, Camera, RefreshCw, Database, Factory, Warehouse, Users, Building2, ChevronRight, Check, Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { SeoHead } from "@/components/SeoHead";
@@ -25,12 +25,35 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
+    let cancelled = false;
+    let script: HTMLScriptElement | null = null;
+    let timeoutId: number | null = null;
+    let idleId: number | null = null;
+
+    const loadCalendly = () => {
+      if (cancelled) return;
+      script = document.createElement("script");
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+    };
+
+    // Defer third-party script to avoid competing with initial render (helps LCP).
+    const w = window as unknown as {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout?: number }) => number;
+      cancelIdleCallback?: (id: number) => void;
+    };
+    if (typeof w.requestIdleCallback === "function") {
+      idleId = w.requestIdleCallback(loadCalendly, { timeout: 2000 });
+    } else {
+      timeoutId = window.setTimeout(loadCalendly, 1500);
+    }
+
     return () => {
-      document.body.removeChild(script);
+      cancelled = true;
+      if (idleId !== null && typeof w.cancelIdleCallback === "function") w.cancelIdleCallback(idleId);
+      if (timeoutId !== null) window.clearTimeout(timeoutId);
+      if (script && script.parentNode) script.parentNode.removeChild(script);
     };
   }, []);
 
@@ -268,6 +291,7 @@ export default function Home() {
                 autoPlay
                 loop
                 muted
+                preload="metadata"
                 data-testid="video-demo"
               />
             </div>

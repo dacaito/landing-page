@@ -6,3 +6,7 @@ vite.config.ts.*
 *.tar.gz
 .deploy-landing-page/
 .local/
+
+# Performance + SEO audit artifacts
+lighthouse-reports/
+seo-audit-results.json

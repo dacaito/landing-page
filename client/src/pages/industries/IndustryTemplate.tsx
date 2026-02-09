@@ -74,12 +74,35 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
   }, []);
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
+    let cancelled = false;
+    let script: HTMLScriptElement | null = null;
+    let timeoutId: number | null = null;
+    let idleId: number | null = null;
+
+    const loadCalendly = () => {
+      if (cancelled) return;
+      script = document.createElement("script");
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+    };
+
+    // Defer third-party script to avoid competing with initial render (helps LCP).
+    const w = window as unknown as {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout?: number }) => number;
+      cancelIdleCallback?: (id: number) => void;
+    };
+    if (typeof w.requestIdleCallback === "function") {
+      idleId = w.requestIdleCallback(loadCalendly, { timeout: 2000 });
+    } else {
+      timeoutId = window.setTimeout(loadCalendly, 1500);
+    }
+
     return () => {
-      document.body.removeChild(script);
+      cancelled = true;
+      if (idleId !== null && typeof w.cancelIdleCallback === "function") w.cancelIdleCallback(idleId);
+      if (timeoutId !== null) window.clearTimeout(timeoutId);
+      if (script && script.parentNode) script.parentNode.removeChild(script);
     };
   }, []);
 
