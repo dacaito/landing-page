@@ -8,6 +8,7 @@
     { "source": "/company", "destination": "/en/company", "permanent": true },
 
     { "source": "/industries/:path*", "destination": "/en/industries/:path*", "permanent": true },
+    { "source": "/industries/:path*/", "destination": "/en/industries/:path*", "permanent": true },
 
     { "source": "/Privacy", "destination": "/en/privacy", "permanent": true },
     { "source": "/Imprint", "destination": "/en/imprint", "permanent": true },
