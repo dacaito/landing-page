@@ -122,6 +122,65 @@ const pharmaContent: IndustryContent = {
       headline: "Ist das relevant für Ihren Betrieb?",
       description: "Ein kurzes Gespräch kann klären, ob physische Bestandsverifizierung die Freigabesicherheit oder Compliance-Position verbessern könnte."
     }
+  },
+  es: {
+    intro: {
+      headline: "Farmacéutica",
+      subheadline: "Su ERP. La realidad física de las operaciones farmacéuticas.",
+      description: "Visibilidad de inventario en tiempo real en materias primas, WIP y producto terminado para mejorar la confianza en la liberación de lotes y reducir el riesgo de cumplimiento normativo.\n\nDesarrollado para entornos regulados donde la precisión y la trazabilidad son innegociables."
+    },
+    provenResults: {
+      metrics: [
+        { value: ">99%", label: "Precisión de inventario" },
+        { value: "30%", label: "Liberación de lotes más rápida" },
+        { value: "50%", label: "Menos roturas de stock" },
+        { value: "2x", label: "Confianza en auditorías" }
+      ]
+    },
+    problem: {
+      headline: "Cuando el inventario del sistema no coincide con la realidad física",
+      description: "La precisión, el estado y la trazabilidad afectan directamente al cumplimiento normativo y al suministro al paciente.",
+      issues: [
+        "Lotes retrasados por inventario faltante o mal ubicado",
+        "Investigaciones manuales para conciliar sistema vs. realidad",
+        "Buffers conservadores para proteger la disponibilidad",
+        "Riesgo de auditoría por suposiciones en lugar de verificación"
+      ],
+      closing: "Estos problemas persisten porque el ERP no está alineado continuamente con la realidad física."
+    },
+    outcome: {
+      headline: "Qué cambia con la verificación física",
+      description: "El alineamiento continuo entre sistema y realidad transforma las operaciones.",
+      benefits: [
+        "Precisión fiable por lote, estado y ubicación",
+        "Liberaciones de lotes más rápidas y fiables",
+        "Menor riesgo de cumplimiento normativo y auditoría",
+        "Menos dependencia de buffers conservadores"
+      ]
+    },
+    howItWorks: {
+      headline: "Una capa de cumplimiento normativo para operaciones farmacéuticas",
+      description: "Vexgen AI alinea continuamente el inventario físico con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.",
+      steps: [
+        { step: "01", title: "Capturar cada movimiento", description: "Cámaras monitorizan flujos de inventario de forma continua." },
+        { step: "02", title: "Validar automáticamente", description: "La IA de visión identifica materiales y cantidades en tiempo real." },
+        { step: "03", title: "Sincronizar su ERP al instante", description: "Discrepancias corregidas automáticamente. Sin intervención manual." }
+      ],
+      closing: "Sin reemplazo de sistemas. Sin rediseño de procesos. Fricción mínima."
+    },
+    whoItsFor: {
+      headline: "Desarrollado para organizaciones farmacéuticas que:",
+      criteria: [
+        "Operan en entornos regulados GMP",
+        "Gestionan inventario controlado por lotes en múltiples ubicaciones",
+        "Experimentan retrasos en la liberación pese a inventario 'disponible'",
+        "Dependen de verificación manual para el cumplimiento normativo"
+      ]
+    },
+    getStarted: {
+      headline: "¿Es relevante para sus operaciones?",
+      description: "Una breve conversación puede evaluar si la verificación física de inventario podría mejorar la confianza en la liberación o la posición de cumplimiento normativo."
+    }
   }
 };
 

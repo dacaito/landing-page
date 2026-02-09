@@ -10,13 +10,15 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+const LANGUAGES: Language[] = ['en', 'de', 'es'];
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [location] = useLocation();
   
-  const language: Language = location.startsWith('/de') ? 'de' : 'en';
+  const language: Language = location.startsWith('/de') ? 'de' : location.startsWith('/es') ? 'es' : 'en';
   
   const getLocalizedPath = (path: string): string => {
-    if (path.startsWith('/en') || path.startsWith('/de')) {
+    if (path.startsWith('/en') || path.startsWith('/de') || path.startsWith('/es')) {
       return path;
     }
     const cleanPath = path === '/' ? '' : path;
@@ -24,9 +26,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   };
   
   const switchLanguagePath = (): string => {
-    const newLang = language === 'en' ? 'de' : 'en';
-    const currentPath = location.replace(/^\/(en|de)/, '') || '';
-    return `/${newLang}${currentPath}`;
+    const currentIndex = LANGUAGES.indexOf(language);
+    const nextLang = LANGUAGES[(currentIndex + 1) % LANGUAGES.length];
+    const currentPath = location.replace(/^\/(en|de|es)/, '') || '';
+    return `/${nextLang}${currentPath}`;
   };
   
   return (

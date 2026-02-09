@@ -51,6 +51,7 @@ export default function Company() {
   const canonicalUrl = `https://vexgen.ai/${lang}/company`;
   const alternateEn = `https://vexgen.ai/en/company`;
   const alternateDe = `https://vexgen.ai/de/company`;
+  const alternateEs = `https://vexgen.ai/es/company`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -60,9 +61,10 @@ export default function Company() {
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="en" href={alternateEn} />
         <link rel="alternate" hrefLang="de" href={alternateDe} />
+        <link rel="alternate" hrefLang="es" href={alternateEs} />
         <link rel="alternate" hrefLang="x-default" href={alternateEn} />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'de_DE'} />
+        <meta property="og:locale" content={lang === 'de' ? 'de_DE' : lang === 'es' ? 'es_ES' : 'en_US'} />
       </Helmet>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">

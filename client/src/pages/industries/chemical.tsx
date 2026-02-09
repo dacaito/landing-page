@@ -122,6 +122,65 @@ const chemicalContent: IndustryContent = {
       headline: "Ist das relevant für Ihren Betrieb?",
       description: "Ein kurzes Gespräch kann klären, ob physische Bestandstransparenz die Kapitaleffizienz verbessern oder operatives Risiko reduzieren könnte."
     }
+  },
+  es: {
+    intro: {
+      headline: "Química",
+      subheadline: "Su ERP. La realidad física de sus operaciones químicas.",
+      description: "Visibilidad de inventario en tiempo real en materias primas, WIP y producto terminado para reducir depreciaciones, evitar roturas de stock y proteger el flujo productivo.\n\nDesarrollado para entornos con alta exposición de capital de trabajo, trazabilidad estricta y requisitos de vida útil."
+    },
+    provenResults: {
+      metrics: [
+        { value: ">99%", label: "Precisión de inventario" },
+        { value: "15+", label: "Días Reducción DIO" },
+        { value: "6 cifras", label: "Reducción de depreciaciones" },
+        { value: "12%", label: "Capital de trabajo liberado" }
+      ]
+    },
+    problem: {
+      headline: "Cuando el inventario del sistema no coincide con la realidad física",
+      description: "Los materiales dominan costes, riesgos y continuidad productiva. Las divergencias tienen impacto inmediato.",
+      issues: [
+        "Capital de trabajo inmovilizado en buffers inflados",
+        "Depreciaciones por materiales caducados o mal ubicados",
+        "Roturas de stock que afectan compromisos con clientes",
+        "Equipos dedicando tiempo a verificaciones manuales y gestión de urgencias"
+      ],
+      closing: "Estos problemas persisten porque los datos del ERP están desconectados de la realidad física en planta."
+    },
+    outcome: {
+      headline: "Qué cambia con la verificación física",
+      description: "El alineamiento continuo entre sistema y realidad transforma las operaciones.",
+      benefits: [
+        "Precisión fiable por material, lote y ubicación",
+        "Menor capital de trabajo en buffers inflados",
+        "Menos paradas por materiales faltantes",
+        "Fin de las compras urgentes y gestión de crisis"
+      ]
+    },
+    howItWorks: {
+      headline: "Una capa de protección para plantas químicas",
+      description: "Vexgen AI alinea continuamente el inventario físico con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.",
+      steps: [
+        { step: "01", title: "Capturar cada movimiento", description: "Cámaras monitorizan flujos de inventario de forma continua." },
+        { step: "02", title: "Validar automáticamente", description: "La IA de visión identifica materiales y cantidades en tiempo real." },
+        { step: "03", title: "Sincronizar su ERP al instante", description: "Discrepancias corregidas automáticamente. Sin intervención manual." }
+      ],
+      closing: "Sin reemplazo de sistemas. Sin rediseño de procesos. Fricción mínima."
+    },
+    whoItsFor: {
+      headline: "Desarrollado para organizaciones químicas donde:",
+      criteria: [
+        "La precisión de inventario afecta al capital de trabajo y al riesgo",
+        "La vida útil, el seguimiento de lotes y la trazabilidad son críticos",
+        "Los planes de producción dependen de la disponibilidad de materiales",
+        "Los equipos dependen de verificaciones manuales o buffers para gestionar la incertidumbre"
+      ]
+    },
+    getStarted: {
+      headline: "¿Es relevante para sus operaciones?",
+      description: "Una breve conversación puede evaluar si la visibilidad física de inventario podría mejorar la eficiencia de capital o reducir el riesgo operativo."
+    }
   }
 };
 

@@ -122,6 +122,65 @@ const logisticsContent: IndustryContent = {
       headline: "Ist das relevant für Ihren Betrieb?",
       description: "Ein kurzes Gespräch kann klären, ob automatisierte Bestandsverifizierung Arbeitsaufwand reduzieren, Genauigkeit verbessern oder Zuverlässigkeit erhöhen könnte."
     }
+  },
+  es: {
+    intro: {
+      headline: "Logística y fulfillment",
+      subheadline: "Su ERP. La realidad física de las operaciones logísticas.",
+      description: "Visibilidad de inventario en tiempo real que elimina el trabajo manual, reduce errores y garantiza una preparación de pedidos fiable en almacenes y centros de distribución.\n\nDesarrollado para operaciones de alto volumen donde la precisión y la velocidad determinan la satisfacción del cliente."
+    },
+    provenResults: {
+      metrics: [
+        { value: ">99%", label: "Precisión de pedidos" },
+        { value: "75%", label: "Menos trabajo manual" },
+        { value: "90%", label: "Menos errores de picking" },
+        { value: "<24h", label: "Resolución de discrepancias" }
+      ]
+    },
+    problem: {
+      headline: "Cuando los errores de inventario se convierten en problemas del cliente",
+      description: "La fiabilidad en la preparación de pedidos depende de saber exactamente qué está disponible, dónde se encuentra y que coincide con los registros del sistema.",
+      issues: [
+        "Recuentos cíclicos manuales que consumen horas de trabajo diarias",
+        "Errores de picking que generan devoluciones y reclamaciones",
+        "Discrepancias de inventario descubiertas solo en el envío",
+        "Personal verificando constantemente lo que el sistema ya debería saber"
+      ],
+      closing: "Estos problemas persisten porque los datos del ERP divergen de la realidad física entre actualizaciones."
+    },
+    outcome: {
+      headline: "Qué cambia con la verificación continua",
+      description: "El alineamiento automático entre inventario físico y datos del sistema transforma las operaciones de fulfillment.",
+      benefits: [
+        "Eliminar recuentos manuales rutinarios y muestreos",
+        "Detectar discrepancias antes de que lleguen al cliente",
+        "Liberar personal para tareas de valor añadido en lugar de verificación",
+        "Construir confianza del cliente mediante precisión constante en pedidos"
+      ]
+    },
+    howItWorks: {
+      headline: "Una capa de verificación para operaciones logísticas",
+      description: "Vexgen AI alinea continuamente el inventario físico con su WMS/ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.",
+      steps: [
+        { step: "01", title: "Capturar cada movimiento", description: "Cámaras monitorizan flujos de inventario en recepción, almacenamiento y expedición." },
+        { step: "02", title: "Validar automáticamente", description: "La IA de visión identifica artículos, cantidades y ubicaciones en tiempo real." },
+        { step: "03", title: "Sincronizar sus sistemas al instante", description: "Discrepancias corregidas automáticamente. Sin conciliación manual." }
+      ],
+      closing: "Sin cambios en el flujo de trabajo. Sin dependencia de códigos de barras. Interrupción mínima."
+    },
+    whoItsFor: {
+      headline: "Desarrollado para operaciones logísticas que:",
+      criteria: [
+        "Procesan altos volúmenes de pedidos con ventanas de entrega ajustadas",
+        "Dedican horas significativas de trabajo a verificaciones manuales de inventario",
+        "Experimentan errores de picking pese a personal formado",
+        "Necesitan mejorar la precisión sin aumentar plantilla"
+      ]
+    },
+    getStarted: {
+      headline: "¿Es relevante para sus operaciones?",
+      description: "Una breve conversación puede evaluar si la verificación automatizada de inventario podría reducir el trabajo manual, mejorar la precisión o aumentar la fiabilidad."
+    }
   }
 };
 

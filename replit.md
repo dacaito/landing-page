@@ -59,8 +59,20 @@ All routes use language prefixes for SEO-friendly internationalization:
 - `/de/privacy` - Datenschutz page
 - `/de/imprint` - Impressum page
 
+### Spanish Routes (`/es/`)
+- `/es/` - Home page (Spanish)
+- `/es/industries/chemical` - Química page
+- `/es/industries/plastics` - Plásticos page
+- `/es/industries/food-beverage` - Alimentación y bebidas page
+- `/es/industries/cosmetics` - Cosmética page
+- `/es/industries/pharma` - Farmacéutica page
+- `/es/industries/logistics` - Logística y fulfillment page
+- `/es/company` - Empresa page
+- `/es/privacy` - Política de privacidad page
+- `/es/imprint` - Aviso legal page
+
 ### Root Route (`/`)
-- Redirects to `/en/` or `/de/` based on browser language detection
+- Redirects to `/en/`, `/de/`, or `/es/` based on browser language detection
 
 ## Scripts
 - `npm run dev:web` - Start development server on port 5000
@@ -72,26 +84,34 @@ All routes use language prefixes for SEO-friendly internationalization:
 - **Build Output**: dist/public
 
 ## SEO Configuration
-- **Sitemap**: `/public/sitemap.xml` - All 18 routes (9 EN + 9 DE) with hreflang annotations
+- **Sitemap**: `/public/sitemap.xml` - All 30 routes (10 EN + 10 DE + 10 ES) with hreflang annotations
 - **Robots.txt**: `/public/robots.txt` - Configured for all major search bots
 - **Canonical URLs**: Per-page language-prefixed canonical URLs via react-helmet-async
-- **Hreflang Tags**: All pages include hreflang="en", hreflang="de", and hreflang="x-default" for international SEO
-- **Open Graph**: Full OG meta tags with og:locale (en_US/de_DE), per-page titles and descriptions
+- **Hreflang Tags**: All pages include hreflang="en", hreflang="de", hreflang="es", and hreflang="x-default" for international SEO
+- **Open Graph**: Full OG meta tags with og:locale (en_US/de_DE/es_ES), per-page titles and descriptions
 - **Structured Data**: JSON-LD schema for Organization and WebSite in index.html
 - **Fonts**: Optimized to single font (Inter) for performance
 - **Per-page Meta Tags**: Each page has unique title/description via react-helmet-async
 - **Image Optimization**: Lazy loading on below-fold images with explicit width/height dimensions
 
 ## Internationalization (i18n)
-- **Languages**: English (EN) and German (DE)
-- **URL-Based Language Routing**: Language determined from URL path prefix (`/en/` or `/de/`) for SEO
+- **Languages**: English (EN), German (DE), and Spanish (ES)
+- **URL-Based Language Routing**: Language determined from URL path prefix (`/en/`, `/de/`, or `/es/`) for SEO
 - **LanguageContext**: Centralized in `client/src/lib/LanguageContext.tsx` - provides `useLanguage()` hook with `language`, `getLocalizedPath()`, and `switchLanguagePath()`
 - **Translation System**: Centralized in `client/src/lib/translations.ts`
-- **Industry Pages**: Full bilingual support with industry-specific business terminology
-- **Language Toggle**: Available in navigation, switches URL path between `/en/` and `/de/`
-- **Browser Language Detection**: Root path (`/`) redirects to `/en/` or `/de/` based on browser language preference
+- **Industry Pages**: Full trilingual support with industry-specific business terminology
+- **Language Toggle**: Available in navigation, cycles through EN → DE → ES → EN
+- **Browser Language Detection**: Root path (`/`) redirects to `/en/`, `/de/`, or `/es/` based on browser language preference
 
 ## Recent Changes
+- **2026-02-09**: Added Spanish (ES) as third language across entire site
+  - Added full Spanish translations to translations.ts (nav, home, all industry page strings)
+  - Updated Language type to include 'es', LanguageContext cycles EN → DE → ES → EN
+  - Added all /es routes to App.tsx (10 routes: home, 6 industries, company, privacy, imprint)
+  - Added Spanish content blocks to all 6 industry page files (chemical, plastics, food-beverage, cosmetics, pharma, logistics)
+  - Updated hreflang tags on all pages to include es + es_ES og:locale
+  - Regenerated sitemap.xml with 30 URLs (10 pages × 3 languages) and 4-language hreflang annotations
+  - Spanish uses European Spanish (neutral) with B2B industrial tone
 - **2026-02-03**: Added Logistics & Fulfillment industry page (6th industry) with bilingual content focused on reducing manual labor, improving reliability, and reducing errors
   - Created `/en/industries/logistics` and `/de/industries/logistics` routes
   - Added navigation links in both desktop and mobile menus

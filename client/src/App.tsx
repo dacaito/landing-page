@@ -41,6 +41,17 @@ function Router() {
       <Route path="/de/privacy" component={Privacy} />
       <Route path="/de/imprint" component={Imprint} />
       
+      <Route path="/es" component={Home} />
+      <Route path="/es/industries/plastics" component={PlasticsIndustry} />
+      <Route path="/es/industries/food-beverage" component={FoodBeverageIndustry} />
+      <Route path="/es/industries/cosmetics" component={CosmeticsIndustry} />
+      <Route path="/es/industries/pharma" component={PharmaIndustry} />
+      <Route path="/es/industries/chemical" component={ChemicalIndustry} />
+      <Route path="/es/industries/logistics" component={LogisticsIndustry} />
+      <Route path="/es/company" component={Company} />
+      <Route path="/es/privacy" component={Privacy} />
+      <Route path="/es/imprint" component={Imprint} />
+      
       <Route component={NotFound} />
     </Switch>
   );

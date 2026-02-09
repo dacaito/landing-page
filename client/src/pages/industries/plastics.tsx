@@ -122,6 +122,65 @@ const plasticsContent: IndustryContent = {
       headline: "Ist das relevant für Ihren Betrieb?",
       description: "Ein kurzes Gespräch kann klären, ob physische Bestandstransparenz Verfügbarkeit, Genauigkeit oder Kapitaleffizienz verbessern könnte."
     }
+  },
+  es: {
+    intro: {
+      headline: "Fabricación de plásticos",
+      subheadline: "Su ERP. La realidad física de la fabricación de plásticos.",
+      description: "Visibilidad de inventario en tiempo real en materias primas, WIP y producto terminado para mantener en funcionamiento las líneas de inyección, extrusión y montaje.\n\nDesarrollado para entornos de alta variedad y alto volumen donde la disponibilidad y la precisión determinan los márgenes."
+    },
+    provenResults: {
+      metrics: [
+        { value: ">99%", label: "Precisión de inventario" },
+        { value: "12+", label: "Días Reducción DIO" },
+        { value: "25%", label: "Mayor disponibilidad de línea" },
+        { value: "90%", label: "Menos verificaciones manuales" }
+      ]
+    },
+    problem: {
+      headline: "Cuando el inventario del sistema no coincide con la realidad física",
+      description: "El rendimiento productivo depende de tener las piezas correctas, en la máquina correcta, en el momento correcto.",
+      issues: [
+        "Líneas esperando material que 'existe' en el sistema",
+        "Buffers excesivos construidos para proteger contra la incertidumbre",
+        "Referencias incorrectas acumulándose mientras faltan las críticas",
+        "Verificaciones manuales constantes para mantener la producción en marcha"
+      ],
+      closing: "Estos problemas persisten porque los datos del ERP están desconectados de lo que realmente hay en planta."
+    },
+    outcome: {
+      headline: "Qué cambia con la verificación física",
+      description: "El alineamiento continuo entre sistema y realidad transforma las operaciones.",
+      benefits: [
+        "Precisión fiable por referencia, pieza y ubicación",
+        "Mayor disponibilidad, menos paradas por material",
+        "Menor capital de trabajo en buffers",
+        "Fin de las urgencias y conciliaciones manuales"
+      ]
+    },
+    howItWorks: {
+      headline: "Una capa de verificación para plantas de plásticos",
+      description: "Vexgen AI alinea continuamente el inventario físico con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.",
+      steps: [
+        { step: "01", title: "Capturar cada movimiento", description: "Cámaras monitorizan flujos de inventario de forma continua." },
+        { step: "02", title: "Validar automáticamente", description: "La IA de visión identifica materiales y cantidades en tiempo real." },
+        { step: "03", title: "Sincronizar su ERP al instante", description: "Discrepancias corregidas automáticamente. Sin intervención manual." }
+      ],
+      closing: "Sin reemplazo de sistemas. Sin rediseño de procesos. Fricción mínima."
+    },
+    whoItsFor: {
+      headline: "Desarrollado para fabricantes de plásticos que:",
+      criteria: [
+        "Operan inyección, extrusión o montaje con secuenciación ajustada",
+        "Gestionan alto número de referencias en cajas, palés y WIP",
+        "Experimentan paradas pese a inventario 'disponible'",
+        "Dependen de buffers y verificaciones manuales para proteger el rendimiento"
+      ]
+    },
+    getStarted: {
+      headline: "¿Es relevante para sus operaciones?",
+      description: "Una breve conversación puede evaluar si la visibilidad física de inventario podría mejorar la disponibilidad, la precisión o la eficiencia de capital."
+    }
   }
 };
 

@@ -122,6 +122,65 @@ const foodBeverageContent: IndustryContent = {
       headline: "Ist das relevant für Ihren Betrieb?",
       description: "Ein kurzes Gespräch kann klären, ob physische Bestandstransparenz Frische, Servicelevel oder Kapitaleffizienz verbessern könnte."
     }
+  },
+  es: {
+    intro: {
+      headline: "Alimentación y bebidas",
+      subheadline: "Su ERP. La realidad física de las operaciones de alimentación y bebidas.",
+      description: "Visibilidad de inventario en tiempo real en palés de materias primas, WIP y producto terminado para reducir desperdicios y proteger niveles de servicio.\n\nDesarrollado para entornos de alto volumen donde la frescura y la disponibilidad definen el rendimiento."
+    },
+    provenResults: {
+      metrics: [
+        { value: ">99%", label: "Precisión de inventario" },
+        { value: "40%", label: "Menos desperdicios" },
+        { value: "5pp", label: "Mejora OTIF" },
+        { value: "90%", label: "Menos verificaciones manuales" }
+      ]
+    },
+    problem: {
+      headline: "Cuando la realidad de los palés diverge de los datos del sistema",
+      description: "La frescura, la disponibilidad y los niveles de servicio dependen de saber exactamente qué hay y dónde.",
+      issues: [
+        "Desperdicios por palés caducados u olvidados",
+        "Roturas de stock causando pedidos incompletos y fallos de OTIF",
+        "Buffers excesivos para proteger niveles de servicio",
+        "Verificaciones constantes de palés y fechas para mantener los pedidos en movimiento"
+      ],
+      closing: "Estos problemas persisten porque los datos del ERP están desconectados de la realidad física de los palés."
+    },
+    outcome: {
+      headline: "Qué cambia con la verificación física",
+      description: "El alineamiento continuo entre sistema y realidad transforma las operaciones.",
+      benefits: [
+        "Precisión fiable por referencia, cantidad y fecha de caducidad",
+        "Menos desperdicios mediante mejor ejecución FIFO/FEFO",
+        "Mayores niveles de servicio, menos palés faltantes",
+        "Equipos liberados de verificaciones manuales constantes de palés"
+      ]
+    },
+    howItWorks: {
+      headline: "Una capa de protección de frescura para operaciones de alimentación y bebidas",
+      description: "Vexgen AI alinea continuamente la realidad física de los palés con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.",
+      steps: [
+        { step: "01", title: "Capturar cada movimiento", description: "Cámaras monitorizan flujos de inventario de forma continua." },
+        { step: "02", title: "Validar automáticamente", description: "La IA de visión identifica materiales y cantidades en tiempo real." },
+        { step: "03", title: "Sincronizar su ERP al instante", description: "Discrepancias corregidas automáticamente. Sin intervención manual." }
+      ],
+      closing: "Sin reemplazo de sistemas. Sin rediseño de procesos. Fricción mínima."
+    },
+    whoItsFor: {
+      headline: "Desarrollado para organizaciones de alimentación y bebidas que:",
+      criteria: [
+        "Gestionan grandes volúmenes de mercancía paletizada e ingredientes",
+        "Dependen de FIFO/FEFO para controlar desperdicios y frescura",
+        "Experimentan problemas de servicio pese a inventario 'disponible'",
+        "Dependen de verificaciones manuales y buffers para proteger OTIF"
+      ]
+    },
+    getStarted: {
+      headline: "¿Es relevante para sus operaciones?",
+      description: "Una breve conversación puede evaluar si la visibilidad física de inventario podría mejorar la frescura, los niveles de servicio o la eficiencia de capital."
+    }
   }
 };
 

@@ -1,4 +1,4 @@
-export type Language = 'en' | 'de';
+export type Language = 'en' | 'de' | 'es';
 
 export const translations = {
   en: {
@@ -664,6 +664,339 @@ export const translations = {
           "Auf manuelle Verifizierung für Compliance angewiesen sind"
         ],
         getStartedDescription: "Ein kurzes Gespräch kann klären, ob physische Bestandsverifizierung die Freigabesicherheit oder Compliance-Position verbessern könnte."
+      }
+    }
+  },
+  es: {
+    nav: {
+      results: "Resultados",
+      solution: "Solución",
+      industries: "Industrias",
+      howItWorks: "Cómo funciona",
+      company: "Empresa",
+      requestDemo: "Solicitar demo",
+      demo: "Demo"
+    },
+    industries: {
+      plastics: "Plásticos",
+      foodBeverage: "Alimentación y bebidas",
+      cosmetics: "Cosmética",
+      logistics: "Logística y fulfillment",
+      pharma: "Farmacéutica",
+      chemical: "Química"
+    },
+    hero: {
+      headline: "Su ERP.\nLa verdad.",
+      subheadline: "Visibilidad en tiempo real que cierra la brecha entre lo que dice su ERP y lo que realmente hay en su planta.",
+      tagline: "Sin recuentos manuales. Sin etiquetas. Sin interrupciones."
+    },
+    results: {
+      label: "Resultados probados",
+      headline: "La realidad genera retorno",
+      description: "Desplegado en entornos reales de fabricación. ROI medible desde el primer día.",
+      metrics: {
+        accuracy: { value: ">99%", label: "Precisión de inventario" },
+        writeoff: { value: "6 cifras", label: "Reducción de depreciaciones" },
+        time: { value: "<1\u00A0Hora", label: "Conciliación ERP" },
+        roi: { value: "<90\u00A0Días", label: "Tiempo hasta ROI" }
+      },
+      dashboardCaption: "Dashboard en vivo de despliegue activo"
+    },
+    problem: {
+      label: "El problema",
+      headline: "El inventario fantasma permanece oculto hasta que cuesta millones.",
+      description: "Las operaciones de fabricación y almacén funcionan con datos ERP que rara vez reflejan la realidad física de la planta.",
+      issues: [
+        "Compras de emergencia y roturas de stock",
+        "Exceso de inventario y depreciaciones costosas",
+        "Horas perdidas en recuentos manuales",
+        "Decisiones críticas basadas en datos poco fiables"
+      ],
+      closing: "Su ERP es tan preciso como los datos que lo alimentan. Hoy, esos datos están rotos."
+    },
+    outcome: {
+      label: "El resultado",
+      headline: "Cuando el ERP refleja la realidad, todo cambia",
+      description: "La verificación física continua transforma las operaciones de reactivas a predecibles.",
+      benefits: [
+        "Precisión de inventario en la que puede confiar, sin recuentos manuales",
+        "Roturas de stock y compras de emergencia eliminadas de raíz",
+        "Capital liberado de buffers de seguridad y exceso de stock",
+        "Auditorías completadas en horas, no en semanas",
+        "Datos ERP en los que sus equipos realmente pueden confiar"
+      ],
+      closing: "Esto no es una verificación periódica. Es la verdad operativa continua."
+    },
+    howItWorks: {
+      label: "Cómo funciona",
+      headline: "Conciliación continua. Esfuerzo manual cero.",
+      description: "Vexgen AI conecta de forma segura y automática los movimientos físicos con los registros digitales. Todos sus datos se procesan localmente y nunca abandonan sus instalaciones. La identidad de los operarios se difumina automáticamente.",
+      steps: [
+        {
+          step: "01",
+          title: "Capturar cada movimiento",
+          description: "Cámaras monitorizan los flujos de inventario de forma continua. Nada queda sin registrar."
+        },
+        {
+          step: "02",
+          title: "Validar automáticamente",
+          description: "La tecnología de visión identifica materiales, movimientos y cantidades en tiempo real."
+        },
+        {
+          step: "03",
+          title: "Sincronizar su ERP al instante",
+          description: "Discrepancias detectadas y corregidas automáticamente. Sin intervención del operario."
+        }
+      ],
+      tags: ["Sin escáneres", "Sin etiquetas", "Sin procesos manuales"]
+    },
+    whoItsFor: {
+      label: "Para quién es",
+      headline: "Desarrollado para operaciones que mueven inventario físico",
+      industries: [
+        { label: "Plantas de fabricación" },
+        { label: "Almacenes y centros logísticos" },
+        { label: "Equipos de operaciones y cadena de suministro" },
+        { label: "Empresas industriales con SAP o ERP" }
+      ],
+      closing: "Si la precisión del inventario impacta en su cuenta de resultados, Vexgen AI fue desarrollado para usted."
+    },
+    contact: {
+      label: "Empezar",
+      headline: "Vea Vexgen AI en acción",
+      description: "¿El camino más rápido para entender el impacto? Véalo aplicado a su operación.",
+      form: {
+        name: "Nombre",
+        namePlaceholder: "Su nombre",
+        email: "Correo electrónico",
+        emailPlaceholder: "usted@empresa.com",
+        company: "Empresa",
+        companyPlaceholder: "Nombre de la empresa",
+        message: "Mensaje (opcional)",
+        messagePlaceholder: "Cuéntenos sobre sus desafíos de inventario...",
+        submit: "Solicitar una demo",
+        submitting: "Enviando..."
+      },
+      toast: {
+        successTitle: "Solicitud enviada",
+        successDescription: "Nos pondremos en contacto pronto para programar su demo.",
+        errorTitle: "Algo salió mal",
+        errorDescription: "Por favor, inténtelo de nuevo más tarde."
+      }
+    },
+    company: {
+      label: "Sobre Vexgen AI",
+      headline: "Desarrollado para operaciones industriales reales",
+      description: "Vexgen AI fue fundada para resolver un problema persistente y costoso: la brecha entre los registros del ERP y la realidad física. Restauramos la confianza en los datos operativos haciendo que los movimientos de inventario sean continuamente observables y verificables.",
+      team: {
+        ceo: {
+          name: "Sebastian Freijo",
+          role: "Cofundador y CEO",
+          bio: "Experiencia en operaciones industriales, gestión de calidad y mejora de procesos basada en datos en entornos de fabricación."
+        },
+        cto: {
+          name: "Andrés Cao",
+          role: "Cofundador y CTO",
+          bio: "Experto en ingeniería y visión por computadora, enfocado en construir sistemas fiables y de grado industrial."
+        },
+        advisor: {
+          name: "Stefan Kalmund",
+          role: "Asesor Senior",
+          bio: "Amplia experiencia ejecutiva en fabricación industrial y liderazgo operativo en empresas globales."
+        }
+      },
+      location: "Baumackerstrasse 42, 8050, Zúrich, Suiza",
+      focus: "Enfoque: Fabricación y almacén"
+    },
+    footer: {
+      copyright: "Vexgen AI. Todos los derechos reservados."
+    },
+    cta: {
+      requestDemo: "Solicitar una demo"
+    },
+    stockComparison: "Comparación de peso por lote: Vexgen AI vs. SAP",
+    industryPages: {
+      sections: {
+        realityToday: "La realidad actual",
+        transformation: "La transformación",
+        theProcess: "El proceso",
+        whoItsFor: "Para quién es",
+        getStarted: "Empezar"
+      },
+      common: {
+        inventoryAccuracy: "Precisión de inventario",
+        dioReduction: "Reducción DIO",
+        writeOffReduction: "Reducción de depreciaciones",
+        workingCapitalFreed: "Capital de trabajo liberado",
+        lessManualChecks: "Menos verificaciones manuales",
+        whatChanges: "Qué cambia con la verificación física",
+        continuousAlignment: "El alineamiento continuo entre sistema y realidad transforma las operaciones.",
+        captureTitle: "Capturar cada movimiento",
+        captureDesc: "Cámaras monitorizan flujos de inventario de forma continua.",
+        validateTitle: "Validar automáticamente",
+        validateDesc: "La IA de visión identifica materiales y cantidades en tiempo real.",
+        syncTitle: "Sincronizar su ERP al instante",
+        syncDesc: "Discrepancias corregidas automáticamente. Sin intervención manual.",
+        closing: "Sin reemplazo de sistemas. Sin rediseño de procesos. Fricción mínima.",
+        isRelevant: "¿Es relevante para sus operaciones?"
+      },
+      chemical: {
+        headline: "Química",
+        subheadline: "Su ERP. La realidad física de sus operaciones químicas.",
+        description: "Visibilidad de inventario en tiempo real en materias primas, WIP y producto terminado para reducir depreciaciones, evitar roturas de stock y proteger el flujo productivo.\n\nDesarrollado para entornos con alta exposición de capital de trabajo, trazabilidad estricta y requisitos de vida útil.",
+        problemHeadline: "Cuando el inventario del sistema no coincide con la realidad física",
+        problemDescription: "Los materiales dominan costes, riesgos y continuidad productiva. Las divergencias tienen impacto inmediato.",
+        issues: [
+          "Capital de trabajo inmovilizado en buffers inflados",
+          "Depreciaciones por materiales caducados o mal ubicados",
+          "Roturas de stock que afectan compromisos con clientes",
+          "Equipos dedicando tiempo a verificaciones manuales y gestión de urgencias"
+        ],
+        problemClosing: "Estos problemas persisten porque los datos del ERP están desconectados de la realidad física en planta.",
+        benefits: [
+          "Precisión fiable por material, lote y ubicación",
+          "Menor capital de trabajo en buffers inflados",
+          "Menos paradas por materiales faltantes",
+          "Fin de las compras urgentes y gestión de crisis"
+        ],
+        processHeadline: "Una capa de protección para plantas químicas",
+        processDescription: "Vexgen AI alinea continuamente el inventario físico con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.",
+        whoHeadline: "Desarrollado para organizaciones químicas donde:",
+        criteria: [
+          "La precisión de inventario afecta al capital de trabajo y al riesgo",
+          "La vida útil, el seguimiento de lotes y la trazabilidad son críticos",
+          "Los planes de producción dependen de la disponibilidad de materiales",
+          "Los equipos dependen de verificaciones manuales o buffers para gestionar la incertidumbre"
+        ],
+        getStartedDescription: "Una breve conversación puede evaluar si la visibilidad física de inventario podría mejorar la eficiencia de capital o reducir el riesgo operativo."
+      },
+      plastics: {
+        headline: "Fabricación de plásticos",
+        subheadline: "Su ERP. La realidad física de la fabricación de plásticos.",
+        description: "Visibilidad de inventario en tiempo real en materias primas, WIP y producto terminado para mantener en funcionamiento las líneas de inyección, extrusión y montaje.\n\nDesarrollado para entornos de alta variedad y alto volumen donde la disponibilidad y la precisión determinan los márgenes.",
+        higherLineUptime: "Mayor disponibilidad de línea",
+        problemHeadline: "Cuando el inventario del sistema no coincide con la realidad física",
+        problemDescription: "El rendimiento productivo depende de tener las piezas correctas, en la máquina correcta, en el momento correcto.",
+        issues: [
+          "Líneas esperando material que 'existe' en el sistema",
+          "Buffers excesivos construidos para proteger contra la incertidumbre",
+          "Referencias incorrectas acumulándose mientras faltan las críticas",
+          "Verificaciones manuales constantes para mantener la producción en marcha"
+        ],
+        problemClosing: "Estos problemas persisten porque los datos del ERP están desconectados de lo que realmente hay en planta.",
+        benefits: [
+          "Precisión fiable por referencia, pieza y ubicación",
+          "Mayor disponibilidad, menos paradas por material",
+          "Menor capital de trabajo en buffers",
+          "Fin de las urgencias y conciliaciones manuales"
+        ],
+        processHeadline: "Una capa de verificación para plantas de plásticos",
+        processDescription: "Vexgen AI alinea continuamente el inventario físico con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.",
+        whoHeadline: "Desarrollado para fabricantes de plásticos que:",
+        criteria: [
+          "Operan inyección, extrusión o montaje con secuenciación ajustada",
+          "Gestionan alto número de referencias en cajas, palés y WIP",
+          "Experimentan paradas pese a inventario 'disponible'",
+          "Dependen de buffers y verificaciones manuales para proteger el rendimiento"
+        ],
+        getStartedDescription: "Una breve conversación puede evaluar si la visibilidad física de inventario podría mejorar la disponibilidad, la precisión o la eficiencia de capital."
+      },
+      foodBeverage: {
+        headline: "Alimentación y bebidas",
+        subheadline: "Su ERP. La realidad física de las operaciones de alimentación y bebidas.",
+        description: "Visibilidad de inventario en tiempo real en palés de materias primas, WIP y producto terminado para reducir desperdicios y proteger niveles de servicio.\n\nDesarrollado para entornos de alto volumen donde la frescura y la disponibilidad definen el rendimiento.",
+        lessWaste: "Menos desperdicios",
+        otifImprovement: "Mejora OTIF",
+        problemHeadline: "Cuando la realidad de los palés diverge de los datos del sistema",
+        problemDescription: "La frescura, la disponibilidad y los niveles de servicio dependen de saber exactamente qué hay y dónde.",
+        issues: [
+          "Desperdicios por palés caducados u olvidados",
+          "Roturas de stock causando pedidos incompletos y fallos de OTIF",
+          "Buffers excesivos para proteger niveles de servicio",
+          "Verificaciones constantes de palés y fechas para mantener los pedidos en movimiento"
+        ],
+        problemClosing: "Estos problemas persisten porque los datos del ERP están desconectados de la realidad física de los palés.",
+        benefits: [
+          "Precisión fiable por referencia, cantidad y fecha de caducidad",
+          "Menos desperdicios mediante mejor ejecución FIFO/FEFO",
+          "Mayores niveles de servicio, menos palés faltantes",
+          "Equipos liberados de verificaciones manuales constantes de palés"
+        ],
+        processHeadline: "Una capa de protección de frescura para operaciones de alimentación y bebidas",
+        processDescription: "Vexgen AI alinea continuamente la realidad física de los palés con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.",
+        whoHeadline: "Desarrollado para organizaciones de alimentación y bebidas que:",
+        criteria: [
+          "Gestionan grandes volúmenes de mercancía paletizada e ingredientes",
+          "Dependen de FIFO/FEFO para controlar desperdicios y frescura",
+          "Experimentan problemas de servicio pese a inventario 'disponible'",
+          "Dependen de verificaciones manuales y buffers para proteger OTIF"
+        ],
+        getStartedDescription: "Una breve conversación puede evaluar si la visibilidad física de inventario podría mejorar la frescura, los niveles de servicio o la eficiencia de capital."
+      },
+      cosmetics: {
+        headline: "Cosmética",
+        subheadline: "Su ERP. La realidad física de las operaciones cosméticas.",
+        description: "Visibilidad de inventario en tiempo real en producción, almacenamiento y distribución para proteger lanzamientos y reducir depreciaciones.\n\nDesarrollado para entornos de alta variedad donde la precisión de referencias y el timing determinan los ingresos.",
+        launchOnTimeRate: "Tasa de lanzamiento puntual",
+        obsoleteReduction: "Reducción de obsoletos",
+        problemHeadline: "Cuando el inventario del sistema no coincide con la realidad física",
+        problemDescription: "La disponibilidad, la precisión y el timing definen el éxito en cosmética.",
+        issues: [
+          "Lanzamientos retrasados por referencias faltantes o mal asignadas",
+          "Variantes incorrectas en stock mientras faltan las de alta demanda",
+          "Depreciaciones por packaging obsoleto o campañas canceladas",
+          "Verificaciones manuales necesarias para confirmar la preparación del lanzamiento"
+        ],
+        problemClosing: "Estos problemas persisten porque al ERP le falta el alineamiento en tiempo real con el stock físico.",
+        benefits: [
+          "Precisión fiable por referencia, variante y ubicación",
+          "Lanzamientos puntuales con menos sorpresas",
+          "Menos depreciaciones por inventario mal asignado",
+          "Menos capital inmovilizado en buffers de protección"
+        ],
+        processHeadline: "Una capa de protección de lanzamientos para operaciones cosméticas",
+        processDescription: "Vexgen AI alinea continuamente el inventario físico con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.",
+        whoHeadline: "Desarrollado para organizaciones cosméticas que:",
+        criteria: [
+          "Gestionan amplios portfolios de referencias con variantes de packaging",
+          "Realizan lanzamientos frecuentes y demanda por campañas",
+          "Experimentan problemas de disponibilidad pese a datos de 'en stock'",
+          "Utilizan verificaciones manuales para proteger lanzamientos y servicio"
+        ],
+        getStartedDescription: "Una breve conversación puede evaluar si la visibilidad física de inventario podría mejorar la preparación de lanzamientos o la eficiencia de capital."
+      },
+      pharma: {
+        headline: "Farmacéutica",
+        subheadline: "Su ERP. La realidad física de las operaciones farmacéuticas.",
+        description: "Visibilidad de inventario en tiempo real en materias primas, WIP y producto terminado para mejorar la confianza en la liberación de lotes y reducir el riesgo de cumplimiento normativo.\n\nDesarrollado para entornos regulados donde la precisión y la trazabilidad son innegociables.",
+        fasterBatchRelease: "Liberación de lotes más rápida",
+        fewerStockouts: "Menos roturas de stock",
+        auditConfidence: "Confianza en auditorías",
+        problemHeadline: "Cuando el inventario del sistema no coincide con la realidad física",
+        problemDescription: "La precisión, el estado y la trazabilidad afectan directamente al cumplimiento normativo y al suministro al paciente.",
+        issues: [
+          "Lotes retrasados por inventario faltante o mal ubicado",
+          "Investigaciones manuales para conciliar sistema vs. realidad",
+          "Buffers conservadores para proteger la disponibilidad",
+          "Riesgo de auditoría por suposiciones en lugar de verificación"
+        ],
+        problemClosing: "Estos problemas persisten porque el ERP no está alineado continuamente con la realidad física.",
+        benefits: [
+          "Precisión fiable por lote, estado y ubicación",
+          "Liberaciones de lotes más rápidas y fiables",
+          "Menor riesgo de cumplimiento normativo y auditoría",
+          "Menos dependencia de buffers conservadores"
+        ],
+        processHeadline: "Una capa de cumplimiento normativo para operaciones farmacéuticas",
+        processDescription: "Vexgen AI alinea continuamente el inventario físico con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.",
+        whoHeadline: "Desarrollado para organizaciones farmacéuticas que:",
+        criteria: [
+          "Operan en entornos regulados GMP",
+          "Gestionan inventario controlado por lotes en múltiples ubicaciones",
+          "Experimentan retrasos en la liberación pese a inventario 'disponible'",
+          "Dependen de verificación manual para el cumplimiento normativo"
+        ],
+        getStartedDescription: "Una breve conversación puede evaluar si la verificación física de inventario podría mejorar la confianza en la liberación o la posición de cumplimiento normativo."
       }
     }
   }

@@ -68,21 +68,25 @@ export default function Home() {
   const canonicalUrl = `https://vexgen.ai/${lang}`;
   const alternateEn = "https://vexgen.ai/en";
   const alternateDe = "https://vexgen.ai/de";
+  const alternateEs = "https://vexgen.ai/es";
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet htmlAttributes={{ lang }}>
-        <title>Vexgen AI - {lang === 'en' ? 'Align ERP with Reality' : 'ERP mit Realität abgleichen'}</title>
-        <meta name="description" content={lang === 'en' 
-          ? "Real-time visibility and reconciliation between ERP data and physical inventory. No manual counts. No tags. No operational disruption."
-          : "Echtzeit-Transparenz und Abgleich zwischen ERP-Daten und physischem Bestand. Keine manuellen Zählungen. Keine Tags. Keine Betriebsunterbrechung."
+        <title>Vexgen AI - {lang === 'de' ? 'ERP mit Realität abgleichen' : lang === 'es' ? 'Alinee su ERP con la realidad' : 'Align ERP with Reality'}</title>
+        <meta name="description" content={lang === 'de' 
+          ? "Echtzeit-Transparenz und Abgleich zwischen ERP-Daten und physischem Bestand. Keine manuellen Zählungen. Keine Tags. Keine Betriebsunterbrechung."
+          : lang === 'es'
+          ? "Visibilidad en tiempo real y conciliación entre datos ERP e inventario físico. Sin recuentos manuales. Sin etiquetas. Sin interrupciones operativas."
+          : "Real-time visibility and reconciliation between ERP data and physical inventory. No manual counts. No tags. No operational disruption."
         } />
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="en" href={alternateEn} />
         <link rel="alternate" hrefLang="de" href={alternateDe} />
+        <link rel="alternate" hrefLang="es" href={alternateEs} />
         <link rel="alternate" hrefLang="x-default" href={alternateEn} />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'de_DE'} />
+        <meta property="og:locale" content={lang === 'de' ? 'de_DE' : lang === 'es' ? 'es_ES' : 'en_US'} />
       </Helmet>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">

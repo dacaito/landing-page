@@ -53,6 +53,7 @@ export interface IndustryContent {
   layoutVariant?: LayoutVariant;
   en: IndustryContentLang;
   de: IndustryContentLang;
+  es: IndustryContentLang;
 }
 
 interface IndustryTemplateProps {
@@ -127,6 +128,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
   const canonicalUrl = `https://vexgen.ai/${lang}/industries/${content.slug}`;
   const alternateEn = `https://vexgen.ai/en/industries/${content.slug}`;
   const alternateDe = `https://vexgen.ai/de/industries/${content.slug}`;
+  const alternateEs = `https://vexgen.ai/es/industries/${content.slug}`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -136,9 +138,10 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="en" href={alternateEn} />
         <link rel="alternate" hrefLang="de" href={alternateDe} />
+        <link rel="alternate" hrefLang="es" href={alternateEs} />
         <link rel="alternate" hrefLang="x-default" href={alternateEn} />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'de_DE'} />
+        <meta property="og:locale" content={lang === 'de' ? 'de_DE' : lang === 'es' ? 'es_ES' : 'en_US'} />
         <meta property="og:title" content={`${c.intro.headline} - Vexgen AI`} />
         <meta property="og:description" content={c.intro.description} />
       </Helmet>

@@ -122,6 +122,65 @@ const cosmeticsContent: IndustryContent = {
       headline: "Ist das relevant für Ihren Betrieb?",
       description: "Ein kurzes Gespräch kann klären, ob physische Bestandstransparenz Launch-Bereitschaft oder Kapitaleffizienz verbessern könnte."
     }
+  },
+  es: {
+    intro: {
+      headline: "Cosmética",
+      subheadline: "Su ERP. La realidad física de las operaciones cosméticas.",
+      description: "Visibilidad de inventario en tiempo real en producción, almacenamiento y distribución para proteger lanzamientos y reducir depreciaciones.\n\nDesarrollado para entornos de alta variedad donde la precisión de referencias y el timing determinan los ingresos."
+    },
+    provenResults: {
+      metrics: [
+        { value: ">99%", label: "Precisión de inventario" },
+        { value: "5pp", label: "Tasa de lanzamiento puntual" },
+        { value: "6 cifras", label: "Reducción de obsoletos" },
+        { value: "10+", label: "Días Reducción DIO" }
+      ]
+    },
+    problem: {
+      headline: "Cuando el inventario del sistema no coincide con la realidad física",
+      description: "La disponibilidad, la precisión y el timing definen el éxito en cosmética.",
+      issues: [
+        "Lanzamientos retrasados por referencias faltantes o mal asignadas",
+        "Variantes incorrectas en stock mientras faltan las de alta demanda",
+        "Depreciaciones por packaging obsoleto o campañas canceladas",
+        "Verificaciones manuales necesarias para confirmar la preparación del lanzamiento"
+      ],
+      closing: "Estos problemas persisten porque al ERP le falta el alineamiento en tiempo real con el stock físico."
+    },
+    outcome: {
+      headline: "Qué cambia con la verificación física",
+      description: "El alineamiento continuo entre sistema y realidad transforma las operaciones.",
+      benefits: [
+        "Precisión fiable por referencia, variante y ubicación",
+        "Lanzamientos puntuales con menos sorpresas",
+        "Menos depreciaciones por inventario mal asignado",
+        "Menos capital inmovilizado en buffers de protección"
+      ]
+    },
+    howItWorks: {
+      headline: "Una capa de protección de lanzamientos para operaciones cosméticas",
+      description: "Vexgen AI alinea continuamente el inventario físico con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.",
+      steps: [
+        { step: "01", title: "Capturar cada movimiento", description: "Cámaras monitorizan flujos de inventario de forma continua." },
+        { step: "02", title: "Validar automáticamente", description: "La IA de visión identifica materiales y cantidades en tiempo real." },
+        { step: "03", title: "Sincronizar su ERP al instante", description: "Discrepancias corregidas automáticamente. Sin intervención manual." }
+      ],
+      closing: "Sin reemplazo de sistemas. Sin rediseño de procesos. Fricción mínima."
+    },
+    whoItsFor: {
+      headline: "Desarrollado para organizaciones cosméticas que:",
+      criteria: [
+        "Gestionan amplios portfolios de referencias con variantes de packaging",
+        "Realizan lanzamientos frecuentes y demanda por campañas",
+        "Experimentan problemas de disponibilidad pese a datos de 'en stock'",
+        "Utilizan verificaciones manuales para proteger lanzamientos y servicio"
+      ]
+    },
+    getStarted: {
+      headline: "¿Es relevante para sus operaciones?",
+      description: "Una breve conversación puede evaluar si la visibilidad física de inventario podría mejorar la preparación de lanzamientos o la eficiencia de capital."
+    }
   }
 };
 
