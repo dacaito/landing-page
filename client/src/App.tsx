@@ -1,4 +1,4 @@
-import { Switch, Route, Redirect, useLocation } from "wouter";
+import { Switch, Route, Redirect } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -21,11 +21,6 @@ function detectBrowserLanguage(): 'en' | 'de' {
   return browserLang.toLowerCase().startsWith('de') ? 'de' : 'en';
 }
 
-function RootRedirect() {
-  const lang = detectBrowserLanguage();
-  return <Redirect to={`/${lang}`} />;
-}
-
 function LegacyRedirect({ path }: { path: string }) {
   const lang = detectBrowserLanguage();
   return <Redirect to={`/${lang}${path}`} />;
@@ -34,8 +29,6 @@ function LegacyRedirect({ path }: { path: string }) {
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={RootRedirect} />
-      
       <Route path="/en" component={Home} />
       <Route path="/en/industries/plastics" component={PlasticsIndustry} />
       <Route path="/en/industries/food-beverage" component={FoodBeverageIndustry} />
