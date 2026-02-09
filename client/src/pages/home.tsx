@@ -70,13 +70,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet htmlAttributes={{ lang }}>
-        <title>Vexgen AI - {lang === 'de' ? 'ERP mit Realität abgleichen' : lang === 'es' ? 'Alinee su ERP con la realidad' : 'Align ERP with Reality'}</title>
-        <meta name="description" content={lang === 'de' 
-          ? "Echtzeit-Transparenz und Abgleich zwischen ERP-Daten und physischem Bestand. Keine manuellen Zählungen. Keine Tags. Keine Betriebsunterbrechung."
-          : lang === 'es'
-          ? "Visibilidad en tiempo real y conciliación entre datos ERP e inventario físico. Sin recuentos manuales. Sin etiquetas. Sin interrupciones operativas."
-          : "Real-time visibility and reconciliation between ERP data and physical inventory. No manual counts. No tags. No operational disruption."
-        } />
+        <title>{t.meta.homeTitle}</title>
+        <meta name="description" content={t.meta.homeDescription} />
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="en" href={alternateEn} />
         <link rel="alternate" hrefLang="de" href={alternateDe} />
@@ -525,9 +520,9 @@ export default function Home() {
               <span>contact@vexgen.ai</span>
             </div>
             <div className="flex items-center gap-4 sm:gap-6 text-sm">
-              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">{lang === 'en' ? 'Company' : 'Unternehmen'}</Link>
-              <Link href={getLocalizedPath('/privacy')} className="text-muted-foreground hover:text-foreground transition-colors">{lang === 'en' ? 'Privacy Policy' : 'Datenschutz'}</Link>
-              <Link href={getLocalizedPath('/imprint')} className="text-muted-foreground hover:text-foreground transition-colors">{lang === 'en' ? 'Imprint' : 'Impressum'}</Link>
+              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.company}</Link>
+              <Link href={getLocalizedPath('/privacy')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.privacyPolicy}</Link>
+              <Link href={getLocalizedPath('/imprint')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.imprint}</Link>
             </div>
           </div>
           <div className="mt-6 text-center text-xs text-muted-foreground">

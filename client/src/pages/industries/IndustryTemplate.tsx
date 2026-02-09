@@ -786,9 +786,9 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
               <span>contact@vexgen.ai</span>
             </div>
             <div className="flex items-center gap-4 sm:gap-6 text-sm">
-              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">Company</Link>
-              <Link href={getLocalizedPath('/privacy')} className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
-              <Link href={getLocalizedPath('/imprint')} className="text-muted-foreground hover:text-foreground transition-colors">Imprint</Link>
+              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.company}</Link>
+              <Link href={getLocalizedPath('/privacy')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.privacyPolicy}</Link>
+              <Link href={getLocalizedPath('/imprint')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.imprint}</Link>
             </div>
           </div>
           <div className="mt-6 text-center text-xs text-muted-foreground">

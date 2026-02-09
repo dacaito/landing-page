@@ -53,8 +53,8 @@ export default function Company() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet htmlAttributes={{ lang }}>
-        <title>About Us - Vexgen AI</title>
-        <meta name="description" content="Learn about Vexgen AI - bridging the gap between ERP records and physical reality with AI-powered inventory visibility." />
+        <title>{t.meta.companyTitle}</title>
+        <meta name="description" content={t.meta.companyDescription} />
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="en" href={alternateEn} />
         <link rel="alternate" hrefLang="de" href={alternateDe} />
@@ -191,12 +191,12 @@ export default function Company() {
               />
             </div>
             <div className="text-center lg:text-left">
-              <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Our Vision</p>
+              <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">{t.company.vision.label}</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">
-                Bridging the gap between digital records and physical reality
+                {t.company.vision.headline}
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
-                We believe that operational excellence starts with trust in your data. When ERP systems accurately reflect what's physically on the floor, everything changes: planning becomes predictable, waste disappears, and teams can focus on value creation instead of firefighting.
+                {t.company.vision.description}
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -204,8 +204,8 @@ export default function Company() {
                     <Target className="w-5 h-5 text-primary" />
                   </div>
                   <div className="text-left">
-                    <h3 className="font-semibold mb-1">Mission</h3>
-                    <p className="text-sm text-muted-foreground">Make inventory movements continuously observable and verifiable in real-time.</p>
+                    <h3 className="font-semibold mb-1">{t.company.vision.mission}</h3>
+                    <p className="text-sm text-muted-foreground">{t.company.vision.missionText}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -213,8 +213,8 @@ export default function Company() {
                     <Eye className="w-5 h-5 text-primary" />
                   </div>
                   <div className="text-left">
-                    <h3 className="font-semibold mb-1">Vision</h3>
-                    <p className="text-sm text-muted-foreground">A world where every physical asset is digitally visible, driving zero-waste operations.</p>
+                    <h3 className="font-semibold mb-1">{t.company.vision.visionLabel}</h3>
+                    <p className="text-sm text-muted-foreground">{t.company.vision.visionText}</p>
                   </div>
                 </div>
               </div>
@@ -226,24 +226,24 @@ export default function Company() {
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-12">
-            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Careers</p>
+            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">{t.company.careers.label}</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-              Join Our Team
+              {t.company.careers.headline}
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-3">
               <p className="text-base sm:text-lg text-muted-foreground mb-6">
-                We currently have no open positions, but we're always interested in hearing from talented individuals who share our passion for transforming manufacturing through technology.
+                {t.company.careers.description}
               </p>
               <p className="text-base sm:text-lg text-muted-foreground mb-8">
-                If you're a highly motivated engineer, operator, or industry expert looking to make an impact, we'd love to hear from you.
+                {t.company.careers.description2}
               </p>
               <a 
                 href="mailto:jobs@vexgen.ai" 
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
               >
-                Send your application to jobs@vexgen.ai
+                {t.company.careers.cta}
               </a>
             </div>
             <div className="lg:col-span-2">
@@ -263,12 +263,12 @@ export default function Company() {
       <section className="py-16 sm:py-24 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">Leadership</p>
+            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">{t.company.leadership.label}</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              Meet the Team
+              {t.company.leadership.headline}
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-              A team of operators, engineers, and industry veterans united by a shared belief: manufacturing deserves better data.
+              {t.company.leadership.description}
             </p>
           </div>
 
@@ -351,9 +351,9 @@ export default function Company() {
               <span>contact@vexgen.ai</span>
             </div>
             <div className="flex items-center gap-4 sm:gap-6 text-sm">
-              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">Company</Link>
-              <Link href={getLocalizedPath('/privacy')} className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
-              <Link href={getLocalizedPath('/imprint')} className="text-muted-foreground hover:text-foreground transition-colors">Imprint</Link>
+              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.company}</Link>
+              <Link href={getLocalizedPath('/privacy')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.privacyPolicy}</Link>
+              <Link href={getLocalizedPath('/imprint')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.imprint}</Link>
             </div>
           </div>
           <div className="mt-6 text-center text-xs text-muted-foreground">

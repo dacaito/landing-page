@@ -140,10 +140,67 @@ export const translations = {
         }
       },
       location: "Baumackerstrasse 42, 8050, Zurich, Switzerland",
-      focus: "Manufacturing and Warehouse Focus"
+      focus: "Manufacturing and Warehouse Focus",
+      vision: {
+        label: "Our Vision",
+        headline: "Bridging the gap between digital records and physical reality",
+        description: "We believe that operational excellence starts with trust in your data. When ERP systems accurately reflect what's physically on the floor, everything changes: planning becomes predictable, waste disappears, and teams can focus on value creation instead of firefighting.",
+        mission: "Mission",
+        missionText: "Make inventory movements continuously observable and verifiable in real-time.",
+        visionLabel: "Vision",
+        visionText: "A world where every physical asset is digitally visible, driving zero-waste operations."
+      },
+      careers: {
+        label: "Careers",
+        headline: "Join Our Team",
+        description: "We currently have no open positions, but we're always interested in hearing from talented individuals who share our passion for transforming manufacturing through technology.",
+        description2: "If you're a highly motivated engineer, operator, or industry expert looking to make an impact, we'd love to hear from you.",
+        cta: "Send your application to jobs@vexgen.ai"
+      },
+      leadership: {
+        label: "Leadership",
+        headline: "Meet the Team",
+        description: "A team of operators, engineers, and industry veterans united by a shared belief: manufacturing deserves better data."
+      }
+    },
+    meta: {
+      homeTitle: "Vexgen AI - Align ERP with Reality",
+      homeDescription: "Real-time visibility and reconciliation between ERP data and physical inventory. No manual counts. No tags. No operational disruption.",
+      companyTitle: "About Us - Vexgen AI",
+      companyDescription: "Learn about Vexgen AI - bridging the gap between ERP records and physical reality with AI-powered inventory visibility.",
     },
     footer: {
-      copyright: "Vexgen AI. All rights reserved."
+      copyright: "Vexgen AI. All rights reserved.",
+      company: "Company",
+      privacyPolicy: "Privacy Policy",
+      imprint: "Imprint"
+    },
+    privacy: {
+      title: "Data Privacy",
+      consent: "Consent",
+      consentText1: "By using our products and services, you agree to this privacy policy and consent to the features specified therein, specifically the use of cookies, analysis tools and resources that facilitate targeted/personalized advertising. If you do not agree to these features, you can utilize the opt-out methods described below. You can control or prevent the use of cookies in the current versions of all popular web browsers (e.g. Firefox, Chrome, Internet Explorer and Safari).",
+      consentText2: "The providers of the above-mentioned analysis and marketing tools also provide their own resources and tools (e.g. special browser add-ons or opt-out cookies) for changing your cookie preferences.",
+      purposes: "Purposes",
+      purposesText: "We use the data we collect in order to maintain our relationship with our customers and potential customers; e.g. to develop our website and adapt it to new requirements, and to provide you with relevant information and services.",
+      logFiles: "Log Files",
+      logFilesText: "When you visit our website and view pages or content, you leave behind information about the nature of your visit, such as your choice of pages (URL), the date and time of your visit, the IP address of your computer, and information about your device type, operating system and browser ID (user agent string). This information is collected in server log files on our web server and stored for one year for debugging purposes.",
+      cookies: "Cookies",
+      cookiesText: "We use cookies to optimize the user experience on the site.",
+      contact: "Contact",
+      contactText: "If you have any questions about this privacy policy, please contact us at:"
+    },
+    imprint: {
+      title: "Imprint",
+      disclaimer: "Disclaimer",
+      disclaimerText: "We strive to provide correct and complete information on this website. All texts and links have been carefully checked and are constantly updated. Vexgen AI assumes no responsibility for the completeness, accuracy, actuality, reliability, or correctness of the information provided. Liability claims for damage arising from use of the information provided, including information which is incomplete or incorrect, are therefore excluded. All offers are non-binding. Individual pages, sections thereof or the entire website, including all offers and information, may be expanded, changed or deleted by Vexgen AI without notice.",
+      liabilityForLinks: "Liability for links",
+      liabilityForLinksText1: "All links to external providers were checked for accuracy at the time of their inclusion. However, we are not liable for the content and availability of websites that can be reached by hyperlink. Vexgen AI assumes no responsibility for the correctness, completeness and legality of the contents and links to other websites, nor for any offers, products or services contained therein, as these are no longer under the control of Vexgen AI. This is the case even if these websites contain the Vexgen AI logo or any other protected name. Access and use of linked websites is at the user's own risk.",
+      liabilityForLinksText2: "The provider of the linked website is solely responsible for any illegal, incorrect or incomplete contents of linked websites, and especially for damage caused by the contents. It is irrelevant whether the damage is of a direct, indirect or financial nature, or any other type of damage that could result from loss of data, loss of use or other circumstances.",
+      copyrights: "Copyrights",
+      copyrightsText: "Copyrights and all other rights to content, images, photos, or other files on the website belong exclusively to Vexgen AI or the specifically named rights holders. Should you become aware of any copyright infringement on our pages, please notify us at",
+      copyrightsText2: "and we will immediately review the circumstances, contact the author and, if necessary, delete the infringing content. Reproduction of any elements requires the advance, written consent of the copyright holder.",
+      applicableLaw: "Applicable law",
+      applicableLawText: "Any disputes or claims arising from the use of our pages are subject to Swiss law. The exclusive place of jurisdiction is Zurich, Switzerland."
     },
     cta: {
       requestDemo: "Request a Demo"
@@ -473,10 +530,67 @@ export const translations = {
         }
       },
       location: "Baumackerstrasse 42, 8050, Zürich, Schweiz",
-      focus: "Fokus: Fertigung und Lager"
+      focus: "Fokus: Fertigung und Lager",
+      vision: {
+        label: "Unsere Vision",
+        headline: "Die Lücke zwischen digitalen Aufzeichnungen und physischer Realität schliessen",
+        description: "Wir glauben, dass operative Exzellenz mit dem Vertrauen in Ihre Daten beginnt. Wenn ERP-Systeme genau widerspiegeln, was physisch vor Ort ist, ändert sich alles: Planung wird vorhersehbar, Verschwendung verschwindet und Teams können sich auf Wertschöpfung statt Krisenmanagement konzentrieren.",
+        mission: "Mission",
+        missionText: "Bestandsbewegungen kontinuierlich beobachtbar und in Echtzeit verifizierbar machen.",
+        visionLabel: "Vision",
+        visionText: "Eine Welt, in der jedes physische Asset digital sichtbar ist und abfallfreie Abläufe ermöglicht."
+      },
+      careers: {
+        label: "Karriere",
+        headline: "Werden Sie Teil unseres Teams",
+        description: "Derzeit haben wir keine offenen Stellen, aber wir sind immer daran interessiert, von talentierten Menschen zu hören, die unsere Leidenschaft für die Transformation der Fertigung durch Technologie teilen.",
+        description2: "Wenn Sie ein hochmotivierter Ingenieur, Betriebsexperte oder Branchenkenner sind, der etwas bewegen möchte, würden wir uns freuen, von Ihnen zu hören.",
+        cta: "Senden Sie Ihre Bewerbung an jobs@vexgen.ai"
+      },
+      leadership: {
+        label: "Führungsteam",
+        headline: "Unser Team",
+        description: "Ein Team aus Betriebsexperten, Ingenieuren und Branchenveteranen, vereint durch eine gemeinsame Überzeugung: Die Fertigung verdient bessere Daten."
+      }
+    },
+    meta: {
+      homeTitle: "Vexgen AI - ERP mit Realität abgleichen",
+      homeDescription: "Echtzeit-Transparenz und Abgleich zwischen ERP-Daten und physischem Bestand. Keine manuellen Zählungen. Keine Tags. Keine Betriebsunterbrechung.",
+      companyTitle: "Über uns - Vexgen AI",
+      companyDescription: "Erfahren Sie mehr über Vexgen AI - die Brücke zwischen ERP-Daten und physischer Realität mit KI-gestützter Bestandstransparenz.",
     },
     footer: {
-      copyright: "Vexgen AI. Alle Rechte vorbehalten."
+      copyright: "Vexgen AI. Alle Rechte vorbehalten.",
+      company: "Unternehmen",
+      privacyPolicy: "Datenschutz",
+      imprint: "Impressum"
+    },
+    privacy: {
+      title: "Datenschutz",
+      consent: "Einwilligung",
+      consentText1: "Durch die Nutzung unserer Produkte und Dienstleistungen stimmen Sie dieser Datenschutzrichtlinie zu und willigen in die darin spezifizierten Funktionen ein, insbesondere die Verwendung von Cookies, Analysetools und Ressourcen, die zielgerichtete/personalisierte Werbung ermöglichen. Wenn Sie diesen Funktionen nicht zustimmen, können Sie die unten beschriebenen Opt-out-Methoden nutzen. Sie können die Verwendung von Cookies in den aktuellen Versionen aller gängigen Webbrowser (z. B. Firefox, Chrome, Internet Explorer und Safari) kontrollieren oder verhindern.",
+      consentText2: "Die Anbieter der oben genannten Analyse- und Marketing-Tools stellen auch eigene Ressourcen und Tools (z. B. spezielle Browser-Add-ons oder Opt-out-Cookies) zur Änderung Ihrer Cookie-Einstellungen bereit.",
+      purposes: "Zwecke",
+      purposesText: "Wir verwenden die von uns erhobenen Daten, um unsere Beziehung zu unseren Kunden und potenziellen Kunden zu pflegen; z. B. um unsere Website weiterzuentwickeln und an neue Anforderungen anzupassen sowie um Ihnen relevante Informationen und Dienstleistungen bereitzustellen.",
+      logFiles: "Log-Dateien",
+      logFilesText: "Wenn Sie unsere Website besuchen und Seiten oder Inhalte ansehen, hinterlassen Sie Informationen über die Art Ihres Besuchs, wie z. B. Ihre Seitenwahl (URL), Datum und Uhrzeit Ihres Besuchs, die IP-Adresse Ihres Computers sowie Informationen über Ihren Gerätetyp, Ihr Betriebssystem und Ihre Browser-ID (User-Agent-String). Diese Informationen werden in Server-Log-Dateien auf unserem Webserver erfasst und für ein Jahr zu Debugging-Zwecken gespeichert.",
+      cookies: "Cookies",
+      cookiesText: "Wir verwenden Cookies, um die Benutzererfahrung auf der Website zu optimieren.",
+      contact: "Kontakt",
+      contactText: "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns unter:"
+    },
+    imprint: {
+      title: "Impressum",
+      disclaimer: "Haftungsausschluss",
+      disclaimerText: "Wir sind bestrebt, auf dieser Website korrekte und vollständige Informationen bereitzustellen. Alle Texte und Links wurden sorgfältig geprüft und werden laufend aktualisiert. Vexgen AI übernimmt keine Verantwortung für die Vollständigkeit, Richtigkeit, Aktualität, Zuverlässigkeit oder Korrektheit der bereitgestellten Informationen. Haftungsansprüche für Schäden, die aus der Nutzung der bereitgestellten Informationen entstehen, einschliesslich unvollständiger oder fehlerhafter Informationen, sind daher ausgeschlossen. Alle Angebote sind unverbindlich. Einzelne Seiten, Teile davon oder die gesamte Website, einschliesslich aller Angebote und Informationen, können von Vexgen AI ohne Vorankündigung erweitert, geändert oder gelöscht werden.",
+      liabilityForLinks: "Haftung für Links",
+      liabilityForLinksText1: "Alle Links zu externen Anbietern wurden zum Zeitpunkt ihrer Aufnahme auf Richtigkeit geprüft. Wir haften jedoch nicht für den Inhalt und die Verfügbarkeit von Websites, die über Hyperlinks erreichbar sind. Vexgen AI übernimmt keine Verantwortung für die Richtigkeit, Vollständigkeit und Rechtmässigkeit der Inhalte und Links zu anderen Websites, noch für darin enthaltene Angebote, Produkte oder Dienstleistungen, da diese nicht mehr unter der Kontrolle von Vexgen AI stehen. Dies gilt auch dann, wenn diese Websites das Vexgen AI-Logo oder einen anderen geschützten Namen enthalten. Der Zugang zu und die Nutzung verlinkter Websites erfolgen auf eigene Gefahr des Nutzers.",
+      liabilityForLinksText2: "Der Anbieter der verlinkten Website ist allein verantwortlich für rechtswidrige, fehlerhafte oder unvollständige Inhalte verlinkter Websites, insbesondere für Schäden, die durch die Inhalte verursacht werden. Es ist unerheblich, ob der Schaden direkter, indirekter oder finanzieller Natur ist oder ob es sich um einen anderen Schadenstyp handelt, der aus Datenverlust, Nutzungsausfall oder anderen Umständen resultieren könnte.",
+      copyrights: "Urheberrechte",
+      copyrightsText: "Urheberrechte und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf der Website gehören ausschliesslich Vexgen AI oder den ausdrücklich genannten Rechteinhabern. Sollten Sie auf unseren Seiten eine Urheberrechtsverletzung feststellen, benachrichtigen Sie uns bitte unter",
+      copyrightsText2: "und wir werden die Umstände unverzüglich prüfen, den Autor kontaktieren und gegebenenfalls den rechtsverletzenden Inhalt entfernen. Die Vervielfältigung jeglicher Elemente erfordert die vorherige schriftliche Zustimmung des Urheberrechtsinhabers.",
+      applicableLaw: "Anwendbares Recht",
+      applicableLawText: "Alle Streitigkeiten oder Ansprüche, die aus der Nutzung unserer Seiten entstehen, unterliegen dem Schweizer Recht. Ausschliesslicher Gerichtsstand ist Zürich, Schweiz."
     },
     cta: {
       requestDemo: "Demo anfordern"
@@ -806,10 +920,67 @@ export const translations = {
         }
       },
       location: "Baumackerstrasse 42, 8050, Zúrich, Suiza",
-      focus: "Enfoque: Fabricación y almacén"
+      focus: "Enfoque: Fabricación y almacén",
+      vision: {
+        label: "Nuestra visión",
+        headline: "Cerrando la brecha entre los registros digitales y la realidad física",
+        description: "Creemos que la excelencia operativa comienza con la confianza en sus datos. Cuando los sistemas ERP reflejan con precisión lo que hay físicamente en planta, todo cambia: la planificación se vuelve predecible, los desperdicios desaparecen y los equipos pueden enfocarse en crear valor en lugar de gestionar urgencias.",
+        mission: "Misión",
+        missionText: "Hacer que los movimientos de inventario sean continuamente observables y verificables en tiempo real.",
+        visionLabel: "Visión",
+        visionText: "Un mundo donde cada activo físico sea digitalmente visible, impulsando operaciones con cero desperdicios."
+      },
+      careers: {
+        label: "Carreras",
+        headline: "Únase a nuestro equipo",
+        description: "Actualmente no tenemos posiciones abiertas, pero siempre estamos interesados en conocer a personas con talento que compartan nuestra pasión por transformar la fabricación a través de la tecnología.",
+        description2: "Si es un ingeniero, operador o experto del sector altamente motivado que busca generar impacto, nos encantaría saber de usted.",
+        cta: "Envíe su candidatura a jobs@vexgen.ai"
+      },
+      leadership: {
+        label: "Liderazgo",
+        headline: "Conozca al equipo",
+        description: "Un equipo de operadores, ingenieros y veteranos del sector unidos por una convicción compartida: la fabricación merece mejores datos."
+      }
+    },
+    meta: {
+      homeTitle: "Vexgen AI - Alinee su ERP con la realidad",
+      homeDescription: "Visibilidad en tiempo real y conciliación entre datos ERP e inventario físico. Sin recuentos manuales. Sin etiquetas. Sin interrupciones operativas.",
+      companyTitle: "Sobre nosotros - Vexgen AI",
+      companyDescription: "Conozca Vexgen AI - cerrando la brecha entre los registros ERP y la realidad física con visibilidad de inventario impulsada por IA.",
     },
     footer: {
-      copyright: "Vexgen AI. Todos los derechos reservados."
+      copyright: "Vexgen AI. Todos los derechos reservados.",
+      company: "Empresa",
+      privacyPolicy: "Política de privacidad",
+      imprint: "Aviso legal"
+    },
+    privacy: {
+      title: "Protección de datos",
+      consent: "Consentimiento",
+      consentText1: "Al utilizar nuestros productos y servicios, usted acepta esta política de privacidad y consiente las funcionalidades especificadas en la misma, específicamente el uso de cookies, herramientas de análisis y recursos que facilitan la publicidad dirigida/personalizada. Si no está de acuerdo con estas funcionalidades, puede utilizar los métodos de exclusión descritos a continuación. Puede controlar o impedir el uso de cookies en las versiones actuales de todos los navegadores web populares (p. ej., Firefox, Chrome, Internet Explorer y Safari).",
+      consentText2: "Los proveedores de las herramientas de análisis y marketing mencionadas anteriormente también proporcionan sus propios recursos y herramientas (p. ej., complementos especiales del navegador o cookies de exclusión) para modificar sus preferencias de cookies.",
+      purposes: "Finalidades",
+      purposesText: "Utilizamos los datos que recopilamos para mantener nuestra relación con nuestros clientes y clientes potenciales; p. ej., para desarrollar nuestro sitio web y adaptarlo a nuevos requisitos, y para proporcionarle información y servicios relevantes.",
+      logFiles: "Archivos de registro",
+      logFilesText: "Cuando visita nuestro sitio web y visualiza páginas o contenido, deja información sobre la naturaleza de su visita, como su selección de páginas (URL), la fecha y hora de su visita, la dirección IP de su ordenador e información sobre el tipo de dispositivo, sistema operativo e identificador del navegador (cadena de agente de usuario). Esta información se recopila en archivos de registro del servidor en nuestro servidor web y se almacena durante un año con fines de depuración.",
+      cookies: "Cookies",
+      cookiesText: "Utilizamos cookies para optimizar la experiencia del usuario en el sitio.",
+      contact: "Contacto",
+      contactText: "Si tiene alguna pregunta sobre esta política de privacidad, contáctenos en:"
+    },
+    imprint: {
+      title: "Aviso legal",
+      disclaimer: "Descargo de responsabilidad",
+      disclaimerText: "Nos esforzamos por proporcionar información correcta y completa en este sitio web. Todos los textos y enlaces han sido cuidadosamente verificados y se actualizan constantemente. Vexgen AI no asume ninguna responsabilidad por la integridad, exactitud, actualidad, fiabilidad o corrección de la información proporcionada. Las reclamaciones de responsabilidad por daños derivados del uso de la información proporcionada, incluyendo información incompleta o incorrecta, quedan por tanto excluidas. Todas las ofertas son no vinculantes. Páginas individuales, secciones de las mismas o el sitio web completo, incluyendo todas las ofertas e información, pueden ser ampliados, modificados o eliminados por Vexgen AI sin previo aviso.",
+      liabilityForLinks: "Responsabilidad por enlaces",
+      liabilityForLinksText1: "Todos los enlaces a proveedores externos fueron verificados en cuanto a su exactitud en el momento de su inclusión. Sin embargo, no somos responsables del contenido y la disponibilidad de sitios web accesibles mediante hipervínculos. Vexgen AI no asume ninguna responsabilidad por la corrección, integridad y legalidad de los contenidos y enlaces a otros sitios web, ni por las ofertas, productos o servicios contenidos en ellos, ya que estos ya no están bajo el control de Vexgen AI. Esto aplica incluso si estos sitios web contienen el logotipo de Vexgen AI o cualquier otro nombre protegido. El acceso y uso de sitios web enlazados es bajo la propia responsabilidad del usuario.",
+      liabilityForLinksText2: "El proveedor del sitio web enlazado es el único responsable de cualquier contenido ilegal, incorrecto o incompleto de los sitios web enlazados, y especialmente de los daños causados por los contenidos. Es irrelevante si el daño es de naturaleza directa, indirecta o financiera, o cualquier otro tipo de daño que pueda resultar de la pérdida de datos, la pérdida de uso u otras circunstancias.",
+      copyrights: "Derechos de autor",
+      copyrightsText: "Los derechos de autor y todos los demás derechos sobre contenidos, imágenes, fotos u otros archivos del sitio web pertenecen exclusivamente a Vexgen AI o a los titulares de derechos expresamente nombrados. Si detecta alguna infracción de derechos de autor en nuestras páginas, notifíquenos en",
+      copyrightsText2: "y revisaremos inmediatamente las circunstancias, contactaremos al autor y, si es necesario, eliminaremos el contenido infractor. La reproducción de cualquier elemento requiere el consentimiento previo y por escrito del titular de los derechos de autor.",
+      applicableLaw: "Legislación aplicable",
+      applicableLawText: "Cualquier disputa o reclamación derivada del uso de nuestras páginas está sujeta a la legislación suiza. El fuero exclusivo es Zúrich, Suiza."
     },
     cta: {
       requestDemo: "Solicitar una demo"

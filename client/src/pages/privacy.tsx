@@ -50,8 +50,8 @@ export default function Privacy() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet htmlAttributes={{ lang }}>
-        <title>Privacy Policy - Vexgen AI</title>
-        <meta name="description" content="Vexgen AI Privacy Policy. Learn how we collect, use, and protect your data." />
+        <title>{t.privacy.title} - Vexgen AI</title>
+        <meta name="description" content={`Vexgen AI - ${t.privacy.title}`} />
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="en" href={alternateEn} />
         <link rel="alternate" hrefLang="de" href={alternateDe} />
@@ -160,45 +160,45 @@ export default function Privacy() {
       <section className="pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-8 sm:mb-12 text-primary">
-            Data Privacy
+            {t.privacy.title}
           </h1>
 
           <div className="space-y-8 text-muted-foreground">
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Consent</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">{t.privacy.consent}</h2>
               <p className="leading-relaxed">
-                By using our products and services, you agree to this privacy policy and consent to the features specified therein, specifically the use of cookies, analysis tools and resources that facilitate targeted/personalized advertising. If you do not agree to these features, you can utilize the opt-out methods described below. You can control or prevent the use of cookies in the current versions of all popular web browsers (e.g. Firefox, Chrome, Internet Explorer and Safari).
+                {t.privacy.consentText1}
               </p>
               <p className="leading-relaxed mt-4">
-                The providers of the above-mentioned analysis and marketing tools also provide their own resources and tools (e.g. special browser add-ons or opt-out cookies) for changing your cookie preferences.
+                {t.privacy.consentText2}
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Purposes</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">{t.privacy.purposes}</h2>
               <p className="leading-relaxed">
-                We use the data we collect in order to maintain our relationship with our customers and potential customers; e.g. to develop our website and adapt it to new requirements, and to provide you with relevant information and services.
+                {t.privacy.purposesText}
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Log Files</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">{t.privacy.logFiles}</h2>
               <p className="leading-relaxed">
-                When you visit our website and view pages or content, you leave behind information about the nature of your visit, such as your choice of pages (URL), the date and time of your visit, the IP address of your computer, and information about your device type, operating system and browser ID (user agent string). This information is collected in server log files on our web server and stored for one year for debugging purposes.
+                {t.privacy.logFilesText}
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Cookies</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">{t.privacy.cookies}</h2>
               <p className="leading-relaxed">
-                We use cookies to optimize the user experience on the site.
+                {t.privacy.cookiesText}
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Contact</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">{t.privacy.contact}</h2>
               <p className="leading-relaxed">
-                If you have any questions about this privacy policy, please contact us at: <a href="mailto:contact@vexgen.ai" className="text-primary hover:underline">contact@vexgen.ai</a>
+                {t.privacy.contactText} <a href="mailto:contact@vexgen.ai" className="text-primary hover:underline">contact@vexgen.ai</a>
               </p>
             </div>
           </div>
@@ -217,9 +217,9 @@ export default function Privacy() {
               <span>contact@vexgen.ai</span>
             </div>
             <div className="flex items-center gap-4 sm:gap-6 text-sm">
-              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">Company</Link>
-              <Link href={getLocalizedPath('/privacy')} className="text-foreground font-medium transition-colors">Privacy Policy</Link>
-              <Link href={getLocalizedPath('/imprint')} className="text-muted-foreground hover:text-foreground transition-colors">Imprint</Link>
+              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.company}</Link>
+              <Link href={getLocalizedPath('/privacy')} className="text-foreground font-medium transition-colors">{t.footer.privacyPolicy}</Link>
+              <Link href={getLocalizedPath('/imprint')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.imprint}</Link>
             </div>
           </div>
           <div className="mt-6 text-center text-xs text-muted-foreground">

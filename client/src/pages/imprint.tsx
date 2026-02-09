@@ -50,8 +50,8 @@ export default function Imprint() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet htmlAttributes={{ lang }}>
-        <title>Imprint - Vexgen AI</title>
-        <meta name="description" content="Vexgen AI legal information and company details." />
+        <title>{t.imprint.title} - Vexgen AI</title>
+        <meta name="description" content={`Vexgen AI - ${t.imprint.title}`} />
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="en" href={alternateEn} />
         <link rel="alternate" hrefLang="de" href={alternateDe} />
@@ -160,38 +160,38 @@ export default function Imprint() {
       <section className="pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-8 sm:mb-12 text-primary">
-            Imprint
+            {t.imprint.title}
           </h1>
 
           <div className="space-y-8 text-muted-foreground">
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Disclaimer</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">{t.imprint.disclaimer}</h2>
               <p className="leading-relaxed">
-                We strive to provide correct and complete information on this website. All texts and links have been carefully checked and are constantly updated. Vexgen AI assumes no responsibility for the completeness, accuracy, actuality, reliability, or correctness of the information provided. Liability claims for damage arising from use of the information provided, including information which is incomplete or incorrect, are therefore excluded. All offers are non-binding. Individual pages, sections thereof or the entire website, including all offers and information, may be expanded, changed or deleted by Vexgen AI without notice.
+                {t.imprint.disclaimerText}
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Liability for links</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">{t.imprint.liabilityForLinks}</h2>
               <p className="leading-relaxed mb-4">
-                All links to external providers were checked for accuracy at the time of their inclusion. However, we are not liable for the content and availability of websites that can be reached by hyperlink. Vexgen AI assumes no responsibility for the correctness, completeness and legality of the contents and links to other websites, nor for any offers, products or services contained therein, as these are no longer under the control of Vexgen AI. This is the case even if these websites contain the Vexgen AI logo or any other protected name. Access and use of linked websites is at the user's own risk.
+                {t.imprint.liabilityForLinksText1}
               </p>
               <p className="leading-relaxed">
-                The provider of the linked website is solely responsible for any illegal, incorrect or incomplete contents of linked websites, and especially for damage caused by the contents. It is irrelevant whether the damage is of a direct, indirect or financial nature, or any other type of damage that could result from loss of data, loss of use or other circumstances.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Copyrights</h2>
-              <p className="leading-relaxed">
-                Copyrights and all other rights to content, images, photos, or other files on the website belong exclusively to Vexgen AI or the specifically named rights holders. Should you become aware of any copyright infringement on our pages, please notify us at <a href="mailto:contact@vexgen.ai" className="text-primary hover:underline">contact@vexgen.ai</a> and we will immediately review the circumstances, contact the author and, if necessary, delete the infringing content. Reproduction of any elements requires the advance, written consent of the copyright holder.
+                {t.imprint.liabilityForLinksText2}
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Applicable law</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">{t.imprint.copyrights}</h2>
               <p className="leading-relaxed">
-                Any disputes or claims arising from the use of our pages are subject to Swiss law. The exclusive place of jurisdiction is Zurich, Switzerland.
+                {t.imprint.copyrightsText} <a href="mailto:contact@vexgen.ai" className="text-primary hover:underline">contact@vexgen.ai</a> {t.imprint.copyrightsText2}
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">{t.imprint.applicableLaw}</h2>
+              <p className="leading-relaxed">
+                {t.imprint.applicableLawText}
               </p>
             </div>
           </div>
@@ -210,9 +210,9 @@ export default function Imprint() {
               <span>contact@vexgen.ai</span>
             </div>
             <div className="flex items-center gap-4 sm:gap-6 text-sm">
-              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">Company</Link>
-              <Link href={getLocalizedPath('/privacy')} className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
-              <Link href={getLocalizedPath('/imprint')} className="text-foreground font-medium transition-colors">Imprint</Link>
+              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.company}</Link>
+              <Link href={getLocalizedPath('/privacy')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.privacyPolicy}</Link>
+              <Link href={getLocalizedPath('/imprint')} className="text-foreground font-medium transition-colors">{t.footer.imprint}</Link>
             </div>
           </div>
           <div className="mt-6 text-center text-xs text-muted-foreground">
