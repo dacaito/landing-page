@@ -8,15 +8,15 @@
 
 **Subheadline:** Su ERP. La realidad física de sus operaciones químicas.
 
-**Description:** Visibilidad de inventario en tiempo real en materias primas, WIP y producto terminado para reducir depreciaciones, evitar roturas de stock y proteger el flujo productivo.
+**Description:** Visibilidad de inventario en tiempo real de materias primas, WIP y producto terminado para reducir bajas de inventario, evitar roturas de stock y proteger la continuidad productiva.
 
-Desarrollado para entornos con alta exposición de capital de trabajo, trazabilidad estricta y requisitos de vida útil.
+Diseñado para entornos con alta exposición de capital circulante, trazabilidad estricta y requisitos exigentes de vida útil.
 
 **Metrics:**
-- >99% Precisión de inventario
-- 15+ Días Reducción DIO
-- 6 cifras Reducción de depreciaciones
-- 12% Capital de trabajo liberado
+- 99% Precisión de inventario
+- +15 días Reducción de DIO
+- Reducción de bajas de inventario de seis cifras
+- 12% Capital circulante liberado
 
 **Problem Headline:** Cuando el inventario del sistema no coincide con la realidad física
 
@@ -71,15 +71,16 @@ Desarrollado para entornos con alta exposición de capital de trabajo, trazabili
 
 **Subheadline:** Su ERP. La realidad física de la fabricación de plásticos.
 
-**Description:** Visibilidad de inventario en tiempo real en materias primas, WIP y producto terminado para mantener en funcionamiento las líneas de inyección, extrusión y montaje.
+**Description:** Visibilidad de inventario en tiempo real de materias primas, WIP y producto terminado para mantener operativas las líneas de inyección, extrusión y montaje.
 
-Desarrollado para entornos de alta variedad y alto volumen donde la disponibilidad y la precisión determinan los márgenes.
+Diseñado para entornos de alta variedad y alto volumen, donde la disponibilidad y la precisión determinan los márgenes.
 
 **Metrics:**
-- >99% Precisión de inventario
-- 12+ Días Reducción DIO
+- 99% Precisión de inventario
+- +12 días Reducción de DIO
 - 25% Mayor disponibilidad de línea
-- 90% Menos verificaciones manuales
+- 90% Reducción de verificaciones manuales
+- Reducción de bajas de inventario por referencias incorrectas
 
 **Problem Headline:** Cuando el inventario del sistema no coincide con la realidad física
 
@@ -134,15 +135,15 @@ Desarrollado para entornos de alta variedad y alto volumen donde la disponibilid
 
 **Subheadline:** Su ERP. La realidad física de las operaciones de alimentación y bebidas.
 
-**Description:** Visibilidad de inventario en tiempo real en palés de materias primas, WIP y producto terminado para reducir desperdicios y proteger niveles de servicio.
+**Description:** Visibilidad de inventario en tiempo real de palés de materias primas, WIP y producto terminado para reducir mermas y bajas de inventario por caducidad, y proteger los niveles de servicio.
 
-Desarrollado para entornos de alto volumen donde la frescura y la disponibilidad definen el rendimiento.
+Diseñado para entornos de alto volumen donde la frescura y la disponibilidad determinan el rendimiento.
 
 **Metrics:**
-- >99% Precisión de inventario
-- 40% Menos desperdicios
-- 5pp Mejora OTIF
-- 90% Menos verificaciones manuales
+- 99% Precisión de inventario
+- 40% Reducción de mermas
+- +5pp Mejora en OTIF
+- 90% Reducción de verificaciones manuales
 
 **Problem Headline:** Cuando la realidad de los palés diverge de los datos del sistema
 
@@ -197,15 +198,15 @@ Desarrollado para entornos de alto volumen donde la frescura y la disponibilidad
 
 **Subheadline:** Su ERP. La realidad física de las operaciones cosméticas.
 
-**Description:** Visibilidad de inventario en tiempo real en producción, almacenamiento y distribución para proteger lanzamientos y reducir depreciaciones.
+**Description:** Visibilidad de inventario en tiempo real en producción, almacenamiento y distribución para proteger lanzamientos y reducir bajas de inventario por referencias mal asignadas o campañas canceladas.
 
-Desarrollado para entornos de alta variedad donde la precisión de referencias y el timing determinan los ingresos.
+Diseñado para entornos de alta variedad donde la precisión de referencias y el timing determinan los ingresos.
 
 **Metrics:**
-- >99% Precisión de inventario
-- 5pp Tasa de lanzamiento puntual
-- 6 cifras Reducción de obsoletos
-- 10+ Días Reducción DIO
+- 99% Precisión de inventario
+- +5pp Mejora en lanzamientos puntuales
+- Reducción de bajas de inventario de seis cifras
+- +10 días Reducción de DIO
 
 **Problem Headline:** Cuando el inventario del sistema no coincide con la realidad física
 
@@ -260,15 +261,15 @@ Desarrollado para entornos de alta variedad donde la precisión de referencias y
 
 **Subheadline:** Su ERP. La realidad física de las operaciones farmacéuticas.
 
-**Description:** Visibilidad de inventario en tiempo real en materias primas, WIP y producto terminado para mejorar la confianza en la liberación de lotes y reducir el riesgo de cumplimiento normativo.
+**Description:** Visibilidad de inventario en tiempo real de materias primas, WIP y producto terminado para aumentar la fiabilidad en la liberación de lotes y reducir el riesgo en auditorías.
 
-Desarrollado para entornos regulados donde la precisión y la trazabilidad son innegociables.
+Diseñado para entornos regulados donde la precisión y la trazabilidad son innegociables.
 
 **Metrics:**
-- >99% Precisión de inventario
+- 99% Precisión de inventario
 - 30% Liberación de lotes más rápida
 - 50% Menos roturas de stock
-- 2x Confianza en auditorías
+- Reducción de bajas de inventario
 
 **Problem Headline:** Cuando el inventario del sistema no coincide con la realidad física
 
@@ -323,14 +324,14 @@ Desarrollado para entornos regulados donde la precisión y la trazabilidad son i
 
 **Subheadline:** Su ERP. La realidad física de las operaciones logísticas.
 
-**Description:** Visibilidad de inventario en tiempo real que elimina el trabajo manual, reduce errores y garantiza una preparación de pedidos fiable en almacenes y centros de distribución.
+**Description:** Visibilidad de inventario en tiempo real que elimina trabajo manual, reduce errores y garantiza una preparación de pedidos fiable en almacenes y centros logísticos.
 
-Desarrollado para operaciones de alto volumen donde la precisión y la velocidad determinan la satisfacción del cliente.
+Diseñado para operaciones de alto volumen donde la precisión y la velocidad determinan la satisfacción del cliente.
 
 **Metrics:**
-- >99% Precisión de pedidos
-- 75% Menos trabajo manual
-- 90% Menos errores de picking
+- 99% Precisión en la preparación de pedidos
+- 75% Reducción de trabajo manual
+- 90% Reducción de errores de picking
 - <24h Resolución de discrepancias
 
 **Problem Headline:** Cuando los errores de inventario se convierten en problemas del cliente
