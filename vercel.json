@@ -2,12 +2,12 @@
   "buildCommand": "npm run build:web",
   "outputDirectory": "dist/public",
   "redirects": [
-    { "source": "/", "destination": "/en", "statusCode": 308 },
+    { "source": "/", "destination": "/en", "permanent": true },
     { "source": "/privacy", "destination": "/en/privacy", "permanent": true },
     { "source": "/imprint", "destination": "/en/imprint", "permanent": true },
     { "source": "/company", "destination": "/en/company", "permanent": true },
 
-    { "source": "/industries/:slug", "destination": "/en/industries/:slug", "permanent": true },
+    { "source": "/industries/:path*", "destination": "/en/industries/:path*", "permanent": true },
 
     { "source": "/Privacy", "destination": "/en/privacy", "permanent": true },
     { "source": "/Imprint", "destination": "/en/imprint", "permanent": true },

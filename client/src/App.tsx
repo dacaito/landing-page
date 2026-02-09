@@ -1,4 +1,4 @@
-import { Switch, Route, Redirect } from "wouter";
+import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -15,16 +15,6 @@ import LogisticsIndustry from "@/pages/industries/logistics";
 import Company from "@/pages/company";
 import Privacy from "@/pages/privacy";
 import Imprint from "@/pages/imprint";
-
-function detectBrowserLanguage(): 'en' | 'de' {
-  const browserLang = navigator.language || (navigator as any).userLanguage || 'en';
-  return browserLang.toLowerCase().startsWith('de') ? 'de' : 'en';
-}
-
-function LegacyRedirect({ path }: { path: string }) {
-  const lang = detectBrowserLanguage();
-  return <Redirect to={`/${lang}${path}`} />;
-}
 
 function Router() {
   return (
@@ -50,16 +40,6 @@ function Router() {
       <Route path="/de/company" component={Company} />
       <Route path="/de/privacy" component={Privacy} />
       <Route path="/de/imprint" component={Imprint} />
-      
-      <Route path="/industries/plastics">{() => <LegacyRedirect path="/industries/plastics" />}</Route>
-      <Route path="/industries/food-beverage">{() => <LegacyRedirect path="/industries/food-beverage" />}</Route>
-      <Route path="/industries/cosmetics">{() => <LegacyRedirect path="/industries/cosmetics" />}</Route>
-      <Route path="/industries/pharma">{() => <LegacyRedirect path="/industries/pharma" />}</Route>
-      <Route path="/industries/chemical">{() => <LegacyRedirect path="/industries/chemical" />}</Route>
-      <Route path="/industries/logistics">{() => <LegacyRedirect path="/industries/logistics" />}</Route>
-      <Route path="/company">{() => <LegacyRedirect path="/company" />}</Route>
-      <Route path="/privacy">{() => <LegacyRedirect path="/privacy" />}</Route>
-      <Route path="/imprint">{() => <LegacyRedirect path="/imprint" />}</Route>
       
       <Route component={NotFound} />
     </Switch>
