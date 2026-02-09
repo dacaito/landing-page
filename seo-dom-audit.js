@@ -1,18 +1,20 @@
 import { chromium } from "playwright";
 
-const REAL_PAGE_URLS = [
-  "https://vexgen.ai/en",
-  "https://vexgen.ai/de",
-  "https://vexgen.ai/es",
-  "https://vexgen.ai/en/industries/pharma",
-  "https://vexgen.ai/de/industries/pharma",
-  "https://vexgen.ai/es/industries/pharma",
+const BASE_URL = (process.env.BASE_URL || "https://vexgen.ai").replace(/\/$/, "");
+
+const REAL_PAGE_PATHS = [
+  "/en",
+  "/de",
+  "/es",
+  "/en/industries/pharma",
+  "/de/industries/pharma",
+  "/es/industries/pharma",
 ];
 
-const NOT_FOUND_URLS = [
-  "https://vexgen.ai/en/does-not-exist",
-  "https://vexgen.ai/de/does-not-exist",
-  "https://vexgen.ai/es/does-not-exist",
+const NOT_FOUND_PATHS = [
+  "/en/does-not-exist",
+  "/de/does-not-exist",
+  "/es/does-not-exist",
 ];
 
 function printSection(title) {
@@ -52,9 +54,45 @@ function assertIncludesAll(setOrArray, required, label) {
   return { ok, label, details: ok ? null : `missing: ${missing.join(", ")}` };
 }
 
+function safeJsonParse(value) {
+  try {
+    return { ok: true, value: JSON.parse(value) };
+  } catch (e) {
+    return { ok: false, error: String(e) };
+  }
+}
+
+function flattenJsonLd(doc) {
+  if (!doc || typeof doc !== "object") return [];
+  const graph = doc["@graph"];
+  if (Array.isArray(graph)) return graph.filter(Boolean);
+  return [doc];
+}
+
+function findOrganizationJsonLd(jsonLdDocs) {
+  for (const d of jsonLdDocs) {
+    const items = flattenJsonLd(d);
+    for (const item of items) {
+      if (!item || typeof item !== "object") continue;
+      const t = item["@type"];
+      if (t === "Organization" || t === "Corporation") return item;
+    }
+  }
+  return null;
+}
+
+const EXPECTED_ORG_SAME_AS = [
+  "https://www.linkedin.com/company/vexgen-ai/",
+  "https://www.crunchbase.com/organization/vexgen-ai",
+  "https://app.dealroom.co/companies/vexgen_ai",
+  "https://www.wlw.ch/de/firma/vexgen-ai-22367771",
+  "https://github.com/vexgen-ai",
+];
+
 function getLangFromUrl(url) {
-  if (url.includes("://vexgen.ai/de/")) return "de";
-  if (url.includes("://vexgen.ai/es/")) return "es";
+  const pathname = new URL(url).pathname;
+  if (pathname.startsWith("/de/") || pathname === "/de") return "de";
+  if (pathname.startsWith("/es/") || pathname === "/es") return "es";
   return "en";
 }
 
@@ -91,11 +129,16 @@ async function extractSeoFromDom() {
 
     const robotsMeta = document.querySelector('meta[name="robots"]')?.getAttribute("content") ?? null;
     const h1 = document.querySelector("h1")?.textContent?.trim() ?? null;
+    const jsonLdScripts = Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
+      .map((n) => n.textContent || "")
+      .map((s) => s.trim())
+      .filter(Boolean);
 
     return {
       title: document.title || "",
       h1,
       robotsMeta,
+      jsonLdScripts,
       canonicalCount: canonicalNodes.length,
       canonicalHrefs,
       metaDescriptionCount: descNodes.length,
@@ -106,6 +149,9 @@ async function extractSeoFromDom() {
 }
 
 const failures = [];
+
+const REAL_PAGE_URLS = REAL_PAGE_PATHS.map((p) => `${BASE_URL}${p}`);
+const NOT_FOUND_URLS = NOT_FOUND_PATHS.map((p) => `${BASE_URL}${p}`);
 
 for (const url of [...REAL_PAGE_URLS, ...NOT_FOUND_URLS]) {
   const isNotFound = NOT_FOUND_URLS.includes(url);
@@ -156,12 +202,22 @@ for (const url of [...REAL_PAGE_URLS, ...NOT_FOUND_URLS]) {
     if (urlOk) printResultLine(true, "NotFound URL checks");
   } else {
     const hreflangValues = alternates.map((a) => a.hreflang);
+    const parsedDocs = extracted.jsonLdScripts.map((s) => safeJsonParse(s));
+    const jsonLdParseErrors = parsedDocs.filter((p) => !p.ok).map((p) => p.error);
+    const jsonLdDocs = parsedDocs.filter((p) => p.ok).map((p) => p.value);
+    const org = findOrganizationJsonLd(jsonLdDocs);
+    const sameAs = Array.isArray(org?.sameAs) ? org.sameAs : [];
+
     const checks = [
       assertEqual(extracted.canonicalCount, 1, "exactly 1 canonical tag"),
       assertTruthy(extracted.canonicalHrefs[0], "canonical href present"),
       assertEqual(extracted.metaDescriptionCount, 1, "exactly 1 meta description tag"),
       assertTruthy(extracted.metaDescriptionContents[0], "meta description content present"),
       assertIncludesAll(hreflangValues, ["en", "de", "es", "x-default"], "hreflang includes en,de,es,x-default"),
+      assertTruthy(extracted.jsonLdScripts.length >= 1, "has >= 1 JSON-LD script"),
+      assertTruthy(!jsonLdParseErrors.length, `JSON-LD scripts parse without errors`),
+      assertTruthy(Boolean(org), "Organization schema present"),
+      assertIncludesAll(sameAs, EXPECTED_ORG_SAME_AS, "Organization sameAs includes required profiles"),
     ];
 
     let urlOk = true;

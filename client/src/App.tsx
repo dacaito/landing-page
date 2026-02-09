@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "./lib/LanguageContext";
+import { SiteJsonLd } from "@/components/SiteJsonLd";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import PlasticsIndustry from "@/pages/industries/plastics";
@@ -62,6 +63,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <LanguageProvider>
+          <SiteJsonLd />
           <Toaster />
           <Router />
         </LanguageProvider>
