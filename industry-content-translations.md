@@ -128,6 +128,69 @@ Entwickelt für Umgebungen mit hoher Working-Capital-Bindung, strenger Rückverf
 
 ---
 
+### Spanish
+
+**Headline:** Química
+
+**Subheadline:** Su ERP. La realidad física de sus operaciones químicas.
+
+**Description:** Visibilidad de inventario en tiempo real en materias primas, WIP y producto terminado para reducir depreciaciones, evitar roturas de stock y proteger el flujo productivo.
+
+Desarrollado para entornos con alta exposición de capital de trabajo, trazabilidad estricta y requisitos de vida útil.
+
+**Metrics:**
+- >99% Precisión de inventario
+- 15+ Días Reducción DIO
+- 6 cifras Reducción de depreciaciones
+- 12% Capital de trabajo liberado
+
+**Problem Headline:** Cuando el inventario del sistema no coincide con la realidad física
+
+**Problem Description:** Los materiales dominan costes, riesgos y continuidad productiva. Las divergencias tienen impacto inmediato.
+
+**Issues:**
+- Capital de trabajo inmovilizado en buffers inflados
+- Depreciaciones por materiales caducados o mal ubicados
+- Roturas de stock que afectan compromisos con clientes
+- Equipos dedicando tiempo a verificaciones manuales y gestión de urgencias
+
+**Closing:** Estos problemas persisten porque los datos del ERP están desconectados de la realidad física en planta.
+
+**Outcome Headline:** Qué cambia con la verificación física
+
+**Outcome Description:** El alineamiento continuo entre sistema y realidad transforma las operaciones.
+
+**Benefits:**
+- Precisión fiable por material, lote y ubicación
+- Menor capital de trabajo en buffers inflados
+- Menos paradas por materiales faltantes
+- Fin de las compras urgentes y gestión de crisis
+
+**How It Works Headline:** Una capa de protección para plantas químicas
+
+**How It Works Description:** Vexgen AI alinea continuamente el inventario físico con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.
+
+**Steps:**
+1. Capturar cada movimiento - Cámaras monitorizan flujos de inventario de forma continua.
+2. Validar automáticamente - La IA de visión identifica materiales y cantidades en tiempo real.
+3. Sincronizar su ERP al instante - Discrepancias corregidas automáticamente. Sin intervención manual.
+
+**Closing:** Sin reemplazo de sistemas. Sin rediseño de procesos. Fricción mínima.
+
+**Who It's For Headline:** Desarrollado para organizaciones químicas donde:
+
+**Criteria:**
+- La precisión de inventario afecta al capital de trabajo y al riesgo
+- La vida útil, el seguimiento de lotes y la trazabilidad son críticos
+- Los planes de producción dependen de la disponibilidad de materiales
+- Los equipos dependen de verificaciones manuales o buffers para gestionar la incertidumbre
+
+**Get Started Headline:** ¿Es relevante para sus operaciones?
+
+**Get Started Description:** Una breve conversación puede evaluar si la visibilidad física de inventario podría mejorar la eficiencia de capital o reducir el riesgo operativo.
+
+---
+
 ## Plastics Manufacturing
 
 ### English
@@ -253,6 +316,69 @@ Entwickelt für High-Mix-, High-Volume-Umgebungen, in denen Verfügbarkeit und G
 **Get Started Headline:** Ist das relevant für Ihren Betrieb?
 
 **Get Started Description:** Ein kurzes Gespräch kann klären, ob physische Bestandstransparenz Verfügbarkeit, Genauigkeit oder Kapitaleffizienz verbessern könnte.
+
+---
+
+### Spanish
+
+**Headline:** Fabricación de plásticos
+
+**Subheadline:** Su ERP. La realidad física de la fabricación de plásticos.
+
+**Description:** Visibilidad de inventario en tiempo real en materias primas, WIP y producto terminado para mantener en funcionamiento las líneas de inyección, extrusión y montaje.
+
+Desarrollado para entornos de alta variedad y alto volumen donde la disponibilidad y la precisión determinan los márgenes.
+
+**Metrics:**
+- >99% Precisión de inventario
+- 12+ Días Reducción DIO
+- 25% Mayor disponibilidad de línea
+- 90% Menos verificaciones manuales
+
+**Problem Headline:** Cuando el inventario del sistema no coincide con la realidad física
+
+**Problem Description:** El rendimiento productivo depende de tener las piezas correctas, en la máquina correcta, en el momento correcto.
+
+**Issues:**
+- Líneas esperando material que 'existe' en el sistema
+- Buffers excesivos construidos para proteger contra la incertidumbre
+- Referencias incorrectas acumulándose mientras faltan las críticas
+- Verificaciones manuales constantes para mantener la producción en marcha
+
+**Closing:** Estos problemas persisten porque los datos del ERP están desconectados de lo que realmente hay en planta.
+
+**Outcome Headline:** Qué cambia con la verificación física
+
+**Outcome Description:** El alineamiento continuo entre sistema y realidad transforma las operaciones.
+
+**Benefits:**
+- Precisión fiable por referencia, pieza y ubicación
+- Mayor disponibilidad, menos paradas por material
+- Menor capital de trabajo en buffers
+- Fin de las urgencias y conciliaciones manuales
+
+**How It Works Headline:** Una capa de verificación para plantas de plásticos
+
+**How It Works Description:** Vexgen AI alinea continuamente el inventario físico con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.
+
+**Steps:**
+1. Capturar cada movimiento - Cámaras monitorizan flujos de inventario de forma continua.
+2. Validar automáticamente - La IA de visión identifica materiales y cantidades en tiempo real.
+3. Sincronizar su ERP al instante - Discrepancias corregidas automáticamente. Sin intervención manual.
+
+**Closing:** Sin reemplazo de sistemas. Sin rediseño de procesos. Fricción mínima.
+
+**Who It's For Headline:** Desarrollado para fabricantes de plásticos que:
+
+**Criteria:**
+- Operan inyección, extrusión o montaje con secuenciación ajustada
+- Gestionan alto número de referencias en cajas, palés y WIP
+- Experimentan paradas pese a inventario 'disponible'
+- Dependen de buffers y verificaciones manuales para proteger el rendimiento
+
+**Get Started Headline:** ¿Es relevante para sus operaciones?
+
+**Get Started Description:** Una breve conversación puede evaluar si la visibilidad física de inventario podría mejorar la disponibilidad, la precisión o la eficiencia de capital.
 
 ---
 
@@ -384,6 +510,69 @@ Entwickelt für Hochvolumen-Umgebungen, in denen Frische und Verfügbarkeit die 
 
 ---
 
+### Spanish
+
+**Headline:** Alimentación y bebidas
+
+**Subheadline:** Su ERP. La realidad física de las operaciones de alimentación y bebidas.
+
+**Description:** Visibilidad de inventario en tiempo real en palés de materias primas, WIP y producto terminado para reducir desperdicios y proteger niveles de servicio.
+
+Desarrollado para entornos de alto volumen donde la frescura y la disponibilidad definen el rendimiento.
+
+**Metrics:**
+- >99% Precisión de inventario
+- 40% Menos desperdicios
+- 5pp Mejora OTIF
+- 90% Menos verificaciones manuales
+
+**Problem Headline:** Cuando la realidad de los palés diverge de los datos del sistema
+
+**Problem Description:** La frescura, la disponibilidad y los niveles de servicio dependen de saber exactamente qué hay y dónde.
+
+**Issues:**
+- Desperdicios por palés caducados u olvidados
+- Roturas de stock causando pedidos incompletos y fallos de OTIF
+- Buffers excesivos para proteger niveles de servicio
+- Verificaciones constantes de palés y fechas para mantener los pedidos en movimiento
+
+**Closing:** Estos problemas persisten porque los datos del ERP están desconectados de la realidad física de los palés.
+
+**Outcome Headline:** Qué cambia con la verificación física
+
+**Outcome Description:** El alineamiento continuo entre sistema y realidad transforma las operaciones.
+
+**Benefits:**
+- Precisión fiable por referencia, cantidad y fecha de caducidad
+- Menos desperdicios mediante mejor ejecución FIFO/FEFO
+- Mayores niveles de servicio, menos palés faltantes
+- Equipos liberados de verificaciones manuales constantes de palés
+
+**How It Works Headline:** Una capa de protección de frescura para operaciones de alimentación y bebidas
+
+**How It Works Description:** Vexgen AI alinea continuamente la realidad física de los palés con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.
+
+**Steps:**
+1. Capturar cada movimiento - Cámaras monitorizan flujos de inventario de forma continua.
+2. Validar automáticamente - La IA de visión identifica materiales y cantidades en tiempo real.
+3. Sincronizar su ERP al instante - Discrepancias corregidas automáticamente. Sin intervención manual.
+
+**Closing:** Sin reemplazo de sistemas. Sin rediseño de procesos. Fricción mínima.
+
+**Who It's For Headline:** Desarrollado para organizaciones de alimentación y bebidas que:
+
+**Criteria:**
+- Gestionan grandes volúmenes de mercancía paletizada e ingredientes
+- Dependen de FIFO/FEFO para controlar desperdicios y frescura
+- Experimentan problemas de servicio pese a inventario 'disponible'
+- Dependen de verificaciones manuales y buffers para proteger OTIF
+
+**Get Started Headline:** ¿Es relevante para sus operaciones?
+
+**Get Started Description:** Una breve conversación puede evaluar si la visibilidad física de inventario podría mejorar la frescura, los niveles de servicio o la eficiencia de capital.
+
+---
+
 ## Cosmetics
 
 ### English
@@ -512,6 +701,69 @@ Entwickelt für High-Mix-Umgebungen, in denen Artikelgenauigkeit und Timing den 
 
 ---
 
+### Spanish
+
+**Headline:** Cosmética
+
+**Subheadline:** Su ERP. La realidad física de las operaciones cosméticas.
+
+**Description:** Visibilidad de inventario en tiempo real en producción, almacenamiento y distribución para proteger lanzamientos y reducir depreciaciones.
+
+Desarrollado para entornos de alta variedad donde la precisión de referencias y el timing determinan los ingresos.
+
+**Metrics:**
+- >99% Precisión de inventario
+- 5pp Tasa de lanzamiento puntual
+- 6 cifras Reducción de obsoletos
+- 10+ Días Reducción DIO
+
+**Problem Headline:** Cuando el inventario del sistema no coincide con la realidad física
+
+**Problem Description:** La disponibilidad, la precisión y el timing definen el éxito en cosmética.
+
+**Issues:**
+- Lanzamientos retrasados por referencias faltantes o mal asignadas
+- Variantes incorrectas en stock mientras faltan las de alta demanda
+- Depreciaciones por packaging obsoleto o campañas canceladas
+- Verificaciones manuales necesarias para confirmar la preparación del lanzamiento
+
+**Closing:** Estos problemas persisten porque al ERP le falta el alineamiento en tiempo real con el stock físico.
+
+**Outcome Headline:** Qué cambia con la verificación física
+
+**Outcome Description:** El alineamiento continuo entre sistema y realidad transforma las operaciones.
+
+**Benefits:**
+- Precisión fiable por referencia, variante y ubicación
+- Lanzamientos puntuales con menos sorpresas
+- Menos depreciaciones por inventario mal asignado
+- Menos capital inmovilizado en buffers de protección
+
+**How It Works Headline:** Una capa de protección de lanzamientos para operaciones cosméticas
+
+**How It Works Description:** Vexgen AI alinea continuamente el inventario físico con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.
+
+**Steps:**
+1. Capturar cada movimiento - Cámaras monitorizan flujos de inventario de forma continua.
+2. Validar automáticamente - La IA de visión identifica materiales y cantidades en tiempo real.
+3. Sincronizar su ERP al instante - Discrepancias corregidas automáticamente. Sin intervención manual.
+
+**Closing:** Sin reemplazo de sistemas. Sin rediseño de procesos. Fricción mínima.
+
+**Who It's For Headline:** Desarrollado para organizaciones cosméticas que:
+
+**Criteria:**
+- Gestionan amplios portfolios de referencias con variantes de packaging
+- Realizan lanzamientos frecuentes y demanda por campañas
+- Experimentan problemas de disponibilidad pese a datos de 'en stock'
+- Utilizan verificaciones manuales para proteger lanzamientos y servicio
+
+**Get Started Headline:** ¿Es relevante para sus operaciones?
+
+**Get Started Description:** Una breve conversación puede evaluar si la visibilidad física de inventario podría mejorar la preparación de lanzamientos o la eficiencia de capital.
+
+---
+
 ## Pharmaceutical
 
 ### English
@@ -637,3 +889,257 @@ Entwickelt für regulierte Umgebungen, in denen Genauigkeit und Rückverfolgbark
 **Get Started Headline:** Ist das relevant für Ihren Betrieb?
 
 **Get Started Description:** Ein kurzes Gespräch kann klären, ob physische Bestandsverifizierung die Freigabesicherheit oder Compliance-Position verbessern könnte.
+
+---
+
+### Spanish
+
+**Headline:** Farmacéutica
+
+**Subheadline:** Su ERP. La realidad física de las operaciones farmacéuticas.
+
+**Description:** Visibilidad de inventario en tiempo real en materias primas, WIP y producto terminado para mejorar la confianza en la liberación de lotes y reducir el riesgo de cumplimiento normativo.
+
+Desarrollado para entornos regulados donde la precisión y la trazabilidad son innegociables.
+
+**Metrics:**
+- >99% Precisión de inventario
+- 30% Liberación de lotes más rápida
+- 50% Menos roturas de stock
+- 2x Confianza en auditorías
+
+**Problem Headline:** Cuando el inventario del sistema no coincide con la realidad física
+
+**Problem Description:** La precisión, el estado y la trazabilidad afectan directamente al cumplimiento normativo y al suministro al paciente.
+
+**Issues:**
+- Lotes retrasados por inventario faltante o mal ubicado
+- Investigaciones manuales para conciliar sistema vs. realidad
+- Buffers conservadores para proteger la disponibilidad
+- Riesgo de auditoría por suposiciones en lugar de verificación
+
+**Closing:** Estos problemas persisten porque el ERP no está alineado continuamente con la realidad física.
+
+**Outcome Headline:** Qué cambia con la verificación física
+
+**Outcome Description:** El alineamiento continuo entre sistema y realidad transforma las operaciones.
+
+**Benefits:**
+- Precisión fiable por lote, estado y ubicación
+- Liberaciones de lotes más rápidas y fiables
+- Menor riesgo de cumplimiento normativo y auditoría
+- Menos dependencia de buffers conservadores
+
+**How It Works Headline:** Una capa de cumplimiento normativo para operaciones farmacéuticas
+
+**How It Works Description:** Vexgen AI alinea continuamente el inventario físico con su ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.
+
+**Steps:**
+1. Capturar cada movimiento - Cámaras monitorizan flujos de inventario de forma continua.
+2. Validar automáticamente - La IA de visión identifica materiales y cantidades en tiempo real.
+3. Sincronizar su ERP al instante - Discrepancias corregidas automáticamente. Sin intervención manual.
+
+**Closing:** Sin reemplazo de sistemas. Sin rediseño de procesos. Fricción mínima.
+
+**Who It's For Headline:** Desarrollado para organizaciones farmacéuticas que:
+
+**Criteria:**
+- Operan en entornos regulados GMP
+- Gestionan inventario controlado por lotes en múltiples ubicaciones
+- Experimentan retrasos en la liberación pese a inventario 'disponible'
+- Dependen de verificación manual para el cumplimiento normativo
+
+**Get Started Headline:** ¿Es relevante para sus operaciones?
+
+**Get Started Description:** Una breve conversación puede evaluar si la verificación física de inventario podría mejorar la confianza en la liberación o la posición de cumplimiento normativo.
+
+---
+
+## Logistics & Fulfillment
+
+### English
+
+**Headline:** Logistics & Fulfillment
+
+**Subheadline:** Your ERP. The physical truth for logistics operations.
+
+**Description:** Real-time inventory visibility that eliminates manual labor, reduces errors, and ensures reliable fulfillment across warehouses and distribution centers.
+
+Built for high-volume operations where accuracy and speed determine customer satisfaction.
+
+**Metrics:**
+- >99% Order Accuracy
+- 75% Less Manual Labor
+- 90% Fewer Picking Errors
+- <24h Discrepancy Resolution
+
+**Problem Headline:** When inventory errors become customer problems
+
+**Problem Description:** Fulfillment reliability depends on knowing exactly what's available, where it is, and that it matches system records.
+
+**Issues:**
+- Manual cycle counts consuming hours of labor daily
+- Picking errors leading to returns and customer complaints
+- Inventory discrepancies discovered only at shipping
+- Staff constantly verifying what the system should already know
+
+**Closing:** These issues persist because ERP data diverges from physical reality between updates.
+
+**Outcome Headline:** What changes with continuous verification
+
+**Outcome Description:** Automatic alignment between physical inventory and system data transforms fulfillment operations.
+
+**Benefits:**
+- Eliminate routine manual counts and spot-checks
+- Catch discrepancies before they reach customers
+- Free staff for value-adding tasks instead of verification
+- Build customer trust through consistent order accuracy
+
+**How It Works Headline:** A verification layer for logistics operations
+
+**How It Works Description:** Vexgen AI continuously aligns physical inventory with your WMS/ERP. All data is processed locally and never leaves your premises.
+
+**Steps:**
+1. Capture every movement - Cameras monitor inventory flows across receiving, storage, and shipping.
+2. Validate automatically - Vision AI identifies items, quantities, and locations in real time.
+3. Sync your systems instantly - Discrepancies corrected automatically. No manual reconciliation.
+
+**Closing:** No workflow changes. No barcode dependency. Minimal disruption.
+
+**Who It's For Headline:** Built for logistics operations that:
+
+**Criteria:**
+- Process high order volumes with tight delivery windows
+- Spend significant labor hours on manual inventory checks
+- Experience picking errors despite trained staff
+- Need to improve accuracy without adding headcount
+
+**Get Started Headline:** Is this relevant for your operations?
+
+**Get Started Description:** A short conversation can assess whether automated inventory verification could reduce labor, improve accuracy, or enhance reliability.
+
+---
+
+### German
+
+**Headline:** Logistik & Fulfillment
+
+**Subheadline:** Ihr ERP. Die physische Wahrheit für Logistikbetriebe.
+
+**Description:** Echtzeit-Bestandstransparenz, die manuelle Arbeit eliminiert, Fehler reduziert und zuverlässige Auftragsabwicklung in Lagern und Distributionszentren gewährleistet.
+
+Entwickelt für Hochvolumen-Betriebe, in denen Genauigkeit und Geschwindigkeit die Kundenzufriedenheit bestimmen.
+
+**Metrics:**
+- >99% Auftragsgenauigkeit
+- 75% Weniger manuelle Arbeit
+- 90% Weniger Kommissionierfehler
+- <24h Abweichungsbehebung
+
+**Problem Headline:** Wenn Bestandsfehler zu Kundenproblemen werden
+
+**Problem Description:** Zuverlässige Auftragsabwicklung erfordert genaues Wissen darüber, was verfügbar ist, wo es sich befindet und dass es mit den Systemdaten übereinstimmt.
+
+**Issues:**
+- Manuelle Inventuren, die täglich Stunden an Arbeitszeit verbrauchen
+- Kommissionierfehler, die zu Retouren und Kundenbeschwerden führen
+- Bestandsabweichungen, die erst beim Versand entdeckt werden
+- Mitarbeiter, die ständig verifizieren, was das System bereits wissen sollte
+
+**Closing:** Diese Probleme bestehen fort, weil ERP-Daten zwischen Updates von der physischen Realität abweichen.
+
+**Outcome Headline:** Was sich mit kontinuierlicher Verifizierung ändert
+
+**Outcome Description:** Automatischer Abgleich zwischen physischem Bestand und Systemdaten sorgt für stabile und planbare Prozesse.
+
+**Benefits:**
+- Routinemäßige manuelle Zählungen und Stichproben eliminieren
+- Abweichungen erkennen, bevor sie beim Kunden ankommen
+- Mitarbeiter für wertschöpfende Aufgaben statt Verifizierung einsetzen
+- Kundenvertrauen durch konstante Auftragsgenauigkeit aufbauen
+
+**How It Works Headline:** Eine Verifizierungsebene für Logistikbetriebe
+
+**How It Works Description:** Vexgen AI gleicht den physischen Bestand kontinuierlich mit Ihrem WMS/ERP ab. Alle Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände.
+
+**Steps:**
+1. Jede Bewegung erfassen - Kameras überwachen Bestandsbewegungen in Wareneingang, Lager und Versand.
+2. Automatisch validieren - Vision-KI identifiziert Artikel, Mengen und Lagerorte in Echtzeit.
+3. Systeme sofort synchronisieren - Abweichungen werden automatisch korrigiert. Keine manuelle Abstimmung.
+
+**Closing:** Keine Workflow-Änderungen. Keine Barcode-Abhängigkeit. Minimale Unterbrechung.
+
+**Who It's For Headline:** Entwickelt für Logistikbetriebe, die:
+
+**Criteria:**
+- Hohe Auftragsvolumen mit engen Lieferfenstern verarbeiten
+- Erhebliche Arbeitsstunden für manuelle Bestandsprüfungen aufwenden
+- Trotz geschultem Personal Kommissionierfehler erleben
+- Genauigkeit verbessern müssen, ohne Personal aufzustocken
+
+**Get Started Headline:** Ist das relevant für Ihren Betrieb?
+
+**Get Started Description:** Ein kurzes Gespräch kann klären, ob automatisierte Bestandsverifizierung Arbeitsaufwand reduzieren, Genauigkeit verbessern oder Zuverlässigkeit erhöhen könnte.
+
+---
+
+### Spanish
+
+**Headline:** Logística y fulfillment
+
+**Subheadline:** Su ERP. La realidad física de las operaciones logísticas.
+
+**Description:** Visibilidad de inventario en tiempo real que elimina el trabajo manual, reduce errores y garantiza una preparación de pedidos fiable en almacenes y centros de distribución.
+
+Desarrollado para operaciones de alto volumen donde la precisión y la velocidad determinan la satisfacción del cliente.
+
+**Metrics:**
+- >99% Precisión de pedidos
+- 75% Menos trabajo manual
+- 90% Menos errores de picking
+- <24h Resolución de discrepancias
+
+**Problem Headline:** Cuando los errores de inventario se convierten en problemas del cliente
+
+**Problem Description:** La fiabilidad en la preparación de pedidos depende de saber exactamente qué está disponible, dónde se encuentra y que coincide con los registros del sistema.
+
+**Issues:**
+- Recuentos cíclicos manuales que consumen horas de trabajo diarias
+- Errores de picking que generan devoluciones y reclamaciones
+- Discrepancias de inventario descubiertas solo en el envío
+- Personal verificando constantemente lo que el sistema ya debería saber
+
+**Closing:** Estos problemas persisten porque los datos del ERP divergen de la realidad física entre actualizaciones.
+
+**Outcome Headline:** Qué cambia con la verificación continua
+
+**Outcome Description:** El alineamiento automático entre inventario físico y datos del sistema transforma las operaciones de fulfillment.
+
+**Benefits:**
+- Eliminar recuentos manuales rutinarios y muestreos
+- Detectar discrepancias antes de que lleguen al cliente
+- Liberar personal para tareas de valor añadido en lugar de verificación
+- Construir confianza del cliente mediante precisión constante en pedidos
+
+**How It Works Headline:** Una capa de verificación para operaciones logísticas
+
+**How It Works Description:** Vexgen AI alinea continuamente el inventario físico con su WMS/ERP. Todos los datos se procesan localmente y nunca abandonan sus instalaciones.
+
+**Steps:**
+1. Capturar cada movimiento - Cámaras monitorizan flujos de inventario en recepción, almacenamiento y expedición.
+2. Validar automáticamente - La IA de visión identifica artículos, cantidades y ubicaciones en tiempo real.
+3. Sincronizar sus sistemas al instante - Discrepancias corregidas automáticamente. Sin conciliación manual.
+
+**Closing:** Sin cambios en el flujo de trabajo. Sin dependencia de códigos de barras. Interrupción mínima.
+
+**Who It's For Headline:** Desarrollado para operaciones logísticas que:
+
+**Criteria:**
+- Procesan altos volúmenes de pedidos con ventanas de entrega ajustadas
+- Dedican horas significativas de trabajo a verificaciones manuales de inventario
+- Experimentan errores de picking pese a personal formado
+- Necesitan mejorar la precisión sin aumentar plantilla
+
+**Get Started Headline:** ¿Es relevante para sus operaciones?
+
+**Get Started Description:** Una breve conversación puede evaluar si la verificación automatizada de inventario podría reducir el trabajo manual, mejorar la precisión o aumentar la fiabilidad.
