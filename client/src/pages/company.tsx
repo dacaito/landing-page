@@ -18,6 +18,30 @@ export default function Company() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
 
+  const externalProfiles = {
+    en: {
+      sentenceStart: "Company profiles available on ",
+      andWord: "and",
+    },
+    de: {
+      sentenceStart: "Unternehmensprofile verfügbar auf ",
+      andWord: "und",
+    },
+    es: {
+      sentenceStart: "Perfiles de la empresa disponibles en ",
+      andWord: "y",
+    },
+  } as const;
+
+  const profilesCopy = externalProfiles[lang];
+  const profileLinks = {
+    linkedin: "https://www.linkedin.com/company/vexgen-ai/",
+    crunchbase: "https://www.crunchbase.com/organization/vexgen-ai",
+    dealroom: "https://app.dealroom.co/companies/vexgen_ai",
+    wlw: "https://www.wlw.ch/de/firma/vexgen-ai-22367771",
+    github: "https://github.com/vexgen-ai",
+  } as const;
+
   const navigateToHomeSection = (sectionId: string) => {
     setMobileMenuOpen(false);
     setLocation(getLocalizedPath('/'));
@@ -223,43 +247,6 @@ export default function Company() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10 sm:mb-12">
-            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">{t.company.careers.label}</p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-              {t.company.careers.headline}
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-3">
-              <p className="text-base sm:text-lg text-muted-foreground mb-6">
-                {t.company.careers.description}
-              </p>
-              <p className="text-base sm:text-lg text-muted-foreground mb-8">
-                {t.company.careers.description2}
-              </p>
-              <a 
-                href="mailto:jobs@vexgen.ai" 
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
-              >
-                {t.company.careers.cta}
-              </a>
-            </div>
-            <div className="lg:col-span-2">
-              <img 
-                src="/images/careers-team.png" 
-                alt="Join the Vexgen AI team" 
-                width="400"
-                height="256"
-                loading="lazy"
-                className="w-full h-auto rounded-2xl shadow-lg max-h-64 object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="py-16 sm:py-24 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
@@ -336,6 +323,96 @@ export default function Company() {
               <span className="text-sm sm:text-base">{t.company.focus}</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card border-y border-border/50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10 sm:mb-12">
+            <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4">{t.company.careers.label}</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
+              {t.company.careers.headline}
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-3">
+              <p className="text-base sm:text-lg text-muted-foreground mb-6">
+                {t.company.careers.description}
+              </p>
+              <p className="text-base sm:text-lg text-muted-foreground mb-8">
+                {t.company.careers.description2}
+              </p>
+              <a
+                href="mailto:jobs@vexgen.ai"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+              >
+                {t.company.careers.cta}
+              </a>
+            </div>
+            <div className="lg:col-span-2">
+              <img
+                src="/images/careers-team.png"
+                alt="Join the Vexgen AI team"
+                width="400"
+                height="256"
+                loading="lazy"
+                className="w-full h-auto rounded-2xl shadow-lg max-h-64 object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-sm text-muted-foreground">
+            {profilesCopy.sentenceStart}
+            <a
+              href={profileLinks.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              LinkedIn
+            </a>
+            ,{" "}
+            <a
+              href={profileLinks.crunchbase}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Crunchbase
+            </a>
+            ,{" "}
+            <a
+              href={profileLinks.dealroom}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Dealroom
+            </a>
+            ,{" "}
+            <a
+              href={profileLinks.wlw}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              WLW
+            </a>{" "}
+            {profilesCopy.andWord}{" "}
+            <a
+              href={profileLinks.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              GitHub
+            </a>
+            .
+          </p>
         </div>
       </section>
 
