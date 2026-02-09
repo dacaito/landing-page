@@ -729,7 +729,7 @@ export const translations = {
     },
     howItWorks: {
       label: "Cómo funciona",
-      headline: "Conciliación continua. Esfuerzo manual cero.",
+      headline: "Conciliación continua. Cero esfuerzo manual.",
       description: "Vexgen AI conecta de forma segura y automática los movimientos físicos con los registros digitales. Todos sus datos se procesan localmente y nunca abandonan sus instalaciones. La identidad de los operarios se difumina automáticamente.",
       steps: [
         {
