@@ -11,7 +11,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LANGUAGES: Language[] = ['en', 'de', 'es'];
+export const LANGUAGES: Language[] = ['de', 'en', 'es'];
 
 const LANGUAGE_LABELS: Record<Language, string> = {
   en: 'English',
