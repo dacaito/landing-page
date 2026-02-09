@@ -4,6 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Vexgen AI - Align ERP with Reality</title>
+
+    <!-- Baseline OG/Twitter for non-JS social crawlers (LinkedIn, etc.). -->
+    <meta property="og:type" content="website" data-static-social="1" />
+    <meta property="og:site_name" content="Vexgen AI" data-static-social="1" />
+    <meta property="og:title" content="Vexgen AI - Align ERP with Reality" data-static-social="1" />
+    <meta
+      property="og:description"
+      content="Real-time visibility and reconciliation between ERP data and physical inventory."
+      data-static-social="1"
+    />
+    <meta property="og:image" content="https://vexgen.ai/og-default.png" data-static-social="1" />
+    <meta property="og:image:width" content="1200" data-static-social="1" />
+    <meta property="og:image:height" content="630" data-static-social="1" />
+    <meta property="og:image:type" content="image/png" data-static-social="1" />
+
+    <meta name="twitter:card" content="summary_large_image" data-static-social="1" />
+    <meta name="twitter:title" content="Vexgen AI - Align ERP with Reality" data-static-social="1" />
+    <meta
+      name="twitter:description"
+      content="Real-time visibility and reconciliation between ERP data and physical inventory."
+      data-static-social="1"
+    />
+    <meta name="twitter:image" content="https://vexgen.ai/og-default.png" data-static-social="1" />
+
+    <!-- Remove baseline social tags once JS runs (avoid duplicates after Helmet). -->
+    <script>
+      document
+        .querySelectorAll('meta[data-static-social="1"]')
+        .forEach((el) => el.parentNode && el.parentNode.removeChild(el));
+    </script>
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
