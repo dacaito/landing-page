@@ -7,6 +7,7 @@ import { SeoHead } from "@/components/SeoHead";
 import { translations } from "@/lib/translations";
 import { useLanguage } from "@/lib/LanguageContext";
 import { LanguageDropdown } from "@/components/LanguageDropdown";
+import { track } from "@/lib/analytics";
 import dashboardImage from "@assets/dash-board-kpi.png";
 import stockImage from "@assets/image_1_1767949813510.png";
 import demoVideo from "@assets/Landing-Page-Reel-876x512.mp4";
@@ -113,21 +114,48 @@ export default function Home() {
           </Link>
           <div className="hidden lg:flex items-center gap-8">
             <button 
-              onClick={() => scrollToSection("results")} 
+              onClick={() => {
+                track("nav_click", {
+                  item: "results",
+                  label: t.nav.results,
+                  href: "#results",
+                  kind: "anchor",
+                  hash: "#results",
+                });
+                scrollToSection("results");
+              }}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-results"
             >
               {t.nav.results}
             </button>
             <button 
-              onClick={() => scrollToSection("solution")} 
+              onClick={() => {
+                track("nav_click", {
+                  item: "solution",
+                  label: t.nav.solution,
+                  href: "#solution",
+                  kind: "anchor",
+                  hash: "#solution",
+                });
+                scrollToSection("solution");
+              }}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-solution"
             >
               {t.nav.solution}
             </button>
             <button 
-              onClick={() => scrollToSection("how-it-works")} 
+              onClick={() => {
+                track("nav_click", {
+                  item: "how_it_works",
+                  label: t.nav.howItWorks,
+                  href: "#how-it-works",
+                  kind: "anchor",
+                  hash: "#how-it-works",
+                });
+                scrollToSection("how-it-works");
+              }}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-how-it-works"
             >
@@ -141,6 +169,15 @@ export default function Home() {
               <button 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 py-2"
                 data-testid="link-industries"
+                onClick={() =>
+                  track("nav_click", {
+                    item: "industries",
+                    label: t.nav.industries,
+                    href: "",
+                    kind: "anchor",
+                    hash: "industries_menu",
+                  })
+                }
               >
                 {t.nav.industries}
                 <ChevronDown className={`w-3 h-3 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} />
@@ -148,22 +185,88 @@ export default function Home() {
               {industriesOpen && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 z-50 pt-1">
                   <div className="bg-background border border-border rounded-lg shadow-lg py-2">
-                    <Link href={getLocalizedPath('/industries/chemical')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link
+                      href={getLocalizedPath('/industries/chemical')}
+                      onClick={() =>
+                        track("nav_click", {
+                          item: "industry_chemical",
+                          label: t.industries.chemical,
+                          href: getLocalizedPath("/industries/chemical"),
+                          kind: "route",
+                        })
+                      }
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    >
                       {t.industries.chemical}
                     </Link>
-                    <Link href={getLocalizedPath('/industries/plastics')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link
+                      href={getLocalizedPath('/industries/plastics')}
+                      onClick={() =>
+                        track("nav_click", {
+                          item: "industry_plastics",
+                          label: t.industries.plastics,
+                          href: getLocalizedPath("/industries/plastics"),
+                          kind: "route",
+                        })
+                      }
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    >
                       {t.industries.plastics}
                     </Link>
-                    <Link href={getLocalizedPath('/industries/food-beverage')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link
+                      href={getLocalizedPath('/industries/food-beverage')}
+                      onClick={() =>
+                        track("nav_click", {
+                          item: "industry_food_beverage",
+                          label: t.industries.foodBeverage,
+                          href: getLocalizedPath("/industries/food-beverage"),
+                          kind: "route",
+                        })
+                      }
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    >
                       {t.industries.foodBeverage}
                     </Link>
-                    <Link href={getLocalizedPath('/industries/cosmetics')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link
+                      href={getLocalizedPath('/industries/cosmetics')}
+                      onClick={() =>
+                        track("nav_click", {
+                          item: "industry_cosmetics",
+                          label: t.industries.cosmetics,
+                          href: getLocalizedPath("/industries/cosmetics"),
+                          kind: "route",
+                        })
+                      }
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    >
                       {t.industries.cosmetics}
                     </Link>
-                    <Link href={getLocalizedPath('/industries/pharma')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link
+                      href={getLocalizedPath('/industries/pharma')}
+                      onClick={() =>
+                        track("nav_click", {
+                          item: "industry_pharma",
+                          label: t.industries.pharma,
+                          href: getLocalizedPath("/industries/pharma"),
+                          kind: "route",
+                        })
+                      }
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    >
                       {t.industries.pharma}
                     </Link>
-                    <Link href={getLocalizedPath('/industries/logistics')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link
+                      href={getLocalizedPath('/industries/logistics')}
+                      onClick={() =>
+                        track("nav_click", {
+                          item: "industry_logistics",
+                          label: t.industries.logistics,
+                          href: getLocalizedPath("/industries/logistics"),
+                          kind: "route",
+                        })
+                      }
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    >
                       {t.industries.logistics}
                     </Link>
                   </div>
@@ -172,6 +275,14 @@ export default function Home() {
             </div>
             <Link 
               href={getLocalizedPath('/company')}
+              onClick={() =>
+                track("nav_click", {
+                  item: "company",
+                  label: t.nav.company,
+                  href: getLocalizedPath("/company"),
+                  kind: "route",
+                })
+              }
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-company"
             >
@@ -181,7 +292,17 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <LanguageDropdown />
             <Button 
-              onClick={() => scrollToSection("contact")} 
+              onClick={() => {
+                track("nav_click", {
+                  item: "demo",
+                  label: t.nav.requestDemo,
+                  href: "#contact",
+                  kind: "anchor",
+                  hash: "#contact",
+                });
+                track("demo_request_click", { placement: "nav" });
+                scrollToSection("contact");
+              }}
               className="rounded-full px-4 sm:px-6 text-sm"
               data-testid="button-request-demo-nav"
             >
@@ -207,21 +328,48 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
             <LanguageDropdown variant="mobile" />
             <button 
-              onClick={() => scrollToSection("results")} 
+              onClick={() => {
+                track("nav_click", {
+                  item: "results",
+                  label: t.nav.results,
+                  href: "#results",
+                  kind: "anchor",
+                  hash: "#results",
+                });
+                scrollToSection("results");
+              }}
               className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
               data-testid="link-results-mobile"
             >
               {t.nav.results}
             </button>
             <button 
-              onClick={() => scrollToSection("solution")} 
+              onClick={() => {
+                track("nav_click", {
+                  item: "solution",
+                  label: t.nav.solution,
+                  href: "#solution",
+                  kind: "anchor",
+                  hash: "#solution",
+                });
+                scrollToSection("solution");
+              }}
               className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
               data-testid="link-solution-mobile"
             >
               {t.nav.solution}
             </button>
             <button 
-              onClick={() => scrollToSection("how-it-works")} 
+              onClick={() => {
+                track("nav_click", {
+                  item: "how_it_works",
+                  label: t.nav.howItWorks,
+                  href: "#how-it-works",
+                  kind: "anchor",
+                  hash: "#how-it-works",
+                });
+                scrollToSection("how-it-works");
+              }}
               className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
               data-testid="link-how-it-works-mobile"
             >
@@ -230,36 +378,115 @@ export default function Home() {
             <div className="flex flex-col items-center gap-2">
               <span className="text-2xl font-medium text-foreground">{t.nav.industries}</span>
               <div className="flex flex-wrap justify-center gap-2">
-                <Link href={getLocalizedPath('/industries/chemical')} onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                <Link
+                  href={getLocalizedPath('/industries/chemical')}
+                  onClick={() => {
+                    track("nav_click", {
+                      item: "industry_chemical",
+                      label: t.industries.chemical,
+                      href: getLocalizedPath("/industries/chemical"),
+                      kind: "route",
+                    });
+                    setMobileMenuOpen(false);
+                  }}
+                  className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors"
+                >
                   {t.industries.chemical}
                 </Link>
-                <Link href={getLocalizedPath('/industries/plastics')} onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                <Link
+                  href={getLocalizedPath('/industries/plastics')}
+                  onClick={() => {
+                    track("nav_click", {
+                      item: "industry_plastics",
+                      label: t.industries.plastics,
+                      href: getLocalizedPath("/industries/plastics"),
+                      kind: "route",
+                    });
+                    setMobileMenuOpen(false);
+                  }}
+                  className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors"
+                >
                   {t.industries.plastics}
                 </Link>
-                <Link href={getLocalizedPath('/industries/food-beverage')} onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                <Link
+                  href={getLocalizedPath('/industries/food-beverage')}
+                  onClick={() => {
+                    track("nav_click", {
+                      item: "industry_food_beverage",
+                      label: t.industries.foodBeverage,
+                      href: getLocalizedPath("/industries/food-beverage"),
+                      kind: "route",
+                    });
+                    setMobileMenuOpen(false);
+                  }}
+                  className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors"
+                >
                   {t.industries.foodBeverage}
                 </Link>
-                <Link href={getLocalizedPath('/industries/cosmetics')} onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                <Link
+                  href={getLocalizedPath('/industries/cosmetics')}
+                  onClick={() => {
+                    track("nav_click", {
+                      item: "industry_cosmetics",
+                      label: t.industries.cosmetics,
+                      href: getLocalizedPath("/industries/cosmetics"),
+                      kind: "route",
+                    });
+                    setMobileMenuOpen(false);
+                  }}
+                  className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors"
+                >
                   {t.industries.cosmetics}
                 </Link>
-                <Link href={getLocalizedPath('/industries/pharma')} onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                <Link
+                  href={getLocalizedPath('/industries/pharma')}
+                  onClick={() => {
+                    track("nav_click", {
+                      item: "industry_pharma",
+                      label: t.industries.pharma,
+                      href: getLocalizedPath("/industries/pharma"),
+                      kind: "route",
+                    });
+                    setMobileMenuOpen(false);
+                  }}
+                  className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors"
+                >
                   {t.industries.pharma}
                 </Link>
-                <Link href={getLocalizedPath('/industries/logistics')} onClick={() => setMobileMenuOpen(false)} className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors">
+                <Link
+                  href={getLocalizedPath('/industries/logistics')}
+                  onClick={() => {
+                    track("nav_click", {
+                      item: "industry_logistics",
+                      label: t.industries.logistics,
+                      href: getLocalizedPath("/industries/logistics"),
+                      kind: "route",
+                    });
+                    setMobileMenuOpen(false);
+                  }}
+                  className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors"
+                >
                   {t.industries.logistics}
                 </Link>
               </div>
             </div>
             <Link 
               href={getLocalizedPath('/company')}
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                track("nav_click", { item: "company", label: t.nav.company, href: getLocalizedPath("/company"), kind: "route" });
+                setMobileMenuOpen(false);
+              }}
               className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
               data-testid="link-company-mobile"
             >
               {t.nav.company}
             </Link>
             <Button 
-              onClick={() => scrollToSection("contact")} 
+              onClick={() => {
+                track("demo_request_click", { placement: "mobile_menu" });
+                track("nav_click", { item: "demo", label: t.cta.requestDemo, href: "#contact", kind: "anchor", hash: "#contact" });
+                scrollToSection("contact");
+              }}
               className="rounded-full px-8 py-6 text-lg mt-4"
               data-testid="button-request-demo-mobile"
             >
@@ -299,7 +526,10 @@ export default function Home() {
 
           <Button 
             size="lg" 
-            onClick={() => scrollToSection("contact")} 
+            onClick={() => {
+              track("demo_request_click", { placement: "hero" });
+              scrollToSection("contact");
+            }}
             className="rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg"
             data-testid="button-request-demo-hero"
           >
@@ -541,9 +771,27 @@ export default function Home() {
               <span>contact@vexgen.ai</span>
             </div>
             <div className="flex items-center gap-4 sm:gap-6 text-sm">
-              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.company}</Link>
-              <Link href={getLocalizedPath('/privacy')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.privacyPolicy}</Link>
-              <Link href={getLocalizedPath('/imprint')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.imprint}</Link>
+              <Link
+                href={getLocalizedPath('/company')}
+                onClick={() => track("nav_click", { item: "company", label: t.footer.company, href: getLocalizedPath("/company") })}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t.footer.company}
+              </Link>
+              <Link
+                href={getLocalizedPath('/privacy')}
+                onClick={() => track("nav_click", { item: "privacy", label: t.footer.privacyPolicy, href: getLocalizedPath("/privacy") })}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t.footer.privacyPolicy}
+              </Link>
+              <Link
+                href={getLocalizedPath('/imprint')}
+                onClick={() => track("nav_click", { item: "imprint", label: t.footer.imprint, href: getLocalizedPath("/imprint") })}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t.footer.imprint}
+              </Link>
             </div>
           </div>
           <div className="mt-6 text-center text-xs text-muted-foreground">
@@ -554,7 +802,10 @@ export default function Home() {
 
       <div className="fixed bottom-0 left-0 right-0 p-3 bg-background/95 backdrop-blur-lg border-t border-border/50 sm:hidden z-40">
         <Button 
-          onClick={() => scrollToSection("contact")} 
+          onClick={() => {
+            track("demo_request_click", { placement: "sticky_cta" });
+            scrollToSection("contact");
+          }}
           className="w-full rounded-full py-3 text-base"
           data-testid="button-sticky-cta"
         >

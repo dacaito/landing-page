@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useLocation } from 'wouter';
 import { Globe, ChevronDown, Check } from 'lucide-react';
 import { useLanguage, LANGUAGES, LANGUAGE_LABELS } from '@/lib/LanguageContext';
+import { track } from '@/lib/analytics';
 
 export function LanguageDropdown({ variant = 'desktop' }: { variant?: 'desktop' | 'mobile' }) {
   const { language: lang, getPathForLang } = useLanguage();
@@ -22,6 +23,7 @@ export function LanguageDropdown({ variant = 'desktop' }: { variant?: 'desktop' 
   const handleSelect = (targetLang: typeof lang) => {
     setOpen(false);
     if (targetLang !== lang) {
+      track("language_switch", { from: lang, to: targetLang });
       setLocation(getPathForLang(targetLang));
     }
   };

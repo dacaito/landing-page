@@ -6,6 +6,7 @@ import { SeoHead } from "@/components/SeoHead";
 import { translations } from "@/lib/translations";
 import { useLanguage } from "@/lib/LanguageContext";
 import { LanguageDropdown } from "@/components/LanguageDropdown";
+import { track } from "@/lib/analytics";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
 export default function Privacy() {
@@ -64,13 +65,31 @@ export default function Privacy() {
             <span className="font-bold text-lg sm:text-xl tracking-tight text-primary">Vexgen AI</span>
           </Link>
           <div className="hidden lg:flex items-center gap-8">
-            <button onClick={() => navigateToHomeSection("results")} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <button
+              onClick={() => {
+                track("nav_click", { item: "results", label: t.nav.results, href: getLocalizedPath("/"), kind: "route", hash: "#results" });
+                navigateToHomeSection("results");
+              }}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               {t.nav.results}
             </button>
-            <button onClick={() => navigateToHomeSection("solution")} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <button
+              onClick={() => {
+                track("nav_click", { item: "solution", label: t.nav.solution, href: getLocalizedPath("/"), kind: "route", hash: "#solution" });
+                navigateToHomeSection("solution");
+              }}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               {t.nav.solution}
             </button>
-            <button onClick={() => navigateToHomeSection("how-it-works")} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <button
+              onClick={() => {
+                track("nav_click", { item: "how_it_works", label: t.nav.howItWorks, href: getLocalizedPath("/"), kind: "route", hash: "#how-it-works" });
+                navigateToHomeSection("how-it-works");
+              }}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               {t.nav.howItWorks}
             </button>
             <div 
@@ -78,39 +97,109 @@ export default function Privacy() {
               onMouseEnter={() => setIndustriesOpen(true)}
               onMouseLeave={() => setIndustriesOpen(false)}
             >
-              <button className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 py-2">
+              <button
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 py-2"
+                onClick={() => track("nav_click", { item: "industries", label: t.nav.industries, href: "", kind: "anchor", hash: "industries_menu" })}
+              >
                 {t.nav.industries}
                 <ChevronDown className={`w-3 h-3 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} />
               </button>
               {industriesOpen && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 z-50 pt-1">
                   <div className="bg-background border border-border rounded-lg shadow-lg py-2">
-                    <Link href={getLocalizedPath('/industries/chemical')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link
+                      href={getLocalizedPath('/industries/chemical')}
+                      onClick={() =>
+                        track("nav_click", {
+                          item: "industry_chemical",
+                          label: t.industries.chemical,
+                          href: getLocalizedPath("/industries/chemical"),
+                          kind: "route",
+                        })
+                      }
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    >
                       {t.industries.chemical}
                     </Link>
-                    <Link href={getLocalizedPath('/industries/plastics')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link
+                      href={getLocalizedPath('/industries/plastics')}
+                      onClick={() =>
+                        track("nav_click", {
+                          item: "industry_plastics",
+                          label: t.industries.plastics,
+                          href: getLocalizedPath("/industries/plastics"),
+                          kind: "route",
+                        })
+                      }
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    >
                       {t.industries.plastics}
                     </Link>
-                    <Link href={getLocalizedPath('/industries/food-beverage')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link
+                      href={getLocalizedPath('/industries/food-beverage')}
+                      onClick={() =>
+                        track("nav_click", {
+                          item: "industry_food_beverage",
+                          label: t.industries.foodBeverage,
+                          href: getLocalizedPath("/industries/food-beverage"),
+                          kind: "route",
+                        })
+                      }
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    >
                       {t.industries.foodBeverage}
                     </Link>
-                    <Link href={getLocalizedPath('/industries/cosmetics')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link
+                      href={getLocalizedPath('/industries/cosmetics')}
+                      onClick={() =>
+                        track("nav_click", {
+                          item: "industry_cosmetics",
+                          label: t.industries.cosmetics,
+                          href: getLocalizedPath("/industries/cosmetics"),
+                          kind: "route",
+                        })
+                      }
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    >
                       {t.industries.cosmetics}
                     </Link>
-                    <Link href={getLocalizedPath('/industries/pharma')} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors">
+                    <Link
+                      href={getLocalizedPath('/industries/pharma')}
+                      onClick={() =>
+                        track("nav_click", {
+                          item: "industry_pharma",
+                          label: t.industries.pharma,
+                          href: getLocalizedPath("/industries/pharma"),
+                          kind: "route",
+                        })
+                      }
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    >
                       {t.industries.pharma}
                     </Link>
                   </div>
                 </div>
               )}
             </div>
-            <Link href={getLocalizedPath('/company')} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              href={getLocalizedPath('/company')}
+              onClick={() =>
+                track("nav_click", { item: "company", label: t.nav.company, href: getLocalizedPath("/company"), kind: "route" })
+              }
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               {t.nav.company}
             </Link>
           </div>
           <div className="flex items-center gap-2">
             <LanguageDropdown />
-            <Link href={getLocalizedPath('/')}>
+            <Link
+              href={getLocalizedPath('/')}
+              onClick={() => {
+                track("nav_click", { item: "demo", label: t.cta.requestDemo, href: getLocalizedPath("/"), kind: "route" });
+                track("demo_request_click", { placement: "nav" });
+              }}
+            >
               <Button size="sm" className="hidden sm:flex rounded-full px-4 sm:px-6">
                 {t.cta.requestDemo}
               </Button>
@@ -138,18 +227,96 @@ export default function Privacy() {
             </button>
           </div>
           <div className="flex-1 flex flex-col items-center justify-center gap-6 p-4">
-            <button onClick={() => navigateToHomeSection("results")} className="text-lg font-medium">{t.nav.results}</button>
-            <button onClick={() => navigateToHomeSection("solution")} className="text-lg font-medium">{t.nav.solution}</button>
-            <button onClick={() => navigateToHomeSection("how-it-works")} className="text-lg font-medium">{t.nav.howItWorks}</button>
+            <button
+              onClick={() => {
+                track("nav_click", { item: "results", label: t.nav.results, href: "#results" });
+                navigateToHomeSection("results");
+              }}
+              className="text-lg font-medium"
+            >
+              {t.nav.results}
+            </button>
+            <button
+              onClick={() => {
+                track("nav_click", { item: "solution", label: t.nav.solution, href: "#solution" });
+                navigateToHomeSection("solution");
+              }}
+              className="text-lg font-medium"
+            >
+              {t.nav.solution}
+            </button>
+            <button
+              onClick={() => {
+                track("nav_click", { item: "how_it_works", label: t.nav.howItWorks, href: "#how-it-works" });
+                navigateToHomeSection("how-it-works");
+              }}
+              className="text-lg font-medium"
+            >
+              {t.nav.howItWorks}
+            </button>
             <div className="flex flex-col items-center gap-2">
               <span className="text-lg font-medium text-muted-foreground">{t.nav.industries}</span>
-              <Link href={getLocalizedPath('/industries/chemical')} className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.chemical}</Link>
-              <Link href={getLocalizedPath('/industries/plastics')} className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.plastics}</Link>
-              <Link href={getLocalizedPath('/industries/food-beverage')} className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.foodBeverage}</Link>
-              <Link href={getLocalizedPath('/industries/cosmetics')} className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.cosmetics}</Link>
-              <Link href={getLocalizedPath('/industries/pharma')} className="text-base text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>{t.industries.pharma}</Link>
+              <Link
+                href={getLocalizedPath('/industries/chemical')}
+                className="text-base text-muted-foreground"
+                onClick={() => {
+                  track("nav_click", { item: "industry_chemical", label: t.industries.chemical, href: getLocalizedPath("/industries/chemical") });
+                  setMobileMenuOpen(false);
+                }}
+              >
+                {t.industries.chemical}
+              </Link>
+              <Link
+                href={getLocalizedPath('/industries/plastics')}
+                className="text-base text-muted-foreground"
+                onClick={() => {
+                  track("nav_click", { item: "industry_plastics", label: t.industries.plastics, href: getLocalizedPath("/industries/plastics") });
+                  setMobileMenuOpen(false);
+                }}
+              >
+                {t.industries.plastics}
+              </Link>
+              <Link
+                href={getLocalizedPath('/industries/food-beverage')}
+                className="text-base text-muted-foreground"
+                onClick={() => {
+                  track("nav_click", { item: "industry_food_beverage", label: t.industries.foodBeverage, href: getLocalizedPath("/industries/food-beverage") });
+                  setMobileMenuOpen(false);
+                }}
+              >
+                {t.industries.foodBeverage}
+              </Link>
+              <Link
+                href={getLocalizedPath('/industries/cosmetics')}
+                className="text-base text-muted-foreground"
+                onClick={() => {
+                  track("nav_click", { item: "industry_cosmetics", label: t.industries.cosmetics, href: getLocalizedPath("/industries/cosmetics") });
+                  setMobileMenuOpen(false);
+                }}
+              >
+                {t.industries.cosmetics}
+              </Link>
+              <Link
+                href={getLocalizedPath('/industries/pharma')}
+                className="text-base text-muted-foreground"
+                onClick={() => {
+                  track("nav_click", { item: "industry_pharma", label: t.industries.pharma, href: getLocalizedPath("/industries/pharma") });
+                  setMobileMenuOpen(false);
+                }}
+              >
+                {t.industries.pharma}
+              </Link>
             </div>
-            <Link href={getLocalizedPath('/company')} className="text-lg font-medium" onClick={() => setMobileMenuOpen(false)}>{t.nav.company}</Link>
+            <Link
+              href={getLocalizedPath('/company')}
+              className="text-lg font-medium"
+              onClick={() => {
+                track("nav_click", { item: "company", label: t.nav.company, href: getLocalizedPath("/company") });
+                setMobileMenuOpen(false);
+              }}
+            >
+              {t.nav.company}
+            </Link>
           </div>
         </div>
       )}
@@ -195,7 +362,14 @@ export default function Privacy() {
             <div>
               <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">{t.privacy.contact}</h2>
               <p className="leading-relaxed">
-                {t.privacy.contactText} <a href="mailto:contact@vexgen.ai" className="text-primary hover:underline">contact@vexgen.ai</a>
+                {t.privacy.contactText}{" "}
+                <a
+                  href="mailto:contact@vexgen.ai"
+                  onClick={() => track("contact_click", { method: "email", email: "contact@vexgen.ai" })}
+                  className="text-primary hover:underline"
+                >
+                  contact@vexgen.ai
+                </a>
               </p>
             </div>
           </div>
@@ -214,9 +388,27 @@ export default function Privacy() {
               <span>contact@vexgen.ai</span>
             </div>
             <div className="flex items-center gap-4 sm:gap-6 text-sm">
-              <Link href={getLocalizedPath('/company')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.company}</Link>
-              <Link href={getLocalizedPath('/privacy')} className="text-foreground font-medium transition-colors">{t.footer.privacyPolicy}</Link>
-              <Link href={getLocalizedPath('/imprint')} className="text-muted-foreground hover:text-foreground transition-colors">{t.footer.imprint}</Link>
+              <Link
+                href={getLocalizedPath('/company')}
+                onClick={() => track("nav_click", { item: "company", label: t.footer.company, href: getLocalizedPath("/company"), kind: "route" })}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t.footer.company}
+              </Link>
+              <Link
+                href={getLocalizedPath('/privacy')}
+                onClick={() => track("nav_click", { item: "privacy", label: t.footer.privacyPolicy, href: getLocalizedPath("/privacy"), kind: "route" })}
+                className="text-foreground font-medium transition-colors"
+              >
+                {t.footer.privacyPolicy}
+              </Link>
+              <Link
+                href={getLocalizedPath('/imprint')}
+                onClick={() => track("nav_click", { item: "imprint", label: t.footer.imprint, href: getLocalizedPath("/imprint"), kind: "route" })}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t.footer.imprint}
+              </Link>
             </div>
           </div>
           <div className="mt-6 text-center text-xs text-muted-foreground">
