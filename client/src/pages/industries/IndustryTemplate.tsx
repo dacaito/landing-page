@@ -6,6 +6,7 @@ import { Link, useLocation } from "wouter";
 import { Helmet } from "react-helmet-async";
 import { translations } from "@/lib/translations";
 import { useLanguage } from "@/lib/LanguageContext";
+import { LanguageDropdown } from "@/components/LanguageDropdown";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
 export type LayoutVariant = 'A' | 'B' | 'C' | 'D';
@@ -90,10 +91,6 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
     }
     return () => { document.body.style.overflow = ''; };
   }, [mobileMenuOpen]);
-
-  const toggleLanguage = () => {
-    setLocation(switchLanguagePath());
-  };
 
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false);
@@ -205,13 +202,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             </Link>
           </div>
           <div className="flex items-center gap-2">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border/50 text-sm text-muted-foreground hover:text-foreground hover:border-border transition-colors"
-            >
-              <Globe className="w-4 h-4" />
-              <span className="uppercase font-medium">{lang}</span>
-            </button>
+            <LanguageDropdown />
             <Button 
               onClick={() => scrollToSection("contact")} 
               className="rounded-full px-4 sm:px-6 text-sm"
@@ -235,13 +226,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl lg:hidden pt-16">
           <div className="flex flex-col items-center justify-center h-full gap-6 px-6">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 text-lg text-muted-foreground"
-            >
-              <Globe className="w-5 h-5" />
-              <span className="uppercase font-medium">{lang === 'en' ? 'English' : 'Deutsch'}</span>
-            </button>
+            <LanguageDropdown variant="mobile" />
             <button onClick={() => navigateToHomeSection("results")} className="text-2xl font-medium text-foreground hover:text-primary transition-colors">
               {t.nav.results}
             </button>

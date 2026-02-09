@@ -6,11 +6,20 @@ interface LanguageContextType {
   language: Language;
   getLocalizedPath: (path: string) => string;
   switchLanguagePath: () => string;
+  getPathForLang: (targetLang: Language) => string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const LANGUAGES: Language[] = ['en', 'de', 'es'];
+export const LANGUAGES: Language[] = ['en', 'de', 'es'];
+
+const LANGUAGE_LABELS: Record<Language, string> = {
+  en: 'English',
+  de: 'Deutsch',
+  es: 'Español',
+};
+
+export { LANGUAGE_LABELS };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [location] = useLocation();
@@ -25,15 +34,19 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     return `/${language}${cleanPath}`;
   };
   
+  const getPathForLang = (targetLang: Language): string => {
+    const currentPath = location.replace(/^\/(en|de|es)/, '') || '';
+    return `/${targetLang}${currentPath}`;
+  };
+
   const switchLanguagePath = (): string => {
     const currentIndex = LANGUAGES.indexOf(language);
     const nextLang = LANGUAGES[(currentIndex + 1) % LANGUAGES.length];
-    const currentPath = location.replace(/^\/(en|de|es)/, '') || '';
-    return `/${nextLang}${currentPath}`;
+    return getPathForLang(nextLang);
   };
   
   return (
-    <LanguageContext.Provider value={{ language, getLocalizedPath, switchLanguagePath }}>
+    <LanguageContext.Provider value={{ language, getLocalizedPath, switchLanguagePath, getPathForLang }}>
       {children}
     </LanguageContext.Provider>
   );

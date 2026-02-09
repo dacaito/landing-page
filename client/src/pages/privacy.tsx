@@ -5,6 +5,7 @@ import { Link, useLocation } from "wouter";
 import { Helmet } from "react-helmet-async";
 import { translations } from "@/lib/translations";
 import { useLanguage } from "@/lib/LanguageContext";
+import { LanguageDropdown } from "@/components/LanguageDropdown";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
 export default function Privacy() {
@@ -40,10 +41,6 @@ export default function Privacy() {
     }
     return () => { document.body.style.overflow = ''; };
   }, [mobileMenuOpen]);
-
-  const toggleLanguage = () => {
-    setLocation(switchLanguagePath());
-  };
 
   const canonicalUrl = `https://vexgen.ai/${lang}/privacy`;
   const alternateEn = `https://vexgen.ai/en/privacy`;
@@ -115,13 +112,7 @@ export default function Privacy() {
             </Link>
           </div>
           <div className="flex items-center gap-2">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border/50 text-sm text-muted-foreground hover:text-foreground hover:border-border transition-colors"
-            >
-              <Globe className="w-4 h-4" />
-              <span className="uppercase font-medium">{lang}</span>
-            </button>
+            <LanguageDropdown />
             <Link href={getLocalizedPath('/')}>
               <Button size="sm" className="hidden sm:flex rounded-full px-4 sm:px-6">
                 {t.cta.requestDemo}
