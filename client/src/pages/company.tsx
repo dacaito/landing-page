@@ -39,7 +39,6 @@ export default function Company() {
     linkedin: "https://www.linkedin.com/company/vexgen-ai/",
     crunchbase: "https://www.crunchbase.com/organization/vexgen-ai",
     dealroom: "https://app.dealroom.co/companies/vexgen_ai",
-    wlw: "https://www.wlw.ch/de/firma/vexgen-ai-22367771",
     github: "https://github.com/vexgen-ai",
   } as const;
 
@@ -573,16 +572,6 @@ export default function Company() {
               className="text-primary hover:underline"
             >
               Dealroom
-            </a>
-            ,{" "}
-            <a
-              href={profileLinks.wlw}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => track("outbound_click", { domain: getDomain(profileLinks.wlw), url: profileLinks.wlw })}
-              className="text-primary hover:underline"
-            >
-              WLW
             </a>{" "}
             {profilesCopy.andWord}{" "}
             <a
