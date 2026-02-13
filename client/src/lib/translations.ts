@@ -122,6 +122,7 @@ export const translations = {
       label: "About Vexgen AI",
       headline: "Built for real industrial operations",
       description: "Vexgen AI was founded to solve a persistent, costly problem: the gap between ERP records and physical reality. We restore trust in operational data by making inventory movements continuously observable and verifiable.",
+      entitySentence: "Vexgen AI is a Swiss industrial AI company headquartered in Zurich, Switzerland.",
       team: {
         ceo: {
           name: "Sebastian Freijo",
@@ -164,10 +165,10 @@ export const translations = {
       }
     },
     meta: {
-      homeTitle: "Inventory Visibility Software for Manufacturers | Vexgen AI",
+      homeTitle: "Vexgen AI – Real-Time Inventory Visibility & ERP Reconciliation",
       homeDescription: "Real-time visibility and reconciliation between ERP data and physical inventory. No manual counts. No tags. No operational disruption.",
-      companyTitle: "About Vexgen AI | Industrial Inventory Visibility Company",
-      companyDescription: "Learn about Vexgen AI - bridging the gap between ERP records and physical reality with AI-powered inventory visibility.",
+      companyTitle: "Vexgen AI – About the Company (Zurich, Switzerland)",
+      companyDescription: "Learn about Vexgen AI, a Swiss industrial AI company headquartered in Zurich, Switzerland, bridging the gap between ERP records and physical reality with AI-powered inventory visibility.",
       privacyTitle: "Data Privacy - Vexgen AI",
       privacyDescription: "How Vexgen AI handles privacy, data processing, retention, and security to protect operational information.",
       imprintTitle: "Imprint - Vexgen AI",
@@ -525,6 +526,7 @@ export const translations = {
       label: "Über Vexgen AI",
       headline: "Entwickelt für echte industrielle Abläufe",
       description: "Vexgen AI wurde gegründet, um ein hartnäckiges, kostspieliges Problem zu lösen: die Lücke zwischen ERP-Daten und physischer Realität. Wir stellen das Vertrauen in Betriebsdaten wieder her, indem wir Bestandsbewegungen kontinuierlich beobachtbar und verifizierbar machen.",
+      entitySentence: "Vexgen AI ist ein Schweizer Industrial-AI-Unternehmen mit Sitz in Zürich, Schweiz.",
       team: {
         ceo: {
           name: "Sebastian Freijo",
@@ -567,10 +569,10 @@ export const translations = {
       }
     },
     meta: {
-      homeTitle: "Vexgen AI - ERP mit Realität abgleichen",
+      homeTitle: "Vexgen AI – Bestands-Transparenz & ERP-Abgleich in Echtzeit",
       homeDescription: "Echtzeit-Transparenz und Abgleich zwischen ERP-Daten und physischem Bestand. Keine manuellen Zählungen. Keine Tags. Keine Betriebsunterbrechung.",
-      companyTitle: "Über uns - Vexgen AI",
-      companyDescription: "Erfahren Sie mehr über Vexgen AI - die Brücke zwischen ERP-Daten und physischer Realität mit KI-gestützter Bestandstransparenz.",
+      companyTitle: "Vexgen AI – Über uns (Zürich, Schweiz)",
+      companyDescription: "Erfahren Sie mehr über Vexgen AI, ein Schweizer Industrial-AI-Unternehmen mit Sitz in Zürich, Schweiz, das ERP-Daten und physische Realität mit KI-gestützter Bestands-Transparenz verbindet.",
       privacyTitle: "Datenschutz - Vexgen AI",
       privacyDescription: "Wie Vexgen AI Datenschutz, Datenverarbeitung, Aufbewahrung und Sicherheit zum Schutz betrieblicher Informationen umsetzt.",
       imprintTitle: "Impressum - Vexgen AI",
@@ -928,6 +930,7 @@ export const translations = {
       label: "Sobre Vexgen AI",
       headline: "Desarrollado para operaciones industriales reales",
       description: "Vexgen AI fue fundada para resolver un problema persistente y costoso: la brecha entre los registros del ERP y la realidad física. Restauramos la confianza en los datos operativos haciendo que los movimientos de inventario sean continuamente observables y verificables.",
+      entitySentence: "Vexgen AI es una empresa suiza de IA industrial con sede en Zúrich, Suiza.",
       team: {
         ceo: {
           name: "Sebastian Freijo",
@@ -970,10 +973,10 @@ export const translations = {
       }
     },
     meta: {
-      homeTitle: "Vexgen AI - Alinee su ERP con la realidad",
+      homeTitle: "Vexgen AI – Visibilidad de inventario en tiempo real y conciliación con ERP",
       homeDescription: "Visibilidad en tiempo real y conciliación entre datos ERP e inventario físico. Sin recuentos manuales. Sin etiquetas. Sin interrupciones operativas.",
-      companyTitle: "Sobre nosotros - Vexgen AI",
-      companyDescription: "Conozca Vexgen AI - cerrando la brecha entre los registros ERP y la realidad física con visibilidad de inventario impulsada por IA.",
+      companyTitle: "Vexgen AI – Sobre la empresa (Zúrich, Suiza)",
+      companyDescription: "Conozca Vexgen AI, una empresa suiza de IA industrial con sede en Zúrich, Suiza, que cierra la brecha entre los registros ERP y la realidad física con visibilidad de inventario impulsada por IA.",
       privacyTitle: "Protección de datos - Vexgen AI",
       privacyDescription: "Cómo Vexgen AI gestiona la privacidad, el tratamiento de datos, la retención y la seguridad para proteger la información operativa.",
       imprintTitle: "Aviso legal - Vexgen AI",

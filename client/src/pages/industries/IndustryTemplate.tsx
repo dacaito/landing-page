@@ -150,19 +150,23 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
   const alternateEn = `https://vexgen.ai/en/industries/${content.slug}`;
   const alternateDe = `https://vexgen.ai/de/industries/${content.slug}`;
   const alternateEs = `https://vexgen.ai/es/industries/${content.slug}`;
-  const EN_TITLE_OVERRIDES: Partial<Record<string, string>> = {
-    chemical: "Chemical Inventory Visibility Software | Vexgen AI",
-    pharma: "Pharmaceutical Inventory Visibility & Compliance Software | Vexgen AI",
-    plastics: "Plastics Manufacturing Inventory Visibility Software | Vexgen AI",
-    "food-beverage": "Food & Beverage Inventory Visibility Software | Vexgen AI",
-    cosmetics: "Cosmetics Manufacturing Inventory Visibility Software | Vexgen AI",
-    logistics: "Warehouse & Logistics Inventory Visibility Software | Vexgen AI",
+  const slugToIndustryKey: Record<string, keyof typeof t.industries> = {
+    chemical: "chemical",
+    cosmetics: "cosmetics",
+    logistics: "logistics",
+    pharma: "pharma",
+    plastics: "plastics",
+    "food-beverage": "foodBeverage",
   };
-  const enOverride = EN_TITLE_OVERRIDES[content.slug];
+  const industryKey = slugToIndustryKey[content.slug] ?? "chemical";
+  const industryLabel = t.industries[industryKey] ?? c.intro.headline;
+
   const pageTitle =
-    lang === "en" && typeof enOverride === "string"
-      ? enOverride
-      : `${c.intro.headline} - Vexgen AI`;
+    lang === "en"
+      ? `Vexgen AI – ${industryLabel} Inventory Visibility Software`
+      : lang === "de"
+        ? `Vexgen AI – Software für Bestands-Transparenz in der ${industryLabel}-Industrie`
+        : `Vexgen AI – Software de visibilidad de inventario para ${industryLabel}`;
 
   return (
     <div className="min-h-screen bg-background">

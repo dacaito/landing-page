@@ -367,6 +367,7 @@ export default function Company() {
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-12 sm:mb-16 max-w-3xl mx-auto leading-relaxed px-2">
             {t.company.description}
+            <span className="block mt-4">{t.company.entitySentence}</span>
           </p>
         </div>
       </section>
