@@ -4,6 +4,11 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+  ssr: {
+    // Ensure react-helmet-async is bundled for SSR output so Node ESM import works reliably.
+    // Without this, Vite may externalize it and Node can fail on named exports.
+    noExternal: ["react-helmet-async"],
+  },
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),

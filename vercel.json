@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build:web",
+  "buildCommand": "npm run build && npm run prerender",
   "outputDirectory": "dist/public",
   "redirects": [
     { "source": "/", "destination": "/en", "permanent": true },
@@ -29,5 +29,16 @@
     { "source": "/Company", "destination": "/en/company", "permanent": true },
     { "source": "/Company/", "destination": "/en/company", "permanent": true }
   ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/en", "destination": "/en.html" },
+    { "source": "/en/:path*", "destination": "/en/:path*.html" },
+
+    { "source": "/de", "destination": "/de.html" },
+    { "source": "/de/:path*", "destination": "/de/:path*.html" },
+
+    { "source": "/es", "destination": "/es.html" },
+    { "source": "/es/:path*", "destination": "/es/:path*.html" },
+
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
