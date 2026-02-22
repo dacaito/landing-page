@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Building2, Factory, Globe, Menu, X, ChevronDown, Linkedin, ExternalLink, Target, Eye } from "lucide-react";
+import { Building2, Factory, Globe, Menu, X, ChevronDown, Linkedin, Target, Eye } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { SeoHead } from "@/components/SeoHead";
@@ -430,7 +430,7 @@ export default function Company() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16">
             <Card className="p-5 sm:p-6 md:p-8 text-left border-border/50">
               <div className="flex items-start justify-between mb-3">
                 <div>
@@ -464,23 +464,6 @@ export default function Company() {
                 </a>
               </div>
               <p className="text-sm sm:text-base text-muted-foreground">{t.company.team.cto.bio}</p>
-            </Card>
-            <Card className="p-5 sm:p-6 md:p-8 text-left border-border/50">
-              <div className="flex items-start justify-between mb-3">
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-1">{t.company.team.advisor.name}</h3>
-                  <p className="text-primary text-xs sm:text-sm">{t.company.team.advisor.role}</p>
-                </div>
-                <a 
-                  href="https://stefankalmund.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-              <p className="text-sm sm:text-base text-muted-foreground">{t.company.team.advisor.bio}</p>
             </Card>
           </div>
 
