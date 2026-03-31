@@ -38,15 +38,15 @@ export const translations = {
     },
     problem: {
       label: "The Problem",
-      headline: "Outbound truck verification is still manual",
-      description: "In many plants handling tubes, pipes, and profiles, outbound truck verification still relies on manual checks, visual inspection, or trust. This consumes time and increases the risk of errors under dispatch pressure.\n\nThis leads to recurring problems at dispatch:",
+      headline: "Manual dispatch checks slow everything down",
+      description: "In many plants handling tubes, pipes, and profiles, dispatch still relies on manual counting, visual checks, or trust.\nThis slows down shipments and adds extra work under time pressure.\n\nAs a result, teams deal with:",
       issues: [
         "Manual counting under time pressure",
-        "No reliable proof of what was shipped",
-        "Loading errors become customer claims",
-        "Time lost in rechecks and investigations"
+        "Rechecks that delay trucks from leaving",
+        "Loading errors that turn into customer claims",
+        "Rework and investigations after dispatch"
       ],
-      closing: "If you don't catch the error before the truck leaves, you deal with it later — in time, cost, and lost customer trust."
+      closing: "Time lost at dispatch shows up later — in delays, extra work, and customer issues."
     },
     outcome: {
       label: "The Outcome",
