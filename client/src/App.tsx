@@ -1,4 +1,4 @@
-import { Switch, Route, useLocation } from "wouter";
+import { Switch, Route, useLocation, Redirect } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -25,7 +25,8 @@ function Router() {
   return (
     <Suspense fallback={null}>
       <Switch>
-        <Route path="/en" component={Home} />
+        <Route path="/en"><Redirect to="/en/inventory-management" /></Route>
+        <Route path="/en/inventory-management" component={Home} />
         <Route path="/en/industries/plastics" component={PlasticsIndustry} />
         <Route path="/en/industries/food-beverage" component={FoodBeverageIndustry} />
         <Route path="/en/industries/cosmetics" component={CosmeticsIndustry} />
@@ -36,7 +37,8 @@ function Router() {
         <Route path="/en/privacy" component={Privacy} />
         <Route path="/en/imprint" component={Imprint} />
 
-        <Route path="/de" component={Home} />
+        <Route path="/de"><Redirect to="/de/inventory-management" /></Route>
+        <Route path="/de/inventory-management" component={Home} />
         <Route path="/de/industries/plastics" component={PlasticsIndustry} />
         <Route path="/de/industries/food-beverage" component={FoodBeverageIndustry} />
         <Route path="/de/industries/cosmetics" component={CosmeticsIndustry} />
@@ -47,7 +49,8 @@ function Router() {
         <Route path="/de/privacy" component={Privacy} />
         <Route path="/de/imprint" component={Imprint} />
 
-        <Route path="/es" component={Home} />
+        <Route path="/es"><Redirect to="/es/inventory-management" /></Route>
+        <Route path="/es/inventory-management" component={Home} />
         <Route path="/es/industries/plastics" component={PlasticsIndustry} />
         <Route path="/es/industries/food-beverage" component={FoodBeverageIndustry} />
         <Route path="/es/industries/cosmetics" component={CosmeticsIndustry} />

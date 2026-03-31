@@ -36,7 +36,8 @@ A Vite + React landing page for Vexgen AI, a company offering real-time visibili
 All routes use language prefixes for SEO-friendly internationalization:
 
 ### English Routes (`/en/`)
-- `/en/` - Home page (English)
+- `/en/` - Redirects to `/en/inventory-management`
+- `/en/inventory-management` - Home/Landing page (English)
 - `/en/industries/chemical` - Chemical industry page
 - `/en/industries/plastics` - Plastics industry page
 - `/en/industries/food-beverage` - Food & Beverage industry page
@@ -48,7 +49,8 @@ All routes use language prefixes for SEO-friendly internationalization:
 - `/en/imprint` - Imprint/Legal page
 
 ### German Routes (`/de/`)
-- `/de/` - Home page (German)
+- `/de/` - Redirects to `/de/inventory-management`
+- `/de/inventory-management` - Home/Landing page (German)
 - `/de/industries/chemical` - Chemie page
 - `/de/industries/plastics` - Kunststoffe page
 - `/de/industries/food-beverage` - Lebensmittel & Getränke page
@@ -60,7 +62,8 @@ All routes use language prefixes for SEO-friendly internationalization:
 - `/de/imprint` - Impressum page
 
 ### Spanish Routes (`/es/`)
-- `/es/` - Home page (Spanish)
+- `/es/` - Redirects to `/es/inventory-management`
+- `/es/inventory-management` - Home/Landing page (Spanish)
 - `/es/industries/chemical` - Química page
 - `/es/industries/plastics` - Plásticos page
 - `/es/industries/food-beverage` - Alimentación y bebidas page
@@ -72,7 +75,7 @@ All routes use language prefixes for SEO-friendly internationalization:
 - `/es/imprint` - Aviso legal page
 
 ### Root Route (`/`)
-- Redirects to `/en/`, `/de/`, or `/es/` based on browser language detection
+- Redirects to `/en/`, `/de/`, or `/es/` based on browser language detection (then further redirects to `/inventory-management`)
 
 ## Scripts
 - `npm run dev:web` - Start development server on port 5000
@@ -104,6 +107,12 @@ All routes use language prefixes for SEO-friendly internationalization:
 - **Browser Language Detection**: Root path (`/`) redirects to `/en/`, `/de/`, or `/es/` based on browser language preference
 
 ## Recent Changes
+- **2026-03-31**: Restructured routing and removed Industries from navigation (setup work)
+  - Moved landing page from `/en/`, `/de/`, `/es/` to `/en/inventory-management`, `/de/inventory-management`, `/es/inventory-management`
+  - Old root language routes (`/en`, `/de`, `/es`) now redirect to their respective `/inventory-management` paths
+  - Removed Industries dropdown from all headers (desktop + mobile) in both `home.tsx` and `IndustryTemplate.tsx`
+  - Industry pages (`/industries/*`) remain fully accessible — links exist and work, just not in the nav
+  - Logo and nav links updated to point directly to `/inventory-management`
 - **2026-02-09**: Added Spanish (ES) as third language across entire site
   - Added full Spanish translations to translations.ts (nav, home, all industry page strings)
   - Updated Language type to include 'es', LanguageContext cycles EN → DE → ES → EN

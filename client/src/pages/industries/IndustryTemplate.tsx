@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ChevronRight, Check, Camera, RefreshCw, Database, Globe, Menu, X, ChevronDown, Target, TrendingUp, DollarSign, Clock, AlertTriangle, Package, Thermometer, Sparkles, Shield, Zap, BarChart3, CheckCircle2, ArrowUpRight, Layers } from "lucide-react";
+import { ChevronRight, Check, Camera, RefreshCw, Database, Globe, Menu, X, Target, TrendingUp, DollarSign, Clock, AlertTriangle, Package, Thermometer, Sparkles, Shield, Zap, BarChart3, CheckCircle2, ArrowUpRight, Layers } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { SeoHead } from "@/components/SeoHead";
@@ -68,7 +68,6 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
   const t = translations[lang];
   const c = content[lang];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [industriesOpen, setIndustriesOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -134,7 +133,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
 
   const navigateToHomeSection = (sectionId: string) => {
     setMobileMenuOpen(false);
-    setLocation(getLocalizedPath('/'));
+    setLocation(getLocalizedPath('/inventory-management'));
     setTimeout(() => {
       const el = document.getElementById(sectionId);
       if (el) {
@@ -181,7 +180,7 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
           <Link
-            href={getLocalizedPath('/')}
+            href={getLocalizedPath('/inventory-management')}
             className="flex items-center gap-2 cursor-pointer rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background"
           >
             <img src={vixgenLogo} alt="Vexgen AI Logo" className="w-8 h-8 sm:w-9 sm:h-9 object-contain" />
@@ -233,117 +232,6 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             >
               {t.nav.howItWorks}
             </button>
-            <div 
-              className="relative group"
-              onMouseEnter={() => setIndustriesOpen(true)}
-              onMouseLeave={() => setIndustriesOpen(false)}
-            >
-              <button 
-                className="text-sm text-foreground font-medium flex items-center gap-1 py-2"
-                onClick={() =>
-                  track("nav_click", {
-                    item: "industries",
-                    label: t.nav.industries,
-                    href: "",
-                    kind: "anchor",
-                    hash: "industries_menu",
-                  })
-                }
-              >
-                {t.nav.industries}
-                <ChevronDown className={`w-3 h-3 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {industriesOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 z-50 pt-1">
-                  <div className="bg-background border border-border rounded-lg shadow-lg py-2">
-                    <Link
-                      href={getLocalizedPath('/industries/chemical')}
-                      onClick={() =>
-                        track("nav_click", {
-                          item: "industry_chemical",
-                          label: t.industries.chemical,
-                          href: getLocalizedPath("/industries/chemical"),
-                          kind: "route",
-                        })
-                      }
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                    >
-                      {t.industries.chemical}
-                    </Link>
-                    <Link
-                      href={getLocalizedPath('/industries/plastics')}
-                      onClick={() =>
-                        track("nav_click", {
-                          item: "industry_plastics",
-                          label: t.industries.plastics,
-                          href: getLocalizedPath("/industries/plastics"),
-                          kind: "route",
-                        })
-                      }
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                    >
-                      {t.industries.plastics}
-                    </Link>
-                    <Link
-                      href={getLocalizedPath('/industries/food-beverage')}
-                      onClick={() =>
-                        track("nav_click", {
-                          item: "industry_food_beverage",
-                          label: t.industries.foodBeverage,
-                          href: getLocalizedPath("/industries/food-beverage"),
-                          kind: "route",
-                        })
-                      }
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                    >
-                      {t.industries.foodBeverage}
-                    </Link>
-                    <Link
-                      href={getLocalizedPath('/industries/cosmetics')}
-                      onClick={() =>
-                        track("nav_click", {
-                          item: "industry_cosmetics",
-                          label: t.industries.cosmetics,
-                          href: getLocalizedPath("/industries/cosmetics"),
-                          kind: "route",
-                        })
-                      }
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                    >
-                      {t.industries.cosmetics}
-                    </Link>
-                    <Link
-                      href={getLocalizedPath('/industries/pharma')}
-                      onClick={() =>
-                        track("nav_click", {
-                          item: "industry_pharma",
-                          label: t.industries.pharma,
-                          href: getLocalizedPath("/industries/pharma"),
-                          kind: "route",
-                        })
-                      }
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                    >
-                      {t.industries.pharma}
-                    </Link>
-                    <Link
-                      href={getLocalizedPath('/industries/logistics')}
-                      onClick={() =>
-                        track("nav_click", {
-                          item: "industry_logistics",
-                          label: t.industries.logistics,
-                          href: getLocalizedPath("/industries/logistics"),
-                          kind: "route",
-                        })
-                      }
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                    >
-                      {t.industries.logistics}
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
             <Link
               href={getLocalizedPath('/company')}
               onClick={() =>
@@ -411,101 +299,6 @@ export default function IndustryTemplate({ content }: IndustryTemplateProps) {
             >
               {t.nav.howItWorks}
             </button>
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-2xl font-medium text-foreground">{t.nav.industries}</span>
-              <div className="flex flex-wrap justify-center gap-2">
-                <Link
-                  href={getLocalizedPath('/industries/chemical')}
-                  onClick={() => {
-                    track("nav_click", {
-                      item: "industry_chemical",
-                      label: t.industries.chemical,
-                      href: getLocalizedPath("/industries/chemical"),
-                      kind: "route",
-                    });
-                    setMobileMenuOpen(false);
-                  }}
-                  className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors"
-                >
-                  {t.industries.chemical}
-                </Link>
-                <Link
-                  href={getLocalizedPath('/industries/plastics')}
-                  onClick={() => {
-                    track("nav_click", {
-                      item: "industry_plastics",
-                      label: t.industries.plastics,
-                      href: getLocalizedPath("/industries/plastics"),
-                      kind: "route",
-                    });
-                    setMobileMenuOpen(false);
-                  }}
-                  className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors"
-                >
-                  {t.industries.plastics}
-                </Link>
-                <Link
-                  href={getLocalizedPath('/industries/food-beverage')}
-                  onClick={() => {
-                    track("nav_click", {
-                      item: "industry_food_beverage",
-                      label: t.industries.foodBeverage,
-                      href: getLocalizedPath("/industries/food-beverage"),
-                      kind: "route",
-                    });
-                    setMobileMenuOpen(false);
-                  }}
-                  className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors"
-                >
-                  {t.industries.foodBeverage}
-                </Link>
-                <Link
-                  href={getLocalizedPath('/industries/cosmetics')}
-                  onClick={() => {
-                    track("nav_click", {
-                      item: "industry_cosmetics",
-                      label: t.industries.cosmetics,
-                      href: getLocalizedPath("/industries/cosmetics"),
-                      kind: "route",
-                    });
-                    setMobileMenuOpen(false);
-                  }}
-                  className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors"
-                >
-                  {t.industries.cosmetics}
-                </Link>
-                <Link
-                  href={getLocalizedPath('/industries/pharma')}
-                  onClick={() => {
-                    track("nav_click", {
-                      item: "industry_pharma",
-                      label: t.industries.pharma,
-                      href: getLocalizedPath("/industries/pharma"),
-                      kind: "route",
-                    });
-                    setMobileMenuOpen(false);
-                  }}
-                  className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors"
-                >
-                  {t.industries.pharma}
-                </Link>
-                <Link
-                  href={getLocalizedPath('/industries/logistics')}
-                  onClick={() => {
-                    track("nav_click", {
-                      item: "industry_logistics",
-                      label: t.industries.logistics,
-                      href: getLocalizedPath("/industries/logistics"),
-                      kind: "route",
-                    });
-                    setMobileMenuOpen(false);
-                  }}
-                  className="px-3 py-1.5 text-sm rounded-full border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary transition-colors"
-                >
-                  {t.industries.logistics}
-                </Link>
-              </div>
-            </div>
             <Link
               href={getLocalizedPath('/company')}
               onClick={() => {
