@@ -21,8 +21,8 @@ export const translations = {
     },
     hero: {
       headline: "Automate dispatch checks.\nSave time.",
-      subheadline: "Vision-based shipment verification for tubes, pipes, and profiles.",
-      tagline: "Save time on dispatch verification with automated checks. Detect loading discrepancies before goods leave the plant. Create a complete, traceable record of what actually shipped.\n\nNo manual counts. No tags. No disruption."
+      subheadline: "No more manual dispatch verification.",
+      tagline: "Catch errors before trucks leave.\nKeep a clear record of every shipment.\n\nNo manual checks. Same process. Less time."
     },
     results: {
       label: "Proven Results",
