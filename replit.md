@@ -107,6 +107,15 @@ All routes use language prefixes for SEO-friendly internationalization:
 - **Browser Language Detection**: Root path (`/`) redirects to `/en/`, `/de/`, or `/es/` based on browser language preference
 
 ## Recent Changes
+- **2026-03-31**: Updated English page content to outbound truck verification template (DE/ES translation pending)
+  - Hero: "Verify every truck before it leaves the plant" — AI-based outbound shipment verification for long products
+  - Problem: manual truck verification with 4 dispatch issues
+  - Results: >99% Shipment Accuracy, >50% Claim Reduction, >1,000 Hours Labor Saved, <90 Days ROI
+  - Outcome: 5 benefits of real-time dispatch verification
+  - How It Works: expanded to 4 steps (added ShieldCheck icon for "Approve or block dispatch")
+  - Who It's For: steel/plastic/aluminum/industrial plants shipping long products
+  - Grid updated to sm:grid-cols-2 xl:grid-cols-4 for 4-step layout
+  - Added whitespace-pre-line to tagline, problem description, and outcome description
 - **2026-03-31**: Restructured routing and removed Industries from navigation (setup work)
   - Home page remains at `/en/`, `/de/`, `/es/` as the canonical home route
   - Same content also accessible at `/en/inventory-management`, `/de/inventory-management`, `/es/inventory-management` (identical for now)

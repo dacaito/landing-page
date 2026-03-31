@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowDown, Camera, RefreshCw, Database, Factory, Warehouse, Users, Building2, ChevronRight, Check, Menu, X } from "lucide-react";
+import { ArrowDown, Camera, RefreshCw, Database, ShieldCheck, Factory, Warehouse, Users, Building2, ChevronRight, Check, Menu, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { SeoHead } from "@/components/SeoHead";
@@ -82,7 +82,7 @@ export default function Home() {
     }, 100);
   };
 
-  const howItWorksIcons = [Camera, RefreshCw, Database];
+  const howItWorksIcons = [Camera, RefreshCw, Database, ShieldCheck];
   const whoItsForIcons = [Factory, Warehouse, Users, Building2];
 
   const pagePath = location.replace(/^\/(en|de|es)/, '') || '';
@@ -297,7 +297,7 @@ export default function Home() {
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-3 sm:mb-4 leading-relaxed px-2">
             {t.hero.subheadline}
           </p>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground/80 max-w-2xl mx-auto mb-8 sm:mb-12 px-2">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground/80 max-w-2xl mx-auto mb-8 sm:mb-12 px-2 whitespace-pre-line">
             {t.hero.tagline}
           </p>
           
@@ -349,7 +349,7 @@ export default function Home() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-6 sm:mb-8 leading-tight" data-testid="text-problem-headline">
             {t.problem.headline}
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 leading-relaxed px-2">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 leading-relaxed px-2 whitespace-pre-line">
             {t.problem.description}
           </p>
 
@@ -425,7 +425,7 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 sm:mb-8" data-testid="text-outcome-headline">
                 {t.outcome.headline}
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 whitespace-pre-line">
                 {t.outcome.description}
               </p>
 
@@ -476,7 +476,7 @@ export default function Home() {
             {t.howItWorks.description}
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8">
             {t.howItWorks.steps.map((item, i) => {
               const Icon = howItWorksIcons[i];
               return (

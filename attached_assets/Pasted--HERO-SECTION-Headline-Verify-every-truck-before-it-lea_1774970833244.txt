@@ -1,0 +1,139 @@
+## HERO SECTION
+
+### **Headline**
+
+Verify every truck before it leaves the plant
+
+### **Sub-headline**
+
+AI-based outbound shipment verification for long products.
+
+Detect loading discrepancies before dispatch. Replace manual checks with automated verification and create a traceable record of what actually left the plant.
+
+No manual counts. No tags. No disruption.
+
+### **Primary CTA**
+
+Request a Demo
+
+### Hero Visual
+
+**Video showing:** 
+
+- Truck loaded with pipes
+- Overlay showing count / bundle / verification / pass-fail
+- discrepancy flag
+
+**Video sequence:**
+
+1. Truck being loaded (real environment)
+2. Camera view (slightly stylized)
+3. Overlay:
+    - “Expected: 120 pipes with product name A”
+    - “Detected: 118 pipes”
+    - “Discrepancy detected”
+4. After solving the issue:
+    - “Verified – ready for dispatch”
+
+## **THE PROBLEM**
+
+**Outbound truck verification is still manual**
+
+In many plants handling long products, outbound truck verification still relies on manual checks, visual inspection, or trust. This consumes time and increases the risk of errors under dispatch pressure.
+
+This leads to recurring problems at dispatch:
+
+- Manual counting under time pressure
+- No reliable proof of what was shipped
+- Loading errors become customer claims
+- Time lost in rechecks and investigations
+
+If you don’t catch the error before the truck leaves, you deal with it later in time, cost, and lost customer trust.
+
+## **RESULTS**
+
+Proven Results
+
+**Reality delivers returns**
+
+Deployed in real manufacturing environments. Measurable ROI from day one.
+
+- **>99% SHIPMENT ACCURACY**
+- **>50% CLAIM REDUCTION**
+- **>1,000 Hours LABOR TIME SAVED**
+- **<90 days TIME TO ROI**
+
+![image.png](attachment:7ebe76a2-7af8-4ae7-9763-6e23e4c77009:image.png)
+
+Or:
+
+![image.png](attachment:55e1ecb1-a6ee-44e1-ad33-0684c0138057:image.png)
+
+## **THE OUTCOME**
+
+### **What changes when every shipment is verified before dispatch**
+
+When outbound shipments are verified in real time, errors are stopped before they leave the plant.
+
+With Vexgen AI, operations become more controlled and predictable:
+
+- Shipments leave the site exactly as planned
+- Loading errors are caught before they become customer claims
+- Manual verification at dispatch is eliminated
+- Less time spent on investigations and rechecks
+- Full traceability of what actually left the plant
+
+This is not post-shipment control. It is control at dispatch.
+
+## **HOW IT WORKS**
+
+### **Automated verification at the point of dispatch**
+
+Vexgen AI verifies every outbound shipment before it leaves the site.
+
+1. **Capture the loaded truck**
+
+Cameras monitor the truck at the dispatch point. 
+
+1. **Detect and count what is loaded**
+
+Vision-based models detect and count loaded materials directly from the truck.
+
+1. **Compare against the shipment order**
+
+The system matches detected quantities with the expected shipment from the ERP.
+
+1. **Approve or block dispatch**
+
+If everything matches, the truck is cleared.
+
+If not, the shipment is flagged and held before leaving the plant.
+
+No scanners.
+
+No tags.
+
+No manual checks.
+
+## 
+
+## **WHO IT’S FOR**
+
+### **Built for operations handling outbound shipments of long products**
+
+Vexgen AI is designed for:
+
+- Steel pipe and tube producers
+- Plastic pipe and profile manufacturers
+- Aluminum and extrusion companies
+- Industrial plants shipping long or bundled products
+
+If your operation depends on loading trucks correctly before dispatch, Vexgen AI is relevant.
+
+## **FINAL CTA**
+
+### **See Vexgen AI in action**
+
+The fastest way to understand the impact is to see it applied to your operation.
+
+**Request a Demo**

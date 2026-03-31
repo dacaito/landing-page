@@ -20,85 +20,90 @@ export const translations = {
       logistics: "Logistics & Fulfillment"
     },
     hero: {
-      headline: "Your ERP.\nThe Truth.",
-      subheadline: "Real-time visibility that bridges the gap between what your ERP says and what is actually on your floor.",
-      tagline: "No manual counts. No tags. No disruption."
+      headline: "Verify every truck before it leaves the plant",
+      subheadline: "AI-based outbound shipment verification for long products.",
+      tagline: "Detect loading discrepancies before dispatch. Replace manual checks with automated verification and create a traceable record of what actually left the plant.\n\nNo manual counts. No tags. No disruption."
     },
     results: {
       label: "Proven Results",
       headline: "Reality delivers returns",
       description: "Deployed in real manufacturing environments. Measurable ROI from day one.",
       metrics: {
-        accuracy: { value: ">99%", label: "Inventory Accuracy" },
-        writeoff: { value: "6-Figure", label: "Write-off Reduction" },
-        time: { value: "<1 Hour", label: "ERP Reconciliation" },
+        accuracy: { value: ">99%", label: "Shipment Accuracy" },
+        writeoff: { value: ">50%", label: "Claim Reduction" },
+        time: { value: ">1,000 Hours", label: "Labor Time Saved" },
         roi: { value: "<90 Days", label: "Time to ROI" }
       },
       dashboardCaption: "Live dashboard from active deployment"
     },
     problem: {
       label: "The Problem",
-      headline: "Phantom inventory stays hidden until it costs you millions.",
-      description: "Manufacturing and warehouse operations run on ERP data that rarely reflects the physical reality of the shop floor.",
+      headline: "Outbound truck verification is still manual",
+      description: "In many plants handling long products, outbound truck verification still relies on manual checks, visual inspection, or trust. This consumes time and increases the risk of errors under dispatch pressure.\n\nThis leads to recurring problems at dispatch:",
       issues: [
-        "Emergency purchases and stockouts",
-        "Excess inventory and costly write-offs",
-        "Hours wasted on manual recounts",
-        "Critical decisions based on unreliable data"
+        "Manual counting under time pressure",
+        "No reliable proof of what was shipped",
+        "Loading errors become customer claims",
+        "Time lost in rechecks and investigations"
       ],
-      closing: "Your ERP is only as accurate as the data feeding it. Today, that data is broken."
+      closing: "If you don't catch the error before the truck leaves, you deal with it later — in time, cost, and lost customer trust."
     },
     outcome: {
       label: "The Outcome",
-      headline: "When ERP reflects reality, everything changes",
-      description: "Continuous physical verification transforms operations from reactive to predictable.",
+      headline: "What changes when every shipment is verified before dispatch",
+      description: "When outbound shipments are verified in real time, errors are stopped before they leave the plant.\n\nWith Vexgen AI, operations become more controlled and predictable:",
       benefits: [
-        "Inventory accuracy you can trust, without manual counts",
-        "Stockouts and panic purchases eliminated at the source",
-        "Capital freed from safety buffers and excess stock",
-        "Audits completed in hours, not weeks",
-        "ERP data your teams can actually rely on"
+        "Shipments leave the site exactly as planned",
+        "Loading errors are caught before they become customer claims",
+        "Manual verification at dispatch is eliminated",
+        "Less time spent on investigations and rechecks",
+        "Full traceability of what actually left the plant"
       ],
-      closing: "This is not periodic checking. This is continuous operational truth."
+      closing: "This is not post-shipment control. It is control at dispatch."
     },
     howItWorks: {
       label: "How It Works",
-      headline: "Continuous reconciliation. Zero manual effort.",
-      description: "Vexgen AI securely and automatically connects physical movements to digital records. All your data is processed locally and never leaves your premises. Operator identity is automatically blurred.",
+      headline: "Automated verification at the point of dispatch",
+      description: "Vexgen AI verifies every outbound shipment before it leaves the site.",
       steps: [
         {
           step: "01",
-          title: "Capture every movement",
-          description: "Cameras continuously monitor inventory flows. Nothing goes untracked."
+          title: "Capture the loaded truck",
+          description: "Cameras monitor the truck at the dispatch point."
         },
         {
           step: "02",
-          title: "Validate automatically",
-          description: "Vision technology identifies materials, movements and quantities in real time."
+          title: "Detect and count what is loaded",
+          description: "Vision-based models detect and count loaded materials directly from the truck."
         },
         {
           step: "03",
-          title: "Sync your ERP instantly",
-          description: "Discrepancies detected and corrected automatically. No operator input needed."
+          title: "Compare against the shipment order",
+          description: "The system matches detected quantities with the expected shipment from the ERP."
+        },
+        {
+          step: "04",
+          title: "Approve or block dispatch",
+          description: "If everything matches, the truck is cleared. If not, the shipment is flagged and held before leaving the plant."
         }
       ],
-      tags: ["No scanners", "No tags", "No manual processes"]
+      tags: ["No scanners", "No tags", "No manual checks"]
     },
     whoItsFor: {
       label: "Who It Is For",
-      headline: "Built for operations that move physical inventory",
+      headline: "Built for operations handling outbound shipments of long products",
       industries: [
-        { label: "Manufacturing plants" },
-        { label: "Warehouses and logistics centers" },
-        { label: "Operations and supply chain teams" },
-        { label: "Industrial enterprises on SAP or ERP" }
+        { label: "Steel pipe and tube producers" },
+        { label: "Plastic pipe and profile manufacturers" },
+        { label: "Aluminum and extrusion companies" },
+        { label: "Industrial plants shipping long or bundled products" }
       ],
-      closing: "If inventory accuracy impacts your bottom line, Vexgen AI was built for you."
+      closing: "If your operation depends on loading trucks correctly before dispatch, Vexgen AI is relevant."
     },
     contact: {
       label: "Get Started",
       headline: "See Vexgen AI in action",
-      description: "The fastest path to understanding impact? See it applied to your operation.",
+      description: "The fastest way to understand the impact is to see it applied to your operation.",
       form: {
         name: "Name",
         namePlaceholder: "Your name",
