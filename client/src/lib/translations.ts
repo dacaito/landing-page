@@ -95,7 +95,7 @@ export const translations = {
         { label: "Steel pipe and tube producers" },
         { label: "Plastic pipe and profile manufacturers" },
         { label: "Aluminum and extrusion companies" },
-        { label: "Industrial plants shipping tubes, pipes, and profiles" }
+        { label: "Distributor of tubes, pipes, and profiles" }
       ],
       closing: "If your operation depends on loading trucks correctly before dispatch, Vexgen AI is relevant."
     },
