@@ -20,7 +20,7 @@ export const translations = {
       logistics: "Logistics & Fulfillment"
     },
     hero: {
-      headline: "Automate dispatch checks. Save time.",
+      headline: "Automate dispatch checks.\nSave time.",
       subheadline: "Vision-based shipment verification for tubes, pipes, and profiles.",
       tagline: "Save time on dispatch verification with automated checks. Detect loading discrepancies before goods leave the plant. Create a complete, traceable record of what actually shipped.\n\nNo manual counts. No tags. No disruption."
     },
