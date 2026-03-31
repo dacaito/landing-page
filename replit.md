@@ -108,11 +108,11 @@ All routes use language prefixes for SEO-friendly internationalization:
 
 ## Recent Changes
 - **2026-03-31**: Restructured routing and removed Industries from navigation (setup work)
-  - Moved landing page from `/en/`, `/de/`, `/es/` to `/en/inventory-management`, `/de/inventory-management`, `/es/inventory-management`
-  - Old root language routes (`/en`, `/de`, `/es`) now redirect to their respective `/inventory-management` paths
+  - Home page remains at `/en/`, `/de/`, `/es/` as the canonical home route
+  - Same content also accessible at `/en/inventory-management`, `/de/inventory-management`, `/es/inventory-management` (identical for now)
+  - Canonical URL is path-aware — each URL gets its own correct canonical tag
   - Removed Industries dropdown from all headers (desktop + mobile) in both `home.tsx` and `IndustryTemplate.tsx`
   - Industry pages (`/industries/*`) remain fully accessible — links exist and work, just not in the nav
-  - Logo and nav links updated to point directly to `/inventory-management`
 - **2026-02-09**: Added Spanish (ES) as third language across entire site
   - Added full Spanish translations to translations.ts (nav, home, all industry page strings)
   - Updated Language type to include 'es', LanguageContext cycles EN → DE → ES → EN

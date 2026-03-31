@@ -15,7 +15,7 @@ import vixgenLogo from "@assets/Vexgen-owl.png";
 
 export default function Home() {
   const { language: lang, getLocalizedPath, switchLanguagePath } = useLanguage();
-  const [, setLocation] = useLocation();
+  const [location, setLocation] = useLocation();
   const t = translations[lang];
   
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -85,10 +85,11 @@ export default function Home() {
   const howItWorksIcons = [Camera, RefreshCw, Database];
   const whoItsForIcons = [Factory, Warehouse, Users, Building2];
 
-  const canonicalUrl = `https://vexgen.ai/${lang}/inventory-management`;
-  const alternateEn = "https://vexgen.ai/en/inventory-management";
-  const alternateDe = "https://vexgen.ai/de/inventory-management";
-  const alternateEs = "https://vexgen.ai/es/inventory-management";
+  const pagePath = location.replace(/^\/(en|de|es)/, '') || '';
+  const canonicalUrl = `https://vexgen.ai${location}`;
+  const alternateEn = `https://vexgen.ai/en${pagePath}`;
+  const alternateDe = `https://vexgen.ai/de${pagePath}`;
+  const alternateEs = `https://vexgen.ai/es${pagePath}`;
 
   return (
     <div className="min-h-screen bg-background">
