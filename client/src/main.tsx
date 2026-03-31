@@ -16,7 +16,9 @@ const app = (
 );
 
 // If prerendered markup exists, hydrate it; otherwise do a normal client render.
-if (rootEl.hasChildNodes()) {
+// Use firstElementChild (not hasChildNodes) so that comment nodes like <!--ssr-outlet-->
+// in dev mode don't falsely trigger hydrateRoot and cause a hydration mismatch.
+if (rootEl.firstElementChild !== null) {
   hydrateRoot(rootEl, app);
 } else {
   createRoot(rootEl).render(app);
