@@ -39,7 +39,7 @@ export const translations = {
     problem: {
       label: "The Problem",
       headline: "Manual dispatch checks slow everything down",
-      description: "In many plants handling tubes, pipes, and profiles, dispatch still relies on manual counting, visual checks, or trust.\nThis slows down shipments and adds extra work.\n\nAs a result, teams deal with:",
+      description: "In many plants handling tubes, pipes, and profiles, dispatch still relies on manual counting, visual checks, or trust. This slows down shipments and adds extra work.\n\nAs a result, teams deal with:",
       issues: [
         "Manual counting under time pressure",
         "Rechecks that delay trucks from leaving",
