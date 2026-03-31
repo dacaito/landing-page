@@ -21,7 +21,7 @@ export const translations = {
     },
     hero: {
       headline: "Verify every truck before it leaves the plant",
-      subheadline: "AI-based outbound shipment verification for long products.",
+      subheadline: "AI-based outbound shipment verification for tubes, pipes, and profiles.",
       tagline: "Detect loading discrepancies before dispatch. Replace manual checks with automated verification and create a traceable record of what actually left the plant.\n\nNo manual counts. No tags. No disruption."
     },
     results: {
@@ -39,7 +39,7 @@ export const translations = {
     problem: {
       label: "The Problem",
       headline: "Outbound truck verification is still manual",
-      description: "In many plants handling long products, outbound truck verification still relies on manual checks, visual inspection, or trust. This consumes time and increases the risk of errors under dispatch pressure.\n\nThis leads to recurring problems at dispatch:",
+      description: "In many plants handling tubes, pipes, and profiles, outbound truck verification still relies on manual checks, visual inspection, or trust. This consumes time and increases the risk of errors under dispatch pressure.\n\nThis leads to recurring problems at dispatch:",
       issues: [
         "Manual counting under time pressure",
         "No reliable proof of what was shipped",
@@ -91,12 +91,12 @@ export const translations = {
     },
     whoItsFor: {
       label: "Who It Is For",
-      headline: "Built for operations handling outbound shipments of long products",
+      headline: "Built for operations handling outbound shipments of tubes, pipes, and profiles",
       industries: [
         { label: "Steel pipe and tube producers" },
         { label: "Plastic pipe and profile manufacturers" },
         { label: "Aluminum and extrusion companies" },
-        { label: "Industrial plants shipping long or bundled products" }
+        { label: "Industrial plants shipping tubes, pipes, and profiles" }
       ],
       closing: "If your operation depends on loading trucks correctly before dispatch, Vexgen AI is relevant."
     },
