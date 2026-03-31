@@ -50,16 +50,15 @@ export const translations = {
     },
     outcome: {
       label: "The Outcome",
-      headline: "What changes when every shipment is verified before dispatch",
-      description: "When outbound shipments are verified in real time, errors are stopped before they leave the plant.\n\nWith Vexgen AI, operations become more controlled and predictable:",
+      headline: "What changes when dispatch checks are automated",
+      description: "Shipments are verified in real time, removing manual work at dispatch and freeing up time for more important tasks.\n\nWith Vexgen AI, teams optimize dispatch operations:",
       benefits: [
-        "Shipments leave the site exactly as planned",
+        "Less time spent on repetitive verification work",
         "Loading errors are caught before they become customer claims",
-        "Manual verification at dispatch is eliminated",
-        "Less time spent on investigations and rechecks",
-        "Full traceability of what actually left the plant"
+        "Dispatch runs without manual checks",
+        "Clear record of what shipped — without manual effort"
       ],
-      closing: "This is not post-shipment control. It is control at dispatch."
+      closing: "Spend less time checking. More time running operations."
     },
     howItWorks: {
       label: "How It Works",
