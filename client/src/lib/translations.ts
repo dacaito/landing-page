@@ -97,7 +97,7 @@ export const translations = {
         { label: "Aluminum and extrusion companies" },
         { label: "Distributor of tubes, pipes, and profiles" }
       ],
-      closing: "If your operation depends on loading trucks correctly before dispatch, Vexgen AI is relevant."
+      closing: "If your operation depends on loading trucks correctly before dispatch, Vexgen AI is for you."
     },
     contact: {
       label: "Get Started",
