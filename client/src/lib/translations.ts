@@ -22,7 +22,7 @@ export const translations = {
     hero: {
       headline: "Verify every truck before it leaves the plant",
       subheadline: "Vision-based outbound shipment verification for tubes, pipes, and profiles.",
-      tagline: "Detect loading discrepancies before dispatch. Replace manual checks with automated verification and create a traceable record of what actually left the plant.\n\nNo manual counts. No tags. No disruption."
+      tagline: "Save time on dispatch verification with automated checks. Detect loading discrepancies before goods leave the plant. Create a complete, traceable record of what actually shipped.\n\nNo manual counts. No tags. No disruption."
     },
     results: {
       label: "Proven Results",
