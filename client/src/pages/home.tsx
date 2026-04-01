@@ -298,9 +298,11 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl font-bold tracking-tight leading-[1.1] mb-6 sm:mb-8 whitespace-pre-line text-primary" data-testid="text-hero-headline">
             {t.hero.headline}
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-3 sm:mb-4 leading-relaxed px-2">
-            {t.hero.subheadline}
-          </p>
+          {t.hero.subheadline && (
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-3 sm:mb-4 leading-relaxed px-2">
+              {t.hero.subheadline}
+            </p>
+          )}
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground/80 max-w-2xl mx-auto mb-8 sm:mb-12 px-2 whitespace-pre-line">
             {t.hero.tagline}
           </p>

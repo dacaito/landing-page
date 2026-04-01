@@ -21,7 +21,7 @@ export const translations = {
     },
     hero: {
       headline: "Automate dispatch checks.\nSave time.",
-      subheadline: "Get rid of manual dispatch verification.",
+      subheadline: "",
       tagline: "Catch errors before trucks leave and\nkeep a clear record of every shipment.\n\nNo manual checks. Same process. Less time."
     },
     results: {
