@@ -425,7 +425,7 @@ export default function Home() {
 
       <section id="solution" className="scroll-mt-24 sm:scroll-mt-28 py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-card border-y border-border/50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
             <div>
               <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4" data-testid="text-outcome-label">{t.outcome.label}</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 sm:mb-8" data-testid="text-outcome-headline">
@@ -451,7 +451,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative mt-8 lg:mt-0">
+            <div className="relative mt-8 lg:mt-0 lg:pt-9">
               <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl sm:rounded-3xl blur-lg sm:blur-xl opacity-50" />
               <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-border/50 shadow-xl">
                 <img 
