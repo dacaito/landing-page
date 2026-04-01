@@ -27,7 +27,7 @@ export const translations = {
     results: {
       label: "Proven Results",
       headline: "Reality delivers returns",
-      description: "Deployed in real manufacturing environments. Measurable ROI from day one.",
+      description: "Deployed in real operational environments. Measurable ROI from day one.",
       metrics: {
         accuracy: { value: ">99%", label: "Shipment Accuracy" },
         writeoff: { value: ">50%", label: "Claim Reduction" },
