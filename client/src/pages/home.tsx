@@ -451,7 +451,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative mt-8 lg:mt-0 lg:pt-9">
+            <div className="relative mt-8 lg:mt-0 lg:pt-9 lg:max-w-[80%]">
               <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl sm:rounded-3xl blur-lg sm:blur-xl opacity-50" />
               <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-border/50 shadow-xl">
                 <img 
