@@ -214,7 +214,7 @@ export const translations = {
     cta: {
       requestDemo: "Request a Demo"
     },
-    stockComparison: "Per-lot weight comparison: Vexgen AI vs. SAP",
+    stockComparison: "Live dispatch verification feed — Vexgen AI",
     industryPages: {
       sections: {
         realityToday: "The Reality Today",

@@ -9,7 +9,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { LanguageDropdown } from "@/components/LanguageDropdown";
 import { track } from "@/lib/analytics";
 import dashboardImage from "@assets/dash-board-kpi.png";
-import stockImage from "@assets/image_1_1767949813510.png";
+import stockImage from "@assets/dashboard-verification-feed.png";
 import demoVideo from "@assets/Landing-Page-Reel-876x512.mp4";
 import demoVideoNew from "@assets/vexgen-demo-website.mp4";
 import vixgenLogo from "@assets/Vexgen-owl.png";
@@ -456,7 +456,7 @@ export default function Home() {
               <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-border/50 shadow-xl">
                 <img 
                   src={stockImage} 
-                  alt="Vexgen AI showing stock comparison between measured weight and SAP records"
+                  alt="Vexgen AI live dispatch verification feed"
                   width="600"
                   height="400"
                   loading="lazy"
