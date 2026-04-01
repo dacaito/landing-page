@@ -11,6 +11,7 @@ import { track } from "@/lib/analytics";
 import dashboardImage from "@assets/dash-board-kpi.png";
 import stockImage from "@assets/image_1_1767949813510.png";
 import demoVideo from "@assets/Landing-Page-Reel-876x512.mp4";
+import demoVideoNew from "@assets/vexgen-demo-website.mp4";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
 export default function Home() {
@@ -84,6 +85,9 @@ export default function Home() {
 
   const howItWorksIcons = [Camera, RefreshCw, Database, ShieldCheck];
   const whoItsForIcons = [Factory, Warehouse, Users, Building2];
+
+  const isInventoryManagement = location.includes('/inventory-management');
+  const activeVideo = isInventoryManagement ? demoVideo : demoVideoNew;
 
   const pagePath = location.replace(/^\/(en|de|es)/, '') || '';
   const canonicalUrl = `https://vexgen.ai${location}`;
@@ -305,7 +309,7 @@ export default function Home() {
             <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 rounded-2xl sm:rounded-3xl blur-xl sm:blur-2xl opacity-50 group-hover:opacity-70 transition-opacity" />
             <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-border/50 bg-card shadow-2xl">
               <video 
-                src={demoVideo}
+                src={activeVideo}
                 className="w-full aspect-video object-cover"
                 playsInline
                 autoPlay
