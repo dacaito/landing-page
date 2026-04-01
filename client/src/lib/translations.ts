@@ -22,7 +22,7 @@ export const translations = {
     hero: {
       headline: "Automate dispatch checks.\nSave time.",
       subheadline: "No more manual dispatch verification.",
-      tagline: "Catch errors before trucks leave.\nKeep a clear record of every shipment.\n\nNo manual checks. Same process. Less time."
+      tagline: "Catch errors before trucks leave and keep a clear record of every shipment.\n\nNo manual checks. Same process. Less time."
     },
     results: {
       label: "Proven Results",
