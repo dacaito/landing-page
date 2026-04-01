@@ -43,7 +43,7 @@ export const translations = {
       issues: [
         "Manual counting under time pressure",
         "Rechecks that delay trucks from leaving",
-        "Loading errors that turn into customer claims",
+        "Loading errors that turn into claims",
         "Rework and investigations after dispatch"
       ],
       closing: "Time lost at dispatch shows up later — in delays, extra work, and customer issues."
