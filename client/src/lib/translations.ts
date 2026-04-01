@@ -32,7 +32,7 @@ export const translations = {
         accuracy: { value: ">99%", label: "Shipment Accuracy" },
         writeoff: { value: ">50%", label: "Claim Reduction" },
         time: { value: ">1,000", label: "Hours Labor Saved" },
-        roi: { value: "<90 Days", label: "Time to ROI" }
+        roi: { value: "<30 Days", label: "Time to ROI" }
       },
       dashboardCaption: "Live dashboard from active deployment"
     },
