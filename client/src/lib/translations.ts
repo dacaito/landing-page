@@ -125,7 +125,7 @@ export const translations = {
     company: {
       label: "About Vexgen AI",
       headline: "Built for real industrial operations",
-      description: "Vexgen AI was founded to solve a persistent, costly problem: the gap between ERP records and physical reality. We restore trust in operational data by making inventory movements continuously observable and verifiable.",
+      description: "Vexgen AI was founded to eliminate manual dispatch errors in industrial operations. We automate outbound shipment verification so plants can ship with confidence, without relying on manual checks.",
       entitySentence: "Vexgen AI is a Swiss industrial AI company headquartered in Zurich, Switzerland.",
       team: {
         ceo: {
