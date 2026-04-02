@@ -9,7 +9,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { LanguageDropdown } from "@/components/LanguageDropdown";
 import { track } from "@/lib/analytics";
 import dashboardImage from "@assets/dash-board-kpi.png";
-import dashboardImageNew from "@assets/image_1775122049450.png";
+import dashboardImageNew from "@assets/dashboard-dispatch-overview.png";
 import stockImage from "@assets/dashboard-verification-feed.png";
 import demoVideo from "@assets/Landing-Page-Reel-876x512.mp4";
 import demoVideoNew from "@assets/vexgen-demo-website.mp4";
@@ -415,7 +415,7 @@ export default function Home() {
                 width="960"
                 height="540"
                 loading="lazy"
-                className="w-[108%] -mx-[4%] -my-[3%]"
+                className="w-full"
                 data-testid="img-dashboard"
               />
             </div>
