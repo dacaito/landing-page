@@ -846,7 +846,7 @@ export const translations = {
       description: "Desplegado en entornos operativos reales. ROI medible desde el primer día.",
       metrics: {
         accuracy: { value: ">99%", label: "Precisión de envíos" },
-        writeoff: { value: ">50%", label: "Reducción de reclamaciones" },
+        writeoff: { value: ">50%", label: "Reducción de reclamos" },
         time: { value: ">1.000", label: "Horas de trabajo ahorradas" },
         roi: { value: "<30\u00A0días", label: "Tiempo hasta ROI" }
       },
