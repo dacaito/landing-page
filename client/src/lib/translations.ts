@@ -836,7 +836,7 @@ export const translations = {
       chemical: "Química"
     },
     hero: {
-      headline: "Automatice los controles de despacho.\nAhorre tiempo.",
+      headline: "Automatice el control de despacho.\nAhorre tiempo.",
       subheadline: "",
       tagline: "Detecte errores antes de que los camiones salgan\ny mantenga un registro claro de cada envío.\n\nSin controles manuales. El mismo proceso. Menos tiempo."
     },
