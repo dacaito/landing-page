@@ -867,7 +867,7 @@ export const translations = {
     outcome: {
       label: "El resultado",
       headline: "Qué cambia al automatizar el control de despacho.",
-      description: "Los envíos se verifican en tiempo real, eliminando el trabajo manual en expedición y liberando tiempo para tareas más importantes.\n\nCon Vexgen AI, los equipos optimizan las operaciones de expedición:",
+      description: "Los despachos se verifican en tiempo real, eliminando el trabajo manual y liberando tiempo para tareas más importantes.\n\nCon Vexgen AI, los equipos optimizan los despachos:",
       benefits: [
         "Menos tiempo dedicado a tareas de verificación repetitivas",
         "Los errores se detectan antes de convertirse en reclamos",
