@@ -62,7 +62,7 @@ export const translations = {
     },
     howItWorks: {
       label: "How It Works",
-      headline: "Automated verification at the point of dispatch",
+      headline: "Automated verification\nat the point of dispatch",
       description: "Vexgen AI verifies every outbound shipment before it leaves the site.",
       steps: [
         {

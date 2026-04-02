@@ -478,7 +478,7 @@ export default function Home() {
       <section id="how-it-works" className="scroll-mt-24 sm:scroll-mt-28 py-16 sm:py-24 md:py-32 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4 text-center" data-testid="text-how-label">{t.howItWorks.label}</p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-center mb-4 sm:mb-6 leading-tight" data-testid="text-how-headline">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-center mb-4 sm:mb-6 leading-tight whitespace-pre-line" data-testid="text-how-headline">
             {t.howItWorks.headline}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-center max-w-3xl mx-auto mb-10 sm:mb-16 px-2">
