@@ -90,7 +90,7 @@ export default function Home() {
   const isInventoryManagement = location.includes('/inventory-management');
   const activeVideo = isInventoryManagement ? demoVideo : demoVideoNew;
   const activeDashboard = isInventoryManagement ? dashboardImage : dashboardImageNew;
-  const activeDashboardCaption = isInventoryManagement ? t.results.dashboardCaption : "Dispatch overview — Vexgen AI";
+  const activeDashboardCaption = isInventoryManagement ? t.results.dashboardCaption : t.results.dispatchDashboardCaption;
 
   const pagePath = location.replace(/^\/(en|de|es)/, '') || '';
   const canonicalUrl = `https://vexgen.ai${location}`;

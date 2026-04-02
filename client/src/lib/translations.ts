@@ -34,7 +34,8 @@ export const translations = {
         time: { value: ">1,000", label: "Hours Labor Saved" },
         roi: { value: "<30 Days", label: "Time to ROI" }
       },
-      dashboardCaption: "Live dashboard from active deployment"
+      dashboardCaption: "Live dashboard from active deployment",
+      dispatchDashboardCaption: "Dispatch overview — Vexgen AI"
     },
     problem: {
       label: "The Problem",
@@ -442,7 +443,8 @@ export const translations = {
         time: { value: ">1.000", label: "Eingesparte Arbeitsstunden" },
         roi: { value: "<30\u00A0Tage", label: "Zeit bis ROI" }
       },
-      dashboardCaption: "Live-Dashboard aus aktivem Einsatz"
+      dashboardCaption: "Live-Dashboard aus aktivem Einsatz",
+      dispatchDashboardCaption: "Versandübersicht — Vexgen AI"
     },
     problem: {
       label: "Das Problem",
@@ -850,7 +852,8 @@ export const translations = {
         time: { value: ">1.000", label: "Horas de trabajo ahorradas" },
         roi: { value: "<30\u00A0días", label: "Tiempo hasta ROI" }
       },
-      dashboardCaption: "Dashboard en vivo de un sitio operativo"
+      dashboardCaption: "Dashboard en vivo de un sitio operativo",
+      dispatchDashboardCaption: "Vista de despachos — Vexgen AI"
     },
     problem: {
       label: "El problema",
