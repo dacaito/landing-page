@@ -870,7 +870,7 @@ export const translations = {
       description: "Los envíos se verifican en tiempo real, eliminando el trabajo manual en expedición y liberando tiempo para tareas más importantes.\n\nCon Vexgen AI, los equipos optimizan las operaciones de expedición:",
       benefits: [
         "Menos tiempo dedicado a tareas de verificación repetitivas",
-        "Los errores de carga se detectan antes de convertirse en reclamos",
+        "Los errores se detectan antes de convertirse en reclamos",
         "Los despachos funcionan sin controles manuales",
         "Registro claro de lo envíado — sin esfuerzo manual"
       ],
