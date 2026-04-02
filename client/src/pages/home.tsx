@@ -415,7 +415,7 @@ export default function Home() {
                 width="960"
                 height="540"
                 loading="lazy"
-                className="w-full scale-[1.04]"
+                className="w-full"
                 data-testid="img-dashboard"
               />
             </div>
