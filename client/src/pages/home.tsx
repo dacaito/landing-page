@@ -10,7 +10,8 @@ import { LanguageDropdown } from "@/components/LanguageDropdown";
 import { track } from "@/lib/analytics";
 import dashboardImage from "@assets/dash-board-kpi.png";
 import dashboardImageNew from "@assets/dashboard-dispatch-overview.png";
-import stockImage from "@assets/dashboard-verification-feed.png";
+import stockImageNew from "@assets/dashboard-verification-feed.png";
+import stockImageOld from "@assets/image_1_1767949813510.png";
 import demoVideo from "@assets/Landing-Page-Reel-876x512.mp4";
 import demoVideoNew from "@assets/vexgen-demo-website.mp4";
 import vixgenLogo from "@assets/Vexgen-owl.png";
@@ -103,6 +104,7 @@ export default function Home() {
   const activeVideo = isInventoryManagement ? demoVideo : demoVideoNew;
   const activeDashboard = isInventoryManagement ? dashboardImage : dashboardImageNew;
   const activeDashboardCaption = isInventoryManagement ? t.results.dashboardCaption : t.results.dispatchDashboardCaption;
+  const activeStockImage = isInventoryManagement ? stockImageOld : stockImageNew;
 
   const pagePath = location.replace(/^\/(en|de|es)/, '') || '';
   const canonicalUrl = `https://vexgen.ai${location}`;
@@ -470,7 +472,7 @@ export default function Home() {
               <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl sm:rounded-3xl blur-lg sm:blur-xl opacity-50" />
               <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-border/50 shadow-xl">
                 <img 
-                  src={stockImage} 
+                  src={activeStockImage} 
                   alt="Vexgen AI live dispatch verification feed"
                   width="600"
                   height="400"
