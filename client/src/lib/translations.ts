@@ -858,7 +858,7 @@ export const translations = {
       description: "En muchas plantas que trabajan con tubos, perfiles y extrusiones, los despachos sigue dependiendo del conteo manual, inspecciones visuales o la confianza. Esto ralentiza los envíos y genera trabajo adicional.\n\nComo resultado, los equipos se enfrentan a:",
       issues: [
         "Conteo manual bajo presión de tiempo",
-        "Reverificaciones que retrasan la salida de los camiones",
+        "Verificaciones que retrasan la salida de los camiones",
         "Errores de carga que se convierten en reclamos",
         "Reprocesos e investigaciones tras el despacho"
       ],
