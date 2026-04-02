@@ -415,7 +415,7 @@ export default function Home() {
                 width="960"
                 height="540"
                 loading="lazy"
-                className="w-full"
+                className="w-[108%] -mx-[4%] -my-[3%]"
                 data-testid="img-dashboard"
               />
             </div>
