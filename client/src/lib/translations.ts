@@ -841,7 +841,7 @@ export const translations = {
       tagline: "Detecte errores antes de que los camiones salgan\ny mantenga un registro claro de cada envío.\n\nSin controles manuales. Mismo proceso. Menos tiempo."
     },
     results: {
-      label: "Resultados confirmados",
+      label: "Resultados probados",
       headline: "La realidad genera resultados",
       description: "Desplegado en entornos operativos reales. ROI medible desde el primer día.",
       metrics: {
