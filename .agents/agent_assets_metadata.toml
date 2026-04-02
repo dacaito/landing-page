@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "DQ0CmcAuQDQLuvX-rUNEg"
+uri = "file://translation-review.md"
+type = "text"
+title = "Translation Review — EN / ES / DE"
