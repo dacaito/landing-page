@@ -18,7 +18,20 @@ import vixgenLogo from "@assets/Vexgen-owl.png";
 export default function Home() {
   const { language: lang, getLocalizedPath, switchLanguagePath } = useLanguage();
   const [location, setLocation] = useLocation();
-  const t = translations[lang];
+  const isInventoryManagement = location.includes('/inventory-management');
+  const baseT = translations[lang];
+  const ip = baseT.inventoryPage;
+  const t = isInventoryManagement ? {
+    ...baseT,
+    hero: ip.hero,
+    results: { ...baseT.results, ...ip.results },
+    problem: ip.problem,
+    outcome: ip.outcome,
+    howItWorks: ip.howItWorks,
+    whoItsFor: ip.whoItsFor,
+    stockComparison: ip.stockComparison,
+    meta: { ...baseT.meta, homeTitle: ip.meta.homeTitle, homeDescription: ip.meta.homeDescription },
+  } : baseT;
   
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -87,7 +100,6 @@ export default function Home() {
   const howItWorksIcons = [Camera, RefreshCw, Database, ShieldCheck];
   const whoItsForIcons = [Factory, Warehouse, Users, Building2];
 
-  const isInventoryManagement = location.includes('/inventory-management');
   const activeVideo = isInventoryManagement ? demoVideo : demoVideoNew;
   const activeDashboard = isInventoryManagement ? dashboardImage : dashboardImageNew;
   const activeDashboardCaption = isInventoryManagement ? t.results.dashboardCaption : t.results.dispatchDashboardCaption;

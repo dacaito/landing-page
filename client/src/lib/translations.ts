@@ -216,6 +216,89 @@ export const translations = {
       requestDemo: "Request a Demo"
     },
     stockComparison: "Live dispatch verification feed — Vexgen AI",
+    inventoryPage: {
+      hero: {
+        headline: "Your ERP.\nThe Truth.",
+        subheadline: "Real-time visibility that bridges the gap between what your ERP says and what is actually on your floor.",
+        tagline: "No manual counts. No tags. No disruption."
+      },
+      results: {
+        label: "Proven Results",
+        headline: "Reality delivers returns",
+        description: "Deployed in real manufacturing environments. Measurable ROI from day one.",
+        metrics: {
+          accuracy: { value: ">99%", label: "Inventory Accuracy" },
+          writeoff: { value: "6-Figure", label: "Write-off Reduction" },
+          time: { value: "<1 Hour", label: "ERP Reconciliation" },
+          roi: { value: "<90 Days", label: "Time to ROI" }
+        },
+        dashboardCaption: "Live dashboard from active deployment"
+      },
+      problem: {
+        label: "The Problem",
+        headline: "Phantom inventory stays hidden until it costs you millions.",
+        description: "Manufacturing and warehouse operations run on ERP data that rarely reflects the physical reality of the shop floor.",
+        issues: [
+          "Emergency purchases and stockouts",
+          "Excess inventory and costly write-offs",
+          "Hours wasted on manual recounts",
+          "Critical decisions based on unreliable data"
+        ],
+        closing: "Your ERP is only as accurate as the data feeding it. Today, that data is broken."
+      },
+      outcome: {
+        label: "The Outcome",
+        headline: "When ERP reflects reality, everything changes",
+        description: "Continuous physical verification transforms operations from reactive to predictable.",
+        benefits: [
+          "Inventory accuracy you can trust, without manual counts",
+          "Stockouts and panic purchases eliminated at the source",
+          "Capital freed from safety buffers and excess stock",
+          "Audits completed in hours, not weeks",
+          "ERP data your teams can actually rely on"
+        ],
+        closing: "This is not periodic checking. This is continuous operational truth."
+      },
+      howItWorks: {
+        label: "How It Works",
+        headline: "Continuous reconciliation. Zero manual effort.",
+        description: "Vexgen AI securely and automatically connects physical movements to digital records. All your data is processed locally and never leaves your premises. Operator identity is automatically blurred.",
+        steps: [
+          {
+            step: "01",
+            title: "Capture every movement",
+            description: "Cameras continuously monitor inventory flows. Nothing goes untracked."
+          },
+          {
+            step: "02",
+            title: "Validate automatically",
+            description: "Vision technology identifies materials, movements and quantities in real time."
+          },
+          {
+            step: "03",
+            title: "Sync your ERP instantly",
+            description: "Discrepancies detected and corrected automatically. No operator input needed."
+          }
+        ],
+        tags: ["No scanners", "No tags", "No manual processes"]
+      },
+      whoItsFor: {
+        label: "Who It Is For",
+        headline: "Built for operations that move physical inventory",
+        industries: [
+          { label: "Manufacturing plants" },
+          { label: "Warehouses and logistics centers" },
+          { label: "Operations and supply chain teams" },
+          { label: "Industrial enterprises on SAP or ERP" }
+        ],
+        closing: "If inventory accuracy impacts your bottom line, Vexgen AI was built for you."
+      },
+      stockComparison: "Per-lot weight comparison: Vexgen AI vs. SAP",
+      meta: {
+        homeTitle: "Vexgen AI – Real-Time Inventory Visibility & ERP Reconciliation",
+        homeDescription: "Real-time visibility and reconciliation between ERP data and physical inventory. No manual counts. No tags. No operational disruption."
+      }
+    },
     industryPages: {
       sections: {
         realityToday: "The Reality Today",
@@ -625,6 +708,89 @@ export const translations = {
       requestDemo: "Demo anfordern"
     },
     stockComparison: "Live-Versandprüfung — Vexgen AI",
+    inventoryPage: {
+      hero: {
+        headline: "Ihr ERP.\nDie Wahrheit.",
+        subheadline: "Echtzeit-Transparenz, die die Lücke zwischen ERP-Daten und der physischen Realität in Ihrem Lager schliesst.",
+        tagline: "Keine manuellen Zählungen. Keine Tags. Keine Unterbrechung."
+      },
+      results: {
+        label: "Bewiesene Ergebnisse",
+        headline: "Realität zahlt sich aus",
+        description: "Im Einsatz in echten Produktionsumgebungen. Messbarer ROI ab dem ersten Tag.",
+        metrics: {
+          accuracy: { value: ">99%", label: "Bestandsgenauigkeit" },
+          writeoff: { value: "6\u2011stellig", label: "Weniger Abschreibungen" },
+          time: { value: "<1\u00A0Stunde", label: "ERP-Abgleich" },
+          roi: { value: "<90\u00A0Tage", label: "Zeit bis ROI" }
+        },
+        dashboardCaption: "Live-Dashboard aus aktivem Einsatz"
+      },
+      problem: {
+        label: "Das Problem",
+        headline: "Phantombestand bleibt unsichtbar, bis er Millionen kostet.",
+        description: "Fertigung und Lager arbeiten mit ERP-Daten, die selten die physische Realität in der Produktion widerspiegeln.",
+        issues: [
+          "Notbestellungen und Lieferengpässe",
+          "Überbestände und teure Abschreibungen",
+          "Stunden verschwendet mit manuellen Nachzählungen",
+          "Kritische Entscheidungen auf Basis unzuverlässiger Daten"
+        ],
+        closing: "Ihr ERP ist nur so genau wie die Daten, die es speisen. Heute sind diese Daten fehlerhaft."
+      },
+      outcome: {
+        label: "Das Ergebnis",
+        headline: "Wenn das ERP die Realität abbildet, ändert sich alles",
+        description: "Kontinuierliche physische Verifizierung verwandelt reaktive Abläufe in planbare Prozesse.",
+        benefits: [
+          "Bestandsgenauigkeit, der Sie vertrauen können, ohne manuelle Zählungen",
+          "Lieferengpässe und Panikbestellungen an der Quelle eliminiert",
+          "Kapital befreit von Sicherheitspuffern und Überbeständen",
+          "Audits in Stunden abgeschlossen, nicht in Wochen",
+          "ERP-Daten, auf die sich Ihre Teams wirklich verlassen können"
+        ],
+        closing: "Das ist keine periodische Prüfung. Das ist kontinuierliche operative Wahrheit."
+      },
+      howItWorks: {
+        label: "So funktioniert es",
+        headline: "Kontinuierlicher Abgleich. Null manueller Aufwand.",
+        description: "Vexgen AI verbindet physische Bewegungen sicher und automatisch mit digitalen Aufzeichnungen. Alle Ihre Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände. Die Identität der Mitarbeiter wird automatisch unkenntlich gemacht.",
+        steps: [
+          {
+            step: "01",
+            title: "Jede Bewegung erfassen",
+            description: "Kameras überwachen kontinuierlich Bestandsbewegungen. Nichts bleibt unerfasst."
+          },
+          {
+            step: "02",
+            title: "Automatisch validieren",
+            description: "Die Vision-Technologie identifiziert Materialien, Bewegungen und Mengen in Echtzeit."
+          },
+          {
+            step: "03",
+            title: "ERP sofort synchronisieren",
+            description: "Abweichungen werden automatisch erkannt und korrigiert. Keine Bediener-Eingabe nötig."
+          }
+        ],
+        tags: ["Keine Scanner", "Keine Tags", "Keine manuellen Prozesse"]
+      },
+      whoItsFor: {
+        label: "Für wen",
+        headline: "Entwickelt für Betriebe, die physischen Bestand bewegen",
+        industries: [
+          { label: "Fertigungsanlagen" },
+          { label: "Lager und Logistikzentren" },
+          { label: "Operations- und Supply-Chain-Teams" },
+          { label: "Industrieunternehmen mit SAP oder ERP" }
+        ],
+        closing: "Wenn Bestandsgenauigkeit Ihr Ergebnis beeinflusst, wurde Vexgen AI für Sie entwickelt."
+      },
+      stockComparison: "Gewichtsvergleich pro Los: Vexgen AI vs. SAP",
+      meta: {
+        homeTitle: "Vexgen AI – Bestands-Transparenz & ERP-Abgleich in Echtzeit",
+        homeDescription: "Echtzeit-Transparenz und Abgleich zwischen ERP-Daten und physischem Bestand. Keine manuellen Zählungen. Keine Tags. Keine Betriebsunterbrechung."
+      }
+    },
     industryPages: {
       sections: {
         realityToday: "Die aktuelle Realität",
@@ -1034,6 +1200,89 @@ export const translations = {
       requestDemo: "Solicitar una demo"
     },
     stockComparison: "Registro de verificación de despachos en vivo — Vexgen AI",
+    inventoryPage: {
+      hero: {
+        headline: "Su ERP.\nLa verdad.",
+        subheadline: "Visibilidad en tiempo real que cierra la brecha entre lo que dice su ERP y lo que realmente hay en su planta.",
+        tagline: "Sin recuentos manuales. Sin etiquetas. Sin interrupciones."
+      },
+      results: {
+        label: "Resultados probados",
+        headline: "La realidad genera retorno",
+        description: "Desplegado en entornos reales de fabricación. ROI medible desde el primer día.",
+        metrics: {
+          accuracy: { value: ">99%", label: "Precisión de inventario" },
+          writeoff: { value: "6 cifras", label: "Reducción de depreciaciones" },
+          time: { value: "<1\u00A0Hora", label: "Conciliación ERP" },
+          roi: { value: "<90\u00A0Días", label: "Tiempo hasta ROI" }
+        },
+        dashboardCaption: "Dashboard en vivo de despliegue activo"
+      },
+      problem: {
+        label: "El problema",
+        headline: "El inventario fantasma permanece oculto hasta que cuesta millones.",
+        description: "Las operaciones de fabricación y almacén funcionan con datos ERP que rara vez reflejan la realidad física de la planta.",
+        issues: [
+          "Compras de emergencia y roturas de stock",
+          "Exceso de inventario y depreciaciones costosas",
+          "Horas perdidas en recuentos manuales",
+          "Decisiones críticas basadas en datos poco fiables"
+        ],
+        closing: "Su ERP es tan preciso como los datos que lo alimentan. Hoy, esos datos están rotos."
+      },
+      outcome: {
+        label: "El resultado",
+        headline: "Cuando el ERP refleja la realidad, todo cambia",
+        description: "La verificación física continua transforma las operaciones de reactivas a predecibles.",
+        benefits: [
+          "Precisión de inventario en la que puede confiar, sin recuentos manuales",
+          "Roturas de stock y compras de emergencia eliminadas de raíz",
+          "Capital liberado de buffers de seguridad y exceso de stock",
+          "Auditorías completadas en horas, no en semanas",
+          "Datos ERP en los que sus equipos realmente pueden confiar"
+        ],
+        closing: "Esto no es una verificación periódica. Es la verdad operativa continua."
+      },
+      howItWorks: {
+        label: "Cómo funciona",
+        headline: "Conciliación continua. Cero esfuerzo manual.",
+        description: "Vexgen AI conecta de forma segura y automática los movimientos físicos con los registros digitales. Todos sus datos se procesan localmente y nunca abandonan sus instalaciones. La identidad de los operarios se difumina automáticamente.",
+        steps: [
+          {
+            step: "01",
+            title: "Capturar cada movimiento",
+            description: "Cámaras monitorizan los flujos de inventario de forma continua. Nada queda sin registrar."
+          },
+          {
+            step: "02",
+            title: "Validar automáticamente",
+            description: "La tecnología de visión identifica materiales, movimientos y cantidades en tiempo real."
+          },
+          {
+            step: "03",
+            title: "Sincronizar su ERP al instante",
+            description: "Discrepancias detectadas y corregidas automáticamente. Sin intervención del operario."
+          }
+        ],
+        tags: ["Sin escáneres", "Sin etiquetas", "Sin procesos manuales"]
+      },
+      whoItsFor: {
+        label: "Para quién es",
+        headline: "Desarrollado para operaciones que mueven inventario físico",
+        industries: [
+          { label: "Plantas de fabricación" },
+          { label: "Almacenes y centros logísticos" },
+          { label: "Equipos de operaciones y cadena de suministro" },
+          { label: "Empresas industriales con SAP o ERP" }
+        ],
+        closing: "Si la precisión del inventario impacta en su cuenta de resultados, Vexgen AI fue desarrollado para usted."
+      },
+      stockComparison: "Comparación de peso por lote: Vexgen AI vs. SAP",
+      meta: {
+        homeTitle: "Vexgen AI – Visibilidad de inventario en tiempo real y conciliación con ERP",
+        homeDescription: "Visibilidad en tiempo real y conciliación entre datos ERP e inventario físico. Sin recuentos manuales. Sin etiquetas. Sin interrupciones operativas."
+      }
+    },
     industryPages: {
       sections: {
         realityToday: "La realidad actual",
