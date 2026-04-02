@@ -899,7 +899,7 @@ export const translations = {
         {
           step: "04",
           title: "Aprobar o bloquear el envío",
-          description: "Si todo coincide, el camión recibe luz verde. Si no, el envío se marca y se retiene antes de salir de la planta."
+          description: "Si todo coincide, el camión recibe luz verde. Si no, se retiene antes de salir de planta."
         }
       ],
       tags: ["Sin controles manuales", "El mismo proceso", "Menos tiempo"]
