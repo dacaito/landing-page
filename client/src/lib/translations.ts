@@ -111,7 +111,7 @@ export const translations = {
         company: "Company",
         companyPlaceholder: "Company name",
         message: "Message (optional)",
-        messagePlaceholder: "Tell us about your inventory challenges...",
+        messagePlaceholder: "Tell us about your dispatch challenges...",
         submit: "Request a Demo",
         submitting: "Submitting..."
       },
@@ -169,8 +169,8 @@ export const translations = {
       }
     },
     meta: {
-      homeTitle: "Vexgen AI – Real-Time Inventory Visibility & ERP Reconciliation",
-      homeDescription: "Real-time visibility and reconciliation between ERP data and physical inventory. No manual counts. No tags. No operational disruption.",
+      homeTitle: "Vexgen AI – Real-Time Dispatch Verification for Industrial Operations",
+      homeDescription: "Automated outbound shipment verification in real time. No manual checks. Fewer errors. More time to run operations.",
       companyTitle: "Vexgen AI – About the Company (Zurich, Switzerland)",
       companyDescription: "Learn about Vexgen AI, a Swiss industrial AI company headquartered in Zurich, Switzerland, bridging the gap between ERP records and physical reality with AI-powered inventory visibility.",
       privacyTitle: "Data Privacy - Vexgen AI",
@@ -428,85 +428,89 @@ export const translations = {
       chemical: "Chemie"
     },
     hero: {
-      headline: "Ihr ERP.\nDie Wahrheit.",
-      subheadline: "Echtzeit-Transparenz, die die Lücke zwischen ERP-Daten und der physischen Realität in Ihrem Lager schliesst.",
-      tagline: "Keine manuellen Zählungen. Keine Tags. Keine Unterbrechung."
+      headline: "Versandkontrollen automatisieren.\nZeit sparen.",
+      subheadline: "",
+      tagline: "Fehler erkennen, bevor LKWs das Werk verlassen,\nund jede Lieferung lückenlos dokumentieren.\n\nKeine manuellen Kontrollen. Gleicher Prozess. Weniger Zeit."
     },
     results: {
-      label: "Bewiesene Ergebnisse",
+      label: "Bewährte Ergebnisse",
       headline: "Realität zahlt sich aus",
-      description: "Im Einsatz in echten Produktionsumgebungen. Messbarer ROI ab dem ersten Tag.",
+      description: "Im Einsatz in realen Betriebsumgebungen. Messbarer ROI ab dem ersten Tag.",
       metrics: {
-        accuracy: { value: ">99%", label: "Bestandsgenauigkeit" },
-        writeoff: { value: "6‑stellig", label: "Weniger Abschreibungen" },
-        time: { value: "<1\u00A0Stunde", label: "ERP-Abgleich" },
-        roi: { value: "<90\u00A0Tage", label: "Zeit bis ROI" }
+        accuracy: { value: ">99%", label: "Versandgenauigkeit" },
+        writeoff: { value: ">50%", label: "Weniger Reklamationen" },
+        time: { value: ">1.000", label: "Eingesparte Arbeitsstunden" },
+        roi: { value: "<30\u00A0Tage", label: "Zeit bis ROI" }
       },
       dashboardCaption: "Live-Dashboard aus aktivem Einsatz"
     },
     problem: {
       label: "Das Problem",
-      headline: "Phantombestand bleibt unsichtbar, bis er Millionen kostet.",
-      description: "Fertigung und Lager arbeiten mit ERP-Daten, die selten die physische Realität in der Produktion widerspiegeln.",
+      headline: "Manuelle Versandkontrollen verlangsamen alles",
+      description: "In vielen Werken, die Rohre, Profile und Schläuche verarbeiten, basiert der Versand noch immer auf manuellem Zählen, Sichtprüfungen oder Vertrauen. Das verlangsamt Lieferungen und erzeugt Mehraufwand.\n\nDadurch entstehen für Teams folgende Probleme:",
       issues: [
-        "Notbestellungen und Lieferengpässe",
-        "Überbestände und teure Abschreibungen",
-        "Stunden verschwendet mit manuellen Nachzählungen",
-        "Kritische Entscheidungen auf Basis unzuverlässiger Daten"
+        "Manuelles Zählen unter Zeitdruck",
+        "Nachkontrollen, die LKWs am Abfahren hindern",
+        "Beladefehler, die zu Reklamationen führen",
+        "Nacharbeiten und Nachforschungen nach dem Versand"
       ],
-      closing: "Ihr ERP ist nur so genau wie die Daten, die es speisen. Heute sind diese Daten fehlerhaft."
+      closing: "Zeitverlust beim Versand zeigt sich später – in Verzögerungen, Mehraufwand und Reklamationen."
     },
     outcome: {
       label: "Das Ergebnis",
-      headline: "Wenn das ERP die Realität abbildet, ändert sich alles",
-      description: "Kontinuierliche physische Verifizierung verwandelt reaktive Abläufe in planbare Prozesse.",
+      headline: "Was sich ändert, wenn Versandkontrollen automatisiert werden",
+      description: "Lieferungen werden in Echtzeit geprüft, manueller Aufwand beim Versand entfällt und Zeit wird für wichtigere Aufgaben frei.\n\nMit Vexgen AI optimieren Teams den Versandprozess:",
       benefits: [
-        "Bestandsgenauigkeit, der Sie vertrauen können, ohne manuelle Zählungen",
-        "Lieferengpässe und Panikbestellungen an der Quelle eliminiert",
-        "Kapital befreit von Sicherheitspuffern und Überbeständen",
-        "Audits in Stunden abgeschlossen, nicht in Wochen",
-        "ERP-Daten, auf die sich Ihre Teams wirklich verlassen können"
+        "Weniger Zeit für repetitive Prüfaufgaben",
+        "Beladefehler werden erkannt, bevor sie zu Reklamationen werden",
+        "Versand läuft ohne manuelle Kontrollen",
+        "Klare Dokumentation jeder Lieferung — ohne manuellen Aufwand"
       ],
-      closing: "Das ist keine periodische Prüfung. Das ist kontinuierliche operative Wahrheit."
+      closing: "Weniger Zeit kontrollieren. Mehr Zeit für den Betrieb."
     },
     howItWorks: {
       label: "So funktioniert es",
-      headline: "Kontinuierlicher Abgleich. Null manueller Aufwand.",
-      description: "Vexgen AI verbindet physische Bewegungen sicher und automatisch mit digitalen Aufzeichnungen. Alle Ihre Daten werden lokal verarbeitet und verlassen niemals Ihr Gelände. Die Identität der Mitarbeiter wird automatisch unkenntlich gemacht.",
+      headline: "Automatisierte Verifizierung\nam Versandpunkt",
+      description: "Vexgen AI prüft jede ausgehende Lieferung, bevor sie das Werk verlässt.",
       steps: [
         {
           step: "01",
-          title: "Jede Bewegung erfassen",
-          description: "Kameras überwachen kontinuierlich Bestandsbewegungen. Nichts bleibt unerfasst."
+          title: "Den beladenen LKW erfassen",
+          description: "Kameras überwachen den LKW am Versandpunkt."
         },
         {
           step: "02",
-          title: "Automatisch validieren",
-          description: "Die Vision-Technologie identifiziert Materialien, Bewegungen und Mengen in Echtzeit."
+          title: "Ladung erkennen und zählen",
+          description: "Bildverarbeitungsmodelle erkennen und zählen die geladenen Materialien direkt am LKW."
         },
         {
           step: "03",
-          title: "ERP sofort synchronisieren",
-          description: "Abweichungen werden automatisch erkannt und korrigiert. Keine Bediener-Eingabe nötig."
+          title: "Mit dem Lieferauftrag abgleichen",
+          description: "Das System gleicht die erkannten Mengen mit der erwarteten Lieferung aus dem ERP ab."
+        },
+        {
+          step: "04",
+          title: "Versand freigeben oder sperren",
+          description: "Bei Übereinstimmung wird der LKW freigegeben. Stimmt etwas nicht, wird die Lieferung markiert und vor dem Verlassen des Werks gestoppt."
         }
       ],
-      tags: ["Keine Scanner", "Keine Tags", "Keine manuellen Prozesse"]
+      tags: ["Keine manuellen Kontrollen", "Gleicher Prozess", "Weniger Zeit"]
     },
     whoItsFor: {
       label: "Für wen",
-      headline: "Entwickelt für Betriebe, die physischen Bestand bewegen",
+      headline: "Entwickelt für Betriebe, die Rohre, Profile und Schläuche versenden",
       industries: [
-        { label: "Fertigungsanlagen" },
-        { label: "Lager und Logistikzentren" },
-        { label: "Operations- und Supply-Chain-Teams" },
-        { label: "Industrieunternehmen mit SAP oder ERP" }
+        { label: "Hersteller von Stahlrohren und -profilen" },
+        { label: "Kunststoffrohr- und Profilhersteller" },
+        { label: "Aluminium- und Extrusionsunternehmen" },
+        { label: "Distributoren von Rohren, Profilen und Schläuchen" }
       ],
-      closing: "Wenn Bestandsgenauigkeit Ihr Ergebnis beeinflusst, wurde Vexgen AI für Sie entwickelt."
+      closing: "Wenn Ihr Betrieb davon abhängt, LKWs vor dem Versand korrekt zu beladen, ist Vexgen AI für Sie gemacht."
     },
     contact: {
       label: "Jetzt starten",
       headline: "Vexgen AI in Aktion erleben",
-      description: "Der schnellste Weg, die Wirkung zu verstehen? Sehen Sie es in Ihrem Betrieb angewendet.",
+      description: "Der schnellste Weg, die Wirkung zu verstehen, ist sie in Ihrem Betrieb zu sehen.",
       form: {
         name: "Name",
         namePlaceholder: "Ihr Name",
@@ -515,7 +519,7 @@ export const translations = {
         company: "Unternehmen",
         companyPlaceholder: "Firmenname",
         message: "Nachricht (optional)",
-        messagePlaceholder: "Erzählen Sie uns von Ihren Bestandsherausforderungen...",
+        messagePlaceholder: "Erzählen Sie uns von Ihren Versandherausforderungen...",
         submit: "Demo anfordern",
         submitting: "Wird gesendet..."
       },
@@ -529,7 +533,7 @@ export const translations = {
     company: {
       label: "Über Vexgen AI",
       headline: "Entwickelt für echte industrielle Abläufe",
-      description: "Vexgen AI wurde gegründet, um ein hartnäckiges, kostspieliges Problem zu lösen: die Lücke zwischen ERP-Daten und physischer Realität. Wir stellen das Vertrauen in Betriebsdaten wieder her, indem wir Bestandsbewegungen kontinuierlich beobachtbar und verifizierbar machen.",
+      description: "Vexgen AI wurde gegründet, um manuelle Versandfehler in industriellen Betrieben zu beseitigen. Wir automatisieren die Prüfung ausgehender Lieferungen, damit Werke sicher versenden können – ohne manuelle Kontrollen.",
       entitySentence: "Vexgen AI ist ein Schweizer Industrial-AI-Unternehmen mit Sitz in Zürich, Schweiz.",
       team: {
         ceo: {
@@ -552,12 +556,12 @@ export const translations = {
       focus: "Fokus: Fertigung und Lager",
       vision: {
         label: "Unsere Vision",
-        headline: "Die Lücke zwischen digitalen Aufzeichnungen und physischer Realität schliessen",
-        description: "Wir glauben, dass operative Exzellenz mit dem Vertrauen in Ihre Daten beginnt. Wenn ERP-Systeme genau widerspiegeln, was physisch vor Ort ist, ändert sich alles: Planung wird vorhersehbar, Verschwendung verschwindet und Teams können sich auf Wertschöpfung statt Krisenmanagement konzentrieren.",
+        headline: "Versandverifizierung automatisieren, damit Lieferungen immer korrekt abgehen",
+        description: "Wir glauben, dass effiziente Abläufe mit zuverlässigen Prozessen beginnen. Wenn die Versandverifizierung automatisch läuft, verbringen Teams weniger Zeit mit Kontrollen und mehr Zeit mit dem, was wirklich zählt. Wir bauen die Werkzeuge, die das möglich machen – ohne Ihren Betrieb zu unterbrechen.",
         mission: "Mission",
-        missionText: "Bestandsbewegungen kontinuierlich beobachtbar und in Echtzeit verifizierbar machen.",
+        missionText: "Versandverifizierung automatisieren, damit jede Lieferung korrekt das Werk verlässt – ohne manuellen Aufwand.",
         visionLabel: "Vision",
-        visionText: "Eine Welt, in der jedes physische Asset digital sichtbar ist und abfallfreie Abläufe ermöglicht."
+        visionText: "Eine Welt, in der jede ausgehende Lieferung automatisch geprüft wird, bevor sie das Werk verlässt."
       },
       careers: {
         label: "Karriere",
@@ -573,8 +577,8 @@ export const translations = {
       }
     },
     meta: {
-      homeTitle: "Vexgen AI – Bestands-Transparenz & ERP-Abgleich in Echtzeit",
-      homeDescription: "Echtzeit-Transparenz und Abgleich zwischen ERP-Daten und physischem Bestand. Keine manuellen Zählungen. Keine Tags. Keine Betriebsunterbrechung.",
+      homeTitle: "Vexgen AI – Automatisierte Versandkontrolle für Industriebetriebe",
+      homeDescription: "Automatisierte Prüfung ausgehender Lieferungen in Echtzeit. Keine manuellen Kontrollen. Weniger Fehler. Mehr Zeit für den Betrieb.",
       companyTitle: "Vexgen AI – Über uns (Zürich, Schweiz)",
       companyDescription: "Erfahren Sie mehr über Vexgen AI, ein Schweizer Industrial-AI-Unternehmen mit Sitz in Zürich, Schweiz, das ERP-Daten und physische Realität mit KI-gestützter Bestands-Transparenz verbindet.",
       privacyTitle: "Datenschutz - Vexgen AI",
@@ -618,7 +622,7 @@ export const translations = {
     cta: {
       requestDemo: "Demo anfordern"
     },
-    stockComparison: "Gewichtsvergleich pro Los: Vexgen AI vs. SAP",
+    stockComparison: "Live-Versandprüfung — Vexgen AI",
     industryPages: {
       sections: {
         realityToday: "Die aktuelle Realität",
@@ -832,85 +836,89 @@ export const translations = {
       chemical: "Química"
     },
     hero: {
-      headline: "Su ERP.\nLa verdad.",
-      subheadline: "Visibilidad en tiempo real que cierra la brecha entre lo que dice su ERP y lo que realmente hay en su planta.",
-      tagline: "Sin recuentos manuales. Sin etiquetas. Sin interrupciones."
+      headline: "Automatice los controles de despacho.\nAhorre tiempo.",
+      subheadline: "",
+      tagline: "Detecte errores antes de que los camiones salgan\ny mantenga un registro claro de cada envío.\n\nSin controles manuales. El mismo proceso. Menos tiempo."
     },
     results: {
-      label: "Resultados probados",
-      headline: "La realidad genera retorno",
-      description: "Desplegado en entornos reales de fabricación. ROI medible desde el primer día.",
+      label: "Resultados confirmados",
+      headline: "La realidad genera resultados",
+      description: "Desplegado en entornos operativos reales. ROI medible desde el primer día.",
       metrics: {
-        accuracy: { value: ">99%", label: "Precisión de inventario" },
-        writeoff: { value: "6 cifras", label: "Reducción de depreciaciones" },
-        time: { value: "<1\u00A0Hora", label: "Conciliación ERP" },
-        roi: { value: "<90\u00A0Días", label: "Tiempo hasta ROI" }
+        accuracy: { value: ">99%", label: "Precisión de envíos" },
+        writeoff: { value: ">50%", label: "Reducción de reclamaciones" },
+        time: { value: ">1.000", label: "Horas de trabajo ahorradas" },
+        roi: { value: "<30\u00A0días", label: "Tiempo hasta ROI" }
       },
-      dashboardCaption: "Dashboard en vivo de despliegue activo"
+      dashboardCaption: "Dashboard en vivo de un sitio operativo"
     },
     problem: {
       label: "El problema",
-      headline: "El inventario fantasma permanece oculto hasta que cuesta millones.",
-      description: "Las operaciones de fabricación y almacén funcionan con datos ERP que rara vez reflejan la realidad física de la planta.",
+      headline: "Los controles manuales de despachos ralentizan todo",
+      description: "En muchas plantas que trabajan con tubos, perfiles y extrusiones, los despachos sigue dependiendo del conteo manual, inspecciones visuales o la confianza. Esto ralentiza los envíos y genera trabajo adicional.\n\nComo resultado, los equipos se enfrentan a:",
       issues: [
-        "Compras de emergencia y roturas de stock",
-        "Exceso de inventario y depreciaciones costosas",
-        "Horas perdidas en recuentos manuales",
-        "Decisiones críticas basadas en datos poco fiables"
+        "Conteo manual bajo presión de tiempo",
+        "Reverificaciones que retrasan la salida de los camiones",
+        "Errores de carga que se convierten en reclamos",
+        "Reprocesos e investigaciones tras el despacho"
       ],
-      closing: "Su ERP es tan preciso como los datos que lo alimentan. Hoy, esos datos están rotos."
+      closing: "El tiempo perdido en los despachos aparece después: en retrasos, trabajo extra y problemas con clientes."
     },
     outcome: {
       label: "El resultado",
-      headline: "Cuando el ERP refleja la realidad, todo cambia",
-      description: "La verificación física continua transforma las operaciones de reactivas a predecibles.",
+      headline: "Qué cambia cuando los controles de despacho se automatizan",
+      description: "Los envíos se verifican en tiempo real, eliminando el trabajo manual en expedición y liberando tiempo para tareas más importantes.\n\nCon Vexgen AI, los equipos optimizan las operaciones de expedición:",
       benefits: [
-        "Precisión de inventario en la que puede confiar, sin recuentos manuales",
-        "Roturas de stock y compras de emergencia eliminadas de raíz",
-        "Capital liberado de buffers de seguridad y exceso de stock",
-        "Auditorías completadas en horas, no en semanas",
-        "Datos ERP en los que sus equipos realmente pueden confiar"
+        "Menos tiempo dedicado a tareas de verificación repetitivas",
+        "Los errores de carga se detectan antes de convertirse en reclamos",
+        "Los despachos funcionan sin controles manuales",
+        "Registro claro de lo envíado — sin esfuerzo manual"
       ],
-      closing: "Esto no es una verificación periódica. Es la verdad operativa continua."
+      closing: "Menos tiempo verificando. Más tiempo gestionando operaciones."
     },
     howItWorks: {
       label: "Cómo funciona",
-      headline: "Conciliación continua. Cero esfuerzo manual.",
-      description: "Vexgen AI conecta de forma segura y automática los movimientos físicos con los registros digitales. Todos sus datos se procesan localmente y nunca abandonan sus instalaciones. La identidad de los operarios se difumina automáticamente.",
+      headline: "Verificación automatizada\nen el punto de despacho",
+      description: "Vexgen AI verifica cada envío saliente antes de que abandone las instalaciones.",
       steps: [
         {
           step: "01",
-          title: "Capturar cada movimiento",
-          description: "Cámaras monitorizan los flujos de inventario de forma continua. Nada queda sin registrar."
+          title: "Capturar del camión cargado",
+          description: "Las cámaras monitorean el camión en el punto de despacho."
         },
         {
           step: "02",
-          title: "Validar automáticamente",
-          description: "La tecnología de visión identifica materiales, movimientos y cantidades en tiempo real."
+          title: "Detectar y contar la carga",
+          description: "Los modelos de visión detectan y cuentan los materiales cargados directamente desde el camión."
         },
         {
           step: "03",
-          title: "Sincronizar su ERP al instante",
-          description: "Discrepancias detectadas y corregidas automáticamente. Sin intervención del operario."
+          title: "Comparar con el pedido de envío",
+          description: "El sistema compara las cantidades detectadas con el envío esperado del ERP."
+        },
+        {
+          step: "04",
+          title: "Aprobar o bloquear el envío",
+          description: "Si todo coincide, el camión recibe luz verde. Si no, el envío se marca y se retiene antes de salir de la planta."
         }
       ],
-      tags: ["Sin escáneres", "Sin etiquetas", "Sin procesos manuales"]
+      tags: ["Sin controles manuales", "El mismo proceso", "Menos tiempo"]
     },
     whoItsFor: {
       label: "Para quién es",
-      headline: "Desarrollado para operaciones que mueven inventario físico",
+      headline: "Desarrollado para operaciones que gestionan envíos de tubos, perfiles y extrusiones",
       industries: [
-        { label: "Plantas de fabricación" },
-        { label: "Almacenes y centros logísticos" },
-        { label: "Equipos de operaciones y cadena de suministro" },
-        { label: "Empresas industriales con SAP o ERP" }
+        { label: "Productores de tubos y perfiles de acero" },
+        { label: "Fabricantes de tubos y perfiles de plástico" },
+        { label: "Empresas de aluminio y extrusión" },
+        { label: "Distribuidores de tubos, perfiles y extrusiones" }
       ],
-      closing: "Si la precisión del inventario impacta en su cuenta de resultados, Vexgen AI fue desarrollado para usted."
+      closing: "Si su operación depende de cargar los camiones correctamente antes del despacho, Vexgen AI es para usted."
     },
     contact: {
       label: "Empezar",
-      headline: "Vea Vexgen AI en acción",
-      description: "¿El camino más rápido para entender el impacto? Véalo aplicado a su operación.",
+      headline: "Descubra Vexgen AI en acción",
+      description: "La manera más rápida de entender el impacto es verlo aplicado a su operación.",
       form: {
         name: "Nombre",
         namePlaceholder: "Su nombre",
@@ -919,7 +927,7 @@ export const translations = {
         company: "Empresa",
         companyPlaceholder: "Nombre de la empresa",
         message: "Mensaje (opcional)",
-        messagePlaceholder: "Cuéntenos sobre sus desafíos de inventario...",
+        messagePlaceholder: "Cuéntenos sobre sus desafíos de expedición...",
         submit: "Solicitar una demo",
         submitting: "Enviando..."
       },
@@ -933,7 +941,7 @@ export const translations = {
     company: {
       label: "Sobre Vexgen AI",
       headline: "Desarrollado para operaciones industriales reales",
-      description: "Vexgen AI fue fundada para resolver un problema persistente y costoso: la brecha entre los registros del ERP y la realidad física. Restauramos la confianza en los datos operativos haciendo que los movimientos de inventario sean continuamente observables y verificables.",
+      description: "Vexgen AI fue fundada para eliminar los errores manuales de expedición en operaciones industriales. Automatizamos la verificación de envíos salientes para que las plantas puedan expedir con confianza, sin depender de controles manuales.",
       entitySentence: "Vexgen AI es una empresa suiza de IA industrial con sede en Zúrich, Suiza.",
       team: {
         ceo: {
@@ -956,12 +964,12 @@ export const translations = {
       focus: "Enfoque: Fabricación y almacén",
       vision: {
         label: "Nuestra visión",
-        headline: "Cerrando la brecha entre los registros digitales y la realidad física",
-        description: "Creemos que la excelencia operativa comienza con la confianza en sus datos. Cuando los sistemas ERP reflejan con precisión lo que hay físicamente en planta, todo cambia: la planificación se vuelve predecible, los desperdicios desaparecen y los equipos pueden enfocarse en crear valor en lugar de gestionar urgencias.",
+        headline: "Automatizando la verificación de despachos para que los envíos siempre salgan correctamente",
+        description: "Creemos que las operaciones eficientes comienzan con procesos fiables. Cuando la verificación de expedición funciona de forma automática, los equipos dedican menos tiempo a revisar y más tiempo a gestionar lo que importa. Construimos las herramientas que hacen esto posible sin interrumpir el funcionamiento de su operación.",
         mission: "Misión",
-        missionText: "Hacer que los movimientos de inventario sean continuamente observables y verificables en tiempo real.",
+        missionText: "Automatizar la verificación de expedición para que cada envío salga correctamente de la planta, sin esfuerzo manual.",
         visionLabel: "Visión",
-        visionText: "Un mundo donde cada activo físico sea digitalmente visible, impulsando operaciones con cero desperdicios."
+        visionText: "Un mundo donde cada envío saliente se verifica automáticamente antes de abandonar la planta."
       },
       careers: {
         label: "Carreras",
@@ -977,8 +985,8 @@ export const translations = {
       }
     },
     meta: {
-      homeTitle: "Vexgen AI – Visibilidad de inventario en tiempo real y conciliación con ERP",
-      homeDescription: "Visibilidad en tiempo real y conciliación entre datos ERP e inventario físico. Sin recuentos manuales. Sin etiquetas. Sin interrupciones operativas.",
+      homeTitle: "Vexgen AI – Verificación de expedición en tiempo real para plantas industriales",
+      homeDescription: "Verificación automatizada de envíos salientes en tiempo real. Sin controles manuales. Menos errores. Más tiempo para operar.",
       companyTitle: "Vexgen AI – Sobre la empresa (Zúrich, Suiza)",
       companyDescription: "Conozca Vexgen AI, una empresa suiza de IA industrial con sede en Zúrich, Suiza, que cierra la brecha entre los registros ERP y la realidad física con visibilidad de inventario impulsada por IA.",
       privacyTitle: "Protección de datos - Vexgen AI",
@@ -1022,7 +1030,7 @@ export const translations = {
     cta: {
       requestDemo: "Solicitar una demo"
     },
-    stockComparison: "Comparación de peso por lote: Vexgen AI vs. SAP",
+    stockComparison: "Registro de verificación de despachos en vivo — Vexgen AI",
     industryPages: {
       sections: {
         realityToday: "La realidad actual",
