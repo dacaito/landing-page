@@ -860,7 +860,7 @@ export const translations = {
         "Conteo manual bajo presión de tiempo",
         "Verificaciones que retrasan la salida de los camiones",
         "Errores de carga que se convierten en reclamos",
-        "Reprocesos e investigaciones tras el despacho"
+        "Retrabajo e investigaciones tras el despacho"
       ],
       closing: "El tiempo perdido se paga en retrasos, retrabajo y problemas con clientes."
     },
