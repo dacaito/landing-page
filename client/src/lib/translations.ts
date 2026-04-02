@@ -879,7 +879,7 @@ export const translations = {
     howItWorks: {
       label: "Cómo funciona",
       headline: "Verificación automatizada\nen el punto de despacho",
-      description: "Vexgen AI verifica cada envío saliente antes de que abandone las instalaciones.",
+      description: "Vexgen AI verifica cada despacho antes de salir.",
       steps: [
         {
           step: "01",
