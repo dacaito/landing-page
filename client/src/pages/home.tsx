@@ -9,6 +9,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { LanguageDropdown } from "@/components/LanguageDropdown";
 import { track } from "@/lib/analytics";
 import dashboardImage from "@assets/dash-board-kpi.png";
+import dashboardImageNew from "@assets/dashboard-dispatch-overview.png";
 import stockImage from "@assets/dashboard-verification-feed.png";
 import demoVideo from "@assets/Landing-Page-Reel-876x512.mp4";
 import demoVideoNew from "@assets/vexgen-demo-website.mp4";
@@ -88,6 +89,8 @@ export default function Home() {
 
   const isInventoryManagement = location.includes('/inventory-management');
   const activeVideo = isInventoryManagement ? demoVideo : demoVideoNew;
+  const activeDashboard = isInventoryManagement ? dashboardImage : dashboardImageNew;
+  const activeDashboardCaption = isInventoryManagement ? t.results.dashboardCaption : "Dispatch overview — Vexgen AI";
 
   const pagePath = location.replace(/^\/(en|de|es)/, '') || '';
   const canonicalUrl = `https://vexgen.ai${location}`;
@@ -407,8 +410,8 @@ export default function Home() {
             <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl sm:rounded-3xl blur-lg sm:blur-xl opacity-50" />
             <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-border/50 shadow-xl">
               <img 
-                src={dashboardImage} 
-                alt="Vexgen AI KPI Dashboard showing warehouse and stock metrics"
+                src={activeDashboard} 
+                alt="Vexgen AI dispatch overview dashboard"
                 width="960"
                 height="540"
                 loading="lazy"
@@ -417,7 +420,7 @@ export default function Home() {
               />
             </div>
             <p className="text-xs sm:text-sm text-muted-foreground text-center mt-3 sm:mt-4">
-              {t.results.dashboardCaption}
+              {activeDashboardCaption}
             </p>
           </div>
         </div>
