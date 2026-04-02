@@ -855,7 +855,7 @@ export const translations = {
     problem: {
       label: "El problema",
       headline: "Los controles manuales de despachos ralentizan todo",
-      description: "En muchas plantas que trabajan con tubos, perfiles y extrusiones, los despachos sigue dependiendo del conteo manual, inspecciones visuales o la confianza. Esto ralentiza los envíos y genera trabajo adicional.\n\nComo resultado, los equipos se enfrentan a:",
+      description: "En muchas plantas que trabajan con tubos, perfiles y extrusiones, los despachos sigue dependiendo del conteo manual, inspecciones visuales o la confianza.\n\nComo resultado, los equipos se enfrentan a:",
       issues: [
         "Conteo manual bajo presión de tiempo",
         "Verificaciones que retrasan la salida de los camiones",
