@@ -838,7 +838,7 @@ export const translations = {
     hero: {
       headline: "Automatice el control de despacho.\nAhorre tiempo.",
       subheadline: "",
-      tagline: "Detecte errores antes de que los camiones salgan\ny mantenga un registro claro de cada envío.\n\nSin controles manuales. El mismo proceso. Menos tiempo."
+      tagline: "Detecte errores antes de que los camiones salgan\ny mantenga un registro claro de cada envío.\n\nSin controles manuales. Mismo proceso. Menos tiempo."
     },
     results: {
       label: "Resultados confirmados",
