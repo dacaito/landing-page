@@ -9,12 +9,11 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { LanguageDropdown } from "@/components/LanguageDropdown";
 import { track } from "@/lib/analytics";
 import dashboardImage from "@assets/dash-board-kpi.png";
+import dashboardImageNew from "@assets/dashboard-dispatch-overview.png";
 import stockImage from "@assets/dashboard-verification-feed.png";
 import demoVideo from "@assets/Landing-Page-Reel-876x512.mp4";
 import demoVideoNew from "@assets/vexgen-demo-website.mp4";
 import vixgenLogo from "@assets/Vexgen-owl.png";
-
-const dashboardImageNew = "/dashboard-dispatch-overview.png?v=2";
 
 export default function Home() {
   const { language: lang, getLocalizedPath, switchLanguagePath } = useLanguage();
