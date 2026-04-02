@@ -862,7 +862,7 @@ export const translations = {
         "Errores de carga que se convierten en reclamos",
         "Reprocesos e investigaciones tras el despacho"
       ],
-      closing: "El tiempo perdido en los despachos aparece después: en retrasos, trabajo extra y problemas con clientes."
+      closing: "El tiempo perdido se paga en retrasos, retrabajo y problemas con clientes."
     },
     outcome: {
       label: "El resultado",
