@@ -148,12 +148,12 @@ export const translations = {
       focus: "Manufacturing and Warehouse Focus",
       vision: {
         label: "Our Vision",
-        headline: "Bridging the gap between digital records and physical reality",
-        description: "We believe that operational excellence starts with trust in your data. When ERP systems accurately reflect what's physically on the floor, everything changes: planning becomes predictable, waste disappears, and teams can focus on value creation instead of firefighting.",
+        headline: "Automating dispatch verification so shipments always leave correctly",
+        description: "We believe efficient operations start with reliable processes. When dispatch verification runs automatically, teams spend less time checking and more time managing what matters. We build the tools that make this possible without disrupting how your operation works.",
         mission: "Mission",
-        missionText: "Make inventory movements continuously observable and verifiable in real-time.",
+        missionText: "Automate dispatch verification so every shipment leaves the plant correctly, without manual effort.",
         visionLabel: "Vision",
-        visionText: "A world where every physical asset is digitally visible, driving zero-waste operations."
+        visionText: "A world where every outbound shipment is automatically verified before it leaves the plant."
       },
       careers: {
         label: "Careers",
