@@ -10,7 +10,7 @@ import { LanguageDropdown } from "@/components/LanguageDropdown";
 import { getDomain, track } from "@/lib/analytics";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
-const companyVisionImage = "/images/company-warehouse.png";
+const companyVisionImage = "/images/company-dispatch.png";
 
 export default function Company() {
   const { language: lang, getLocalizedPath, switchLanguagePath } = useLanguage();
