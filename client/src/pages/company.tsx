@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Building2, Factory, Globe, Menu, X, ChevronDown, Linkedin, Target, Eye } from "lucide-react";
+import { Building2, Factory, Globe, Menu, X, Linkedin, Target, Eye } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { SeoHead } from "@/components/SeoHead";
@@ -16,7 +16,6 @@ export default function Company() {
   const [, setLocation] = useLocation();
   const t = translations[lang];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [industriesOpen, setIndustriesOpen] = useState(false);
 
   const externalProfiles = {
     en: {
@@ -117,95 +116,6 @@ export default function Company() {
             >
               {t.nav.howItWorks}
             </button>
-            <div 
-              className="relative group"
-              onMouseEnter={() => setIndustriesOpen(true)}
-              onMouseLeave={() => setIndustriesOpen(false)}
-            >
-              <button
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 py-2"
-                onClick={() => track("nav_click", { item: "industries", label: t.nav.industries, href: "", kind: "anchor", hash: "industries_menu" })}
-              >
-                {t.nav.industries}
-                <ChevronDown className={`w-3 h-3 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {industriesOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 z-50 pt-1">
-                  <div className="bg-background border border-border rounded-lg shadow-lg py-2">
-                    <Link
-                      href={getLocalizedPath('/industries/chemical')}
-                      onClick={() =>
-                        track("nav_click", {
-                          item: "industry_chemical",
-                          label: t.industries.chemical,
-                          href: getLocalizedPath("/industries/chemical"),
-                          kind: "route",
-                        })
-                      }
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                    >
-                      {t.industries.chemical}
-                    </Link>
-                    <Link
-                      href={getLocalizedPath('/industries/plastics')}
-                      onClick={() =>
-                        track("nav_click", {
-                          item: "industry_plastics",
-                          label: t.industries.plastics,
-                          href: getLocalizedPath("/industries/plastics"),
-                          kind: "route",
-                        })
-                      }
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                    >
-                      {t.industries.plastics}
-                    </Link>
-                    <Link
-                      href={getLocalizedPath('/industries/food-beverage')}
-                      onClick={() =>
-                        track("nav_click", {
-                          item: "industry_food_beverage",
-                          label: t.industries.foodBeverage,
-                          href: getLocalizedPath("/industries/food-beverage"),
-                          kind: "route",
-                        })
-                      }
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                    >
-                      {t.industries.foodBeverage}
-                    </Link>
-                    <Link
-                      href={getLocalizedPath('/industries/cosmetics')}
-                      onClick={() =>
-                        track("nav_click", {
-                          item: "industry_cosmetics",
-                          label: t.industries.cosmetics,
-                          href: getLocalizedPath("/industries/cosmetics"),
-                          kind: "route",
-                        })
-                      }
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                    >
-                      {t.industries.cosmetics}
-                    </Link>
-                    <Link
-                      href={getLocalizedPath('/industries/pharma')}
-                      onClick={() =>
-                        track("nav_click", {
-                          item: "industry_pharma",
-                          label: t.industries.pharma,
-                          href: getLocalizedPath("/industries/pharma"),
-                          kind: "route",
-                        })
-                      }
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                    >
-                      {t.industries.pharma}
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
             <Link
               href={getLocalizedPath('/company')}
               onClick={() =>
@@ -279,59 +189,6 @@ export default function Company() {
             >
               {t.nav.howItWorks}
             </button>
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-lg font-medium text-muted-foreground">{t.nav.industries}</span>
-              <Link
-                href={getLocalizedPath('/industries/chemical')}
-                className="text-base text-muted-foreground"
-                onClick={() => {
-                  track("nav_click", { item: "industry_chemical", label: t.industries.chemical, href: getLocalizedPath("/industries/chemical") });
-                  setMobileMenuOpen(false);
-                }}
-              >
-                {t.industries.chemical}
-              </Link>
-              <Link
-                href={getLocalizedPath('/industries/plastics')}
-                className="text-base text-muted-foreground"
-                onClick={() => {
-                  track("nav_click", { item: "industry_plastics", label: t.industries.plastics, href: getLocalizedPath("/industries/plastics") });
-                  setMobileMenuOpen(false);
-                }}
-              >
-                {t.industries.plastics}
-              </Link>
-              <Link
-                href={getLocalizedPath('/industries/food-beverage')}
-                className="text-base text-muted-foreground"
-                onClick={() => {
-                  track("nav_click", { item: "industry_food_beverage", label: t.industries.foodBeverage, href: getLocalizedPath("/industries/food-beverage") });
-                  setMobileMenuOpen(false);
-                }}
-              >
-                {t.industries.foodBeverage}
-              </Link>
-              <Link
-                href={getLocalizedPath('/industries/cosmetics')}
-                className="text-base text-muted-foreground"
-                onClick={() => {
-                  track("nav_click", { item: "industry_cosmetics", label: t.industries.cosmetics, href: getLocalizedPath("/industries/cosmetics") });
-                  setMobileMenuOpen(false);
-                }}
-              >
-                {t.industries.cosmetics}
-              </Link>
-              <Link
-                href={getLocalizedPath('/industries/pharma')}
-                className="text-base text-muted-foreground"
-                onClick={() => {
-                  track("nav_click", { item: "industry_pharma", label: t.industries.pharma, href: getLocalizedPath("/industries/pharma") });
-                  setMobileMenuOpen(false);
-                }}
-              >
-                {t.industries.pharma}
-              </Link>
-            </div>
             <Link
               href={getLocalizedPath('/company')}
               className="text-lg font-medium text-primary"
