@@ -26,7 +26,6 @@ function Router() {
     <Suspense fallback={null}>
       <Switch>
         <Route path="/en" component={Home} />
-        <Route path="/en/inventory-management" component={Home} />
         <Route path="/en/industries/plastics" component={PlasticsIndustry} />
         <Route path="/en/industries/food-beverage" component={FoodBeverageIndustry} />
         <Route path="/en/industries/cosmetics" component={CosmeticsIndustry} />
@@ -38,7 +37,6 @@ function Router() {
         <Route path="/en/imprint" component={Imprint} />
 
         <Route path="/de" component={Home} />
-        <Route path="/de/inventory-management" component={Home} />
         <Route path="/de/industries/plastics" component={PlasticsIndustry} />
         <Route path="/de/industries/food-beverage" component={FoodBeverageIndustry} />
         <Route path="/de/industries/cosmetics" component={CosmeticsIndustry} />
@@ -50,7 +48,6 @@ function Router() {
         <Route path="/de/imprint" component={Imprint} />
 
         <Route path="/es" component={Home} />
-        <Route path="/es/inventory-management" component={Home} />
         <Route path="/es/industries/plastics" component={PlasticsIndustry} />
         <Route path="/es/industries/food-beverage" component={FoodBeverageIndustry} />
         <Route path="/es/industries/cosmetics" component={CosmeticsIndustry} />

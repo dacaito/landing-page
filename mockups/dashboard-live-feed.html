@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vexgen AI - Live Verification Feed</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #f5f7fa; color: #1a2332; -webkit-font-smoothing: antialiased; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 40px; }
+
+  .frame { width: 700px; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+
+  /* Mini topbar */
+  .mini-bar { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; border-bottom: 1px solid #e2e8f0; background: #fafbfc; }
+  .mini-bar-left { display: flex; align-items: center; gap: 8px; }
+  .mini-logo { width: 24px; height: 24px; background: linear-gradient(135deg, #0063BF, #004a8f); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 11px; }
+  .mini-brand { font-weight: 700; font-size: 13px; color: #0063BF; }
+  .mini-sep { color: #cbd5e1; font-size: 13px; }
+  .mini-page { font-size: 13px; font-weight: 600; color: #1a2332; }
+  .live-dot { display: inline-flex; align-items: center; gap: 5px; background: #fef2f2; border: 1px solid #fecaca; padding: 2px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; color: #dc2626; }
+  .live-dot::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #dc2626; animation: pulse 1.5s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+  /* Feed list */
+  .feed { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+
+  .event { display: flex; align-items: flex-start; gap: 10px; padding: 10px 12px; border-radius: 10px; border: 1px solid transparent; }
+  .event.active { background: #f8fbff; border-color: #0063BF; }
+
+  .event-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .event-icon.green { background: #dcfce7; color: #16a34a; }
+  .event-icon.blue { background: #eff6ff; color: #0063BF; }
+  .event-icon.amber { background: #fef3c7; color: #d97706; }
+  .event-icon.red { background: #fee2e2; color: #dc2626; }
+  .event-icon svg { width: 16px; height: 16px; }
+
+  .event-body { flex: 1; min-width: 0; }
+  .event-row1 { display: flex; align-items: center; justify-content: space-between; margin-bottom: 3px; }
+  .event-title { font-size: 13px; font-weight: 600; }
+  .event-title .link { color: #0063BF; }
+  .event-time { font-size: 11px; color: #94a3b8; font-weight: 500; }
+  .event-desc { font-size: 12px; color: #64748b; line-height: 1.4; margin-bottom: 6px; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .tag { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 5px; font-size: 11px; font-weight: 500; }
+  .tag-dock { background: #eff6ff; color: #0063BF; }
+  .tag-in { background: #f0fdf4; color: #15803d; }
+  .tag-out { background: #eff6ff; color: #1d4ed8; }
+  .tag-carrier { background: #f1f5f9; color: #475569; }
+  .tag-items { background: #f5f3ff; color: #6d28d9; }
+
+  .badge { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 500; }
+  .badge-dot { width: 5px; height: 5px; border-radius: 50%; }
+  .badge-verified { background: #dcfce7; color: #16a34a; }
+  .badge-verified .badge-dot { background: #16a34a; }
+  .badge-progress { background: #fef3c7; color: #d97706; }
+  .badge-progress .badge-dot { background: #d97706; }
+  .badge-detecting { background: #eff6ff; color: #0063BF; }
+  .badge-detecting .badge-dot { background: #0063BF; animation: pulse 1.5s infinite; }
+  .badge-exception { background: #fee2e2; color: #dc2626; }
+  .badge-exception .badge-dot { background: #dc2626; }
+
+  /* Detected items row */
+  .detected { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+  .det-item { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 5px 9px; font-size: 11px; }
+  .det-sku { font-weight: 600; color: #1a2332; }
+  .det-meta { color: #64748b; }
+  .det-ok { color: #16a34a; font-weight: 600; }
+
+  /* Divider */
+  .divider { height: 1px; background: #f1f5f9; margin: 2px 12px; }
+
+  /* Bottom summary bar */
+  .summary-bar { display: flex; align-items: center; justify-content: space-around; padding: 12px 16px; border-top: 1px solid #e2e8f0; background: #fafbfc; }
+  .summary-stat { text-align: center; }
+  .summary-val { font-size: 18px; font-weight: 700; color: #0063BF; }
+  .summary-label { font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 500; margin-top: 1px; }
+</style>
+</head>
+<body>
+
+<div class="frame">
+  <div class="mini-bar">
+    <div class="mini-bar-left">
+      <div class="mini-logo">V</div>
+      <span class="mini-brand">Vexgen AI</span>
+      <span class="mini-sep">/</span>
+      <span class="mini-page">Verification Feed</span>
+    </div>
+    <div class="live-dot">LIVE</div>
+  </div>
+
+  <div class="feed">
+
+    <!-- Active detection -->
+    <div class="event active">
+      <div class="event-icon blue">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <div class="event-body">
+        <div class="event-row1">
+          <div class="event-title">Pallet Detected <span class="link">#8127</span></div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="badge badge-detecting"><span class="badge-dot"></span>Detecting</span>
+            <span class="event-time">10:42 AM</span>
+          </div>
+        </div>
+        <div class="event-desc">3 of 24 pallets verified. Unloading in progress.</div>
+        <div class="tags">
+          <span class="tag tag-dock">Dock 1</span>
+          <span class="tag tag-in">Inbound</span>
+          <span class="tag tag-carrier">FedEx Freight</span>
+          <span class="tag tag-items">3 / 24 pallets</span>
+        </div>
+        <div class="detected">
+          <div class="det-item"><span class="det-sku">QC-400-BLK</span> <span class="det-meta">Qty: 12</span> <span class="det-ok">OK</span></div>
+          <div class="det-item"><span class="det-sku">QC-400-BLK</span> <span class="det-meta">Qty: 12</span> <span class="det-ok">OK</span></div>
+          <div class="det-item"><span class="det-sku">SL-200-WHT</span> <span class="det-meta">Qty: 8</span> <span class="det-ok">OK</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Verifying outbound -->
+    <div class="event">
+      <div class="event-icon amber">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="event-body">
+        <div class="event-row1">
+          <div class="event-title">Verification In Progress <span class="link">#8126</span></div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="badge badge-progress"><span class="badge-dot"></span>Verifying</span>
+            <span class="event-time">10:38 AM</span>
+          </div>
+        </div>
+        <div class="event-desc">16 of 18 pallets matched against BOL. 2 remaining.</div>
+        <div class="tags">
+          <span class="tag tag-dock">Dock 2</span>
+          <span class="tag tag-out">Outbound</span>
+          <span class="tag tag-carrier">XPO Logistics</span>
+          <span class="tag tag-items">16 / 18 pallets</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Verified -->
+    <div class="event">
+      <div class="event-icon green">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="event-body">
+        <div class="event-row1">
+          <div class="event-title">Shipment Verified <span class="link">#8125</span></div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="badge badge-verified"><span class="badge-dot"></span>Verified</span>
+            <span class="event-time">10:32 AM</span>
+          </div>
+        </div>
+        <div class="event-desc">All 12 pallets verified. BOL matched. Turnaround: 14 min.</div>
+        <div class="tags">
+          <span class="tag tag-dock">Dock 3</span>
+          <span class="tag tag-in">Inbound</span>
+          <span class="tag tag-carrier">Kuehne+Nagel</span>
+          <span class="tag tag-items">12 / 12 pallets</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Exception -->
+    <div class="event">
+      <div class="event-icon red">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      </div>
+      <div class="event-body">
+        <div class="event-row1">
+          <div class="event-title">Exception Flagged <span class="link">#8121</span></div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="badge badge-exception"><span class="badge-dot"></span>Exception</span>
+            <span class="event-time">9:41 AM</span>
+          </div>
+        </div>
+        <div class="event-desc">2 pallets short vs. BOL. Expected 14, received 12. Evidence captured.</div>
+        <div class="tags">
+          <span class="tag tag-dock">Dock 1</span>
+          <span class="tag tag-in">Inbound</span>
+          <span class="tag tag-carrier">DHL Supply Chain</span>
+          <span class="tag tag-items">12 / 14 pallets</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Verified outbound -->
+    <div class="event">
+      <div class="event-icon green">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="event-body">
+        <div class="event-row1">
+          <div class="event-title">Shipment Verified <span class="link">#8122</span></div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="badge badge-verified"><span class="badge-dot"></span>Verified</span>
+            <span class="event-time">9:58 AM</span>
+          </div>
+        </div>
+        <div class="event-desc">All 22 pallets verified and loaded. Truck cleared.</div>
+        <div class="tags">
+          <span class="tag tag-dock">Dock 2</span>
+          <span class="tag tag-out">Outbound</span>
+          <span class="tag tag-carrier">Rhenus Logistics</span>
+          <span class="tag tag-items">22 / 22 pallets</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="summary-bar">
+    <div class="summary-stat">
+      <div class="summary-val">47</div>
+      <div class="summary-label">Trucks Today</div>
+    </div>
+    <div class="summary-stat">
+      <div class="summary-val">18m</div>
+      <div class="summary-label">Avg. Turnaround</div>
+    </div>
+    <div class="summary-stat">
+      <div class="summary-val">99.6%</div>
+      <div class="summary-label">Accuracy</div>
+    </div>
+    <div class="summary-stat">
+      <div class="summary-val">2</div>
+      <div class="summary-label">Exceptions</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

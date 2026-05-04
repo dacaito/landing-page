@@ -20,85 +20,80 @@ export const translations = {
       logistics: "Logistics & Fulfillment"
     },
     hero: {
-      headline: "Automate dispatch checks.\nSave time.",
+      headline: "Automate Shipping & Receiving.\nMaximize Throughput.",
       subheadline: "",
-      tagline: "Catch errors before trucks leave and\nkeep a clear record of every shipment.\n\nNo manual checks. Same process. Less time."
+      tagline: "Trucks move faster. Dock teams do less manual work.\nEvery shipment verified automatically, inbound and outbound.\n\nNo manual scanning. No process change."
     },
     results: {
       label: "Proven Results",
       headline: "Reality delivers returns",
-      description: "Deployed in real operational environments. Measurable ROI from day one.",
+      description: "Built for real-world dock operations. Engineered for measurable ROI.",
       metrics: {
+        time: { value: ">80%", label: "Faster Dock Turnaround" },
         accuracy: { value: ">99%", label: "Shipment Accuracy" },
-        writeoff: { value: ">50%", label: "Claim Reduction" },
-        time: { value: ">1,000", label: "Hours Labor Saved" },
+        writeoff: { value: ">50%", label: "Fewer Freight Claims" },
         roi: { value: "<30 Days", label: "Time to ROI" }
       },
       dashboardCaption: "Live dashboard from active deployment",
-      dispatchDashboardCaption: "Dispatch overview — Vexgen AI"
+      dispatchDashboardCaption: "Shipping & receiving overview | Vexgen AI"
     },
     problem: {
       label: "The Problem",
-      headline: "Manual dispatch checks slow everything down",
-      description: "In many plants handling tubes, pipes, and profiles, dispatch still relies on manual counting, visual checks, or trust. This slows down shipments and adds extra work.\n\nAs a result, teams deal with:",
+      headline: "The loading dock is your biggest bottleneck",
+      description: "Every manual check at the dock adds minutes per truck. Counting pallets, verifying BOLs, inspecting for damage. Those minutes compound into hours of lost throughput every day.\n\nAs a result, teams deal with:",
       issues: [
-        "Manual counting under time pressure",
-        "Rechecks that delay trucks from leaving",
-        "Loading errors that turn into claims",
-        "Rework and investigations after dispatch"
+        "Trucks waiting while teams manually verify shipments",
+        "Dock labor spent on repetitive scanning and checking",
+        "Slow turnaround slowing your entire operation",
+        "Errors discovered too late, creating rework and claims"
       ],
-      closing: "Time lost at dispatch shows up later — in delays, extra work, and customer issues."
+      closing: "The dock should move at the speed of your operation, not slow it down."
     },
     outcome: {
       label: "The Outcome",
-      headline: "What changes when dispatch checks are automated",
-      description: "Shipments are verified in real time, removing manual work at dispatch and freeing up time for more important tasks.\n\nWith Vexgen AI, teams optimize dispatch operations:",
+      headline: "What changes when the dock runs itself",
+      description: "Trucks clear faster. Teams spend less time on manual verification and more time on operations that move the needle.\n\nWith Vexgen AI, dock operations transform:",
       benefits: [
-        "Less time spent on repetitive verification work",
-        "Loading errors are caught before they become customer claims",
-        "Dispatch runs without manual checks",
-        "Clear record of what shipped — without manual effort"
+        "Faster truck turnaround with less waiting and more throughput",
+        "Dock labor freed from repetitive verification tasks",
+        "Inbound and outbound shipments verified automatically",
+        "Errors and damage caught before they become claims"
       ],
-      closing: "Spend less time checking. More time running operations."
+      closing: "More trucks through the door. Less time per truck. Same team."
     },
     howItWorks: {
       label: "How It Works",
-      headline: "Automated verification\nat the point of dispatch",
-      description: "Vexgen AI verifies every outbound shipment before it leaves the site.",
+      headline: "Automated verification\nat every dock door",
+      description: "Vexgen AI verifies every shipment, inbound and outbound, before it leaves or enters the facility.",
       steps: [
         {
           step: "01",
-          title: "Capture the loaded truck",
-          description: "Cameras monitor the truck at the dispatch point."
+          title: "Capture at the dock door",
+          description: "Cameras at each dock door see every pallet, label, and barcode, inbound and outbound. No handheld scanners. No process change."
         },
         {
           step: "02",
-          title: "Detect and count what is loaded",
-          description: "Vision-based models detect and count loaded materials directly from the truck."
+          title: "Verify automatically",
+          description: "Computer vision reads labels, barcodes, and text. It matches against BOLs, counts quantities, and flags exceptions in real time."
         },
         {
           step: "03",
-          title: "Compare against the shipment order",
-          description: "The system matches detected quantities with the expected shipment from the ERP."
-        },
-        {
-          step: "04",
-          title: "Approve or block dispatch",
-          description: "If everything matches, the truck is cleared. If not, the shipment is flagged and held before leaving the plant."
+          title: "Update your systems instantly",
+          description: "Your WMS, ERP, and TMS update automatically. Exceptions surface immediately with visual evidence. Teams act only when needed."
         }
       ],
-      tags: ["No manual checks", "Same process", "Less time"]
+      tags: ["No manual scanning", "No process change", "Same team"]
     },
     whoItsFor: {
       label: "Who It Is For",
-      headline: "Built for operations handling outbound shipments of tubes, pipes, and profiles",
+      headline: "Built for operations moving freight through dock doors",
       industries: [
-        { label: "Steel pipe and tube producers" },
-        { label: "Plastic pipe and profile manufacturers" },
-        { label: "Aluminum and extrusion companies" },
-        { label: "Distributor of tubes, pipes, and profiles" }
+        { label: "3PL warehouses" },
+        { label: "Distribution centers" },
+        { label: "Manufacturing shipping docks" },
+        { label: "Freight & logistics operators" }
       ],
-      closing: "If your operation depends on loading trucks correctly before dispatch, Vexgen AI is for you."
+      closing: "If trucks and dock throughput impact your bottom line, Vexgen AI was built for you."
     },
     contact: {
       label: "Get Started",
@@ -112,7 +107,7 @@ export const translations = {
         company: "Company",
         companyPlaceholder: "Company name",
         message: "Message (optional)",
-        messagePlaceholder: "Tell us about your dispatch challenges...",
+        messagePlaceholder: "Tell us about your dock operations...",
         submit: "Request a Demo",
         submitting: "Submitting..."
       },
@@ -125,8 +120,8 @@ export const translations = {
     },
     company: {
       label: "About Vexgen AI",
-      headline: "Built for real industrial operations",
-      description: "Vexgen AI was founded to eliminate manual dispatch errors in industrial operations. We automate outbound shipment verification so plants can ship with confidence, without relying on manual checks.",
+      headline: "Built for the loading dock",
+      description: "Vexgen AI was founded to eliminate the manual bottleneck at the dock door. We automate shipping and receiving verification so operations move faster, without adding headcount or changing processes.",
       entitySentence: "Vexgen AI is a Swiss industrial AI company headquartered in Zurich, Switzerland.",
       team: {
         ceo: {
@@ -146,34 +141,34 @@ export const translations = {
         }
       },
       location: "Baumackerstrasse 42, 8050, Zurich, Switzerland",
-      focus: "Manufacturing and Warehouse Focus",
+      focus: "Warehouse & Logistics Focus",
       vision: {
         label: "Our Vision",
-        headline: "Automating dispatch verification so shipments always leave correctly",
-        description: "We believe efficient operations start with reliable processes. When dispatch verification runs automatically, teams spend less time checking and more time managing what matters. We build the tools that make this possible without disrupting how your operation works.",
+        headline: "Every dock door, fully automated",
+        description: "We believe efficient operations start at the dock door. When shipping and receiving runs automatically, teams move faster, errors disappear, and throughput increases. All without changing how your operation works.",
         mission: "Mission",
-        missionText: "Automate dispatch verification so every shipment leaves the plant correctly, without manual effort.",
+        missionText: "Automate shipping and receiving so every truck clears faster, without manual effort.",
         visionLabel: "Vision",
-        visionText: "A world where every outbound shipment is automatically verified before it leaves the plant."
+        visionText: "A world where every dock door captures, verifies, and reports automatically."
       },
       careers: {
         label: "Careers",
         headline: "Join Our Team",
-        description: "We currently have no open positions, but we're always interested in hearing from talented individuals who share our passion for transforming manufacturing through technology.",
+        description: "We currently have no open positions, but we're always interested in hearing from talented individuals who share our passion for transforming logistics through technology.",
         description2: "If you're a highly motivated engineer, operator, or industry expert looking to make an impact, we'd love to hear from you.",
         cta: "Send your application to jobs@vexgen.ai"
       },
       leadership: {
         label: "Leadership",
         headline: "Meet the Team",
-        description: "A team of operators, engineers, and industry veterans united by a shared belief: manufacturing deserves better data."
+        description: "A team of operators, engineers, and industry veterans united by a shared belief: the loading dock deserves better technology."
       }
     },
     meta: {
-      homeTitle: "Vexgen AI – Real-Time Dispatch Verification for Industrial Operations",
-      homeDescription: "Automated outbound shipment verification in real time. No manual checks. Fewer errors. More time to run operations.",
+      homeTitle: "Vexgen AI – Automated Shipping & Receiving for Warehouse Operations",
+      homeDescription: "Automate shipping and receiving at the dock door. Faster truck turnaround, fewer errors, real-time visibility. No manual scanning. No process change.",
       companyTitle: "Vexgen AI – About the Company (Zurich, Switzerland)",
-      companyDescription: "Learn about Vexgen AI, a Swiss industrial AI company headquartered in Zurich, Switzerland, bridging the gap between ERP records and physical reality with AI-powered inventory visibility.",
+      companyDescription: "Learn about Vexgen AI, a Swiss industrial AI company headquartered in Zurich, Switzerland, automating shipping and receiving at the dock door with computer vision.",
       privacyTitle: "Data Privacy - Vexgen AI",
       privacyDescription: "How Vexgen AI handles privacy, data processing, retention, and security to protect operational information.",
       imprintTitle: "Imprint - Vexgen AI",
@@ -215,90 +210,7 @@ export const translations = {
     cta: {
       requestDemo: "Request a Demo"
     },
-    stockComparison: "Live dispatch verification feed — Vexgen AI",
-    inventoryPage: {
-      hero: {
-        headline: "Your ERP.\nThe Truth.",
-        subheadline: "Real-time visibility that bridges the gap between what your ERP says and what is actually on your floor.",
-        tagline: "No manual counts. No tags. No disruption."
-      },
-      results: {
-        label: "Proven Results",
-        headline: "Reality delivers returns",
-        description: "Deployed in real manufacturing environments. Measurable ROI from day one.",
-        metrics: {
-          accuracy: { value: ">99%", label: "Inventory Accuracy" },
-          writeoff: { value: "6-Figure", label: "Write-off Reduction" },
-          time: { value: "<1 Hour", label: "ERP Reconciliation" },
-          roi: { value: "<90 Days", label: "Time to ROI" }
-        },
-        dashboardCaption: "Live dashboard from active deployment"
-      },
-      problem: {
-        label: "The Problem",
-        headline: "Phantom inventory stays hidden until it costs you millions.",
-        description: "Manufacturing and warehouse operations run on ERP data that rarely reflects the physical reality of the shop floor.",
-        issues: [
-          "Emergency purchases and stockouts",
-          "Excess inventory and costly write-offs",
-          "Hours wasted on manual recounts",
-          "Critical decisions based on unreliable data"
-        ],
-        closing: "Your ERP is only as accurate as the data feeding it. Today, that data is broken."
-      },
-      outcome: {
-        label: "The Outcome",
-        headline: "When ERP reflects reality, everything changes",
-        description: "Continuous physical verification transforms operations from reactive to predictable.",
-        benefits: [
-          "Inventory accuracy you can trust, without manual counts",
-          "Stockouts and panic purchases eliminated at the source",
-          "Capital freed from safety buffers and excess stock",
-          "Audits completed in hours, not weeks",
-          "ERP data your teams can actually rely on"
-        ],
-        closing: "This is not periodic checking. This is continuous operational truth."
-      },
-      howItWorks: {
-        label: "How It Works",
-        headline: "Continuous reconciliation. Zero manual effort.",
-        description: "Vexgen AI securely and automatically connects physical movements to digital records. All your data is processed locally and never leaves your premises. Operator identity is automatically blurred.",
-        steps: [
-          {
-            step: "01",
-            title: "Capture every movement",
-            description: "Cameras continuously monitor inventory flows. Nothing goes untracked."
-          },
-          {
-            step: "02",
-            title: "Validate automatically",
-            description: "Vision technology identifies materials, movements and quantities in real time."
-          },
-          {
-            step: "03",
-            title: "Sync your ERP instantly",
-            description: "Discrepancies detected and corrected automatically. No operator input needed."
-          }
-        ],
-        tags: ["No scanners", "No tags", "No manual processes"]
-      },
-      whoItsFor: {
-        label: "Who It Is For",
-        headline: "Built for operations that move physical inventory",
-        industries: [
-          { label: "Manufacturing plants" },
-          { label: "Warehouses and logistics centers" },
-          { label: "Operations and supply chain teams" },
-          { label: "Industrial enterprises on SAP or ERP" }
-        ],
-        closing: "If inventory accuracy impacts your bottom line, Vexgen AI was built for you."
-      },
-      stockComparison: "Per-lot weight comparison: Vexgen AI vs. SAP",
-      meta: {
-        homeTitle: "Vexgen AI – Real-Time Inventory Visibility & ERP Reconciliation",
-        homeDescription: "Real-time visibility and reconciliation between ERP data and physical inventory. No manual counts. No tags. No operational disruption."
-      }
-    },
+    stockComparison: "Live shipping & receiving feed | Vexgen AI",
     industryPages: {
       sections: {
         realityToday: "The Reality Today",

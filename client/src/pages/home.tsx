@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowDown, Camera, RefreshCw, Database, ShieldCheck, Factory, Warehouse, Users, Building2, ChevronRight, Check, Menu, X } from "lucide-react";
+import { ArrowDown, Camera, RefreshCw, Database, Factory, Warehouse, Users, Building2, ChevronRight, Check, Menu, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { SeoHead } from "@/components/SeoHead";
@@ -8,31 +8,15 @@ import { translations } from "@/lib/translations";
 import { useLanguage } from "@/lib/LanguageContext";
 import { LanguageDropdown } from "@/components/LanguageDropdown";
 import { track } from "@/lib/analytics";
-import dashboardImage from "@assets/dash-board-kpi.png";
-import dashboardImageNew from "@assets/dashboard-dispatch-overview.png";
-import stockImageNew from "@assets/dashboard-verification-feed.png";
-import stockImageOld from "@assets/image_1_1767949813510.png";
-import demoVideo from "@assets/Landing-Page-Reel-876x512.mp4";
-import demoVideoNew from "@assets/vexgen-demo-website.mp4";
+import dashboardImage from "@assets/dashboard-shipping-overview.png";
+import stockImage from "@assets/dashboard-live-verification-feed.png";
+import demoVideo from "@assets/vexgen-demo-v2-website.mp4";
 import vixgenLogo from "@assets/Vexgen-owl.png";
 
 export default function Home() {
   const { language: lang, getLocalizedPath, switchLanguagePath } = useLanguage();
-  const [location, setLocation] = useLocation();
-  const isInventoryManagement = location.includes('/inventory-management');
-  const baseT = translations[lang];
-  const ip = baseT.inventoryPage;
-  const t = isInventoryManagement ? {
-    ...baseT,
-    hero: ip.hero,
-    results: { ...baseT.results, ...ip.results },
-    problem: ip.problem,
-    outcome: ip.outcome,
-    howItWorks: ip.howItWorks,
-    whoItsFor: ip.whoItsFor,
-    stockComparison: ip.stockComparison,
-    meta: { ...baseT.meta, homeTitle: ip.meta.homeTitle, homeDescription: ip.meta.homeDescription },
-  } : baseT;
+  const [location] = useLocation();
+  const t = translations[lang];
   
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -98,13 +82,9 @@ export default function Home() {
     }, 100);
   };
 
-  const howItWorksIcons = [Camera, RefreshCw, Database, ShieldCheck];
+  const howItWorksIcons = [Camera, RefreshCw, Database];
   const whoItsForIcons = [Factory, Warehouse, Users, Building2];
 
-  const activeVideo = isInventoryManagement ? demoVideo : demoVideoNew;
-  const activeDashboard = isInventoryManagement ? dashboardImage : dashboardImageNew;
-  const activeDashboardCaption = isInventoryManagement ? t.results.dashboardCaption : t.results.dispatchDashboardCaption;
-  const activeStockImage = isInventoryManagement ? stockImageOld : stockImageNew;
 
   const pagePath = location.replace(/^\/(en|de|es)/, '') || '';
   const canonicalUrl = `https://vexgen.ai${location}`;
@@ -328,7 +308,7 @@ export default function Home() {
             <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 rounded-2xl sm:rounded-3xl blur-xl sm:blur-2xl opacity-50 group-hover:opacity-70 transition-opacity" />
             <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-border/50 bg-card shadow-2xl">
               <video 
-                src={activeVideo}
+                src={demoVideo}
                 className="w-full aspect-video object-cover"
                 playsInline
                 autoPlay
@@ -424,8 +404,8 @@ export default function Home() {
             <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl sm:rounded-3xl blur-lg sm:blur-xl opacity-50" />
             <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-border/50 shadow-xl">
               <img 
-                src={activeDashboard} 
-                alt="Vexgen AI dispatch overview dashboard"
+                src={dashboardImage} 
+                alt="Vexgen AI shipping and receiving dashboard"
                 width="960"
                 height="540"
                 loading="lazy"
@@ -434,7 +414,7 @@ export default function Home() {
               />
             </div>
             <p className="text-xs sm:text-sm text-muted-foreground text-center mt-3 sm:mt-4">
-              {activeDashboardCaption}
+              {t.results.dispatchDashboardCaption}
             </p>
           </div>
         </div>
@@ -442,7 +422,7 @@ export default function Home() {
 
       <section id="solution" className="scroll-mt-24 sm:scroll-mt-28 py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-card border-y border-border/50">
         <div className="max-w-7xl mx-auto">
-          <div className={`grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 ${isInventoryManagement ? 'items-center' : 'items-start'}`}>
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
             <div>
               <p className="text-xs sm:text-sm uppercase tracking-widest text-primary mb-3 sm:mb-4" data-testid="text-outcome-label">{t.outcome.label}</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 sm:mb-8" data-testid="text-outcome-headline">
@@ -468,12 +448,12 @@ export default function Home() {
               </p>
             </div>
 
-            <div className={`relative mt-8 lg:mt-0 ${isInventoryManagement ? '' : 'lg:pt-20 lg:max-w-[80%]'}`}>
+            <div className="relative mt-8 lg:mt-0 lg:pt-20 lg:max-w-[80%]">
               <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl sm:rounded-3xl blur-lg sm:blur-xl opacity-50" />
               <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-border/50 shadow-xl">
                 <img 
-                  src={activeStockImage} 
-                  alt="Vexgen AI live dispatch verification feed"
+                src={stockImage} 
+                alt="Vexgen AI live shipping and receiving feed"
                   width="600"
                   height="400"
                   loading="lazy"

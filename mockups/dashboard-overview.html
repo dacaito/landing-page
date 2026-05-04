@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vexgen AI - Dashboard Overview</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #f5f7fa; color: #1a2332; -webkit-font-smoothing: antialiased; }
+
+  /* Top bar */
+  .topbar { display: flex; align-items: center; justify-content: space-between; background: #fff; border-bottom: 1px solid #e2e8f0; padding: 12px 24px; height: 56px; }
+  .topbar-left { display: flex; align-items: center; gap: 10px; }
+  .topbar-logo { width: 32px; height: 32px; background: linear-gradient(135deg, #0063BF, #004a8f); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 14px; }
+  .topbar-brand { font-weight: 700; font-size: 16px; color: #0063BF; }
+  .topbar-breadcrumb { color: #64748b; font-size: 14px; margin-left: 8px; }
+  .topbar-breadcrumb span { color: #1a2332; font-weight: 500; }
+  .topbar-avatar { width: 36px; height: 36px; background: #0063BF; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600; font-size: 14px; }
+
+  /* Layout */
+  .layout { display: flex; min-height: calc(100vh - 56px); }
+
+  /* Sidebar */
+  .sidebar { width: 56px; background: #fff; border-right: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; padding-top: 16px; gap: 8px; }
+  .sidebar-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; color: #64748b; cursor: pointer; transition: all 0.15s; }
+  .sidebar-icon.active { background: #eff6ff; color: #0063BF; }
+  .sidebar-icon svg { width: 20px; height: 20px; }
+  .sidebar-bottom { margin-top: auto; margin-bottom: 16px; }
+
+  /* Main */
+  .main { flex: 1; padding: 24px 32px; overflow: auto; }
+
+  /* Page header */
+  .page-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+  .page-title { font-size: 22px; font-weight: 700; }
+  .header-actions { display: flex; gap: 10px; }
+  .btn { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500; border: 1px solid #e2e8f0; background: #fff; cursor: pointer; display: flex; align-items: center; gap: 6px; color: #475569; }
+  .btn-primary { background: #0063BF; color: #fff; border-color: #0063BF; }
+
+  /* Stats row */
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+  .stat-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; }
+  .stat-label { font-size: 12px; font-weight: 500; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+  .stat-value { font-size: 28px; font-weight: 700; color: #0063BF; }
+  .stat-sub { font-size: 12px; color: #64748b; margin-top: 4px; }
+  .stat-change { font-size: 12px; color: #16a34a; font-weight: 500; }
+  .stat-change.down { color: #dc2626; }
+
+  /* Table */
+  .table-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+  .table-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid #e2e8f0; }
+  .table-title { font-size: 15px; font-weight: 600; }
+  .table-tabs { display: flex; gap: 4px; }
+  .table-tab { padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 500; color: #64748b; cursor: pointer; }
+  .table-tab.active { background: #eff6ff; color: #0063BF; }
+
+  table { width: 100%; border-collapse: collapse; }
+  thead th { text-align: left; padding: 12px 20px; font-size: 11px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #e2e8f0; background: #fafbfc; }
+  tbody td { padding: 14px 20px; font-size: 14px; border-bottom: 1px solid #f1f5f9; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: #fafbfc; }
+
+  .shipment-id { font-weight: 600; color: #0063BF; }
+  .badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 500; }
+  .badge-verified { background: #dcfce7; color: #16a34a; }
+  .badge-progress { background: #fef3c7; color: #d97706; }
+  .badge-exception { background: #fee2e2; color: #dc2626; }
+  .badge-scheduled { background: #eff6ff; color: #0063BF; }
+  .badge-inbound { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; font-size: 11px; padding: 2px 8px; }
+  .badge-outbound { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; font-size: 11px; padding: 2px 8px; }
+  .badge-dot { width: 6px; height: 6px; border-radius: 50%; }
+  .badge-verified .badge-dot { background: #16a34a; }
+  .badge-progress .badge-dot { background: #d97706; }
+  .badge-exception .badge-dot { background: #dc2626; }
+  .badge-scheduled .badge-dot { background: #0063BF; }
+
+  .dock-label { display: inline-flex; align-items: center; padding: 2px 8px; background: #f1f5f9; border-radius: 4px; font-size: 12px; font-weight: 500; color: #475569; }
+
+  .items-count { font-weight: 600; }
+  .time-cell { color: #64748b; font-size: 13px; }
+
+  /* Dock status bar */
+  .dock-bar { display: grid; grid-template-columns: repeat(8, 1fr); gap: 10px; margin-bottom: 24px; }
+  .dock-slot { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; text-align: center; }
+  .dock-slot-name { font-size: 11px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+  .dock-slot-status { font-size: 12px; font-weight: 500; }
+  .dock-slot.active { border-color: #0063BF; background: #eff6ff; }
+  .dock-slot.active .dock-slot-status { color: #0063BF; }
+  .dock-slot.idle { }
+  .dock-slot.idle .dock-slot-status { color: #94a3b8; }
+  .dock-slot.verified { border-color: #16a34a; background: #f0fdf4; }
+  .dock-slot.verified .dock-slot-status { color: #16a34a; }
+  .dock-indicator { width: 8px; height: 8px; border-radius: 50%; margin: 0 auto 6px; }
+  .dock-slot.active .dock-indicator { background: #0063BF; animation: pulse 2s infinite; }
+  .dock-slot.idle .dock-indicator { background: #cbd5e1; }
+  .dock-slot.verified .dock-indicator { background: #16a34a; }
+
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-logo">V</div>
+    <div class="topbar-brand">Vexgen AI</div>
+    <div class="topbar-breadcrumb">/ <span>Dashboard</span></div>
+  </div>
+  <div class="topbar-avatar">JD</div>
+</div>
+
+<div class="layout">
+  <div class="sidebar">
+    <div class="sidebar-icon active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+    </div>
+    <div class="sidebar-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+    </div>
+    <div class="sidebar-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </div>
+    <div class="sidebar-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+    </div>
+    <div class="sidebar-bottom">
+      <div class="sidebar-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="page-header">
+      <div class="page-title">Shipping & Receiving Overview</div>
+      <div class="header-actions">
+        <div class="btn">Today: May 4, 2026</div>
+        <div class="btn btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-label">Trucks Processed Today</div>
+        <div class="stat-value">47</div>
+        <div class="stat-sub"><span class="stat-change">+12%</span> vs. yesterday</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Avg. Dock Turnaround</div>
+        <div class="stat-value">18 min</div>
+        <div class="stat-sub"><span class="stat-change">-23%</span> vs. last week</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Shipment Accuracy</div>
+        <div class="stat-value">99.6%</div>
+        <div class="stat-sub">2 exceptions flagged</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Active Dock Doors</div>
+        <div class="stat-value">5 / 8</div>
+        <div class="stat-sub">3 idle</div>
+      </div>
+    </div>
+
+    <div class="dock-bar">
+      <div class="dock-slot active">
+        <div class="dock-indicator"></div>
+        <div class="dock-slot-name">Dock 1</div>
+        <div class="dock-slot-status">Unloading</div>
+      </div>
+      <div class="dock-slot active">
+        <div class="dock-indicator"></div>
+        <div class="dock-slot-name">Dock 2</div>
+        <div class="dock-slot-status">Verifying</div>
+      </div>
+      <div class="dock-slot verified">
+        <div class="dock-indicator"></div>
+        <div class="dock-slot-name">Dock 3</div>
+        <div class="dock-slot-status">Verified</div>
+      </div>
+      <div class="dock-slot active">
+        <div class="dock-indicator"></div>
+        <div class="dock-slot-name">Dock 4</div>
+        <div class="dock-slot-status">Loading</div>
+      </div>
+      <div class="dock-slot verified">
+        <div class="dock-indicator"></div>
+        <div class="dock-slot-name">Dock 5</div>
+        <div class="dock-slot-status">Complete</div>
+      </div>
+      <div class="dock-slot idle">
+        <div class="dock-indicator"></div>
+        <div class="dock-slot-name">Dock 6</div>
+        <div class="dock-slot-status">Idle</div>
+      </div>
+      <div class="dock-slot idle">
+        <div class="dock-indicator"></div>
+        <div class="dock-slot-name">Dock 7</div>
+        <div class="dock-slot-status">Idle</div>
+      </div>
+      <div class="dock-slot idle">
+        <div class="dock-indicator"></div>
+        <div class="dock-slot-name">Dock 8</div>
+        <div class="dock-slot-status">Idle</div>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-header">
+        <div class="table-title">Recent Shipments</div>
+        <div class="table-tabs">
+          <div class="table-tab active">All</div>
+          <div class="table-tab">Inbound</div>
+          <div class="table-tab">Outbound</div>
+          <div class="table-tab">Exceptions</div>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Shipment</th>
+            <th>Type</th>
+            <th>Dock</th>
+            <th>Carrier</th>
+            <th>Items</th>
+            <th>Status</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="shipment-id">#8127</span></td>
+            <td><span class="badge-inbound">Inbound</span></td>
+            <td><span class="dock-label">Dock 1</span></td>
+            <td>FedEx Freight</td>
+            <td><span class="items-count">24</span> pallets</td>
+            <td><span class="badge badge-progress"><span class="badge-dot"></span>Unloading</span></td>
+            <td class="time-cell">10:42 AM</td>
+          </tr>
+          <tr>
+            <td><span class="shipment-id">#8126</span></td>
+            <td><span class="badge-outbound">Outbound</span></td>
+            <td><span class="dock-label">Dock 2</span></td>
+            <td>XPO Logistics</td>
+            <td><span class="items-count">18</span> pallets</td>
+            <td><span class="badge badge-progress"><span class="badge-dot"></span>Verifying</span></td>
+            <td class="time-cell">10:38 AM</td>
+          </tr>
+          <tr>
+            <td><span class="shipment-id">#8125</span></td>
+            <td><span class="badge-inbound">Inbound</span></td>
+            <td><span class="dock-label">Dock 3</span></td>
+            <td>Kuehne+Nagel</td>
+            <td><span class="items-count">12</span> pallets</td>
+            <td><span class="badge badge-verified"><span class="badge-dot"></span>Verified</span></td>
+            <td class="time-cell">10:32 AM</td>
+          </tr>
+          <tr>
+            <td><span class="shipment-id">#8124</span></td>
+            <td><span class="badge-outbound">Outbound</span></td>
+            <td><span class="dock-label">Dock 4</span></td>
+            <td>DB Schenker</td>
+            <td><span class="items-count">36</span> pallets</td>
+            <td><span class="badge badge-progress"><span class="badge-dot"></span>Loading</span></td>
+            <td class="time-cell">10:25 AM</td>
+          </tr>
+          <tr>
+            <td><span class="shipment-id">#8123</span></td>
+            <td><span class="badge-inbound">Inbound</span></td>
+            <td><span class="dock-label">Dock 5</span></td>
+            <td>CEVA Logistics</td>
+            <td><span class="items-count">8</span> pallets</td>
+            <td><span class="badge badge-verified"><span class="badge-dot"></span>Verified</span></td>
+            <td class="time-cell">10:14 AM</td>
+          </tr>
+          <tr>
+            <td><span class="shipment-id">#8122</span></td>
+            <td><span class="badge-outbound">Outbound</span></td>
+            <td><span class="dock-label">Dock 2</span></td>
+            <td>Rhenus Logistics</td>
+            <td><span class="items-count">22</span> pallets</td>
+            <td><span class="badge badge-verified"><span class="badge-dot"></span>Verified</span></td>
+            <td class="time-cell">9:58 AM</td>
+          </tr>
+          <tr>
+            <td><span class="shipment-id">#8121</span></td>
+            <td><span class="badge-inbound">Inbound</span></td>
+            <td><span class="dock-label">Dock 1</span></td>
+            <td>DHL Supply Chain</td>
+            <td><span class="items-count">14</span> pallets</td>
+            <td><span class="badge badge-exception"><span class="badge-dot"></span>Exception</span></td>
+            <td class="time-cell">9:41 AM</td>
+          </tr>
+          <tr>
+            <td><span class="shipment-id">#8120</span></td>
+            <td><span class="badge-outbound">Outbound</span></td>
+            <td><span class="dock-label">Dock 6</span></td>
+            <td>Planzer Transport</td>
+            <td><span class="items-count">30</span> pallets</td>
+            <td><span class="badge badge-verified"><span class="badge-dot"></span>Verified</span></td>
+            <td class="time-cell">9:22 AM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
