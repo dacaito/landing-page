@@ -45,7 +45,7 @@ export const translations = {
         "Trucks waiting while teams manually verify shipments",
         "Dock labor spent on repetitive scanning and checking",
         "Slow turnaround slowing your entire operation",
-        "Exceptions discovered too late, creating rework and claims"
+        "Exceptions discovered too late, creating claims and returns"
       ],
       closing: "The dock should move at the speed of your operation, not slow it down."
     },
