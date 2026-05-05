@@ -54,8 +54,6 @@
   .badge-dot { width: 5px; height: 5px; border-radius: 50%; }
   .badge-verified { background: #dcfce7; color: #16a34a; }
   .badge-verified .badge-dot { background: #16a34a; }
-  .badge-progress { background: #fef3c7; color: #d97706; }
-  .badge-progress .badge-dot { background: #d97706; }
   .badge-detecting { background: #eff6ff; color: #0063BF; }
   .badge-detecting .badge-dot { background: #0063BF; animation: pulse 1.5s infinite; }
   .badge-exception { background: #fee2e2; color: #dc2626; }
@@ -93,20 +91,20 @@
 
   <div class="feed">
 
-    <!-- Active detection -->
+    <!-- Unloading in progress -->
     <div class="event active">
       <div class="event-icon blue">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 12l4 4 4-4"/><line x1="12" y1="3" x2="12" y2="16"/><line x1="5" y1="21" x2="19" y2="21"/></svg>
       </div>
       <div class="event-body">
         <div class="event-row1">
-          <div class="event-title">Pallet Detected <span class="link">#8127</span></div>
+          <div class="event-title">Unloading in progress <span class="link">#8127</span></div>
           <div style="display:flex;align-items:center;gap:8px;">
-            <span class="badge badge-detecting"><span class="badge-dot"></span>Detecting</span>
+            <span class="badge badge-detecting"><span class="badge-dot"></span>In progress</span>
             <span class="event-time">10:42 AM</span>
           </div>
         </div>
-        <div class="event-desc">3 of 24 pallets verified. Unloading in progress.</div>
+        <div class="event-desc">3 of 24 pallets verified so far.</div>
         <div class="tags">
           <span class="tag tag-dock">Dock 1</span>
           <span class="tag tag-in">Inbound</span>
@@ -123,22 +121,22 @@
 
     <div class="divider"></div>
 
-    <!-- Verifying outbound -->
+    <!-- Loading in progress -->
     <div class="event">
-      <div class="event-icon amber">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="event-icon blue">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 8l4-4 4 4"/><line x1="12" y1="4" x2="12" y2="17"/><line x1="5" y1="21" x2="19" y2="21"/></svg>
       </div>
       <div class="event-body">
         <div class="event-row1">
-          <div class="event-title">Verification In Progress <span class="link">#8126</span></div>
+          <div class="event-title">Loading in progress <span class="link">#8126</span></div>
           <div style="display:flex;align-items:center;gap:8px;">
-            <span class="badge badge-progress"><span class="badge-dot"></span>Verifying</span>
+            <span class="badge badge-detecting"><span class="badge-dot"></span>In progress</span>
             <span class="event-time">10:38 AM</span>
           </div>
         </div>
         <div class="event-desc">16 of 18 pallets matched against BOL. 2 remaining.</div>
         <div class="tags">
-          <span class="tag tag-dock">Dock 2</span>
+          <span class="tag tag-dock">Dock 4</span>
           <span class="tag tag-out">Outbound</span>
           <span class="tag tag-carrier">XPO Logistics</span>
           <span class="tag tag-items">16 / 18 pallets</span>
@@ -148,16 +146,16 @@
 
     <div class="divider"></div>
 
-    <!-- Verified -->
+    <!-- Shipment Complete -->
     <div class="event">
       <div class="event-icon green">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
       <div class="event-body">
         <div class="event-row1">
-          <div class="event-title">Shipment Verified <span class="link">#8125</span></div>
+          <div class="event-title">Shipment Complete <span class="link">#8125</span></div>
           <div style="display:flex;align-items:center;gap:8px;">
-            <span class="badge badge-verified"><span class="badge-dot"></span>Verified</span>
+            <span class="badge badge-verified"><span class="badge-dot"></span>Complete</span>
             <span class="event-time">10:32 AM</span>
           </div>
         </div>
@@ -188,7 +186,7 @@
         </div>
         <div class="event-desc">2 pallets short vs. BOL. Expected 14, received 12. Evidence captured.</div>
         <div class="tags">
-          <span class="tag tag-dock">Dock 1</span>
+          <span class="tag tag-dock">Dock 5</span>
           <span class="tag tag-in">Inbound</span>
           <span class="tag tag-carrier">DHL Supply Chain</span>
           <span class="tag tag-items">12 / 14 pallets</span>
@@ -198,16 +196,16 @@
 
     <div class="divider"></div>
 
-    <!-- Verified outbound -->
+    <!-- Shipment Complete outbound -->
     <div class="event">
       <div class="event-icon green">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
       <div class="event-body">
         <div class="event-row1">
-          <div class="event-title">Shipment Verified <span class="link">#8122</span></div>
+          <div class="event-title">Shipment Complete <span class="link">#8122</span></div>
           <div style="display:flex;align-items:center;gap:8px;">
-            <span class="badge badge-verified"><span class="badge-dot"></span>Verified</span>
+            <span class="badge badge-verified"><span class="badge-dot"></span>Complete</span>
             <span class="event-time">9:58 AM</span>
           </div>
         </div>

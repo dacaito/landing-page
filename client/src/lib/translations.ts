@@ -20,7 +20,7 @@ export const translations = {
       logistics: "Logistics & Fulfillment"
     },
     hero: {
-      headline: "Automate Shipping & Receiving.\nMaximize Throughput.",
+      headline: "Automate Your Dock.\nMaximize Throughput.",
       subheadline: "",
       tagline: "Trucks move faster. Dock teams do less manual work.\nEvery shipment verified automatically, inbound and outbound.\n\nNo manual scanning. No process change."
     },
@@ -35,7 +35,7 @@ export const translations = {
         roi: { value: "<30 Days", label: "Time to ROI" }
       },
       dashboardCaption: "Live dashboard from active deployment",
-      dispatchDashboardCaption: "Shipping & receiving overview | Vexgen AI"
+      dispatchDashboardCaption: "Shipping & receiving overview"
     },
     problem: {
       label: "The Problem",
@@ -45,19 +45,19 @@ export const translations = {
         "Trucks waiting while teams manually verify shipments",
         "Dock labor spent on repetitive scanning and checking",
         "Slow turnaround slowing your entire operation",
-        "Errors discovered too late, creating rework and claims"
+        "Exceptions discovered too late, creating rework and claims"
       ],
       closing: "The dock should move at the speed of your operation, not slow it down."
     },
     outcome: {
       label: "The Outcome",
-      headline: "What changes when the dock runs itself",
+      headline: "What happens when dock verification is automatic",
       description: "Trucks clear faster. Teams spend less time on manual verification and more time on operations that move the needle.\n\nWith Vexgen AI, dock operations transform:",
       benefits: [
         "Faster truck turnaround with less waiting and more throughput",
         "Dock labor freed from repetitive verification tasks",
         "Inbound and outbound shipments verified automatically",
-        "Errors and damage caught before they become claims"
+        "Exceptions and damage caught before they become claims"
       ],
       closing: "More trucks through the door. Less time per truck. Same team."
     },
@@ -210,7 +210,7 @@ export const translations = {
     cta: {
       requestDemo: "Request a Demo"
     },
-    stockComparison: "Live shipping & receiving feed | Vexgen AI",
+    stockComparison: "Live verification feed",
     industryPages: {
       sections: {
         realityToday: "The Reality Today",
