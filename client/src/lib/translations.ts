@@ -26,7 +26,7 @@ export const translations = {
     },
     results: {
       label: "Proven Results",
-      headline: "Reality delivers returns",
+      headline: "Results are visible",
       description: "Built for real-world dock operations. Engineered for measurable ROI.",
       metrics: {
         time: { value: ">80%", label: "Faster Dock Turnaround" },
@@ -424,85 +424,80 @@ export const translations = {
       chemical: "Chemie"
     },
     hero: {
-      headline: "Versandkontrollen automatisieren.\nZeit sparen.",
+      headline: "Automatisieren Sie Ihre Rampe.\nMaximaler Durchsatz.",
       subheadline: "",
-      tagline: "Fehler erkennen, bevor LKWs das Werk verlassen,\nund jede Lieferung lückenlos dokumentieren.\n\nKeine manuellen Kontrollen. Gleicher Prozess. Weniger Zeit."
+      tagline: "LKWs werden schneller abgefertigt. Rampenteams erledigen weniger manuelle Arbeit.\nJede Lieferung wird automatisch verifiziert, eingehend und ausgehend.\n\nKein manuelles Scannen. Keine Prozessänderung."
     },
     results: {
       label: "Bewährte Ergebnisse",
-      headline: "Realität zahlt sich aus",
-      description: "Im Einsatz in realen Betriebsumgebungen. Messbarer ROI ab dem ersten Tag.",
+      headline: "Die Ergebnisse sind sichtbar",
+      description: "Entwickelt für reale Rampenbetriebe. Konstruiert für messbaren ROI.",
       metrics: {
-        accuracy: { value: ">99%", label: "Versandgenauigkeit" },
-        writeoff: { value: ">50%", label: "Weniger Reklamationen" },
-        time: { value: ">1.000", label: "Eingesparte Arbeitsstunden" },
+        time: { value: ">80%", label: "Schnellere Rampenabfertigung" },
+        accuracy: { value: ">99%", label: "Liefergenauigkeit" },
+        writeoff: { value: ">50%", label: "Weniger Frachtreklamationen" },
         roi: { value: "<30\u00A0Tage", label: "Zeit bis ROI" }
       },
       dashboardCaption: "Live-Dashboard aus aktivem Einsatz",
-      dispatchDashboardCaption: "Versandübersicht — Vexgen AI"
+      dispatchDashboardCaption: "Warenein- und -ausgangsübersicht"
     },
     problem: {
       label: "Das Problem",
-      headline: "Manuelle Versandkontrollen verlangsamen alles",
-      description: "In vielen Werken, die Rohre, Profile und Schläuche verarbeiten, basiert der Versand noch immer auf manuellem Zählen, Sichtprüfungen oder Vertrauen. Das verlangsamt Lieferungen und erzeugt Mehraufwand.\n\nDadurch entstehen für Teams folgende Probleme:",
+      headline: "Die Laderampe ist Ihr grösster Engpass",
+      description: "Jede manuelle Kontrolle an der Rampe kostet Minuten pro LKW. Paletten zählen, Lieferscheine prüfen, Schäden inspizieren. Diese Minuten summieren sich zu Stunden an verlorenem Durchsatz pro Tag.\n\nDadurch kämpfen Teams mit:",
       issues: [
-        "Manuelles Zählen unter Zeitdruck",
-        "Nachkontrollen, die LKWs am Abfahren hindern",
-        "Beladefehler, die zu Reklamationen führen",
-        "Nacharbeiten und Nachforschungen nach dem Versand"
+        "LKWs warten, während Teams Lieferungen manuell prüfen",
+        "Rampenpersonal verbringt Zeit mit repetitivem Scannen und Kontrollieren",
+        "Langsame Abfertigung bremst den gesamten Betrieb",
+        "Abweichungen werden zu spät entdeckt und verursachen Nacharbeit und Reklamationen"
       ],
-      closing: "Zeitverlust beim Versand zeigt sich später – in Verzögerungen, Mehraufwand und Reklamationen."
+      closing: "Die Rampe sollte im Tempo Ihres Betriebs arbeiten, nicht ihn ausbremsen."
     },
     outcome: {
       label: "Das Ergebnis",
-      headline: "Was sich ändert, wenn Versandkontrollen automatisiert werden",
-      description: "Lieferungen werden in Echtzeit geprüft, manueller Aufwand beim Versand entfällt und Zeit wird für wichtigere Aufgaben frei.\n\nMit Vexgen AI optimieren Teams den Versandprozess:",
+      headline: "Was passiert, wenn die Rampenprüfung automatisch läuft",
+      description: "LKWs werden schneller abgefertigt. Teams verbringen weniger Zeit mit manueller Prüfung und mehr Zeit mit Aufgaben, die den Betrieb voranbringen.\n\nMit Vexgen AI verändern sich Rampenabläufe:",
       benefits: [
-        "Weniger Zeit für repetitive Prüfaufgaben",
-        "Beladefehler werden erkannt, bevor sie zu Reklamationen werden",
-        "Versand läuft ohne manuelle Kontrollen",
-        "Klare Dokumentation jeder Lieferung — ohne manuellen Aufwand"
+        "Schnellere LKW-Abfertigung mit weniger Wartezeit und mehr Durchsatz",
+        "Rampenpersonal von repetitiven Prüfaufgaben entlastet",
+        "Ein- und ausgehende Lieferungen werden automatisch verifiziert",
+        "Abweichungen und Schäden werden erkannt, bevor sie zu Reklamationen werden"
       ],
-      closing: "Weniger Zeit kontrollieren. Mehr Zeit für den Betrieb."
+      closing: "Mehr LKWs durch das Tor. Weniger Zeit pro LKW. Gleiches Team."
     },
     howItWorks: {
       label: "So funktioniert es",
-      headline: "Automatisierte Verifizierung\nam Versandpunkt",
-      description: "Vexgen AI prüft jede ausgehende Lieferung, bevor sie das Werk verlässt.",
+      headline: "Automatische Verifizierung\nan jedem Rampentor",
+      description: "Vexgen AI verifiziert jede Lieferung, eingehend und ausgehend, bevor sie das Lager verlässt oder betritt.",
       steps: [
         {
           step: "01",
-          title: "Den beladenen LKW erfassen",
-          description: "Kameras überwachen den LKW am Versandpunkt."
+          title: "Erfassung am Rampentor",
+          description: "Kameras an jedem Tor erfassen jede Palette, jedes Etikett und jeden Barcode, eingehend und ausgehend. Keine Handscanner. Keine Prozessänderung."
         },
         {
           step: "02",
-          title: "Ladung erkennen und zählen",
-          description: "Bildverarbeitungsmodelle erkennen und zählen die geladenen Materialien direkt am LKW."
+          title: "Automatisch verifizieren",
+          description: "Bildverarbeitung liest Etiketten, Barcodes und Text. Sie gleicht mit Lieferscheinen ab, zählt Mengen und meldet Abweichungen in Echtzeit."
         },
         {
           step: "03",
-          title: "Mit dem Lieferauftrag abgleichen",
-          description: "Das System gleicht die erkannten Mengen mit der erwarteten Lieferung aus dem ERP ab."
-        },
-        {
-          step: "04",
-          title: "Versand freigeben oder sperren",
-          description: "Bei Übereinstimmung wird der LKW freigegeben. Stimmt etwas nicht, wird die Lieferung markiert und vor dem Verlassen des Werks gestoppt."
+          title: "Systeme sofort aktualisieren",
+          description: "Ihr WMS, ERP und TMS werden automatisch aktualisiert. Abweichungen werden sofort mit Bildbeleg angezeigt. Teams handeln nur bei Bedarf."
         }
       ],
-      tags: ["Keine manuellen Kontrollen", "Gleicher Prozess", "Weniger Zeit"]
+      tags: ["Kein manuelles Scannen", "Keine Prozessänderung", "Gleiches Team"]
     },
     whoItsFor: {
       label: "Für wen",
-      headline: "Entwickelt für Betriebe, die Rohre, Profile und Schläuche versenden",
+      headline: "Entwickelt für Betriebe, die Fracht über Laderampen bewegen",
       industries: [
-        { label: "Hersteller von Stahlrohren und -profilen" },
-        { label: "Kunststoffrohr- und Profilhersteller" },
-        { label: "Aluminium- und Extrusionsunternehmen" },
-        { label: "Distributoren von Rohren, Profilen und Schläuchen" }
+        { label: "Kontraktlogistik-Lager" },
+        { label: "Distributionszentren" },
+        { label: "Versandrampen in der Fertigung" },
+        { label: "Fracht- und Logistikunternehmen" }
       ],
-      closing: "Wenn Ihr Betrieb davon abhängt, LKWs vor dem Versand korrekt zu beladen, ist Vexgen AI für Sie gemacht."
+      closing: "Wenn LKWs und Rampendurchsatz Ihr Ergebnis beeinflussen, wurde Vexgen AI für Sie entwickelt."
     },
     contact: {
       label: "Jetzt starten",
@@ -516,7 +511,7 @@ export const translations = {
         company: "Unternehmen",
         companyPlaceholder: "Firmenname",
         message: "Nachricht (optional)",
-        messagePlaceholder: "Erzählen Sie uns von Ihren Versandherausforderungen...",
+        messagePlaceholder: "Erzählen Sie uns von Ihrem Rampenbetrieb...",
         submit: "Demo anfordern",
         submitting: "Wird gesendet..."
       },
@@ -529,8 +524,8 @@ export const translations = {
     },
     company: {
       label: "Über Vexgen AI",
-      headline: "Entwickelt für echte industrielle Abläufe",
-      description: "Vexgen AI wurde gegründet, um manuelle Versandfehler in industriellen Betrieben zu beseitigen. Wir automatisieren die Prüfung ausgehender Lieferungen, damit Werke sicher versenden können – ohne manuelle Kontrollen.",
+      headline: "Entwickelt für die Laderampe",
+      description: "Vexgen AI wurde gegründet, um den manuellen Engpass am Rampentor zu beseitigen. Wir automatisieren die Warenein- und -ausgangsprüfung, damit Betriebe schneller arbeiten, ohne zusätzliches Personal oder Prozessänderungen.",
       entitySentence: "Vexgen AI ist ein Schweizer Industrial-AI-Unternehmen mit Sitz in Zürich, Schweiz.",
       team: {
         ceo: {
@@ -550,34 +545,34 @@ export const translations = {
         }
       },
       location: "Baumackerstrasse 42, 8050, Zürich, Schweiz",
-      focus: "Fokus: Fertigung und Lager",
+      focus: "Fokus: Lager und Logistik",
       vision: {
         label: "Unsere Vision",
-        headline: "Versandverifizierung automatisieren, damit Lieferungen immer korrekt abgehen",
-        description: "Wir glauben, dass effiziente Abläufe mit zuverlässigen Prozessen beginnen. Wenn die Versandverifizierung automatisch läuft, verbringen Teams weniger Zeit mit Kontrollen und mehr Zeit mit dem, was wirklich zählt. Wir bauen die Werkzeuge, die das möglich machen – ohne Ihren Betrieb zu unterbrechen.",
+        headline: "Jedes Rampentor, vollständig automatisiert",
+        description: "Wir glauben, dass effiziente Abläufe am Rampentor beginnen. Wenn Warenein- und -ausgang automatisch laufen, arbeiten Teams schneller, Fehler verschwinden und der Durchsatz steigt. Alles ohne Änderung Ihrer Betriebsabläufe.",
         mission: "Mission",
-        missionText: "Versandverifizierung automatisieren, damit jede Lieferung korrekt das Werk verlässt – ohne manuellen Aufwand.",
+        missionText: "Warenein- und -ausgang automatisieren, damit jeder LKW schneller abgefertigt wird, ohne manuellen Aufwand.",
         visionLabel: "Vision",
-        visionText: "Eine Welt, in der jede ausgehende Lieferung automatisch geprüft wird, bevor sie das Werk verlässt."
+        visionText: "Eine Welt, in der jedes Rampentor automatisch erfasst, verifiziert und dokumentiert."
       },
       careers: {
         label: "Karriere",
         headline: "Werden Sie Teil unseres Teams",
-        description: "Derzeit haben wir keine offenen Stellen, aber wir sind immer daran interessiert, von talentierten Menschen zu hören, die unsere Leidenschaft für die Transformation der Fertigung durch Technologie teilen.",
+        description: "Derzeit haben wir keine offenen Stellen, aber wir sind immer daran interessiert, von talentierten Menschen zu hören, die unsere Leidenschaft für die Transformation der Logistik durch Technologie teilen.",
         description2: "Wenn Sie ein hochmotivierter Ingenieur, Betriebsexperte oder Branchenkenner sind, der etwas bewegen möchte, würden wir uns freuen, von Ihnen zu hören.",
         cta: "Senden Sie Ihre Bewerbung an jobs@vexgen.ai"
       },
       leadership: {
         label: "Führungsteam",
         headline: "Unser Team",
-        description: "Ein Team aus Betriebsexperten, Ingenieuren und Branchenveteranen, vereint durch eine gemeinsame Überzeugung: Die Fertigung verdient bessere Daten."
+        description: "Ein Team aus Betriebsexperten, Ingenieuren und Branchenveteranen, vereint durch eine gemeinsame Überzeugung: Die Laderampe verdient bessere Technologie."
       }
     },
     meta: {
-      homeTitle: "Vexgen AI – Automatisierte Versandkontrolle für Industriebetriebe",
-      homeDescription: "Automatisierte Prüfung ausgehender Lieferungen in Echtzeit. Keine manuellen Kontrollen. Weniger Fehler. Mehr Zeit für den Betrieb.",
+      homeTitle: "Vexgen AI – Automatisierter Warenein- und -ausgang für Lagerbetriebe",
+      homeDescription: "Automatisieren Sie Warenein- und -ausgang am Rampentor. Schnellere LKW-Abfertigung, weniger Fehler, Echtzeit-Transparenz. Kein manuelles Scannen. Keine Prozessänderung.",
       companyTitle: "Vexgen AI – Über uns (Zürich, Schweiz)",
-      companyDescription: "Erfahren Sie mehr über Vexgen AI, ein Schweizer Industrial-AI-Unternehmen mit Sitz in Zürich, Schweiz, das ERP-Daten und physische Realität mit KI-gestützter Bestands-Transparenz verbindet.",
+      companyDescription: "Erfahren Sie mehr über Vexgen AI, ein Schweizer Industrial-AI-Unternehmen mit Sitz in Zürich, Schweiz, das Warenein- und -ausgang an der Laderampe mit Bildverarbeitung automatisiert.",
       privacyTitle: "Datenschutz - Vexgen AI",
       privacyDescription: "Wie Vexgen AI Datenschutz, Datenverarbeitung, Aufbewahrung und Sicherheit zum Schutz betrieblicher Informationen umsetzt.",
       imprintTitle: "Impressum - Vexgen AI",
@@ -619,7 +614,7 @@ export const translations = {
     cta: {
       requestDemo: "Demo anfordern"
     },
-    stockComparison: "Live-Versandprüfung — Vexgen AI",
+    stockComparison: "Live-Verifizierungsfeed",
     inventoryPage: {
       hero: {
         headline: "Ihr ERP.\nDie Wahrheit.",
@@ -916,85 +911,80 @@ export const translations = {
       chemical: "Química"
     },
     hero: {
-      headline: "Automatice el control de despacho.\nAhorre tiempo.",
+      headline: "Automatice su muelle.\nMaximice el rendimiento.",
       subheadline: "",
-      tagline: "Detecte errores antes de que los camiones salgan\ny mantenga un registro claro de cada envío.\n\nSin controles manuales. Mismo proceso. Menos tiempo."
+      tagline: "Los camiones se mueven más rápido. Los equipos de muelle realizan menos trabajo manual.\nCada envío de entrada y salida verificado automáticamente.\n\nSin escaneo manual. Sin cambio de proceso."
     },
     results: {
       label: "Resultados probados",
-      headline: "La realidad genera resultados",
-      description: "Desplegado en entornos operativos reales. ROI medible desde el primer día.",
+      headline: "Los resultados son visibles",
+      description: "Diseñado para operaciones reales de muelle. Ingeniería orientada a ROI medible.",
       metrics: {
+        time: { value: ">80%", label: "Rotación de muelle más rápida" },
         accuracy: { value: ">99%", label: "Precisión de envíos" },
-        writeoff: { value: ">50%", label: "Reducción de reclamos" },
-        time: { value: ">1.000", label: "Horas de trabajo ahorradas" },
+        writeoff: { value: ">50%", label: "Menos reclamos" },
         roi: { value: "<30\u00A0días", label: "Tiempo hasta ROI" }
       },
       dashboardCaption: "Dashboard en vivo de un sitio operativo",
-      dispatchDashboardCaption: "Vista de despachos — Vexgen AI"
+      dispatchDashboardCaption: "Vista general de entradas y salidas"
     },
     problem: {
       label: "El problema",
-      headline: "Los controles manuales de despachos ralentizan todo",
-      description: "En muchas plantas que trabajan con tubos, perfiles y extrusiones, los despachos sigue dependiendo del conteo manual, inspecciones visuales o la confianza.\n\nComo resultado, los equipos se enfrentan a:",
+      headline: "El muelle de carga es su mayor cuello de botella",
+      description: "Cada control manual en el muelle añade minutos por camión. Contar palés, verificar documentos de transporte, inspeccionar daños. Esos minutos se acumulan en horas de rendimiento perdido cada día.\n\nComo resultado, los equipos lidian con:",
       issues: [
-        "Conteo manual bajo presión de tiempo",
-        "Verificaciones que retrasan la salida de los camiones",
-        "Errores de carga que se convierten en reclamos",
-        "Retrabajo e investigaciones tras el despacho"
+        "Camiones esperando mientras los equipos verifican envíos manualmente",
+        "Personal de muelle dedicado a escaneo y controles repetitivos",
+        "Rotación lenta que frena toda la operación",
+        "Incidencias descubiertas demasiado tarde, generando retrabajo y reclamaciones"
       ],
-      closing: "El tiempo perdido se paga en retrasos, retrabajo y problemas con clientes."
+      closing: "El muelle debería moverse al ritmo de su operación, no frenarla."
     },
     outcome: {
       label: "El resultado",
-      headline: "Qué cambia al automatizar el control de despacho.",
-      description: "Los despachos se verifican en tiempo real, eliminando el trabajo manual y liberando tiempo para tareas más importantes.\n\nCon Vexgen AI, los equipos optimizan los despachos:",
+      headline: "Qué sucede cuando la verificación del muelle es automática",
+      description: "Los camiones se despachan más rápido. Los equipos dedican menos tiempo a verificación manual y más a operaciones que generan impacto.\n\nCon Vexgen AI, las operaciones de muelle se transforman:",
       benefits: [
-        "Menos tiempo dedicado a tareas de verificación repetitivas",
-        "Los errores se detectan antes de convertirse en reclamos",
-        "Los despachos funcionan sin controles manuales",
-        "Registro claro de lo envíado — sin esfuerzo manual"
+        "Rotación de camiones más rápida con menos esperas y mayor rendimiento",
+        "Personal de muelle liberado de tareas de verificación repetitivas",
+        "Envíos de entrada y salida verificados automáticamente",
+        "Incidencias y daños detectados antes de convertirse en reclamaciones"
       ],
-      closing: "Menos tiempo verificando. Más tiempo gestionando operaciones."
+      closing: "Más camiones procesados. Menos tiempo por camión. Mismo equipo."
     },
     howItWorks: {
       label: "Cómo funciona",
-      headline: "Verificación automatizada\nen el punto de despacho",
-      description: "Vexgen AI verifica cada despacho antes de salir.",
+      headline: "Verificación automatizada\nen cada puerta de muelle",
+      description: "Vexgen AI verifica cada envío, de entrada y de salida, antes de que salga o entre en la instalación.",
       steps: [
         {
           step: "01",
-          title: "Capturar del camión cargado",
-          description: "Las cámaras monitorean el camión en el punto de despacho."
+          title: "Captura en la puerta del muelle",
+          description: "Cámaras en cada puerta del muelle captan cada palé, etiqueta y código de barras. Sin escáneres manuales. Sin cambio de proceso."
         },
         {
           step: "02",
-          title: "Detectar y contar la carga",
-          description: "Los modelos de visión detectan y cuentan los materiales cargados directamente desde el camión."
+          title: "Verificación automática",
+          description: "Sistemas de visión leen etiquetas, códigos de barras y texto. Compara contra documentos de transporte, cuenta cantidades y señala incidencias en tiempo real."
         },
         {
           step: "03",
-          title: "Comparar con el pedido de envío",
-          description: "El sistema compara las cantidades detectadas con el envío esperado del ERP."
-        },
-        {
-          step: "04",
-          title: "Aprobar o bloquear el envío",
-          description: "Si todo coincide, el camión recibe luz verde. Si no, se retiene antes de salir de planta."
+          title: "Actualización instantánea de sus sistemas",
+          description: "Su WMS, ERP y TMS se actualizan automáticamente. Las incidencias aparecen de inmediato con evidencia visual. Los equipos actúan solo cuando es necesario."
         }
       ],
-      tags: ["Sin controles manuales", "El mismo proceso", "Menos tiempo"]
+      tags: ["Sin escaneo manual", "Sin cambio de proceso", "Mismo equipo"]
     },
     whoItsFor: {
       label: "Para quién es",
-      headline: "Desarrollado para operaciones que gestionan envíos de tubos, perfiles y extrusiones",
+      headline: "Diseñado para operaciones que mueven carga por muelles",
       industries: [
-        { label: "Productores de tubos y perfiles de acero" },
-        { label: "Fabricantes de tubos y perfiles de plástico" },
-        { label: "Empresas de aluminio y extrusión" },
-        { label: "Distribuidores de tubos, perfiles y extrusiones" }
+        { label: "Almacenes 3PL" },
+        { label: "Centros de distribución" },
+        { label: "Muelles de envío en manufactura" },
+        { label: "Operadores de carga y logística" }
       ],
-      closing: "Si su operación depende de cargar los camiones correctamente antes del despacho, Vexgen AI es para usted."
+      closing: "Si los camiones y el rendimiento del muelle impactan su resultado final, Vexgen AI fue diseñado para usted."
     },
     contact: {
       label: "Empezar",
@@ -1008,7 +998,7 @@ export const translations = {
         company: "Empresa",
         companyPlaceholder: "Nombre de la empresa",
         message: "Mensaje (opcional)",
-        messagePlaceholder: "Cuéntenos sobre sus desafíos de expedición...",
+        messagePlaceholder: "Cuéntenos sobre sus operaciones de muelle...",
         submit: "Solicitar una demo",
         submitting: "Enviando..."
       },
@@ -1021,8 +1011,8 @@ export const translations = {
     },
     company: {
       label: "Sobre Vexgen AI",
-      headline: "Desarrollado para operaciones industriales reales",
-      description: "Vexgen AI fue fundada para eliminar los errores manuales de expedición en operaciones industriales. Automatizamos la verificación de envíos salientes para que las plantas puedan expedir con confianza, sin depender de controles manuales.",
+      headline: "Diseñado para el muelle de carga",
+      description: "Vexgen AI fue fundada para eliminar el cuello de botella manual en la puerta del muelle. Automatizamos la verificación de entradas y salidas para que las operaciones se muevan más rápido, sin añadir personal ni cambiar procesos.",
       entitySentence: "Vexgen AI es una empresa suiza de IA industrial con sede en Zúrich, Suiza.",
       team: {
         ceo: {
@@ -1033,7 +1023,7 @@ export const translations = {
         cto: {
           name: "Andrés Cao",
           role: "Cofundador y CTO",
-          bio: "Experto en ingeniería y visión por computadora, enfocado en construir sistemas fiables y de grado industrial."
+          bio: "Experto en ingeniería y visión artificial, enfocado en construir sistemas fiables y de grado industrial."
         },
         advisor: {
           name: "Stefan Kalmund",
@@ -1042,34 +1032,34 @@ export const translations = {
         }
       },
       location: "Baumackerstrasse 42, 8050, Zúrich, Suiza",
-      focus: "Enfoque: Fabricación y almacén",
+      focus: "Enfoque: Almacén y logística",
       vision: {
         label: "Nuestra visión",
-        headline: "Automatizando la verificación de despachos para que los envíos siempre salgan correctamente",
-        description: "Creemos que las operaciones eficientes comienzan con procesos fiables. Cuando la verificación de expedición funciona de forma automática, los equipos dedican menos tiempo a revisar y más tiempo a gestionar lo que importa. Construimos las herramientas que hacen esto posible sin interrumpir el funcionamiento de su operación.",
+        headline: "Cada puerta de muelle, completamente automatizada",
+        description: "Creemos que las operaciones eficientes comienzan en la puerta del muelle. Cuando las entradas y salidas funcionan automáticamente, los equipos trabajan más rápido, los errores desaparecen y el rendimiento aumenta. Todo sin cambiar cómo funciona su operación.",
         mission: "Misión",
-        missionText: "Automatizar la verificación de expedición para que cada envío salga correctamente de la planta, sin esfuerzo manual.",
+        missionText: "Automatizar entradas y salidas para que cada camión se despache más rápido, sin esfuerzo manual.",
         visionLabel: "Visión",
-        visionText: "Un mundo donde cada envío saliente se verifica automáticamente antes de abandonar la planta."
+        visionText: "Un mundo donde cada puerta de muelle captura, verifica y documenta automáticamente."
       },
       careers: {
         label: "Carreras",
         headline: "Únase a nuestro equipo",
-        description: "Actualmente no tenemos posiciones abiertas, pero siempre estamos interesados en conocer a personas con talento que compartan nuestra pasión por transformar la fabricación a través de la tecnología.",
+        description: "Actualmente no tenemos posiciones abiertas, pero siempre estamos interesados en conocer a personas con talento que compartan nuestra pasión por transformar la logística a través de la tecnología.",
         description2: "Si es un ingeniero, operador o experto del sector altamente motivado que busca generar impacto, nos encantaría saber de usted.",
         cta: "Envíe su candidatura a jobs@vexgen.ai"
       },
       leadership: {
         label: "Liderazgo",
         headline: "Conozca al equipo",
-        description: "Un equipo de operadores, ingenieros y veteranos del sector unidos por una convicción compartida: la fabricación merece mejores datos."
+        description: "Un equipo de operadores, ingenieros y veteranos del sector unidos por una convicción compartida: el muelle de carga merece mejor tecnología."
       }
     },
     meta: {
-      homeTitle: "Vexgen AI – Verificación de expedición en tiempo real para plantas industriales",
-      homeDescription: "Verificación automatizada de envíos salientes en tiempo real. Sin controles manuales. Menos errores. Más tiempo para operar.",
+      homeTitle: "Vexgen AI – Entradas y salidas automatizadas para operaciones de almacén",
+      homeDescription: "Automatice entradas y salidas en la puerta del muelle. Rotación de camiones más rápida, menos errores, visibilidad en tiempo real. Sin escaneo manual. Sin cambio de proceso.",
       companyTitle: "Vexgen AI – Sobre la empresa (Zúrich, Suiza)",
-      companyDescription: "Conozca Vexgen AI, una empresa suiza de IA industrial con sede en Zúrich, Suiza, que cierra la brecha entre los registros ERP y la realidad física con visibilidad de inventario impulsada por IA.",
+      companyDescription: "Conozca Vexgen AI, una empresa suiza de IA industrial con sede en Zúrich, Suiza, que automatiza entradas y salidas en el muelle de carga con visión artificial.",
       privacyTitle: "Protección de datos - Vexgen AI",
       privacyDescription: "Cómo Vexgen AI gestiona la privacidad, el tratamiento de datos, la retención y la seguridad para proteger la información operativa.",
       imprintTitle: "Aviso legal - Vexgen AI",
@@ -1111,7 +1101,7 @@ export const translations = {
     cta: {
       requestDemo: "Solicitar una demo"
     },
-    stockComparison: "Registro de verificación de despachos en vivo — Vexgen AI",
+    stockComparison: "Vista de verificación en vivo",
     inventoryPage: {
       hero: {
         headline: "Su ERP.\nLa verdad.",
